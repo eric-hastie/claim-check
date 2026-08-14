@@ -528,7 +528,7 @@ competitors:
       - url: https://cursor.com/pricing
         kind: pricing
         anchor: "Pricing"
-        verified: null
+        verified: 2026-08-14
     why: >
       The highest-stakes watch in the file. The current pitch rests on Bugbot's
       2026-05 move to usage billing at roughly $1.00 to $1.50 per run, and two public
@@ -586,19 +586,20 @@ competitors:
 
   - id: graphite
     name: Graphite Agent
-    tier: 2
-    digest: true
+    tier: 3
+    digest: false
     has_claims: false
     sources:
       - url: https://graphite.com/blog
         kind: blog
         anchor: "Graphite"
-        verified: null
+        verified: 2026-08-14
     gap: >
-      No dated changelog feed. Changelog posts are published on the blog, and
-      /docs/cli-changelog covers the CLI only. Treat blog dates as the release date and
-      expect to miss small changes. Note the rename: Diamond was folded into Graphite
-      Agent on 2025-10-08, so a claim naming Diamond is already stale.
+      No usable release feed. There is no changelog page, /docs/cli-changelog covers the
+      CLI only, and the blog is not a release log: as of 2026-08-14 the newest post is
+      2026-04-01. Demoted to tier 3 for that reason, not because Graphite stopped
+      mattering. Revisit if a changelog appears. Note the rename: Diamond was folded
+      into Graphite Agent on 2025-10-08, so a claim naming Diamond is already stale.
 
   - id: augment
     name: Augment Code
@@ -1330,5 +1331,45 @@ claims:
     last_verified: 2026-08-14
     severity: medium
     note: "Copilot usage metrics exist at the org level, but they measure Copilot adoption, not delivery. Do not overstate the row."
+
+  # ------------------------------------------------- registered from run 2/3
+
+  - id: self-cap-behaviour
+    competitor: self
+    page: https://getoptimal.ai/pricing
+    claim: "At the deep-review cap, reviews pause until the start of the next billing cycle."
+    sources: [https://getoptimal.ai/pricing]
+    status: CONFIRMED
+    evidence: "Deep reviews pause until the start of your next billing cycle. You can upgrade your plan at any time to restore them immediately."
+    source: https://getoptimal.ai/pricing
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
+    severity: high
+    note: >
+      Registered after run 2 caught it changing. On 2026-08-10 the same page described a
+      downgrade to quick reviews; it now describes a pause. This is load-bearing for
+      every flat-versus-metered argument on the comparison pages: a hard stop is harder
+      to defend than a degraded review, and the metered competitor it is aimed at lets
+      the customer set their own spend cap instead.
+
+  - id: bugbot-usage-billing
+    competitor: cursor-bugbot
+    page: https://getoptimal.ai/bugbot-cost-calculator
+    claim: "Cursor Bugbot is billed on usage, so review cost scales with PR volume."
+    sources: [https://cursor.com/pricing]
+    status: CONFIRMED
+    evidence: "Bugbot on usage-based billing on both Individual and Teams tiers, with on-demand usage billed in arrears once the included amount is consumed."
+    source: https://cursor.com/pricing
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
+    severity: critical
+    note: >
+      The single highest-stakes claim in the file: two public calculators are built on
+      it. One qualifier the calculators do not carry: Enterprise lists "agentic code
+      reviews with Bugbot" as included, so against a Cursor Enterprise account the
+      metered-cost argument does not apply. Ask which Cursor tier they are on before
+      running the cost pitch.
 
 ```
