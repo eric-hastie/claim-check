@@ -1007,17 +1007,20 @@ claims:
   - id: self-unlimited-reviews
     competitor: self
     page: /vs (all comparison pages)
-    claim: "Flat $29/user/month with unlimited reviews."
-    sources: [https://getoptimal.ai/pricing]
-    status: OUT_OF_DATE
-    cause: internal_conflict
-    evidence_date: 2026-08-10
-    observed: 2026-08-12
-    evidence: "The pricing page caps deep reviews at 50 (Plus), 100 (Pro) and 350 (Max) per user per month, and states that past the cap 'you're downgraded to quick reviews'."
-    source: https://getoptimal.ai/pricing
-    last_verified: 2026-08-12
+    claim: "Flat $29/user/month: flat pricing that doesn't spike as you ship more, the lowest total cost for actively-shipping teams."
+    sources: [https://getoptimal.ai/pricing, https://getoptimal.ai/vs, https://getoptimal.ai/vs/greptile]
+    status: CONFIRMED
+    evidence: "Consistent with the pricing page, which caps deep reviews at 50 / 100 / 350 per user per month. The wording no longer asserts unlimited reviews."
+    source: https://getoptimal.ai/vs
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
     severity: critical
-    note: "Self-contradiction between the comparison pages and the pricing page. One click apart. The accurate word is predictable, not unlimited."
+    note: >
+      Resolved. Between 2026-08-10 and 2026-08-14 this row read "flat $29/user/month
+      with unlimited reviews", which the pricing page contradicted. Checked on /vs and
+      /vs/greptile: neither now contains the word unlimited. Keep the claim registered,
+      because pricing copy is the row most likely to drift back.
 
   - id: self-2x-vulnerabilities
     competitor: self
