@@ -1,0 +1,116 @@
+SOURCE: https://getoptimal.ai/docs/insights/overview
+TITLE: Engineering Productivity Insights — Optimal Docs
+CLASS: docs
+
+Engineering Productivity Insights — Optimal Docs 
+ / Docs / Engineering Insights / Overview 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Engineering Productivity Insights
+
+ What is Insights?
+
+ Insights is Optimal AI’s productivity analytics layer. It gives engineering leaders a unified, data-driven view of team performance, bottlenecks, and delivery efficiency — directly connected to their GitHub and Jira activity.
+
+ By surfacing cycle times, code review velocity, allocations, and goals, Insights transforms scattered development data into meaningful metrics that drive better decisions and higher performance.
+
+ The Problem
+
+ Engineering productivity has always been hard to quantify. Teams rely on anecdotal updates or manual spreadsheets, and leaders struggle to identify what’s slowing projects down. Traditional tools focus on tasks — not the flow of engineering work.
+
+ Without proper visibility, it’s difficult to:
+
+ Spot delivery bottlenecks
+
+ Measure review and merge velocity
+
+ Track time in status or cycle times
+
+ Balance team workloads
+
+ The Solution
+
+ Insights integrates directly with your repositories and project management tools to build a real-time performance dashboard for your engineering organization. It combines DORA metrics, AI-based analysis, and custom productivity views so you can see exactly how your teams are working — and where to improve.
+
+ With Insights, you can:
+
+ Track velocity and throughput across teams
+
+ Measure review and merge times
+
+ Identify where PRs or tasks get stuck
+
+ Align engineering goals with company OKRs
+
+ Drive data-backed process improvements
+
+ Key Capabilities
+
+ Cycle Time Tracking
+
+ Insights visualizes the complete development lifecycle — from first commit to deploy — highlighting delays between coding, review, and deployment. It helps you pinpoint stages where work slows down and provides recommendations to optimize your delivery pipeline.
+
+ Allocations/Distributions
+
+ Understand how your team’s time is distributed. With Allocations and Goals, you can define strategic focus areas (e.g., “60% feature work, 20% tech debt”) and measure actual time spent based on GitHub and Jira activity.
+
+ Review Load & Velocity
+
+ Insights tracks how many PRs are being reviewed, who’s performing reviews, and average time to merge. You can quickly see if certain reviewers are overloaded or if feedback loops are too long.
+
+ GitHub & Jira Integrations
+
+ Insights connects seamlessly with your existing tools — no manual setup required. It continuously syncs data from your repositories and project management systems. All integrations are designed with zero data retention and secure API access.
+
+ AI-Powered Trend Detection
+
+ Beyond static charts, Insights uses AI to detect patterns and anomalies — such as sudden dips in engagement, PR spikes, or delivery delays. It surfaces these as proactive notifications.
+
+ Quick Overview
+
+ Page What it shows 
+ PR Cycle Time How fast code moves from first commit to merge 
+ Activity Team workload distribution across commits, reviews, merges 
+ Distributions Where engineering effort is going (bugs, features, tech debt) 
+ AI Insights Auto-generated trend summaries for any dashboard 
+ Contributors Individual engineer performance lens 
+
+ Recommended Next Steps
+
+ Trial Setup 
+
+ Jira Integration

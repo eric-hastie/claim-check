@@ -1,0 +1,80 @@
+SOURCE: https://getoptimal.ai/careers
+TITLE: Careers — Optimal AI
+CLASS: other
+
+Product Core Platform
+ AI Code Reviews Engineering Insights Deployment Frequency How It Works AI Agents
+ AppSec Agent CI Fixer Agent Dependency Bundler 
+ Resources Learn
+ Changelog Docs Blog Case Studies Tools
+ Integrations Comparisons LLM Token Calculator Claude Code Review Calculator Bugbot Cost Calculator Contact Us 
+
+Security
+ Careers 
+We're hiring
+
+Login
+
+Get Started - Free
+
+Get a Demo
+
+Careers at Optimal AI
+
+Build the quality layer for the world's code
+
+We're building the AI that reviews every PR, catches real bugs, and keeps codebases
+ clean — for engineering teams everywhere. Come help us get there.
+
+View open roles
+
+Why Optimal
+
+A small team building one of the most useful tools in modern software engineering.
+
+ Work on hard problems 
+ Reasoning over entire codebases, catching the bugs humans miss, and keeping AI-generated code honest. The kind of problems that do not have a Stack Overflow answer. 
+
+ Ship to real engineers 
+ Optibot reviews production PRs for fast-moving teams every day. What you build ships quickly and is used by engineers who notice the difference. 
+
+ Small team, big leverage 
+ A focused team where your work is visible and your ownership is real. Less process, more impact — you decide what good looks like and then build it. 
+
+Open roles
+
+Don't see your role? Reach out via contact — we're always interested in great people.
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

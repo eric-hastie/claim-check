@@ -1,0 +1,150 @@
+SOURCE: https://getoptimal.ai/docs/getting-started/optimal-insights
+TITLE: Optimal Insights — Optimal Docs
+CLASS: docs
+
+Optimal Insights — Optimal Docs 
+ / Docs / Getting Started / Optimal Insights overview 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Optimal Insights
+
+ Get a complete view of how your engineering team ships — from delivery speed to AI-assisted development. Insights connects directly to GitHub, analyzes your real activity data, and turns it into actionable metrics so you can spot friction, measure progress, and ship faster.
+
+ PR Cycle Time
+
+ Measure how fast your team moves from first commit to merge.
+
+ The PR Cycle Time dashboard shows where time is spent in your pull request workflow — from creation to review to merge. It helps you identify slowdowns and track improvements across teams, repos, or individual developers.
+
+ Key Metrics
+
+ Average Cycle Time – Total time from first commit to merge. An “Excellent” badge appears when under 24 hours.
+
+ Time to Open – From first commit to PR creation.
+
+ Time in Review – Duration the PR waits for review and approval.
+
+ Time to Merge – From PR open to merge into the target branch.
+
+ Merged to Staging – How many PRs reached staging environments.
+
+ Filters and Views
+
+ Teams vs. Individuals – Switch between team-wide or contributor-level insights.
+
+ Repositories – Focus on one or multiple repos.
+
+ Date Range – Analyze over 7, 14, 30, or 90-day windows to track trends.
+
+ AI Insights
+
+ Instantly understand what changed — and why.
+
+ The AI Insights side panel automatically analyzes the page you’re on (like PR Cycle Time or Activity) and provides an executive summary.
+
+ What It Shows
+
+ TL;DR Summary – Explains what shifted (e.g., longer open times but faster merges).
+
+ Activity Trends – Week-over-week % changes in each metric.
+
+ Notable Contributors – Who or what drove those changes.
+
+ Pro tip: Open it weekly before sprint reviews — it’s like having a built-in engineering analyst.
+
+ Activity
+
+ Visualize your team’s engineering rhythm. The Activity view shows commits, reviews, merges, and comments across a timeline — giving you a visual heartbeat of your team’s workflow.
+
+ How It Works
+
+ Each developer appears as a row; each bubble represents activity for that day. The bigger the bubble, the more events occurred.
+
+ Color codes:
+
+ ⚪ Commit – Code pushed to the repository
+
+ 🔵 PR Open – New pull request created
+
+ 🟡 PR Review – Pull request reviewed
+
+ 🟢 Merge Commit – Pull request merged into the main branch
+
+ 🔴 Comment – Review comment added on a pull request
+
+ Why It Matters
+
+ Spot midweek review peaks and Friday slowdowns.
+
+ Balance review load across engineers.
+
+ Detect burnout or under-utilization patterns early.
+
+ AI Adoption
+
+ Measure how AI tools impact your engineering workflow. The AI Adoption dashboard tracks real usage and engagement with AI coding tools like GitHub Copilot and Claude.
+
+ Core Metrics
+
+ Overall Code Acceptance Rate – % of AI-suggested code merged.
+
+ Average Chat Interactions per Day – How often engineers engage AI assistants.
+
+ Top Performing Model by Acceptance – The AI model producing the most accepted code.
+
+ Highest Acceptance by Language – Which language benefits most.
+
+ Average Daily Engagement Rate – % of developers actively using AI tools.
+
+ Pro Tips
+
+ Enable AI Insights on every major dashboard for context-aware summaries.
+
+ Standardize GitHub labels to improve Distributions and Allocations data.
+
+ Compare time windows (7-day vs 30-day) to measure process improvements.
+
+ Encourage reviewers to spread feedback load — visible in Activity view.
+
+ Track AI Adoption alongside PR Cycle Time to measure real ROI of Copilot.
+
+ Troubleshooting
+
+ Issue Solution 
+ No data yet? Wait a few hours after connecting GitHub; Insights backfills automatically 
+ Missing PRs or repos? Verify permissions include read + metadata access 
+ Empty AI Adoption view? Ensure AI telemetry is enabled in connected IDEs or extensions

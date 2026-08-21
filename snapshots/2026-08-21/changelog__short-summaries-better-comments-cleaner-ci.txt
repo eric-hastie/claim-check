@@ -1,0 +1,101 @@
+SOURCE: https://getoptimal.ai/changelog/short-summaries-better-comments-cleaner-ci
+TITLE: Optibot: Short Summaries & Cleaner CI — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ ✏️ 
+
+ Improvement December 4, 2025 Quality UX CI Slack 
+ Optibot: Short Summaries & Cleaner CI 
+ Optibot 2.3.3 — short summary mode, granular draft PR controls, friendlier review status messages, smarter Slack reports, and comment placement fixes. 
+
+ Optibot Release 2.3.3
+ New Features
+ Short Summary Level
+ Get the gist of a pull request in seconds. Optibot now supports a new "short" summary mode — a natural, conversational 2–3 sentence overview perfect for quick updates.
+ Enable it via:
+ summary.level: "short" 
+ Granular Control Over Draft Pull Requests
+ You now have full control over whether Optibot runs on draft PRs. Use the new settings to enable/disable summaries and reviews:
+ summary.autoOnDraft
+reviews.autoOnDraft 
+ Example Configuration
+ {
+ "reviews": {
+ "auto": true,
+ "autoOnPush": true,
+ "autoOnDraft": false,
+ "autoApprove": true,
+ "codeSuggestions": true
+ },
+ "dependencyBundler": { "enabled": true },
+ "summary": {
+ "auto": true,
+ "autoOnDraft": false,
+ "level": "short"
+ },
+ "enableCIFixer": true
+} 
+ Improvements
+ Friendlier Review Status
+ Review status messages now feel more human and collaborative:
+ Code Looks Good 👍
+ Needs Changes 🔧
+ Smarter Slack Reports
+ Weekly Slack reports are now tighter and more signal-focused.
+ Enhanced Multi-Organization Support
+ Repository statistics now correctly aggregate across multiple organizations.
+ More Reliable GitHub Commenting
+ If a comment can't attach to a specific line, Optibot now posts it as a file-level comment so no feedback is ever lost.
+ Bug Fixes
+ Accurate Comment Placement
+ Resolved issues where comments spanning non-adjacent lines could appear in the wrong place. Anchoring is now much more precise.
+ CI Auto-Fix Precision
+ The CI auto-fixer now triggers only for failures directly tied to a PR's check suite.
+ Slack Notification Reliability
+ Fixed an issue that sometimes prevented Slack notifications from sending after a review completed.
+
+Previous
+ Optibot + Slack Integration — Real-Time PR Reviews & Productivity Alerts 
+Next
+ Introducing Branch Review: Analyze Entire Pull Requests 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -14,8 +14,8 @@ Claims are paraphrases of page copy, not quotes, so matching is by distinctive
 token overlap plus a best-sentence similarity floor rather than exact string
 search.
 
-    python tools/published.py acme 2026-08-21
-    python tools/published.py acme 2026-08-21 --write
+    python tools/published.py getoptimal 2026-08-21
+    python tools/published.py getoptimal 2026-08-21 --write
 """
 import argparse
 import difflib
@@ -34,7 +34,13 @@ def targets_root():
     private directory while the code stays shareable.
     """
     import os
-    return Path(os.environ.get("CLAIM_CHECK_TARGETS", REPO / "targets"))
+    env = os.environ.get("CLAIM_CHECK_TARGETS")
+    if env:
+        return Path(env)
+    # Single-target repo: config sits at the root next to the tools.
+    if (REPO / "claims.yaml").exists():
+        return REPO
+    return REPO / "targets"
 
 STOP = set("""a an and are as at be been but by can for from has have how in into is it its
 me more most no not of on only or our out over per so than that the their them then there
@@ -108,7 +114,8 @@ def main():
     ap.add_argument("--write", action="store_true")
     args = ap.parse_args()
 
-    tdir = targets_root() / args.target
+    root_dir = targets_root()
+    tdir = root_dir if (root_dir / "claims.yaml").exists() or (root_dir / "owner.yaml").exists() else root_dir / args.target
     snap = tdir / "snapshots" / args.snapshot
     raw = (tdir / "claims.yaml").read_text(encoding="utf-8")
     data = yaml.safe_load(raw)

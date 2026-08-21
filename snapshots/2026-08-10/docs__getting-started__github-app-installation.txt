@@ -1,0 +1,158 @@
+SOURCE: https://getoptimal.ai/docs/getting-started/github-app-installation
+TITLE: GitHub App Installation & Troubleshooting — Optimal Docs
+
+GitHub App Installation & Troubleshooting — Optimal Docs 
+ / Docs / Getting Started / GitHub App installation 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ GitHub App Installation & Troubleshooting Guide
+
+ Before Optibot can review pull requests or measure engineering productivity, it needs permission to connect to your organization’s repositories via the Optibot & Optimal Insights GitHub App.
+
+ This guide explains:
+
+ How to install the Optibot and Optimal Insights GitHub App
+
+ How to confirm they’re installed correctly
+
+ How to re-request the installation email if it’s missing
+
+ How to troubleshoot common setup issues
+
+ You can install Optibot and Insights on multiple accounts (personal and organization). Each installation controls which repositories the app can access.
+
+ Installation Flow
+
+ 1. Open the installation link
+
+ Optibot (Code Reviewer): 
+
+ https://github.com/apps/agent-optibot/installations/new 
+
+ Optimal Insights: 
+
+ https://github.com/apps/optimal-insights/installations/new 
+
+ 2. Choose where to install
+
+ Select your organization or your personal account.
+
+ 3. Select repository access
+
+ All repositories (recommended)
+
+ or Only selected repositories (manually choose repos)
+
+ 4. Review requested permissions
+
+ Confirm you’re comfortable granting access to read/write PRs, commits, and metadata.
+
+ 5. Click Install or Request
+
+ Install → you have permission to complete it.
+
+ Request → only org owners can approve. GitHub will email them automatically.
+
+ Note: Installation ≠ Authorization. Both may be required depending on org settings.
+
+ Who Can Install the App
+
+ Role Capability 
+ Organization Owner Can install Optibot across the entire org and grant repo access 
+ Repo Admin Can install Optibot only on repos you administer 
+ Org Member (no admin) Can request installation — GitHub will email the org owner for approval 
+
+ If you see a “Request” button instead of “Install” , the organization owner must approve.
+
+ How to Verify Installation
+
+ A. Organization Level
+
+ Go to GitHub → Organization Settings → Third-party Access → GitHub Apps
+
+ Confirm Agent Optibot and Optimal Insights appear in the list.
+
+ Click Configure to view permissions granted, repositories connected, and option to suspend/remove.
+
+ B. Repository Level
+
+ Go to Repo → Settings → Integrations → GitHub Apps
+
+ Confirm Optibot & Optimal Insights is listed.
+
+ Check if it has access to the correct repo(s).
+
+ Didn’t Receive the Installation Email?
+
+ Check spam/junk folders
+
+ Confirm you have org owner privileges — only owners receive approval emails
+
+ Visit Settings → Installed GitHub Apps to check if Optibot already appears
+
+ If not, visit the install URL again and reinstall manually
+
+ Still blocked? Have your org owner follow the same link to approve directly
+
+ → GitHub Official Guide – Installing a GitHub App from a third party 
+
+ Troubleshooting Checklist
+
+ Before activation calls, confirm all boxes are checked:
+
+ Org owner accepted the install invite
+
+ Optibot appears under “Installed GitHub Apps”
+
+ Correct repositories are selected
+
+ Permissions include read/write on PRs and metadata
+
+ App installed at org or repo level (not just personal)
+
+ Team knows who to contact if re-request needed
+
+ Quick Reference Links
+
+ Installing a GitHub App (Official) 
+
+ Viewing Installed Apps 
+
+ Requesting App Installation from Org Owner 
+
+ Optimal Insights Signup 
+
+ Optibot (Code Review) Signup

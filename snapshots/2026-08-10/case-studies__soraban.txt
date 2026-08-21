@@ -1,0 +1,174 @@
+SOURCE: https://getoptimal.ai/case-studies/soraban
+TITLE: Soraban — 2+ Hours Saved, 5 Vulns Blocked Monthly
+
+Soraban's platform processes sensitive financial data for accountants — and during tax season, engineers
+ are shipping constantly. The team needed security review to keep pace with development velocity. Their
+ existing SAST tools couldn't.
+
+After replacing those tools with Optibot, every engineer reclaimed hours each week, the security team
+ gained a permanent AI guardrail with real context — and the entire PR process got quieter and smarter.
+
+ The Problem 
+
+Manual Security Reviews Couldn't Keep Up with 10× Seasonal Traffic
+
+From January to April, Soraban's platform handles 10× its normal traffic load. Code was shipping
+ constantly. Every PR was going through a manual, human-based review — and when they tried to automate
+ with SAST tools, the false positives overwhelmed the team.
+
+ SAST tool alert fatigue — false positives were pulling hours away from engineers with nothing actionable to show
+
+ No cross-module visibility — if new code broke something two modules away, no tool flagged it
+
+ High incident cost — one missed vulnerability meant 50–100 person-hours to remediate and $10K+ in total cost
+
+"We've tried and tested a handful of tools that ultimately didn't produce very consistent results... just the amount of false positives was pulling a lot of time away from the team."
+
+ Sean Coleman
+ Head of Security & Compliance, Soraban
+
+Soraban processes and stores sensitive financial data for accountants. A security incident doesn't stay
+ in engineering. It pulls in developers, security, operations, and customer success — with total
+ remediation costs of $10,000 or more for incidents that could realistically have been caught at the PR stage.
+
+ The Solution 
+
+Optibot Replaced Manual Reviews and Noisy SAST Tools in One GitHub Integration
+
+Soraban integrated Optibot directly into their GitHub workflow. It reviews every PR automatically,
+ leaving precise, line-by-line comments like a senior engineer — with full awareness of what's happening
+ beyond the PR boundary.
+
+ Full-codebase context
+ Optibot understands your architecture and dependencies. It catches issues that only appear when new code interacts with something two modules away — the exact scenario legacy tools miss.
+
+ Surgical, line-by-line comments
+ No vague alerts. Optibot leaves contextual comments on specific lines, fitting naturally into the existing GitHub review workflow.
+
+ Zero false-positive noise
+ The team dropped their separate SAST tools entirely. Optibot now covers code quality, bug catching, and security review — all natively inside GitHub.
+
+ Instant install, zero friction
+ 2-click install. The engineering team experienced zero resistance — Optibot communicates like a human reviewer, not a scanner.
+
+"Optibot comes in very surgically, leaves comments in context of specific lines of code... It fits into our natural workflow. It has effectively filled the gap for us as our primary SAST tool."
+
+ Sean Coleman
+ Head of Security & Compliance, Soraban
+
+ The Results 
+
+2+ Hours Back per Engineer. 3–5 Threats Stopped per Month. Zero Tool Sprawl.
+
+Standardizing on Optibot allowed Soraban to maintain high shipping velocity during their busiest
+ season without sacrificing security or exhausting their senior staff:
+
+ 3–5 monthly security deflections — issues caught before merge, before incident, before cost
+ 2+ hours saved per engineer per week — no more chasing false alarms from legacy tools
+ Zero SAST tool sprawl — Optibot replaced the full stack of noisy, scoped scanning tools
+ SOC 2 compliance support — Optibot is now integral to their PR process and compliance workflow
+ 100% team buy-in — because it communicates like a human, adoption was frictionless
+
+"The new code we were introducing didn't have any issues directly, but it did impact related code and Optibot was able to reach into that side of things and flag it. That's when I started to see the power of Optibot."
+
+ Sean Coleman
+ Head of Security & Compliance, Soraban
+
+"You can drive very fast and dangerously, but you might not always arrive in one piece. Optibot provides that reassurance that we are shipping secure code at speed."
+
+ Sean Coleman
+ Head of Security & Compliance, Soraban
+
+ The Impact in Numbers
+
+Before and after metrics for Soraban's team using Optimal AI
+
+ Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before
+
+ After
+
+ Improvement
+
+ Review Overhead
+
+ Slow, manual first-pass review
+
+ Instant, AI-led first-pass review
+
+ 2+ Hours Saved / Engineer 
+
+ Vulnerability Detection
+
+ Human-dependent, scoped to the PR
+
+ 24/7 AI guardrails with cross-module context
+
+ 3–5 Catches / Month 
+
+ Signal-to-Noise
+
+ High false positives from legacy SAST
+
+ Surgical, contextual findings only
+
+ Eliminated Alert Fatigue 
+
+ Security Risk
+
+ High during peak season (Jan–April)
+
+ Hardened CI/CD, guardrails year-round
+
+ Avoided $10K+ Incident Costs 
+
+ Team Integration
+
+ Friction with clunky, noisy tools
+
+ Agentic UX — feels like a human reviewer
+
+ 100% Team Buy-in 
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+ Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

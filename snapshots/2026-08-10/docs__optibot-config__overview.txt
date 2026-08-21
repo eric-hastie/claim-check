@@ -1,0 +1,125 @@
+SOURCE: https://getoptimal.ai/docs/optibot-config/overview
+TITLE: Optibot Configuration Overview — Optimal Docs
+
+Optibot Configuration Overview — Optimal Docs 
+ / Docs / Optibot Config / Configuration overview 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Getting Started with Optibot Configuration Settings
+
+ Customize how Optibot behaves across your repositories directly from the Optibot dashboard. Each repository gets its own configuration. Toggle features on or off, set review triggers, manage exclusions, and more. Changes take effect immediately with no files to commit or maintain.
+
+ Access your settings at: agents.getoptimal.ai → Configuration tab 
+
+ Reviews
+
+ Control when and how Optibot reviews pull requests on this repository.
+
+ Auto review — Automatically review every PR on open. (Recommended) 
+
+ Auto review on draft — Include draft PRs in automatic reviews.
+
+ Auto review on push — Trigger a new review whenever commits are pushed to an open PR.
+
+ Auto review after workflow — Trigger a review only after a CI workflow completes.
+
+ Allow approve — Allow Optibot to approve PRs that pass all checks.
+
+ Code suggestions — Allow Optibot to generate inline code suggestions during reviews.
+
+ Skip files — Files or patterns excluded from the review process (e.g. *.md , docs/* ).
+
+ Sensitivity — Controls strictness: Low, Medium, or High. Medium is recommended. 
+
+ Excluded labels — PRs carrying any of these labels are skipped (e.g. wontfix ).
+
+ Excluded users — PRs authored by these usernames are skipped (e.g. bot-account ).
+
+ Suppress repeated issues — Issues already raised in a previous review are moved to a collapsible section.
+
+ → Full review settings reference 
+
+ Summary
+
+ Control when and how Optibot generates PR summaries.
+
+ Auto summary — Automatically generate a PR summary on open.
+
+ Auto summary on draft — Include draft PRs in automatic summaries.
+
+ Summary level — Controls the detail level: Basic or Detailed.
+
+ Excluded labels — PRs with these labels are skipped for automatic summaries.
+
+ Excluded users — PRs from these usernames are skipped for automatic summaries.
+
+ → Full summary settings reference 
+
+ Dependency Bundler
+
+ Enabled — Organizes and bundles incoming Dependabot PRs into a single consolidated PR. Reduces noise from individual dependency update PRs.
+
+ → Dependency bundler settings 
+
+ Monorepo Guidelines
+
+ Apply different review standards to different parts of your monorepo. Register per-directory markdown instruction files and Optibot automatically applies only the rules relevant to each PR’s changed directories.
+
+ Enabled — Turns per-directory review instructions on or off.
+
+ Paths — Repo-relative paths to your instruction markdown files. The file’s location determines which directory it governs.
+
+ Auto-detect — Give Optibot a glob like **/REVIEW.md and it discovers matching instruction files for you, so new services get covered without editing a list.
+
+ File-pattern instructions — Map a file type to an instruction file (e.g. *.proto → docs/protobuf-guideline.md ) to scope rules by what kind of file changed rather than where it lives.
+
+ → Monorepo guidelines reference 
+
+ Other Settings
+
+ Enable CI fixer — Attempts to fix failed CI checks by opening fix PRs and/or suggesting remediation steps.
+
+ Tag to talk — When enabled, Optibot will only respond to comments that contain @optibot .
+
+ Guidelines URL — Path or URL pointing to your coding guidelines file inside the repository (e.g. docs/guidelines/README.md ).
+
+ → CI fixer settings 
+
+ Review Fixer
+
+ Enable Review Fixer — Allow Optibot to automatically apply review comment fixes directly to your code when accepted.
+
+ Note: Settings are per-repository. If you manage multiple repositories, you’ll need to configure each one separately from the repository selector in the Settings tab.

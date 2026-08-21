@@ -1,0 +1,75 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-slack-integration---real-time-pr-reviews-productivity-alerts
+TITLE: Optibot + Slack: PR Reviews & Alerts — Optimal AI Changelog
+
+All changelog entries
+
+ 🔔 
+
+ New Release December 3, 2025 Slack Notifications Integration 
+ Optibot + Slack: PR Reviews & Alerts 
+ Optibot now posts real-time PR review summaries and productivity alerts to your Slack channels, keeping your team in flow without context switching. 
+
+ Optibot + Slack Integration
+
+This week's release brings one of our most requested features: Optibot now integrates directly with Slack. With one click, you can receive real-time updates on everything Optibot is doing inside your codebase — without leaving your team's workflow.
+
+ What's New
+ Real-Time PR Review Notifications
+ Optibot now posts directly into your Slack channels the moment it completes a code review.
+ These aren't generic "LGTM" alerts — they include Optibot's high-context, high-quality comments built from full-file understanding and repo-level awareness.
+ Developer Productivity Insights (Live)
+ Get notified when your team's engineering performance improves.
+ Optibot will alert you when key metrics move — especially cycle-time reductions — so you can see productivity wins as they happen.
+ Seamless Setup
+ Connect your Slack workspace and GitHub org in minutes.
+ Once connected, Optibot automatically streams insights, reviews, and improvements into your chosen channels.
+ Why This Matters
+ Engineering leaders get instant visibility.
+ Developers stay in flow.
+ And your team sees the impact of improvements in real time, without digging through dashboards.
+
+Head to Integrations → Slack inside Optimal AI to connect your workspace.
+
+Previous
+ Automatic Reviews on New Commits 
+Next
+ Shorter Summaries. Better Comments. Cleaner CI in Optibot 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

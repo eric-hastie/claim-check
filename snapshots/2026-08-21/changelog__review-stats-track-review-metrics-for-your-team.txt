@@ -1,0 +1,80 @@
+SOURCE: https://getoptimal.ai/changelog/review-stats-track-review-metrics-for-your-team
+TITLE: Review Stats: Track Review Metrics for Your Team
+CLASS: changelog
+
+All changelog entries
+
+ New Release June 23, 2026 Insights Analytics Metrics Code Review 
+ Review Stats: Track Review Metrics for Your Team 
+ See how much reviewing your team is doing. Total reviews, per-member breakdowns, top repositories, and a timeline chart — all filterable by date range. 
+
+ See exactly how much reviewing your team is doing
+
+Optibot now ships a dedicated Review Statistics page. It gives you a clear, filterable view of review activity across your organization: who's reviewing, how often, which repositories are getting the most attention, and how that activity has trended over time.
+
+No setup required. If Optibot is already running reviews on your repositories, the data is there.
+
+ What's on the page
+ Summary cards
+
+Three headline numbers sit at the top of the page: Total Reviews in the selected period, Average Reviews per Member , and your Top Repository by review volume. These update instantly when you change the date range.
+
+ Reviews Over Time
+
+A bar chart shows review volume across the selected date range. Granularity adjusts automatically as you widen or narrow the range, shifting from daily to weekly to monthly so the chart stays readable at any scale.
+
+ Reviews by Member
+
+A paginated table breaks down review counts by team member. You can search by name to find a specific engineer, and toggle the sort order on the Reviews column to flip between highest and lowest. The member with the most reviews in the period is highlighted with a "Most Active" label and a rank indicator.
+
+This makes it straightforward to see who's most active and understand how review load is distributed across the team.
+
+ Where to find it
+
+Review Statistics is available under Repo Insights → Review Stats in the left navigation. It's scoped to your organization and respects the same date range filter used across the rest of the Insights section.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Reviews That Learn As You Push 
+Next
+ Auto-Detect Review Instructions 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

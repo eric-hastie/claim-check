@@ -1,0 +1,182 @@
+SOURCE: https://getoptimal.ai/docs/optibot-cli/ci-cd-pipelines
+TITLE: CLI for Agents & CI/CD Pipelines — Optimal Docs
+CLASS: docs
+
+CLI for Agents & CI/CD Pipelines — Optimal Docs 
+ / Docs / Optibot CLI / CLI for agents & CI/CD pipelines 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Using Optibot CLI with CI/CD Pipelines
+
+ The Optibot CLI was created for both use in typical development environments for engineers and for use within CI/CD pipelines and fully autonomous agent environments like Claude Code, Codex, and others.
+
+ Install
+
+ npm install -g @optimalai/optibot 
+
+ Getting API Keys (For Agents & CI/CD)
+
+ API keys ( optk_* ) are long-lived credentials for non-interactive environments such as agentic coders and CI/CD pipelines. Generate them on a dev machine , then store the key in your CI provider’s secrets.
+
+ optibot login opens a browser and will refuse to run inside a CI environment (it detects CI , GITHUB_ACTIONS , GITLAB_CI , and similar). Do the steps below on your local machine, not in the pipeline.
+
+ Recommended: guided setup
+
+ optibot setup ci 
+
+ optibot setup ci walks the whole flow: it logs you in if needed, confirms the active organization (re-scoping your token if you pick a different one), mints a long-lived API key, and prints the export OPTIBOT_API_KEY=... line ready to paste into your CI provider’s secret store. Use --key-name <name> to skip the name prompt, and --non-interactive to error on any missing input instead of prompting (useful in scripts).
+
+ Because API keys are bound to the organization active at creation, run optibot org switch first if you need the key to act as a specific organization.
+
+ Manual alternative
+
+ If you prefer to do it by hand:
+
+ Authenticate via the CLI on your dev machine:
+
+ optibot login 
+
+ Create an API key:
+
+ optibot apikey create ci-github-actions 
+
+ The output includes the key (starts with optk_ ). Copy it immediately — it is only shown once. 
+
+ Set the key as an environment variable:
+
+ export OPTIBOT_API_KEY = optk_your_key_here 
+
+ You can also list and delete your keys directly from the CLI:
+
+ # List all API keys 
+ optibot apikey list 
+
+ # Delete a key by ID 
+ optibot apikey delete KEY_ID 
+
+ Environment Variables
+
+ Variable Description 
+ OPTIBOT_API_KEY Your API token (for automation/CI/CD) 
+ OPTIBOT_API_URL Backend URL (defaults to https://agents.getoptimal.ai ) 
+
+ Usage
+
+ # Review local uncommitted changes 
+ optibot review 
+
+ # Review against the auto-detected base branch (origin/main, origin/master, or origin/develop) 
+ optibot review -b 
+
+ # Review changes against a specific branch 
+ optibot review --branch origin/main 
+
+ # Review an arbitrary diff file 
+ optibot review --diff changes.patch 
+
+ CI/CD Integration
+
+ Setup
+
+ Generate an API key (see above).
+
+ Add it as a repository secret (e.g., OPTIBOT_API_KEY in GitHub → Settings → Secrets).
+
+ Advisory vs blocking reviews
+
+ By default optibot review exits 0 and posts feedback without failing the job — the review is advisory . To make a failing review block the build (and therefore the merge), add --fail-on-issues : the command exits non-zero when the review does not pass. The recipes below are advisory; add the flag to gate.
+
+ optibot review --branch origin/main --fail-on-issues 
+
+ Running Reviews in CI
+
+ Upgrading is safe for existing pipelines. The commands and options in the recipes below are unchanged, so bumping the CLI to v0.7.3 or later needs no edits to your workflow.
+
+ Only outbound HTTPS is required. On runners that block WebSockets you lose the live progress lines, but the review itself completes normally.
+
+ Brief network interruptions do not fail a running review. 
+
+ Set the job timeout with reviews in mind. optibot review waits for the review to finish and gives up after 50 minutes, so allow at least that much for your largest changes.
+
+ Exit codes are gate-ready. With --fail-on-issues , a review that does not pass exits non-zero; errors and timeouts also exit non-zero, so the pipeline can branch on the outcome.
+
+ GitHub Actions
+
+ name : Code Review 
+ on : [ pull_request ] 
+
+ jobs : 
+ review : 
+ runs-on : ubuntu-latest 
+ steps : 
+ - uses : actions/checkout@v4 
+ with : 
+ fetch-depth : 0 
+ - name : Install Optibot CLI 
+ run : npm install -g @optimalai/optibot 
+ - name : Run code review 
+ env : 
+ OPTIBOT_API_KEY : ${{ secrets.OPTIBOT_API_KEY }} 
+ run : optibot review --branch origin/${{ github.base_ref }} 
+
+ GitLab CI
+
+ code-review : 
+ image : node:20 
+ script : 
+ - npm install -g @optimalai/optibot 
+ - optibot review --branch origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME 
+ variables : 
+ OPTIBOT_API_KEY : $OPTIBOT_API_KEY 
+ only : 
+ - merge_requests 
+
+ Security Scans in CI
+
+ The same OPTIBOT_API_KEY also authorizes optibot scan . Run scans non-interactively with --json for machine-readable output, and branch on the stable exit codes ( 0 success, 2 auth, 3 insufficient credits, 4 a scan is already running, 5 not found, 6 invalid request). See Security Scans for the full command group and billing model.
+
+ optibot scan run my-repo --json 
+
+ Review Output
+
+ After each review, the CLI displays:
+
+ Review Summary — general comments about the changes
+
+ File Comments — per-file feedback with line numbers
+
+ Rate limit info — reviews used, remaining quota, and time until reset (color-coded: dim → yellow → red as quota depletes)

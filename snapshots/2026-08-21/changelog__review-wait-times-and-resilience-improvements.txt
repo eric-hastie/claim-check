@@ -1,0 +1,70 @@
+SOURCE: https://getoptimal.ai/changelog/review-wait-times-and-resilience-improvements
+TITLE: Review Wait Times & Resilience Improvements | Optibot
+CLASS: changelog
+
+All changelog entries
+
+ 🛡️ 
+
+ Improvement July 16, 2026 Code Review Reliability Performance DX 
+ Review Wait-Time Estimates & More Resilient Reviews 
+ Optibot now tells you how long a review will take, fails over more reliably when a reviewer hits a rate limit, and detects duplicate code faster on large repos. 
+
+This release focuses on making reviews more predictable and more resilient: clearer wait-time estimates, tougher failover when a reviewer is rate-limited, and faster duplicate-code detection on large repos.
+
+ Improvements
+ Know how long a review will take
+
+Optibot's initial comment on a new pull request now gives you a real estimate, like "usually done in about 2 minutes," based on recent review times, instead of a generic "reviewing..." message. Re-review requests get the same treatment, so you know what to expect before you go get coffee.
+
+ More resilient under provider hiccups
+
+Optibot now automatically fails over to a backup reviewer not just during outages, but also when a reviewer is rate-limited, so your reviews keep completing smoothly instead of stalling. We also fixed an edge case where an interrupted backup review could occasionally post a placeholder comment instead of retrying cleanly.
+
+ Faster duplicate-code detection on large repos
+
+We optimized how duplicate-code detection searches your codebase, so pre-checks run faster and more reliably as your codebase grows.
+
+Previous
+ Jira: Reconnect Instantly, Connect More Reliably 
+Next
+ Jira: Accurate Ticket Detection from Titles and Branches 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

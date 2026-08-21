@@ -1,0 +1,82 @@
+SOURCE: https://getoptimal.ai/changelog/automatic-reviews-on-new-commits
+TITLE: Automatic Reviews on New Commits — Optimal AI Changelog
+
+All changelog entries
+
+ 🔄 
+
+ Improvement December 3, 2025 Auto Review Code Suggestions Quality 
+ Automatic Reviews on New Commits 
+ Optibot 2.3.2 — configure auto re-review on every new push, smarter context-aware code suggestions, and more reliable multi-line comment placement. 
+
+ Optibot Release 2.3.2
+ Features
+ Automatic Reviews on New Commits
+
+You can now configure Optibot to automatically re-review a pull request every time you push new commits. This ensures you get continuous feedback as you develop, not just when the PR is first opened.
+
+ To enable, add autoOnPush: true to the reviews section of your .optibot configuration file:
+ {
+ "reviews": {
+ "auto": true,
+ "autoApprove": true,
+ "autoOnPush": true,
+ "code-generation": true
+ }
+} 
+ Improvements
+ Smarter and More Accurate Code Suggestions
+
+Our code review agent is now much smarter about how it generates suggestions. Our new tool allows Optibot to read the full content of a file to understand its structure, formatting, and context before suggesting a change. This results in code suggestions that seamlessly match your existing coding style.
+
+ More Reliable Comment Placement
+
+We've improved the logic that places comments on your pull requests. Comments that span multiple lines or cover complex changes are now positioned more accurately, ensuring you never miss a valuable piece of feedback.
+
+ Under the Hood Improvements
+ Enhanced System Monitoring: We've added more detailed internal logging to our AI agents. This helps us better monitor performance and troubleshoot issues, ensuring a more stable and reliable service.
+ Security and Dependency Updates: We have updated various dependencies to bolster security and improve performance.
+
+Previous
+ Optibot Release — Cursor Extension Launch 
+Next
+ Optibot + Slack Integration — Real-Time PR Reviews & Productivity Alerts 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

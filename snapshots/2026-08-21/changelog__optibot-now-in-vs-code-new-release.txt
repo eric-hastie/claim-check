@@ -1,0 +1,82 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-now-in-vs-code-new-release
+TITLE: Optibot, Now in VS Code — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 🖥️ 
+
+ New Release November 18, 2025 VS Code Extension IDE 
+ Optibot, Now in VS Code 
+ Optibot is now in the VS Code Marketplace. Fix PR issues with one click — VS Code opens with full file and line context, no copy-paste needed. 
+
+You can now use Agent Optibot directly inside VS Code to fix issues that show up in your GitHub pull requests — without copy-pasting, prompt engineering, or hunting for files.
+
+ What's New
+ Official VS Code extension: Optibot is now available in the Visual Studio Code Marketplace as an editor extension.
+
+ "Solve in VS Code" deep link from GitHub: Every Optibot review comment in GitHub now includes a "Solve in VS Code" link. Click it, and we'll:
+ Open VS Code.
+ Install the Optibot extension (if you don't already have it).
+ Open a chat with full context for that specific issue.
+
+ One-click install from the PR: Engineers don't need to pre-install anything. If the extension isn't present, clicking "Solve in VS Code" on a review comment launches VS Code and prompts installation. Click Install — and you're live.
+
+ Context-aware fixes in your editor: When the extension opens, Optibot loads the exact file, line, and review comment into VS Code's chat. It proposes a fix in-place. You can preview the diff and click "Keep" if it looks good, or edit/undo as needed. Changes are applied directly to your local branch, ready to commit back to the same PR.
+
+ Org-aware login: When engineers sign in from VS Code using "Optibot Login", they're joined to their existing org — so all reviews, settings, and permissions stay consistent.
+
+ Why This Matters
+ Before this extension, fixing issues from Optibot reviews looked like: 
+ Copy the comment → open VS Code → find the file + line → paste into chat → write a prompt → hope you got the context right.
+ Now it's: 
+ Click "Solve in VS Code" → Optibot opens in your editor with full context → review & keep the fix → commit.
+ Faster PR turnaround (no context juggling).
+ Less prompt overhead (Optibot already knows the file, line, and issue).
+ Cleaner workflow (fix, commit, re-review, ship — all from your IDE).
+ Availability
+ VS Code: Live in the Visual Studio Code Marketplace .
+
+Previous
+ Inline GitLab Comments, On-Demand Compliance Checks, and Smarter Re-Reviews 
+Next
+ VS Code Extension Support and GitLab Enhancements 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

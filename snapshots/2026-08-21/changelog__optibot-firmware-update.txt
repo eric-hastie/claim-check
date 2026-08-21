@@ -1,0 +1,100 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-firmware-update
+TITLE: Reviews That Learn As You Push — A Rebuilt Review Engine
+CLASS: changelog
+
+All changelog entries
+
+ New Release June 19, 2026 Code Review Performance AI Reliability 
+ Reviews That Learn As You Push 
+ Push reviews now zero in on your latest commits — faster, more targeted feedback with every push, automatically. 
+
+ The review engine just got a major upgrade
+
+Optibot's review engine got a quiet but significant upgrade. Nothing to configure, no workflow changes. It just works differently now.
+
+Active pull requests used to get noisier with every push. Now they get smarter. The more you iterate, the more focused the feedback becomes, and the cleaner the PR thread stays.
+
+ What changed
+ Each push gets a sharper review
+
+Optibot now brings its full understanding of a pull request to every push. What changes is the focus — zeroing in on what's actually new, without losing sight of what came before.
+
+The result is more precise feedback on your latest changes, without repeating what's already been said. On pull requests with multiple rounds of iteration, the signal gets sharper with each push rather than noisier.
+
+A full review is always one command away. Comment #optibot full review on any pull request to trigger a complete, from-scratch analysis at any time. The existing #optibot review command now runs an incremental review, consistent with the new default.
+
+ Dismiss Findings Outside the Diff
+
+Some of Optibot's most useful observations aren't tied to a specific line. Architectural notes, patterns spotted across the PR, broader code health signals. These often carry real weight. But when one doesn't apply to your situation, there was previously no way to say so. It would persist across every subsequent push.
+
+You can now dismiss these comments with a single click. Once dismissed, a finding is remembered and won't resurface on future reviews. Your PR thread reflects only what's actually relevant.
+
+ Improvements
+ Smarter Issue Tracking Across Pushes
+
+Every review summary now shows the full picture of a pull request, not just what was found in the latest pass. Two new collapsible sections make the state immediately clear: Unresolved blockers from previous reviews and Resolved since last review . Open blockers are linked directly from the summary rather than re-posted as new comments, so the PR thread stays clean and nothing gets buried.
+
+ Automatic Approval When Issues Clear
+
+Fix the blockers, push, and you're done. When autoApprove is enabled, Optibot watches each push against every open blocker and approves the pull request the moment everything is resolved. No manual re-review request, no waiting. The review lifecycle completes itself.
+
+ "Request Changes" for Blocking Reviews
+
+For repositories with autoApprove enabled, you can now opt in to formal "Request Changes" submissions on GitHub. When a review finds blocking issues, Optibot submits the review as a GitHub change request rather than a plain comment. This pairs cleanly with branch protection rules to prevent merging until every blocker is resolved and the review is approved.
+
+ Reviews You Can Always Trust
+
+Force-pushes and rebases rewrite history. When Optibot detects either, it automatically runs a full review to ensure nothing gets missed. You always get complete coverage, regardless of how the branch evolved.
+
+If you push while a review is already running, Optibot waits for the right moment before starting the next one. The feedback you receive always reflects your latest commit, never an intermediate state.
+
+ Under the Hood
+ Clearer blocker labels: Every finding now clearly signals whether it's a blocker or not, along with a brief explanation when it's safe to merge. Less follow-up, more context, right where you need it.
+
+ More resilient reviews: The review engine is now more robust against transient failures. If something goes wrong under the hood, the system recovers and completes the review without any interruption on your end.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Review Memory: Shared Knowledge & Smarter Suggestions 
+Next
+ Review Stats: Track Review Metrics for Your Team 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

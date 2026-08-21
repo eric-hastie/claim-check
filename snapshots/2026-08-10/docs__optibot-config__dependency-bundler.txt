@@ -1,0 +1,87 @@
+SOURCE: https://getoptimal.ai/docs/optibot-config/dependency-bundler
+TITLE: Dependency Bundler Configuration — Optimal Docs
+
+Dependency Bundler Configuration — Optimal Docs 
+ / Docs / Optibot Config / Dependency bundler 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Enabling the Optibot Dependency Bundler
+
+ The Dependency Bundler setting controls automated consolidation of Dependabot pull requests. Access it from your Optibot dashboard at agents.getoptimal.ai → Configuration tab → Dependency Bundler section .
+
+ ⚠️ GitHub only. The Dependency Bundler requires Dependabot and works with GitHub repositories only. It is not available for GitLab.
+
+ Enable Dependency Bundler
+
+ Setting: Enabled | Type: boolean | Default: Off
+
+ When turned on, Optibot analyzes your pending Dependabot PRs and consolidates compatible updates into a single PR. Instead of reviewing and merging dozens of individual dependency update PRs, your team gets one clean PR with a summary of what changed and any breaking updates flagged separately.
+
+ When to use: 
+
+ Enable for projects with frequent dependency updates where Dependabot generates high PR volume
+
+ Useful for teams who want to reduce the noise and overhead of managing individual dependency PRs one by one
+
+ Helps keep your dependency management process from becoming a bottleneck
+
+ What the Dependency Bundler Does
+
+ When enabled, Optibot:
+
+ Monitors pending Dependabot PRs on the repository
+
+ Analyzes which updates are compatible and safe to bundle together
+
+ Consolidates compatible updates into a single PR with a clean summary of all changes
+
+ Flags any breaking changes or updates that should be reviewed and merged separately
+
+ Reduces the number of open dependency PRs your team needs to manage at any given time
+
+ Requirements
+
+ Dependabot must be enabled on the repository
+
+ The repository must be connected to Optibot via the GitHub integration
+
+ Optibot must have read/write permissions on pull requests (granted during GitHub App installation)
+
+ GitLab Users
+
+ This feature is not available for GitLab repositories. The Dependency Bundler is specific to GitHub and requires Dependabot. If you are on GitLab, leave this setting off — it will have no effect.
+
+ Note: Settings are per-repository. Optibot will begin analyzing pending Dependabot PRs on the next cycle once enabled.

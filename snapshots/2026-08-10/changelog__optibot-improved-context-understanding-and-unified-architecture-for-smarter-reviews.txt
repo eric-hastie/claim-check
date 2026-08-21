@@ -1,0 +1,97 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-improved-context-understanding-and-unified-architecture-for-smarter-reviews
+TITLE: Optibot Unified Architecture Update — Optimal AI Changelog
+
+All changelog entries
+
+ 🧠 
+
+ Improvement November 5, 2025 Architecture Context AI Models 
+ Optibot Unified Architecture Update 
+ Acadia V2.2.7 — unified agent with full codebase context, Q&A in review threads, next-gen AI models, and editor-native deeplinks for VS Code and Cursor. 
+
+ Optibot — V2.2.7 Acadia Release Notes
+
+The Acadia release unifies Optibot's architecture into a single intelligent agent, elevates review quality, and makes context navigation seamless through editor-native integrations. Your AI reviewer just got a whole lot smarter.
+
+ Major Improvements
+ Fewer, Better Comments
+
+Remember when Optibot would flag your import order while missing the SQL injection? We fixed that. Optibot now laser-focuses on what actually matters — like payment bugs, missing auth checks, or subtle API changes that could break production.
+
+ Smarter Context Understanding
+
+Optibot now explores your entire codebase using our upgraded code search engine. It finds patterns, reads relevant files, and understands how a "one-line change" impacts other services.
+
+ Natural Conversations
+ Ask it questions. It gets it.
+ "Why did you flag this?"
+ "Can you explain the security risk?"
+ "What's the alternative approach?"
+
+Optibot now maintains relevant context — review threads stay focused and untainted by previous sessions.
+
+ Why This Architecture?
+
+We reimagined how Optibot thinks. The old multi-agent setup was like having five specialists with fragmented context — one for reviews, one for summaries, one for questions. That led to inconsistent feedback and missed insights.
+
+Now, Optibot operates as a unified agent that reviews holistically. It plans its review strategy, gathers the context it needs, and reasons like a great engineer would:
+
+ Less "technically you could…"
+ More "this will break in production because…"
+ Under the Hood
+ Next-Generation AI Agent: A more powerful and autonomous architecture for deeper reasoning and accuracy.
+ Advanced Comment Validation: Every review comment now lands precisely on the correct line — no more misplaced suggestions.
+ Upgraded AI Models: Latest generation models bring faster, sharper, and more context-aware analysis.
+ Dependency Updates: Platform-wide upgrades to improve stability, security, and performance.
+ Coming Soon
+ VS Code & Cursor Integration
+
+You can now connect your favorite editor directly to Optibot. A new authentication flow makes linking your account effortless — enabling a seamless workflow between your IDE and code reviews.
+
+ "Solve it in Editor" Links
+
+Getting feedback is good — acting on it should be effortless. Review comments will soon include handy vscode and cursor links. A single click opens the exact file and line in your editor with full context, so you can jump right into making improvements.
+
+Previous
+ GitLab Integration and Faster Code Review Performance 
+Next
+ Individual vs. Team Comparison Now Live in Insights 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

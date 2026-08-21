@@ -1,0 +1,104 @@
+SOURCE: https://getoptimal.ai/case-studies
+TITLE: Case Studies — Optimal AI
+
+Product Core Platform
+ AI Code Reviews Engineering Insights Deployment Frequency How It Works AI Agents
+ AppSec Agent CI Fixer Agent Dependency Bundler 
+ Resources Learn
+ Changelog Docs Blog Case Studies Tools
+ Integrations Comparisons LLM Token Calculator Claude Code Review Calculator Bugbot Cost Calculator Contact Us 
+
+Security
+ Careers 
+We're hiring
+
+Login
+
+Get Started - Free
+
+Get a Demo
+
+ Optimal AI Case Studies
+
+Helping optimize code reviews and engineering productivity at:
+
+Trusted by world-class engineering teams building with AI.
+
+ MongoDB x Optimal AI
+ How MongoDB Cut PR Size by ~50% and Improved PR Cycle Time with Optimal AI
+
+Read Case Study ›
+
+ Dapta x Optimal AI
+ How Dapta, a Voice AI Company, 10×'d Their PR Velocity Using Optibot
+
+Read Case Study ›
+
+ Prometric x Optimal AI
+ How Prometric Saved Weeks of Manual Reporting Time With Real-Time Engineering Insights in Optimal AI
+
+Read Case Study ›
+
+ Soraban 
+
+ Soraban x Optimal AI
+ How Soraban Reclaimed 2+ Hours Weekly and Blocked 5 Monthly Vulnerabilities using Optibot
+
+Read Case Study ›
+
+ Prado x Optimal AI
+ How Prado 5×'d Deploys and Cut Review Time by 30% Using Optibot + Insights
+
+Read Case Study ›
+
+ Artemis Ops x Optimal AI
+ How Artemis Ops Cut Review Time by 20% with a Lean Team Using Optibot
+
+Read Case Study ›
+
+ Nearfleet 
+
+ Nearfleet x Optimal AI
+ How Nearfleet Slashed PR Cycle Times by 75% and Reclaimed 30 Hours a Week Using Optibot
+
+Read Case Study ›
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

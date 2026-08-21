@@ -1,0 +1,170 @@
+SOURCE: https://getoptimal.ai/case-studies/prado
+TITLE: Prado — 5× More Deploys with AI Code Reviews | Optimal
+
+Prado had built a reputation for helping food and meal-prep brands deliver high-quality subscription
+ experiences at scale. But behind the scenes, their engineering team was struggling with a familiar
+ problem: velocity.
+
+Manual code reviews , unpredictable deploys, and a lack of visibility into team performance slowed
+ development to a crawl. By adopting both Optibot and Insights, Prado transformed code review from
+ a bottleneck into a superpower — shipping five, six times a day, safely.
+
+ The Problem 
+
+Manual Review Bottlenecks and Limited Visibility Slowed Delivery
+
+As Prado's customer base expanded, so did its codebase. The number of pull requests climbed, but
+ the review process couldn't keep up. "We were releasing to production once a day — sometimes only
+ two or three times a week," recalls Grainger Blackett, CTO.
+
+ Large PRs piled up — nobody wanted to touch them, leading to long pickup times and unpredictable release windows
+
+ Deployments lagged , creating tension between speed and safety
+
+ Team metrics were murky , making it difficult to see which processes actually drove performance
+
+"Our feedback loops weren't scaling with the company. We needed a system that could keep up with how fast we were moving."
+
+ Grainger Blackett
+ CTO, Prado
+
+ The Solution 
+
+AI-Powered Reviews and Real-Time Engineering Insights
+
+Prado adopted both Optibot — the AI code review agent — and Insights, the engineering analytics
+ platform. Together they eliminated idle review time and replaced guesswork with measurable performance data.
+
+ Instant first-pass reviews
+ Optibot reviews every PR automatically within seconds — flagging risky logic, suggesting improvements, and linking changes back to Jira/GitLab issues for full context.
+
+ A new quality standard
+ The team's rule became: Optibot reviews every PR first. Engineers resolve its feedback before any human reviewer touches it — keeping merges clean and reducing noise.
+
+ Real-time pipeline visibility
+ Insights tracks cycle time, review duration, deployment frequency by environment, and PR activity trends — turning gut feel into measurable data.
+
+ Senior engineer equivalent coverage
+ The first time Optibot caught a pagination edge case with a clean, detailed fix, it clicked: "It felt like having another senior engineer on the team."
+
+"Our new standard is simple: Optibot reviews every PR. You resolve its feedback before anyone else touches it. That change alone sped us up dramatically."
+
+ Grainger Blackett
+ CTO, Prado
+
+ The Results 
+
+5–6× Daily Deploys, 30% Faster PR Cycles, and Safer Releases
+
+The impact was immediate. With Optibot handling first-pass reviews and Insights providing real-time
+ visibility, Prado's team saw measurable gains across speed, quality, and confidence:
+
+ Staging deployments increased from 1–2 per day to 5–6 per day — a 5× improvement
+ Average PR cycle time dropped ~30% across all contributors, including the CTO
+ Every PR received an immediate review, eliminating idle time and ensuring code safety
+ Cleaner merges and fewer regressions — engineers resolve Optibot's feedback before human review
+ Optibot's recommendations became part of the team's daily rhythm — fully adopted
+
+"I still contribute code myself, and even my cycle time dropped by about 30%. It's like we added a full-time senior engineer dedicated to reviews."
+
+ Grainger Blackett
+ CTO, Prado
+
+"I feel safer knowing every PR has that extra layer of review. If you're trying to speed up to keep up, you need Optibot."
+
+ Grainger Blackett
+ CTO, Prado
+
+ The Impact in Numbers
+
+Before and after metrics for Prado's team using Optimal AI
+
+Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before
+
+ After
+
+ Improvement
+
+ Staging Deploys
+
+ 1–2 per day
+
+ 5–6 per day
+
+ 5× increase 
+
+ PR Cycle Time
+
+ Slow; long pickup times on large PRs
+
+ 30% faster across all contributors
+
+ 30% improvement 
+
+ Code Review Coverage
+
+ Partial; dependent on human availability
+
+ 100% — every PR reviewed instantly via Optibot
+
+ Full coverage 
+
+ Engineering Visibility
+
+ No real-time metrics; murky team performance data
+
+ Automated via Insights — cycle time, deploy freq, PR trends
+
+ Real-time clarity 
+
+ Release Confidence
+
+ Tension between speed and safety
+
+ Every PR has AI review layer; team ships faster and safer
+
+ Safer, faster releases 
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

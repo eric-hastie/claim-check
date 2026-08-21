@@ -1,0 +1,121 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/gitlab-integration
+TITLE: GitLab Integration Setup — Optimal Docs
+
+GitLab Integration Setup — Optimal Docs 
+ / Docs / Agentic Code Reviews / GitLab integration setup 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ GitLab Integration
+
+ Enable Optibot to analyze your GitLab repositories, automate code reviews, and generate contextual summaries.
+
+ Setup time: ~12–15 minutes
+
+ Required permissions: Maintainer or Admin on the GitLab group or repository.
+
+ Sign Up and Access the Integration Page
+
+ Go to the Optimal AI signup page .
+
+ Select “Sign Up with GitLab.” 
+
+ Complete your account details and verify your email address.
+
+ After verification, you’ll be redirected to the GitLab Integration Setup page.
+
+ Create a GitLab Access Token
+
+ Optibot requires a GitLab Access Token from a bot or service account with specific permissions to interact with your repositories.
+
+ Steps
+
+ In GitLab, navigate to your group or repository’s Settings → Access Tokens . (Group tokens are recommended for multi-repository installations.)
+
+ Click “Add new token.” 
+
+ Enter a Token name, e.g., Optibot-code-review or Optibot Reviewer .
+
+ Add a short description, and set the expiration date to the maximum allowed.
+
+ Assign the role as Maintainer .
+
+ Under Scopes, select all of the following:
+
+ api — Full API access
+
+ read_repository — Clone and read repositories
+
+ write_repository — Create merge request comments
+
+ read_user — Access user information
+
+ Continue Your Setup on Optimal
+
+ If you’re on a self-hosted instance, replace your URL from gitlab.com to your self-hosted domain.
+
+ Insert your GitLab token in the field provided.
+
+ Grab your Bot/User ID from the Admin page at gitlab.com/admin/users (or your GitLab URL /admin/users ).
+
+ Click “Connect GitLab” .
+
+ You’ll be taken to a screen to select your repos. Select the repos you want Optibot installed on — this will create webhooks automatically.
+
+ Your install of Optibot is finished. Manage it from agents.getoptimal.ai/dashboard/gitlab-integration .
+
+ Verify Installation
+
+ Once setup completes:
+
+ Optibot will begin analyzing merge requests automatically.
+
+ Confirm installation by checking your GitLab Repository → Settings → Webhooks . There should be an entry for agents.getoptimal.ai .
+
+ Optibot Features on GitLab
+
+ Once integrated, Optibot enables:
+
+ 🧠 Automated Code Reviews — Reviews each new merge request and provides detailed feedback directly in GitLab comments.
+
+ 🧾 AI-Generated Summaries — Generates structured summaries and line-by-line breakdowns of code changes for every MR.
+
+ ⚙️ Contextual Recommendations — Highlights potential issues, security concerns, or missing documentation based on code patterns.
+
+ 🔗 Cross-Tool Integration — Works seamlessly with Jira, Bitbucket, and other tools for compliance and reporting.
+
+ For additional configuration options, visit the Advanced Configuration page .
+
+ ✅ Your Optibot GitLab integration is now complete. Monitor and manage your integrations at: agents.getoptimal.ai/dashboard/gitlab-integration

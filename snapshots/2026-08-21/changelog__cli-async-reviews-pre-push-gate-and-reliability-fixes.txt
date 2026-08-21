@@ -1,0 +1,94 @@
+SOURCE: https://getoptimal.ai/changelog/cli-async-reviews-pre-push-gate-and-reliability-fixes
+TITLE: CLI: Async Reviews & Pre-Push Gate — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ New Release July 5, 2026 CLI Code Review DX Reliability 
+ CLI: Async Reviews & Pre-Push Gate 
+ Optibot CLI reviews now queue asynchronously with no blocked connections. Use --fail-on-issues to gate pushes pre-flight, plus async reliability fixes. 
+
+ What changed
+
+This release ships three improvements to the CLI and API review experience, driven by a significant increase in review load. Reviews are now fully asynchronous, a new pre-push gate gives you a last line of defense before code ships, and the reliability of high-traffic async review jobs has been hardened across the board.
+
+ Update required to use these features. Run npm install -g @optimalai/optibot@latest to get v0.7.3.
+ View the package on npm .
+
+ New Features
+ Async reviews: no more waiting
+
+Reviews now run in the background. Kick one off and keep working. You'll pick up the result when it's ready instead of waiting for the agent to finish before you can move on.
+
+ Pre-push code review gate: --fail-on-issues 
+
+The review API now surfaces a pass/fail signal alongside review comments. The CLI's new --fail-on-issues flag uses this signal to block a push when the review does not pass, giving you a final check before code leaves your machine.
+
+ optibot review --branch --fail-on-issues 
+ Wire it up as a pre-push git hook to automatically gate every push.
+ The gate fails open if the CLI is not installed or the flag is absent, so existing workflows are unaffected.
+ A bypass environment variable is available for CI environments where the gate should not run.
+ Reliability Improvements
+ Pre-push gate works with async reviews
+
+The pass/fail signal is now included in async review results, so --fail-on-issues correctly blocks a push regardless of whether the review ran synchronously or in the background.
+
+ Accurate usage counts under load
+
+Under high review volume, some reviews were not counted correctly in your usage stats. This is now fixed so your numbers stay accurate.
+
+ Failed reviews surface immediately
+
+If a review failed to start, it previously appeared to be pending and never resolved. It now surfaces as a clear error straight away so you can retry without waiting.
+
+ Quota data consistent across all reviews
+
+Your remaining review quota is now included in async results, matching what synchronous reviews already returned.
+
+ Keep your CLI up to date
+
+We recommend staying on the latest version to get reliability fixes and new features as they ship. v0.7.3 is the minimum version for async reviews and the pre-push gate.
+
+Previous
+ Optibot Now Catches Duplicate Code Before It Ships 
+Next
+ Jira: Reconnect Instantly, Connect More Reliably 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

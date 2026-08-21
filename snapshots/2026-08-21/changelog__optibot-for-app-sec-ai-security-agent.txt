@@ -1,0 +1,84 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-for-app-sec-ai-security-agent
+TITLE: Optibot for AppSec — Security Agent — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 🔐 
+
+ New Release March 30, 2026 Security AI Agent AppSec 
+ Optibot for AppSec — Security Agent 
+ Optibot's AI Security Agent scans repositories for CVE/CWE vulnerabilities with scheduled scans, real-time progress tracking, and no configuration needed. 
+
+ Summary
+
+This release introduces our brand new AI Security Agent, providing enhanced control and insight into your code's security posture. Optibot has achieved high benchmarks in identifying CVEs and CWEs in open source repositories. Each of Optibot's security findings is supported by evidence and adheres to the Mitre ATT&CK and CVE.org databases, enabling the identification of current application security issues in your code.
+
+The agent can detect attack surfaces that are often overlooked by SAST scanners such as Snyk and SonarCube. For instance, we identified a total of 11 findings (4 high, 5 medium, and 2 low) in the Pi-mono repository, which serves as the underlying dependency for Open Claw.
+
+ New Features
+ AI-Powered Security Agent
+ Our new Security Agent automatically scans your repositories for security vulnerabilities, utilizing advanced AI to understand your code's context and identify potential exploits.
+ Manual & Scheduled Scans: Perform a scan on-demand or configure a recurring schedule (daily, weekly, monthly, or custom) for continuous project monitoring.
+ Three Quality Tiers: Choose between Low Cost, Balanced, and Best Quality AI model tiers to find the right balance of speed and thoroughness for each scan.
+ GitHub & GitLab Integration: Optionally, the agent can automatically create a detailed issue in your repository with all its findings, facilitating tracking and remediation.
+ Real-Time Progress: Monitor the agent's progress in real-time directly within the user interface.
+ Flexible AI Credits System
+ We are introducing a new prepaid AI Credits system to support the Security Agent and future AI features, providing your organization with a flexible budget for consumption-based features.
+ Top Up Anytime: Organization owners can easily add credits to the organization's shared balance via the Billing settings page.
+ Clear & Transparent Balance: Your current AI Credit balance is always visible in both your organization's Billing settings and on the Security Agent page.
+ Improvements
+ Unified Payment History
+ The Billing page now includes a unified payment history, allowing you to view both regular subscription payments and AI Credit purchases in a single, easy-to-navigate list.
+ Proactive Billing Notifications: Receive new email notifications to help you stay informed about your credit usage, including alerts when your balance is low, when a scheduled scan is approaching, or if a scan was skipped due to insufficient credits.
+ Enhanced Organization Management
+ Organization owners can now promote other members to owner status, sharing responsibility for managing billing, seats, and settings. Owners can also be demoted back to members if necessary.
+ Improved Dependabot Analysis
+ Our Dependabot integration has been enhanced to detect when a dependency update includes a license change, automatically adding a license-change label to the pull request for improved visibility into your software supply chain.
+ Bug Fixes
+ API Key Creation for Organization Owners
+ An issue where organization owners could not create API keys without explicitly assigning themselves a seat has been resolved. Owners now have the ability to create API keys by default.
+ Under the Hood Improvements
+ Several core platform components have been updated to enhance performance, reliability, and the speed of future development.
+
+Previous
+ Optibot Claude Code Skill — Code Reviews Built Into Claude Code 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

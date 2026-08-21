@@ -1,0 +1,86 @@
+SOURCE: https://getoptimal.ai/integrations
+TITLE: Integrations — Optimal AI
+
+Integrations 
+
+Optibot, where your team already works.
+
+Native integrations for the platforms engineering teams use every day. Install once, no workflow changes, no CI pipeline edits.
+
+ GitHub
+ Native GitHub App. Inline PR reviews, full codebase context, CI failure detection, and SOC 2 compliance scanning.
+
+View integration
+
+ GitLab
+ Self-managed and cloud GitLab support. Merge-request reviews, inline comments, and pipeline-aware feedback.
+
+View integration
+
+ VS Code
+ Real-time code reviews inside your editor. AI suggestions, inline annotations, and one-click fixes as you code.
+
+View integration
+
+ Cursor
+ Fix GitHub review comments inside Cursor. One click opens the exact file and line with a ready-to-apply fix — no prompting required.
+
+View integration
+
+ Jira
+ Jira Cloud and self-hosted. Spec-vs-code alignment checks in PR reviews, plus sprint health, story points, and issue-to-PR traceability in Insights.
+
+View integration
+
+ Slack
+ OAuth-based Slack integration. Real-time PR review notifications and weekly impact reports delivered to the channel your team already uses.
+
+View integration
+
+ Claude Code
+ Native Claude Code skill. Multi-pass reviews with full codebase context, inline fix suggestions, and natural-language review commands — all inside your terminal session.
+
+View integration
+
+ MCP Server
+ One npm install for Claude Desktop, Cursor, Windsurf, Claude Code, and any MCP-compatible client. Natural language review triggers. CI/CD compatible.
+
+View integration
+
+ More integrations soon
+
+Bitbucket, Azure DevOps, and more are in active development. Need a specific integration? Let us know. 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,186 @@
+SOURCE: https://getoptimal.ai/shallow-vs-deep-code-reviews
+TITLE: Deep vs Shallow AI Code Reviews: What's the Difference?
+
+Build vs. Buy — Review Agent Strategy 
+
+Shallow reviews create noise. Deep reviews reduce cycle time.
+
+The hidden cost of building your own review agent — and why most teams pay more for less.
+
+SEE OPTIBOT IN ACTION
+
+GET STARTED FREE
+
+ +43%
+ More edge cases caught vs. shallow review agents
+
+ −32%
+ Faster cycle times on average
+
+ $0
+ Additional token cost per review, no matter the PR size
+
+ The core tradeoff 
+ What are you actually comparing when choosing between in-house agents and Optibot?
+
+You're comparing hidden costs, review quality, and long-term maintenance — not just upfront setup. In-house agents look free. They aren't. Here's what both approaches actually deliver.
+
+ In-House Agents
+ Claude Code, Cursor, local CLI runners
+
+ Shallow, diff-only reviews — misses cross-file dependencies and architecture
+
+ Runs locally — reviews are invisible to managers, no GitHub visibility or accountability
+
+ Consumes session limits — burns Claude Code tokens your engineers need for coding
+
+ Drifts over time as codebase grows — maintenance becomes a real engineering burden
+
+ Usage-based pricing means costs scale with PR volume — deep reviews get expensive fast
+
+VS
+
+ Optibot
+ Full codebase context. GitHub-native. Flat cost.
+
+ Deep, code-aware reviews with full multi-repo codebase context — not just the diff
+
+ GitHub-native — reviews posted inline, teams collaborate, managers see everything
+
+ Zero session limit impact — Optibot runs independently, keeps Claude Code for coding
+
+ Maintains fresh codebase context on every push — no drift, no maintenance overhead
+
+ Fixed, predictable cost — unlimited reviews regardless of PR volume or codebase size
+
+ The full argument 
+ Why don't shallow code reviews scale?
+
+They don't scale because they only inspect diffs, miss cross-file dependencies, and drift as the codebase grows. Seven reasons the "build it yourself" approach costs more than it saves.
+
+ 01 
+ Shallow reviews ≠ real code review
+ Diff-only agents look at the surface. They miss cross-file dependencies, architectural regressions, and patterns that only make sense with full codebase context. High noise, low signal — engineers start tuning out the reviews entirely.
+ Only look at diffs or single files — miss architecture 
+
+ 02 
+ Deep reviews require full codebase context
+ Catching real edge cases and architectural issues requires indexing your entire codebase, not just the changed lines. That's expensive to build, expensive to maintain, and token-heavy to run at scale.
+ Optibot maintains this context automatically on every push 
+
+ 03 
+ No visibility, no accountability
+ Local and CLI-based review agents run silently. Managers can't see what bugs were caught. Teams can't collaborate on review comments. There's no audit trail and no way to measure impact — making it impossible to justify the investment.
+ Optibot posts reviews inline on GitHub — visible to everyone 
+
+ 04 
+ Codebases are moving targets
+ Your codebase doubles in size. New patterns emerge. Services get renamed. An in-house agent built six months ago now misses critical context. Keeping it current requires ongoing engineering time — the hidden maintenance tax nobody accounts for at the start.
+ Optibot re-indexes on every push — zero drift 
+
+ 05 
+ Review agents compete for session limits
+ Anthropic is moving toward usage-based pricing. When your engineers run deep reviews through Claude Code, those tokens come out of the same session budget they need for writing and debugging. You're forcing a tradeoff between review quality and coding speed.
+ Optibot is fully separate — preserves your Claude Code limits 
+
+ 06 
+ The cost trajectory of "free" agents
+ Usage-based model pricing is going up, not down. Deep reviews today cost significantly more in tokens than six months ago. An in-house approach that looks cost-effective at 10 PRs/week looks very different at 100. Optibot is flat cost, regardless of volume.
+ Unlimited reviews. Predictable monthly cost. No tradeoffs. 
+
+ 07 
+ Catches edge cases
+ Critical bugs that diff-only reviews would never surface — caught before they reach production.
+
+ Reduces cycle time
+ Reviews happen instantly on every PR. No waiting on a human to get to it, no back-and-forth noise.
+
+ Enforces guidelines
+ Repo-specific rules, security standards, and coding patterns enforced automatically — no manual checklists.
+
+ True cost analysis 
+ What does it really cost to build vs. buy a code review agent?
+
+Building an in-house agent costs engineering time, ongoing maintenance, and variable token spend, while Optibot delivers predictable flat pricing and full GitHub-native reviews. The hidden costs of in-house agents add up fast. Optibot is the only option with a predictable number.
+
+ In-House Agent
+ The "free" option
+
+ Token cost per deep review $0.80–$4.00+ 
+ Engineering time to build 2–4 weeks 
+ Ongoing maintenance Constant 
+ GitHub visibility None 
+ Session limit impact High 
+ Cost trajectory Increases with PRs 
+
+ Optibot
+ Predictable cost. No tradeoffs.
+
+ Token cost per review Included 
+ Engineering time to set up < 10 minutes 
+ Ongoing maintenance Zero 
+ GitHub visibility Full — inline comments 
+ Session limit impact None 
+ Cost trajectory Flat, regardless of volume 
+
+ Frequently Asked Questions
+
+ What is the difference between shallow and deep code reviews? Shallow reviews only analyze the code diff or single files, missing cross-file dependencies, architectural issues, and codebase-wide patterns. Deep reviews use full codebase context to catch edge cases, security vulnerabilities, and design problems that shallow approaches would never surface.
+
+ Why do in-house review agents become expensive over time? In-house agents require ongoing engineering maintenance as your codebase grows, consume Claude Code session limits that developers need for coding, and have usage-based token costs that scale with PR volume. Optibot eliminates these costs with zero maintenance and flat pricing.
+
+ How much does Optibot cost compared to building in-house? Optibot offers predictable flat pricing regardless of PR volume or codebase size, while in-house agents can cost $0.80–$4.00+ per deep review in tokens plus 2–4 weeks of engineering time to build and constant maintenance. Optibot includes unlimited reviews with no additional token costs.
+
+ Can I see Optibot reviews in GitHub? Yes, Optibot posts reviews directly as inline comments on GitHub pull requests, making them visible to your entire team and managers. This creates accountability, enables collaboration, and provides an audit trail that local CLI agents cannot offer.
+
+ How does Optibot maintain fresh codebase context? Optibot automatically re-indexes your entire codebase on every push, ensuring it always has current context about your architecture, patterns, and dependencies. This prevents the drift that affects in-house agents as codebases evolve.
+
+ Does Optibot impact my Claude Code session limits? No, Optibot runs independently of Claude Code and doesn't consume your session limits. Your developers can continue using Claude Code for coding and debugging without worrying about review costs eating into their token budget.
+
+ How quickly can I switch from in-house reviews to Optibot? Setup takes less than 10 minutes — just connect your GitHub repository and configure your preferences. Optibot starts delivering deep reviews immediately, with no migration period or engineering time required.
+
+ What if my codebase has specific review requirements? Optibot adapts to your team's standards and can be configured with custom rules, security policies, and coding guidelines. It learns from your existing codebase patterns and enforces them automatically across all reviews.
+
+ // stop the leak
+
+Stop paying the hidden tax on shallow reviews. 
+
+Optibot delivers deep, full codebase reviews at a fixed cost — with GitHub visibility, zero maintenance, and no session limit trade-offs.
+
+GET A DEMO
+
+START FOR FREE
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

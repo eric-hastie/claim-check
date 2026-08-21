@@ -1,0 +1,172 @@
+SOURCE: https://getoptimal.ai/case-studies/artemis-ops
+TITLE: Artemis Ops — AI Code Reviews Cut Review Time 20% | Optimal
+
+Artemis Ops builds software for the construction industry — automating compliance paperwork and
+ workflow tracking for operators who don't have time for friction. The product was scaling; the
+ engineering team was small. The bottleneck wasn't ideas. It was reviews.
+
+By adopting Optibot as their AI code review agent, Artemis Ops eliminated review bottlenecks,
+ cut their overall development cycle by 20%, and made every engineer stronger — without adding headcount.
+
+ The Problem 
+
+Big PRs, Context Switching, and Reviewer Availability Slowed Everything Down
+
+Artemis Ops tracked work in Notion and paired tickets with PRs. When code was "ready," it moved
+ to review — where velocity stalled. PRs often ballooned to thousands of lines, and the review
+ process couldn't keep up.
+
+ Large, high-context PRs demanded deep, line-by-line attention — pulling engineers off their own work
+
+ Reviewer availability created gaps — when the second engineer wasn't free, progress froze entirely
+
+ Manual cross-linking between GitHub PRs and Notion tickets created extra clicks and review fatigue
+
+"Some PRs were thousands of lines. We'd read through every single change. It took forever and pulled people off their own work."
+
+ Sam Lee
+ CEO & Co-Founder, Artemis Ops
+
+The result: slower ticket turnaround, inconsistent review quality, and a team spending more time
+ inspecting code than shipping improvements.
+
+ The Solution 
+
+Optibot: AI Reviews, Auto-Summaries, and GitHub ↔ Notion Sync
+
+Artemis Ops adopted Optibot to front-load signal and reduce human drag. Setup took minutes over Slack,
+ and the team was reviewing with AI on day one.
+
+ Auto review on every PR
+ Optibot scans diffs immediately and flags the highest-risk changes first — so humans skim smarter, not harder.
+
+ Critical issue highlighting
+ Big, structural concerns surfaced in seconds. "The really big PRs have been great — it just highlights the six things we need to change."
+
+ Auto-summaries of changes
+ Clear overviews of what changed and why reduce "where do I start?" time and keep reviewers focused.
+
+ GitHub ↔ Notion sync
+ Optibot's PR comments flow directly into Notion tickets — no extra tab-hopping, no manual context copying.
+
+"Optibot identifies big changes that could be a problem faster than we would. We still skim, but we rely on it to highlight the big issues or inefficiencies."
+
+ Sam Lee
+ CEO & Co-Founder, Artemis Ops
+
+ The Results 
+
+20% Faster Process, Fewer Interruptions, and Stronger Engineers
+
+With Optibot handling first-pass review and pushing context into Notion, Artemis Ops saw measurable
+ impact across their entire workflow:
+
+ 20% faster overall development cycle — review, ticket flow, and merges
+ Zero review bottlenecks — Optibot reviews every PR instantly, with or without a second engineer
+ Fewer pull-offs — engineers are interrupted less to review others' work
+ Faster ticket turnaround — PR comments sync automatically into Notion
+ Better engineers — Optibot's feedback on redundancy and inefficient patterns raised the team's bar
+
+"Having a system that can auto review was crucial for a small team. The onboarding was so smooth — done over Slack — and everyone said, 'Wait, that's so cool.'"
+
+ Sam Lee
+ CEO & Co-Founder, Artemis Ops
+
+"Not only is Optibot doing the work for us, it's making us stronger engineers too."
+
+ Sam Lee
+ CEO & Co-Founder, Artemis Ops
+
+ The Impact in Numbers
+
+Before and after metrics for Artemis Ops's team using Optimal AI
+
+Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before
+
+ After
+
+ Improvement
+
+ Overall Process Speed
+
+ Baseline — slow review and ticket flow
+
+ 20% faster across review, ticket turnaround, and merges
+
+ 20% improvement 
+
+ Large PR Review Flow
+
+ Line-by-line reading for thousands-of-line diffs
+
+ AI highlights critical issues first; humans skim smarter
+
+ Less reviewer time 
+
+ Reviewer Availability
+
+ Blocked when second engineer unavailable
+
+ Automatic review on every PR, any time
+
+ Consistent coverage 
+
+ Ticket Turnaround
+
+ Manual cross-linking GitHub ↔ Notion
+
+ PR comments auto-sync to Notion tickets
+
+ Faster tickets 
+
+ Onboarding
+
+ N/A
+
+ Slack-based setup, live on day one
+
+ Same-day time-to-value 
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,87 @@
+SOURCE: https://getoptimal.ai/security
+TITLE: Security — Building and Scaling with Trust | Optimal AI
+CLASS: security
+
+SOC 2 Type II Certified
+
+Building and Scaling
+with Trust
+
+Optimal AI is SOC 2 Type II certified, and we are committed to maintaining your data security with robust encryption and stringent protocols, so you can scale product delivery with trust.
+
+ AICPA 
+ SOC2 
+
+ AES 
+ 256 
+
+ SSO 
+ RBAC 
+
+ // security.spec
+ Every layer, accounted for.
+
+ Enterprise-grade protection from infrastructure to compliance. Upgrade to dedicated single-tenant on request.
+
+ 01 INFRA Infrastructure Hosted and managed on Google Cloud Platform with additional network security controls to minimize attack surface. GCP 
+ 02 ENCR Encryption All data and metadata is encrypted in transit and at rest using the 256-bit Advanced Encryption Standard. AES-256 
+ 03 STOR Storage Data is securely stored in U.S.-based data centers, ensuring compliance with US data security and privacy laws. US-only 
+ 04 PRIV Privacy SAML-based single sign-on with advanced role-based access controls and granular permission scoping across all user tiers. SAML+RBAC 
+ 05 COMP Compliance SOC 2 Type II certified with strict security reviews, access controls, and continuous system monitoring. SOC 2 ✓ 
+ 06 VULN Vulnerability Continuous vulnerability scans across code and infrastructure with a structured responsible disclosure policy. Ongoing 
+
+Zero Code Retention
+
+ Optibot never stores your source code
+
+Optibot analyzes your PRs in-memory during the review and discards all code immediately after. We only persist metadata needed for performance insights — never your source code.
+
+Single-Tenant Available
+
+ Dedicated infrastructure on request
+
+Enterprise teams can upgrade to a fully isolated single-tenant deployment, giving you full control over your data residency and network boundaries.
+
+ Vulnerability Reporting for the Optimal AI Platform
+
+Should you have any questions regarding our security, compliance, or privacy practices, our team is available to assist you. If you've discovered a security concern, please send a report to [email protected] .
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+GET A DEMO
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

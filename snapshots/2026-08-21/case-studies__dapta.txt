@@ -1,0 +1,187 @@
+SOURCE: https://getoptimal.ai/case-studies/dapta
+TITLE: Dapta — 10× PR Velocity with Optibot | Optimal
+CLASS: case_study
+
+Dapta is moving fast. Its platform deploys voice agents that let SMBs put AI to work across sales
+ and operations. The way Dapta builds has fundamentally changed. The development cycle has compressed
+ so much that there's no longer a separate designer, project manager, or product manager handing work
+ down the line. Engineers, product owners, product specialists, and even product leadership
+ prototyping in Node and Python all ship code directly. That pushed Dapta's PR volume up 8–10×.
+
+That velocity created a review problem. With so many contributions a day, code and design started to
+ drift — "everything looks different," as the team put it. Manual reviews couldn't keep up, and a
+ code-review AI tool Dapta had
+ been using fell short on quality. After adopting Optibot, every line of code shipped is now checked,
+ verified, and scanned for security issues and tech debt in one to two minutes per PR.
+
+Paired with Optimal AI Insights, Dapta now sees how its engineering velocity is changing in real
+ time, streamed directly from GitHub.
+
+ The Problem 
+
+Everyone (and Their Agents) Started Shipping Code, and Reviews Couldn't Keep Up
+
+As AI unlocked shipping for the entire org, PR volume exploded and the review layer fell behind:
+
+ Everyone ships now — with AI, the dev cycle collapsed: engineers, product owners, and specialists all write and merge code, pushing PR volume up 8–10×
+
+ Design and code drift — with dozens of contributions a day across a large multi-repo codebase, consistency suffered. Some contributors were strong on design, others weren't, and the design system wasn't being enforced uniformly
+
+ Reviews couldn't scale — manual code reviews were too slow to ship to SMB customers fast, and a prior AI code-review tool fell short on the depth and quality Dapta expected
+
+"What started out as just the engineers using Optibot for code review has now moved into product owners, product specialists, and pretty much anyone that ships code at Dapta."
+
+ Felipe Gomez
+ Chief Product & Technology Officer, Dapta
+
+Without a fast, trustworthy review layer, Dapta couldn't safely convert its new shipping velocity
+ into shipped product.
+
+ The Solution 
+
+Reviews in Under 2 Minutes, and Velocity Tracked Across 16 Engineers
+
+Dapta integrated Optibot as the automated reviewer on every PR, starting with its most active, most
+ complex repo and extending across the codebase. Alongside it, Insights turned GitHub activity into a
+ live view of engineering productivity.
+
+ Reviews in 1–2 minutes
+ Optibot delivers deep, full-context reviews in one to two minutes per PR. The low latency and overall speed removed the review bottleneck entirely.
+
+ Every line checked
+ Optibot checks every line of code shipped — verifying it, finding security issues, and consistently surfacing tech debt and maintainability concerns.
+
+ Enforced standards across repos
+ Dapta codifies its design-system and best-practice standards once and has them enforced automatically on every PR, keeping a fast-moving, multi-contributor codebase consistent without manual policing.
+
+ Insights for real-time velocity
+ Streaming GitHub data shows how velocity is changing team-wide, per engineer, and including agentic productivity. Leadership uses it daily, including in 1:1s, and the team can ask Optibot about engineering productivity directly inside Insights.
+
+Optimal AI Insights streams GitHub activity into a live view of velocity — PR cycle time, PRs reviewed, and average PR size across the team.
+
+"We started out just using Optibot inside GitHub, but then eventually we used all of the plugins as well as the skills available within Optibot in the marketplaces. Now every line of code shipped, Optibot checks it, verifies it, finds security issues, and consistently finds tech debt."
+
+ Felipe Gomez
+ Chief Product & Technology Officer, Dapta
+
+ The Results 
+
+8–10× More PRs Shipped, Every One Reviewed in Minutes, Quality Intact
+
+Optibot became a permanent part of how Dapta builds, and it spread far beyond the engineering team:
+
+ A dedicated reviewer on every PR — Optibot became core to the workflow almost immediately, acting "like a dedicated engineer that is just doing code reviews"
+ Reviews in 1–2 minutes — removing the latency bottleneck and letting Dapta ship to SMB customers fast, even at 8–10× PR volume
+ From a focused trial to org-wide — what began as a trial on the most active repos expanded to 16 of 17 seats active org-wide (94% utilization), now used by engineers, product owners, product specialists, and anyone who ships code
+ Real-time productivity visibility — Insights is part of leadership's daily routine, including 1:1s, giving Dapta a live view of team-wide and agentic productivity, rework, PR size, and velocity per engineer
+ Deep engagement — the team regularly gives Optimal AI product feedback because they want to use Optibot even more than they already do
+
+"I'm seeing the Insights data every day now. It's been very useful in our one-on-ones — to compare and let people see their own performance."
+
+ Felipe Gomez
+ Chief Product & Technology Officer, Dapta
+
+ The Impact in Numbers
+
+Before and after metrics for Dapta's team using Optimal AI
+
+Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before Optibot
+
+ After Optibot
+
+ Improvement
+
+ PR Velocity
+
+ Manual reviews couldn't keep up as everyone began shipping
+
+ Every PR reviewed regardless of volume
+
+ 8–10× PR throughput 
+
+ Review Turnaround
+
+ Slow manual reviews; prior AI tool lagged
+
+ Deep, full-context review on every PR
+
+ 1–2 minutes per PR 
+
+ Review Coverage
+
+ Inconsistent; quality gaps with prior tool
+
+ Every line checked, verified & security-scanned
+
+ 2,700+ PRs in 90 days 
+
+ Code & Design Consistency
+
+ Drift across a fast-moving, multi-contributor codebase
+
+ Standards enforced automatically on every PR
+
+ Consistent across repos 
+
+ Adoption
+
+ Engineers only
+
+ Engineers + product owners + specialists
+
+ Org-wide (16 of 17 seats) 
+
+ Productivity Visibility
+
+ No real-time view of velocity
+
+ Insights streams GitHub data — velocity per engineer & agentic productivity
+
+ Real-time, used daily 
+
+By the numbers — last 90 days (Mar 17 → Jun 17, 2026): 2,704 reviews · 2,634 PR summaries · 143 comment
+ replies · 16 of 17 seats active (94.1% utilization). All activity from the Dapta-Tech organization.
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

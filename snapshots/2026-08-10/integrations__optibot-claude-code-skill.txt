@@ -1,0 +1,226 @@
+SOURCE: https://getoptimal.ai/integrations/optibot-claude-code-skill
+TITLE: Claude Code Integration — Optibot Skill by Optimal AI
+
+Optibot 
+
+ Claude Code 
+
+ Claude Code Integration 
+
+Don't let Claude review its own homework.
+
+Install the Optibot skill in Claude Code and get a multi-pass, business logic-aware code review without leaving your session. Optibot catches breaking changes and production-breaking bugs that Claude's built-in reviewer misses — at a fraction of the cost.
+
+INSTALL THE SKILL
+
+READ THE DOCS
+
+2-click install
+ · 
+$29/month unlimited reviews
+ · 
+Node 20+ · Git required
+
+ The problem 
+ Claude Code's built-in reviewer has a fundamental conflict of interest
+
+ Claude Code built-in reviewer 
+ Reviews code it generated itself — one pass, no independent perspective 
+ Greps through your codebase to gather context, fills the context window, burns the rest on tool calls 
+ Signal-to-noise ratio around 40/60 — nearly half the comments are irrelevant 
+ Misses business logic issues and cross-repo breaking changes 
+ $15–25 per deep PR review on usage-based pricing — costs scale with PR volume 
+
+ VS 
+
+ Optibot inside Claude Code 
+ Independent reviewer — no stake in the code, no bias toward its own output 
+ Multiple passes with full codebase context — architectural awareness, not just diff reading 
+ High signal-to-noise — every comment is intentional and relevant 
+ Catches breaking changes and business logic issues before they reach GitHub 
+ $29/month flat per user — unlimited reviews, one price regardless of PR volume 
+
+ What this unlocks 
+ Deep code reviews without leaving Claude Code
+
+Four things Optibot does inside your Claude Code session that Claude's built-in reviewer doesn't.
+
+ Multi-pass reviews on every diff
+ Claude Code's built-in reviewer does a single pass. Optibot runs multiple passes — each one going deeper into the codebase context to surface issues that a single scan always misses. Large diffs, complex refactors, and PRs touching multiple services all get the same level of depth.
+
+ Business logic and breaking change detection
+ Optibot understands how your code connects across the full codebase — not just the lines that changed. It catches breaking changes that only appear when you understand the upstream dependencies, and flags business logic gaps that a diff-only review can't see. These are the issues that reach production when reviewers only look at what changed.
+
+ Inline fix suggestions in the same session
+ When Optibot flags an issue, it offers to fix it right there in the Claude Code session. Accept the fix, modify it, or skip it — all without leaving the terminal. The review-to-fix loop stays entirely inside your existing workflow.
+
+ Review anything, in natural language
+ Review uncommitted local changes, branch diffs against main, or arbitrary patch files — all through natural language. Just tell Optibot what you want reviewed: "review my changes," "review my branch against main," or "review this diff." No flags, no commands, no configuration required.
+
+ How it works 
+ Installed in under 2 minutes. Review with one sentence.
+
+01
+
+ Install the Optibot skill
+
+Two installation paths — choose whichever fits your workflow.
+
+ Option A — Claude Code Plugin Manager (inside a session)
+
+Type /plugin in the Claude Code chat to open the Plugin Manager. Go to the Marketplace tab, add the repo Optimal-AI/optibot-skill , then switch to the Discover tab. Find Optibot and press Enter to install. Run /reload-plugins to activate.
+
+ Option B — CLI (in your regular terminal)
+ claude plugin marketplace add Optimal-AI/optibot-skill
+claude plugin install optibot@optimal-ai 
+
+Then run /reload-plugins inside your Claude Code session to load the plugin.
+
+02
+
+ Authenticate with your Optibot account
+
+Inside your Claude Code session, run:
+
+ optibot login 
+
+This opens a browser window to authenticate with your Optibot account. All your organization permissions and repo access carry over automatically. For headless or CI/CD use, authenticate with an API key instead — create one by saying "create an API key for CI" inside the session.
+
+Don't have an account? Sign up free at agents.getoptimal.ai/signup .
+
+03
+
+ Ask for a review in plain language
+
+Once installed and authenticated, just tell Claude what you want reviewed:
+
+ "review my changes" — reviews all uncommitted local changes
+
+ "review my branch" or "review my branch against main" — compares your current branch against main
+
+ "review this diff" — reviews an arbitrary .patch or .diff file you point it at
+
+Claude handles the rest — Optibot runs automatically in the background, no commands or configuration required.
+
+04
+
+ Review findings and apply fixes
+
+Optibot posts its review findings directly in the Claude Code session — flagged issues, explanations, and fix suggestions inline. For each issue, you can ask Claude to apply the fix, modify it before applying, or skip it. Everything stays inside the session. When you're ready, push to GitHub and open your PR — Optibot will also review it there automatically if your GitHub integration is active.
+
+ Cost comparison 
+ $29/month flat. Claude Code charges that per review.
+
+One month of Optibot costs less than a single deep Claude Code review. At team scale, the difference is significant.
+
+ Claude Code built-in reviewer
+ Per review pricing 
+ Cost per deep PR review $15–25 
+ Pricing model Usage-based · scales with PRs 
+ Reviews per month (10 engineers, 8 PRs/week) ~320 PRs/mo 
+ Estimated monthly cost ~$1,280/mo 
+ Context window for review Shared with coding session 
+ Review depth Single pass 
+
+Anthropic confirmed: "Reviews generally average $15–25, billed on token usage"
+
+Recommended
+
+ Optibot
+ Flat monthly pricing 
+ Cost per user per month $29 
+ Pricing model Flat rate · unlimited reviews 
+ Reviews per month (10 engineers, 8 PRs/week) Unlimited 
+ Estimated monthly cost (10 users) $290/mo 
+ Context window for review Dedicated — preserves your coding session 
+ Review depth Multi-pass 
+
+ For a team of 10 engineers at 8 PRs/week, Optibot is 5x cheaper than Claude Code review — and deeper. 
+
+Calculate your savings
+
+ Who it's for 
+ Built for engineers who live in Claude Code
+
+ IC Engineers & Senior Engineers
+ You're already working in Claude Code. The last thing you want is to break your session to push a branch, open a GitHub PR, and wait for a review to come back. The Optibot skill keeps the review loop inside your existing workflow — just say "review my changes" and Optibot runs before you've even pushed. Catch issues before they reach your teammates.
+
+ Engineers doing complex refactors
+ Simple diffs don't need a second reviewer. Complex refactors — the ones touching multiple services, changing shared utilities, or landing significant architectural changes — do. Optibot's multi-pass review with full codebase context is specifically useful when you're making changes risky enough to warrant a second set of eyes before pushing.
+
+ CTOs & Engineering Leads managing Claude Code costs
+ If your team is using Claude Code's built-in reviewer at scale, the per-PR cost adds up fast. Optibot replaces that with a flat $29/user/month — preserves your team's Claude Code session limits for coding instead of burning them on reviews, and delivers deeper reviews in the process.
+
+ Requirements 
+ What you need to get started
+
+ Claude Code
+ Anthropic's Claude Code CLI must be installed. Get it at claude.ai/claude-code.
+
+ Node.js 20+ and Git
+ Required runtime dependencies. Both must be installed and available in your terminal.
+
+ Optibot account
+ Free to start. Sign up at agents.getoptimal.ai/signup. Authenticate via browser or API key for CI/CD use.
+
+ Frequently asked questions
+
+ How is this different from Claude Code's built-in code reviewer? Claude Code's built-in reviewer asks Claude to review code it generated itself — one pass, no independent perspective, and a signal-to-noise ratio of around 40/60 meaning nearly half the comments are typically irrelevant. It also runs inside your existing context window, competing with your coding session for tokens. Optibot is an independent reviewer built specifically for reviewing, not generating. It runs multiple passes, understands your business logic and codebase architecture, and preserves your Claude Code session limits for coding. It also costs a fraction of the price at scale.
+
+ Does this work without a GitHub integration? Yes. The Claude Code skill reviews local changes, branch diffs, and patch files directly in your terminal — no GitHub connection required for in-session reviews. If you also have Optibot connected to GitHub, it will review your PR automatically when you push. The two work independently and complement each other.
+
+ What can Optibot review inside Claude Code? Three things — uncommitted local changes ("review my changes"), branch diffs against main ("review my branch" or "review my branch against main"), and arbitrary patch or diff files ("review this diff"). All triggered through natural language inside your Claude Code session.
+
+ How do I use Optibot in a CI/CD pipeline? Create an API key inside your Claude Code session by saying "create an API key for CI" — Optibot will generate and display the key. Use that key for headless authentication in your CI/CD workflow instead of the browser-based optibot login flow.
+
+ Does installing the skill affect my Claude Code session performance? No. Optibot runs as a separate process and doesn't consume your Claude Code context window unless you explicitly trigger a review. Your coding session runs exactly as it did before — Optibot only activates when you ask for a review.
+
+ Does Optibot store my code? No. All analysis is done ephemerally. Your code is never stored, logged, or used for model training. Optibot operates under a zero data retention model.
+
+ // install the skill
+
+Get a review that Claude can't give itself. 
+
+Install the Optibot skill in Claude Code and get multi-pass, business logic-aware reviews without leaving your session. $29/month flat. Unlimited reviews.
+
+INSTALL THE SKILL
+
+GET A DEMO
+
+ Optibot 
+
+ Claude Code 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

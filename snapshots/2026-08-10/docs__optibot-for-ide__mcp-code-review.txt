@@ -1,0 +1,116 @@
+SOURCE: https://getoptimal.ai/docs/optibot-for-ide/mcp-code-review
+TITLE: Reviewing Code with MCP — Optimal Docs
+
+Reviewing Code with MCP — Optimal Docs 
+ / Docs / Optibot for IDE / Reviewing code with MCP 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Reviewing Code with MCP
+
+ Once Optibot MCP is installed and configured, you can run code reviews live inside your AI editor and watch them progress in real time — or integrate reviews into your CI/CD pipeline as an automated step.
+
+ Watch Review Progress in Real Time
+
+ When you trigger a review (e.g., “review my local changes” or “review this branch”), Optibot streams the review progress back to your editor. You’ll see the review move through these stages:
+
+ Stage What’s happening 
+ started Review initiated — Optibot has received the code 
+ analyzing_patch Optibot is parsing and structuring the diff 
+ tool_call Optibot is running analysis tools against the code 
+ generating_review Findings are being compiled and written 
+ completed Review is finished — results are ready 
+
+ Progress updates appear in real time in your editor so you always know where the review stands. For large diffs, this typically takes 30–90 seconds.
+
+ CI/CD Integration
+
+ You can use the Optibot MCP tools in CI/CD pipelines by running optibot-mcp as a command-line tool with your API key.
+
+ Setup
+
+ Generate an API key from your Optibot dashboard at agents.getoptimal.ai → Settings → API Keys.
+
+ Store the API key as a secret in your CI provider:
+
+ GitHub Actions: Add it as a repository or organization secret named OPTIBOT_API_KEY .
+
+ GitLab CI: Add it under Settings → CI/CD → Variables.
+
+ Other providers: use the equivalent secrets/environment variable mechanism.
+
+ Reference the secret in your workflow YAML as an environment variable.
+
+ GitHub Actions Example
+
+ name : Optibot Code Review 
+
+ on : 
+ pull_request : 
+ branches : [ main ] 
+
+ jobs : 
+ optibot-review : 
+ runs-on : ubuntu-latest 
+ steps : 
+ - uses : actions/checkout@v4 
+ with : 
+ fetch-depth : 0 
+
+ - name : Install Optibot MCP 
+ run : npm install -g @optimalai/optibot-mcp 
+
+ - name : Run Optibot Review 
+ env : 
+ OPTIBOT_API_KEY : ${{ secrets.OPTIBOT_API_KEY }} 
+ run : optibot-mcp review_branch 
+
+ This runs a branch review on every pull request targeting main . Findings appear in the workflow run logs and, if Optibot’s GitHub integration is configured, are also posted as PR comments.
+
+ Other CI Providers
+
+ The pattern is the same for any CI provider that supports environment variables:
+
+ Install: npm install -g @optimalai/optibot-mcp 
+
+ Set OPTIBOT_API_KEY from your secrets store.
+
+ Run optibot-mcp review_branch (or review_local_changes if reviewing uncommitted changes).
+
+ Environment Variables
+
+ Variable Required Description 
+ OPTIBOT_API_KEY Yes Your Optibot API key for authentication 
+ OPTIBOT_API_URL No Override the Optibot API endpoint (default: https://api.getoptimal.ai ). Only needed for on-prem or custom deployments.

@@ -1,0 +1,206 @@
+SOURCE: https://getoptimal.ai/integrations/jira
+TITLE: Jira AI Bot for Code Review | Optibot by Optimal AI
+
+Optibot 
+
+ Jira 
+
+ Jira Integration 
+
+Close the gap between spec and shipped code.
+
+Connect Jira to Optimal AI and get two things at once: Optibot cross-references every PR against its linked Jira ticket in real-time — catching logic gaps before they leave your branch — and your Insights dashboard gains sprint health, story points, and full issue-to-PR traceability. One integration, two layers of visibility.
+
+GET STARTED FREE
+
+READ THE DOCS
+
+Jira Cloud and self-hosted
+ · 
+Works with Optibot reviews and Insights
+ · 
+Zero data retention
+
+ What this unlocks 
+ What does connecting Jira unlock for code reviews and delivery metrics?
+
+Connecting Jira activates both Optibot's spec alignment checks and Insights' delivery metrics. Here's what changes.
+
+ Optibot code reviews 
+
+ Automatic Jira issue detection
+ Optibot scans every PR title and description for Jira issue keys (e.g. PROJ-123) and retrieves the linked issue automatically. No manual tagging or additional setup required — if the issue key is in the PR, Optibot finds it.
+
+ AI alignment checks: spec vs. code
+ Optibot's AI cross-references the actual code changes in the PR against what the linked Jira issue describes. It flags missing edge cases, logic gaps, and implementation details that aren't addressed by the code — catching the delta between what was specced and what was shipped before the PR is reviewed by a human.
+
+ Issue context surfaced in every review
+ The linked issue's type, status, and summary are pulled directly into the Optibot review comment. Reviewers see the full context of what the PR is supposed to accomplish without leaving GitHub or GitLab — no tab-switching to Jira to understand the intent of the change.
+
+ Insights dashboard 
+
+ Sprint health and story point tracking
+ Track Jira-linked issues, story point completion rates, and carryover work across your active sprint directly in the Insights dashboard. See whether your team's velocity matches sprint commitments and identify work that's at risk before the end of the sprint.
+
+ Time in status across the full issue lifecycle
+ Measure how long issues spend in each Jira status column — from To Do through In Progress, In Review, and Done. Time in status reveals where work is getting stuck in your process before it even reaches a pull request, making bottlenecks visible and actionable.
+
+ Issue-to-PR traceability and allocation by epic
+ Connect every PR to the Jira issue that originated it and see how engineering time is distributed across epics, projects, and issue types. Understand whether effort is going where the roadmap says it should — and spot when reactive work is pulling the team away from committed priorities.
+
+ How it works 
+ How do you connect Jira to Optimal AI?
+
+The same credentials power both layers, but they're set up in different places in the product. Connect Optibot for code review alignment checks, then wire up Insights for delivery metrics.
+
+ Optibot — spec alignment in code reviews 
+
+ 01 
+ Connect Jira in your Optibot dashboard
+ In the Optibot dashboard, navigate to the Jira integration page. Pick Cloud or Server / Data Center, then enter your Jira Domain (e.g. yourcompany.atlassian.net for Jira Cloud, or your self-hosted URL), your Service Account, and your API Token. Generate the API token from your Atlassian account: Profile → Manage Your Account → Security → Create and Manage API Tokens. Click Connect Jira. If credentials ever expire, come back and re-save the form. No need to disconnect first.
+
+ 02 
+ Optibot detects issue keys in PRs automatically
+ No further setup needed. From this point, whenever a PR title or description contains a Jira issue key (e.g. PROJ-123), Optibot retrieves the linked issue automatically. It parses the issue's description — including Atlassian Document Format — and includes it in its analysis.
+
+ 03 
+ Reviews include alignment checks and issue context
+ Every Optibot review on a Jira-linked PR now includes an AI alignment check — whether the code changes address what the ticket describes — and surfaces the issue's type, status, and summary inline in the review comment. Reviewers see the full context without leaving GitHub or GitLab.
+
+ Insights — delivery metrics and sprint health 
+
+ 01 
+ Open Jira Integration in Insights settings
+ In your Optimal AI dashboard, click the Settings icon in the bottom left sidebar. Go to the Integrations tab and select Jira Integration. Enter your Jira domain, service account, and API token (same credentials as Optibot if already connected).
+
+ 02 
+ Configure import and webhook sync
+ Enable Import users from Jira to sync your Jira users into Insights. Enable Automatically integrate with Jira webhooks to keep Insights updated in real time as Jira activity occurs. If your instance requires manual webhook setup, copy the webhook URL from Insights and add it in Jira at /plugins/servlet/webhooks — select issue and sprint event triggers.
+
+ 03 
+ Link team members to their Jira accounts
+ Go to the Members tab in Settings and click the Jira icon beside each engineer. Map each Insights member profile to their corresponding Jira account. This ensures sprint contributions, story points, and cycle times are accurately attributed to individual engineers.
+
+ 04 
+ Insights begins populating Jira data
+ Once members are linked, Insights starts pulling sprint data, story points, time in status, and issue-to-PR traceability from your Jira projects. Data populates immediately and updates in real time via webhooks as Jira activity occurs.
+
+ Who it's for 
+ Which engineering roles benefit from the Jira integration?
+
+From IC engineers shipping the code to leaders answering whether the roadmap is on track — Jira connected to Optimal AI gives every role the context they need.
+
+ Senior Engineers & IC Engineers
+ Stop writing PR descriptions that have to re-explain everything that's already in the Jira ticket. Once Jira is connected, Optibot pulls the issue context automatically — reviewers see what the PR is supposed to do without asking. And if your implementation misses something the ticket required, Optibot flags it in the review before a human has to catch it.
+
+ Engineering Managers & Scrum Masters
+ See sprint health, story point completion, and time in status in your Insights dashboard without running manual status updates. Jira data flows in automatically — so your retro is based on what actually happened, not on what people remembered to report.
+
+ Directors, VPEs & CTOs
+ Close the gap between what's planned and what's shipping. Issue-to-PR traceability connects every committed ticket to its code change, and allocations by epic show whether engineering effort matches roadmap priorities. The answer to "are we delivering what we said we would?" becomes a dashboard, not a meeting.
+
+ Permissions & access 
+ What credentials does Optimal AI require and why?
+
+Optimal AI connects to Jira via an API token from a service account you control. We only read the project data needed to populate Insights metrics.
+
+ Requirement Why 
+ Jira domain URL Identifies your Jira Cloud or self-hosted instance 
+ Service account with project admin permissions Required to read issue data, story points, and sprint information across all tracked projects 
+ API token Authenticates the connection — generated from your Atlassian account settings 
+ Webhook setup (auto or manual) Keeps Insights metrics updated in real time as Jira activity occurs 
+ User mapping Links Jira users to GitHub users for accurate per-engineer metric attribution 
+
+ Recommended: Use a dedicated service account — not a personal account — for centralized control and reliability. The service account needs project admin permissions for every Jira project you want Insights to track.
+
+ Get started 
+ How quickly can you set up the Jira integration?
+
+Grab your Jira credentials, connect in settings, and link team members. Data starts flowing into Insights immediately.
+
+ 01 Get your Jira credentials
+
+Jira domain URL · Service account with project admin permissions · API token from Atlassian Account → Security → API Tokens.
+
+ 02 Connect in Insights settings
+
+Settings → Integrations → Jira Integration. Enter domain, service account, and API token. Enable user import and webhook sync. Click Save.
+
+ 03 Link team members
+
+Settings → Members. Click the Jira icon beside each engineer and map them to their Jira account. Metrics start populating immediately.
+
+Need the full setup guide? 
+Read the setup guide →
+
+ Data that unlocks after connecting 
+
+ Insights · Jira data stream LIVE 
+ Sprint health Story points · completion rate · carryover 
+ PR cycle time Linked to Jira issues and epics 
+ Time in status Per issue · per team · per sprint 
+ Allocations Engineering time by epic and project 
+ Traceability Every PR connected to its Jira issue 
+ User attribution Metrics tied to individual engineers 
+
+Updates in real time via Jira webhooks.
+
+ Frequently asked questions
+
+ Does this work with Jira Server and Jira Data Center, or only Jira Cloud? Both. Select Cloud or Server / Data Center from the instance type toggle on the connect form, then enter your domain: yourcompany.atlassian.net for Cloud, or your own self-hosted domain URL for Server / Data Center. The form adjusts automatically, asking for a username instead of an email for Server / Data Center accounts.
+
+ Do I need a dedicated service account or can I use my personal Jira account? A dedicated service account is strongly recommended. It needs project admin permissions for every Jira project you want Insights to track. Using a personal account works but creates dependency on that individual's account status — if their permissions change, the connection breaks.
+
+ How does real-time sync work? Insights uses Jira webhooks to receive updates as activity occurs — issues moving between statuses, sprint changes, story point updates. If your Jira instance allows it, webhook setup is automatic. For instances that require manual setup, copy the webhook URL from the Insights integration page and add it in Jira at /plugins/servlet/webhooks.
+
+ What happens if I don't link team members to their Jira accounts? Insights will still show Jira data at the project and sprint level, but individual metric attribution will be incomplete. Cycle times, sprint contributions, and story point completion won't be accurately attributed to specific engineers until the user mapping step is done.
+
+ Does connecting Jira give Optimal AI access to all of our Jira data? Optimal AI reads only the Jira project data needed to populate Insights metrics — issues, story points, sprint information, status transitions, and user activity in connected projects. No data is stored after analysis. Optimal AI operates under a zero data retention model.
+
+ // connect jira
+
+Connect Jira. See your full delivery picture in one place. 
+
+Link your Jira projects to Optimal AI's Insights dashboard and get sprint health, PR cycle times, story points, and time in status all in one view — updated in real time.
+
+GET STARTED FREE
+
+GET A DEMO
+
+ Optibot 
+
+ Jira 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

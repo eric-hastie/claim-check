@@ -1,0 +1,122 @@
+url	title	words
+https://getoptimal.ai/	AI Code Review for GitHub & GitLab | Optibot by Optimal AI	2064
+https://getoptimal.ai/agents/appsec	Optibot AppSec Agent — AI Security Scanning | Optimal	1202
+https://getoptimal.ai/agents/ci-fixer	Optibot CI Fixer — Auto-Repair Failed CI Builds | Optimal	1204
+https://getoptimal.ai/agents/dependency-bundler	Dependency Bundler — Consolidate Dependabot PRs | Optimal	1318
+https://getoptimal.ai/agents/review-fixer	Review Fixer Agent — Optibot by Optimal AI	1584
+https://getoptimal.ai/ai-code-reviews	AI Code Reviews — Deep, Automated & GitHub-Native | Optimal	1588
+https://getoptimal.ai/blog	Blog: AI Code Reviews & Engineering | Optimal AI	343
+https://getoptimal.ai/blog/ai-code-review-for-gitlab	Best AI Code Review Tools for GitLab 2026 | Optimal AI	3619
+https://getoptimal.ai/blog/best-ai-code-review-tools	9 Best AI Code Review Tools 2026: Ranked & Compared	3226
+https://getoptimal.ai/blog/best-ai-coding-assistants-for-jetbrains	Best AI for JetBrains IDEs 2026: IntelliJ, PyCharm	2713
+https://getoptimal.ai/blog/coderabbit-alternatives	Best CodeRabbit Alternatives 2026 | Optimal AI	2522
+https://getoptimal.ai/blog/cursor-bugbot-pricing	Cursor BugBot Pricing 2026: What Does It Actually Cost?	1444
+https://getoptimal.ai/blog/dora-metrics-guide	DORA Metrics Guide: Benchmarks, Formulas & Improvement	2209
+https://getoptimal.ai/blog/github-copilot-code-review-alternatives	Best GitHub Copilot Code Review Alternatives 2026	4299
+https://getoptimal.ai/blog/greptile-alternatives	Best Greptile Alternatives 2026 | Optimal AI	3408
+https://getoptimal.ai/blog/how-to-reduce-pr-review-time	PR Cycle Time: How to Measure and Reduce It	3770
+https://getoptimal.ai/blog/replit-app-security	Replit App Security: Scan for AI Code Vulnerabilities	1582
+https://getoptimal.ai/blog/replit-code-review	Replit Code Review: Catching Bugs in AI-Generated Code	1518
+https://getoptimal.ai/bugbot-cost-calculator	Cursor BugBot Pricing 2026: Cost Calculator | Optimal	1236
+https://getoptimal.ai/careers	Careers — Optimal AI	270
+https://getoptimal.ai/case-studies	Case Studies — Optimal AI	311
+https://getoptimal.ai/case-studies/artemis-ops	Artemis Ops — AI Code Reviews Cut Review Time 20% | Optimal	704
+https://getoptimal.ai/case-studies/dapta	Dapta — 10× PR Velocity with Optibot | Optimal	1050
+https://getoptimal.ai/case-studies/mongodb	MongoDB Case Study — 50% Smaller PRs, Faster Cycles	662
+https://getoptimal.ai/case-studies/nearfleet	Nearfleet — 75% Faster PRs, 30 Hours Reclaimed Weekly	849
+https://getoptimal.ai/case-studies/prado	Prado — 5× More Deploys with AI Code Reviews | Optimal	722
+https://getoptimal.ai/case-studies/prometric	Prometric Case Study — 50% Faster PR Cycles, 40+ Hours Saved	742
+https://getoptimal.ai/case-studies/soraban	Soraban — 2+ Hours Saved, 5 Vulns Blocked Monthly	819
+https://getoptimal.ai/changelog	Changelog — Optimal AI	1464
+https://getoptimal.ai/changelog/arcadia-release-v2-5-1	Arcadia 2.5.1: Smarter Code Reviews — Optimal AI Changelog	464
+https://getoptimal.ai/changelog/auto-detect-review-instructions	Auto-Detect Review Instructions | Optibot Changelog	658
+https://getoptimal.ai/changelog/automatic-reviews-on-new-commits	Automatic Reviews on New Commits — Optimal AI Changelog	340
+https://getoptimal.ai/changelog/cli-async-reviews-pre-push-gate-and-reliability-fixes	CLI: Async Reviews & Pre-Push Gate — Optimal AI Changelog	491
+https://getoptimal.ai/changelog/gitlab-integration-and-faster-code-review-performance	GitLab Integration & Review Speed — Optimal AI Changelog	466
+https://getoptimal.ai/changelog/individual-vs-team-comparison-now-live-in-insights	Individual vs. Team in Insights — Optimal AI Changelog	533
+https://getoptimal.ai/changelog/inline-gitlab-comments-on-demand-compliance-checks-and-smarter-re-reviews	Inline GitLab Comments & Compliance — Optimal AI Changelog	379
+https://getoptimal.ai/changelog/introducing-branch-review-analyze-entire-pull-requests	Introducing Branch Review — Optimal AI Changelog	418
+https://getoptimal.ai/changelog/jira-reconnect-and-more-reliable-setup	Jira Reconnect & More Reliable Setup | Optibot	404
+https://getoptimal.ai/changelog/jira-ticket-detection-titles-and-branches	Jira Ticket Detection from Titles & Branches | Optibot	443
+https://getoptimal.ai/changelog/optibot-claude-code-skill---optibot-code-reviews-built-into-claude-code	Optibot Claude Code Skill — Optimal AI Changelog	336
+https://getoptimal.ai/changelog/optibot-feature-update	Optibot February Feature Update — Optimal AI Changelog	549
+https://getoptimal.ai/changelog/optibot-february-ii---release-notes	Optibot February II — Release Notes — Optimal AI Changelog	414
+https://getoptimal.ai/changelog/optibot-firmware-update	Reviews That Learn As You Push — A Rebuilt Review Engine	714
+https://getoptimal.ai/changelog/optibot-for-app-sec-ai-security-agent	Optibot for AppSec — Security Agent — Optimal AI Changelog	614
+https://getoptimal.ai/changelog/optibot-improved-context-understanding-and-unified-architecture-for-smarter-reviews	Optibot Unified Architecture Update — Optimal AI Changelog	496
+https://getoptimal.ai/changelog/optibot-monorepo-guidelines---per-directory-review-instructions	Monorepo Guidelines — Optimal AI Changelog	402
+https://getoptimal.ai/changelog/optibot-now-finds-dead-code-and-code-quality-issues	Optibot: Dead Code & Quality Issues — Optimal AI Changelog	409
+https://getoptimal.ai/changelog/optibot-now-in-vs-code-new-release	Optibot, Now in VS Code — Optimal AI Changelog	460
+https://getoptimal.ai/changelog/optibot-release---cursor-extension-launch	Optibot: Cursor Extension Launch — Optimal AI Changelog	451
+https://getoptimal.ai/changelog/optibot-release-re-review-code-in-one-click	Optibot Release - Re-review code in one click	587
+https://getoptimal.ai/changelog/optibot-slack-integration---real-time-pr-reviews-productivity-alerts	Optibot + Slack: PR Reviews & Alerts — Optimal AI Changelog	306
+https://getoptimal.ai/changelog/optimal-insights-february-release-log	Optimal Insights February Release Log — Optimal AI Changelog	533
+https://getoptimal.ai/changelog/pair-review	Pair Review - Optibot's biggest review upgrade	760
+https://getoptimal.ai/changelog/review-memory-organization-level-and-smarter-maintenance	Review Memory: Norms & Smarter Suggestions	684
+https://getoptimal.ai/changelog/review-stats-track-review-metrics-for-your-team	Review Stats: Track Review Metrics for Your Team	403
+https://getoptimal.ai/changelog/review-wait-times-and-resilience-improvements	Review Wait Times & Resilience Improvements | Optibot	301
+https://getoptimal.ai/changelog/short-summaries-better-comments-cleaner-ci	Optibot: Short Summaries & Cleaner CI — Optimal AI Changelog	362
+https://getoptimal.ai/changelog/smarter-duplicate-detection-and-more-reliable-reviews	Catch Duplicate Code Before It Ships | Optibot	543
+https://getoptimal.ai/changelog/vs-code-extension-support-and-gitlab-enhancements	VS Code & GitLab Enhancements — Optimal AI Changelog	366
+https://getoptimal.ai/claude-code-review-cost-calculator	Claude Code Review Calculator: Per-PR vs Flat $29 | Optimal	1115
+https://getoptimal.ai/contact	Contact Us — Optimal AI	313
+https://getoptimal.ai/demo	Book a Demo | Optimal AI Code Review	1167
+https://getoptimal.ai/docs	Documentation — Optimal Docs	352
+https://getoptimal.ai/docs/agentic-code-reviews/github-integration	GitHub Integration Setup Guide (Optibot) — Optimal Docs	570
+https://getoptimal.ai/docs/agentic-code-reviews/gitlab-integration	GitLab Integration Setup — Optimal Docs	507
+https://getoptimal.ai/docs/agentic-code-reviews/optibot-features	Optibot Features — Optimal Docs	1001
+https://getoptimal.ai/docs/agentic-code-reviews/overview	Agentic Code Reviews — Optimal Docs	537
+https://getoptimal.ai/docs/agentic-code-reviews/review-memory	Review Memory — Optimal Docs	1089
+https://getoptimal.ai/docs/agentic-code-reviews/review-stats	Review Statistics — Optimal Docs	421
+https://getoptimal.ai/docs/agentic-code-reviews/vs-code-extension	VS Code Extension — Optimal Docs	866
+https://getoptimal.ai/docs/claude-code-skill/getting-started	Getting Started with the Claude Code Skill — Optimal Docs	533
+https://getoptimal.ai/docs/getting-started/github-app-installation	GitHub App Installation & Troubleshooting — Optimal Docs	569
+https://getoptimal.ai/docs/getting-started/optimal-insights	Optimal Insights — Optimal Docs	691
+https://getoptimal.ai/docs/getting-started/slack-integration	Slack Integration — Optimal Docs	401
+https://getoptimal.ai/docs/getting-started/start-guide	Start guide on using Optimal AI — Optimal Docs	407
+https://getoptimal.ai/docs/getting-started/trial-setup	Trial Setup — Optibot + Insights — Optimal Docs	899
+https://getoptimal.ai/docs/insights/activity-view	Activity View — Optimal Docs	490
+https://getoptimal.ai/docs/insights/ai-insights	AI Insights — Optimal Docs	880
+https://getoptimal.ai/docs/insights/contributors	Contributors — Optimal Docs	852
+https://getoptimal.ai/docs/insights/distributions	Distributions — Optimal Docs	616
+https://getoptimal.ai/docs/insights/jira-integration	Jira Integration in Insights — Optimal Docs	1203
+https://getoptimal.ai/docs/insights/overview	Engineering Productivity Insights — Optimal Docs	556
+https://getoptimal.ai/docs/insights/pr-cycle-time	PR Cycle Time — Optimal Docs	780
+https://getoptimal.ai/docs/optibot-cli/ci-cd-pipelines	CLI for Agents & CI/CD Pipelines — Optimal Docs	896
+https://getoptimal.ai/docs/optibot-cli/installation	Optibot CLI — Installation & Getting Started — Optimal Docs	1013
+https://getoptimal.ai/docs/optibot-cli/organizations	Optibot CLI — Organizations & Status — Optimal Docs	619
+https://getoptimal.ai/docs/optibot-cli/security-scans	Optibot CLI — Security Scans — Optimal Docs	953
+https://getoptimal.ai/docs/optibot-config/ci-fixer	CI Fixer Configuration — Optimal Docs	484
+https://getoptimal.ai/docs/optibot-config/dependency-bundler	Dependency Bundler Configuration — Optimal Docs	418
+https://getoptimal.ai/docs/optibot-config/monorepo-guidelines	Monorepo Guidelines — Optimal Docs	1860
+https://getoptimal.ai/docs/optibot-config/overview	Optibot Configuration Overview — Optimal Docs	643
+https://getoptimal.ai/docs/optibot-config/reviews	Review Configuration Settings — Optimal Docs	1054
+https://getoptimal.ai/docs/optibot-config/summaries	Summary Configuration Settings — Optimal Docs	588
+https://getoptimal.ai/docs/optibot-for-ide/mcp-code-review	Reviewing Code with MCP — Optimal Docs	516
+https://getoptimal.ai/docs/optibot-for-ide/optibot-mcp	Optibot MCP Server — Optimal Docs	637
+https://getoptimal.ai/engineering-ai-agents	How Optibot Works — AI Code Review with Codebase Context	2925
+https://getoptimal.ai/features/engineering-productivity-insights	Engineering Productivity Metrics Dashboard | Optimal AI	1273
+https://getoptimal.ai/integrations	Integrations — Optimal AI	273
+https://getoptimal.ai/integrations/cursor	Cursor Integration — Optibot by Optimal AI	1393
+https://getoptimal.ai/integrations/github	GitHub Integration — Optibot by Optimal AI	1317
+https://getoptimal.ai/integrations/gitlab	GitLab Integration — Optibot by Optimal AI	1511
+https://getoptimal.ai/integrations/jira	Jira AI Bot for Code Review | Optibot by Optimal AI	1787
+https://getoptimal.ai/integrations/mcp-server	MCP Server Integration — Optibot by Optimal AI	1565
+https://getoptimal.ai/integrations/optibot-claude-code-skill	Claude Code Integration — Optibot Skill by Optimal AI	1590
+https://getoptimal.ai/integrations/slack	Slack Integration — Optibot by Optimal AI	1051
+https://getoptimal.ai/integrations/vscode	VS Code Extension — Optibot by Optimal AI	1283
+https://getoptimal.ai/optibot-claude-code-skill-for-deeper-code-reviews	Optibot Claude Code Skill — Deeper Reviews | Optimal	1064
+https://getoptimal.ai/pricing	Pricing — Optimal AI	1090
+https://getoptimal.ai/privacy	Privacy Policy — Optimal AI	1434
+https://getoptimal.ai/security	Security — Building and Scaling with Trust | Optimal AI	365
+https://getoptimal.ai/shallow-vs-deep-code-reviews	Deep vs Shallow AI Code Reviews: What's the Difference?	1229
+https://getoptimal.ai/terms-of-use	Terms of Service — Optimal AI	1429
+https://getoptimal.ai/token-spend-calculator	LLM Token Cost Calculator: Claude vs GPT vs Gemini | Optimal	1105
+https://getoptimal.ai/vs	Optibot vs Competitors — Code Reviews | Optimal AI	361
+https://getoptimal.ai/vs/coderabbit	Optibot vs CodeRabbit — Comparison 2026 | Optimal AI	1012
+https://getoptimal.ai/vs/coderabbit-pricing	Optibot vs CodeRabbit Pricing — Flat vs Usage | Optimal AI	1492
+https://getoptimal.ai/vs/deepsource	Optibot vs DeepSource: AI Code Review vs Analysis | Optimal	1141
+https://getoptimal.ai/vs/github-copilot	Optibot vs GitHub Copilot — Comparison 2026 | Optimal AI	846
+https://getoptimal.ai/vs/greptile	Optibot vs Greptile — Comparison 2026 | Optimal AI	757
+https://getoptimal.ai/vs/qodo	Optibot vs Qodo Merge: AI Code Review 2026 | Optimal AI	1116
+https://getoptimal.ai/vs/sonarqube	Optibot vs SonarQube: AI Code Review vs SAST | Optimal	1191

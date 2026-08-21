@@ -1,0 +1,92 @@
+SOURCE: https://getoptimal.ai/changelog/review-memory-organization-level-and-smarter-maintenance
+TITLE: Review Memory: Norms & Smarter Suggestions
+CLASS: changelog
+
+All changelog entries
+
+ New Release June 11, 2026 Review Memory AI Organization Knowledge Management 
+ Review Memory: Shared Knowledge & Smarter Suggestions 
+ Review Memory now operates at the organization level: shared Norms, contradiction detection, and a self-maintaining knowledge base. 
+
+ Your team's knowledge, working everywhere
+
+The best review feedback isn't about what one repository learned. It's about what your whole engineering organization has figured out. Until now, a coding pattern confirmed as a best practice in one repo had no way to benefit the others. Each repository built its memory independently, and the knowledge base grew stale without anyone actively tending to it. This update changes both of those things.
+
+ Features
+ Organization-Level Memories
+
+When the same pattern is independently confirmed across multiple repositories in your organization, that's consensus, and consensus is worth more than any individual repo's experience. Optibot now detects when the same coding practices are emerging across your codebase. Once a pattern reaches that threshold, it's automatically promoted into a single, unified organization-level memory.
+
+That shared memory is then applied to code reviews across all repositories in your organization, including ones that hadn't learned the pattern yet. New repositories added to your organization inherit the full wisdom of your existing codebase from day one.
+
+The net result: teams stop re-learning the same lessons in different corners of the codebase. Knowledge compounds instead of remaining siloed.
+
+ Contradiction Detection
+
+Memory quality matters as much as memory volume. It's possible for two independently confirmed memories to conflict. One might suggest "always prefer explicit error propagation" while another suggests "always wrap async calls in try-catch." Both may have been valid when they were learned. Together, they give the reviewer inconsistent guidance.
+
+Optibot now scans for these conflicts automatically. When two memories appear to contradict each other, they're flagged directly in the UI. Your team sees exactly where the knowledge base disagrees, making it straightforward to review the conflict and resolve it, keeping the pattern set consistent and trustworthy. The system won't silently pick a winner; it surfaces the disagreement and defers to you.
+
+ Improvements
+ Automated Memory Maintenance & Decay
+
+A knowledge base that never forgets anything is eventually just noise. Conventions your team abandoned, patterns tied to a framework you moved off, rules that made sense for a project that's since been retired. All of these can accumulate silently and dilute the signal of the memories that actually matter.
+
+Review Memories now have an automated lifecycle. Memories that haven't been seen or engaged with in reviews will gradually decrease in confidence over time. When confidence drops low enough and a memory has been inactive long enough, it's automatically archived, removed from active suggestions but not permanently deleted.
+
+Any memory you've manually edited or pinned is fully protected from this process. Human-confirmed knowledge doesn't fade. The decay system only affects patterns that haven't been touched or acted upon.
+
+ Smarter, More Relevant Suggestions
+
+Not every correct memory is a useful one. Optibot now learns which patterns your team actually acts on and adjusts what it surfaces accordingly. Over time, reviews show fewer suggestions that get scrolled past and more of the ones that prompt real change.
+
+ Quality of Life
+ Archive Instead of Delete
+
+Deleting a memory now archives it rather than permanently removing it. This applies to both manual deletions and the automated lifecycle. If a pattern was removed accidentally, or if you want to revisit a memory that was auto-archived by the decay system, it can be recovered. Nothing is lost for good unless you explicitly want it to be.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Monorepo Guidelines - Per-Directory Review Instructions 
+Next
+ Reviews That Learn As You Push 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

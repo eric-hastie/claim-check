@@ -1,0 +1,130 @@
+SOURCE: https://getoptimal.ai/docs/insights/distributions
+TITLE: Distributions — Optimal Docs
+CLASS: docs
+
+Distributions — Optimal Docs 
+ / Docs / Engineering Insights / Distributions 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Distributions
+
+ The Distributions view shows how your team’s work is distributed over time. When set up correctly, it breaks down where engineering effort is going — what percentage of work is focused on tech debt, security, new features, or bugs.
+
+ Note: Teams need to manually create labels (e.g., “tech debt”, “security”, “new feature”, “bug”) within their GitHub repositories. Once PRs or issues are labeled accordingly, the Distributions view will automatically categorize and visualize that data.
+
+ Where to Find It
+
+ Go to Allocations → Distributions in the left sidebar.
+
+ How It Works
+
+ The Distributions page pulls data from all PRs or issues within your selected date range. It groups them by label or type to calculate how much work falls into each category.
+
+ Each colored section in the chart represents a different type of work:
+
+ Bugs — fixes and patches
+
+ Tech Debt — refactoring or cleanup
+
+ Security — vulnerability and dependency fixes
+
+ Enhancements — improvements or new functionality
+
+ Hover over each segment to see the exact percentage and number of PRs associated with that label.
+
+ Filters
+
+ Date Range
+
+ Choose the time period you want to analyze — for example, a sprint or week range. All metrics and charts refresh automatically as you adjust the dates.
+
+ Repository Filter
+
+ Select one or multiple repositories to narrow your view. This helps you isolate work across different codebases or projects.
+
+ User Filter
+
+ Filter results by a specific team member to see where their work was allocated. Helpful for understanding workload balance or individual focus areas.
+
+ Toggle Chart Type
+
+ Switch between two visualization styles:
+
+ Donut Chart — shows percentage breakdowns by category
+
+ Bar Chart — shows changes in distribution over time
+
+ GitHub / Jira Toggle
+
+ Switch between GitHub and Jira to control the data source:
+
+ GitHub — categorizes work by pull request labels
+
+ Jira — categorizes by issue types
+
+ Interpreting the Data
+
+ Distribution What It Means 
+ Large Bugs section Team spent most time fixing issues 
+ High Tech Debt share Time went into refactoring or cleanup 
+ Notable Security section Patches, audits, or dependency updates 
+ More New Features Progress toward roadmap or sprint goals 
+
+ Pull Request Table
+
+ Scroll below the chart to see a detailed list of pull requests that make up the data. Each row represents a single PR with these columns:
+
+ Label Name — which category the PR belongs to
+
+ Title — the pull request name from GitHub
+
+ Repository — which codebase the PR originated from
+
+ Author — who opened or merged the pull request
+
+ PR Size — lines added (+) and removed (–)
+
+ You can sort by any column, use the search bar to find a specific PR, and use pagination to navigate large datasets.
+
+ Troubleshooting
+
+ Issue Fix 
+ Percentages don’t add up neatly Normal — a single PR can have multiple labels 
+ No data showing Expand your date range or confirm repos are selected 
+ Chart not switching Refresh your browser and check the toggle 
+ Missing PR sizes Make sure your GitHub token has access to read diffs 
+ Too many “Unlabeled” items Check if your team is consistently applying labels or issue types

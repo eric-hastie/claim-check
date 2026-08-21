@@ -1,0 +1,86 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-february-ii---release-notes
+TITLE: Optibot February II — Release Notes — Optimal AI Changelog
+
+All changelog entries
+
+ 🎛️ 
+
+ New Release February 24, 2026 Review Quality Configuration AI Models 
+ Optibot February II — Release Notes 
+ Granular review sensitivity levels, upgraded AI models for higher quality output, and under-the-hood reliability improvements. 
+
+ Features
+ Introducing Review Sensitivity Levels
+
+You now have granular control over the strictness of your code reviews. With our new "Sensitivity" setting, you can tailor the AI's feedback to match your team's specific needs and priorities. This setting can be configured in your repository's .optibot file.
+
+ Choose from three distinct levels:
+ Low Sensitivity: For teams that want to focus only on the most critical issues. The AI will exclusively flag breaking changes to APIs, database schemas, and core logic that could lead to production failures or data loss.
+ Medium Sensitivity (Default): A balanced approach that provides high-impact feedback. The AI identifies significant bugs, security vulnerabilities, and logical errors, while ignoring minor stylistic preferences and nitpicks.
+ High Sensitivity: For teams aiming for the highest standards of code quality. The AI acts as a meticulous reviewer, providing feedback on everything from critical bugs and performance issues to style inconsistencies, naming conventions, and documentation gaps.
+ Example Configuration
+ {
+ "reviews": {
+ "auto": true,
+ "autoOnPush": true,
+ "autoOnDraft": false,
+ "sensitivity": "medium",
+ "autoApprove": true,
+ "codeSuggestions": true,
+ "excludedLabels": ["do not review"],
+ "codeSuggestionsSkipFiles": []
+ }
+} 
+ Improvements
+ Upgraded AI Models for Higher Quality Reviews
+ We've upgraded the core AI models that power our code analysis and review features. This enhancement brings several benefits:
+ More Accurate Suggestions: The AI is now better at understanding code context, resulting in more precise and relevant feedback.
+ Improved Performance: You may notice faster response times for reviews and other AI-powered actions.
+ Higher-Quality Summaries: Generated summaries and comments are more coherent and insightful.
+ Under the Hood Improvements
+ We have rolled out updates to our internal development frameworks and tooling to improve the reliability and speed at which we can deliver new features and fixes.
+ Dependencies have been updated to ensure the platform remains secure and performant.
+
+Previous
+ Optibot February Feature Update 
+Next
+ Optibot Claude Code Skill — Code Reviews Built Into Claude Code 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

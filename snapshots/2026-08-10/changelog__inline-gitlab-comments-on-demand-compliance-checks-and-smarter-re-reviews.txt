@@ -1,0 +1,84 @@
+SOURCE: https://getoptimal.ai/changelog/inline-gitlab-comments-on-demand-compliance-checks-and-smarter-re-reviews
+TITLE: Inline GitLab Comments & Compliance — Optimal AI Changelog
+
+All changelog entries
+
+ 💬 
+
+ Improvement November 17, 2025 GitLab Compliance Re-review AI 
+ Inline GitLab Comments & Compliance 
+ Acadia 2.2.7 — line-specific GitLab comments, on-demand compliance checks, context-aware follow-ups that recall prior feedback, and a major AI upgrade. 
+
+Acadia 2.2.7: Smarter Reviews, Sharper Context, Stronger Foundations. This release brings major upgrades to how Optibot reviews, reasons, and learns from your codebase. From inline GitLab comments to intelligent re-reviews, every feature was designed to make feedback faster, more relevant, and right where it matters.
+
+ New Features
+ Inline Comments for GitLab
+
+No more hunting through general feedback threads. Optibot now leaves contextual, line-specific comments directly in your GitLab merge requests — making it easier to understand and act on feedback instantly.
+
+ On-Demand Compliance & Release Notes (GitLab)
+
+Ask Optibot to "check compliance" or "provide release notes" and it will instantly analyze your MR for compliance gaps or summarize your release changes. AI-powered documentation, right inside your workflow.
+
+ Context-Aware Follow-Up Reviews (GitLab + GitHub)
+
+Optibot now remembers what's been fixed, acknowledged, or 👍 reacted to — avoiding repeated suggestions and focusing only on new or unresolved issues. Every re-review gets smarter.
+
+ Improvements
+ More Accurate Code Search (GitLab + GitHub)
+
+We've upgraded Optibot's search stack to a new hybrid method that improves accuracy, reduces false assumptions, and delivers more grounded review comments.
+
+ Automatic Knowledge Base Updates (GitLab + GitHub)
+
+Optibot now keeps itself up-to-date. When you push to main, its understanding of your repository refreshes automatically — ensuring every comment reflects the latest code.
+
+ Under the Hood
+ Major AI Framework Upgrade
+ A foundational update that enhances performance, reliability, and precision across all agents.
+ Next-Generation Agent Architecture
+ Completely rebuilt with a modular design for greater efficiency and future-proof scalability — setting the stage for more advanced agent capabilities ahead.
+
+Previous
+ Individual vs. Team Comparison Now Live in Insights 
+Next
+ Optibot, Now in VS Code 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

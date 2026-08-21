@@ -1,0 +1,103 @@
+SOURCE: https://getoptimal.ai/docs/optibot-config/ci-fixer
+TITLE: CI Fixer Configuration — Optimal Docs
+
+CI Fixer Configuration — Optimal Docs 
+ / Docs / Optibot Config / CI fixer settings 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Optibot CI Fixer
+
+ The CI Fixer setting controls automated CI/CD pipeline failure detection and fixes. Access it from your Optibot dashboard at agents.getoptimal.ai → Configuration tab → Other Settings section .
+
+ ⚠️ GitHub only. The CI Fixer works with GitHub Actions. It is not available for GitLab repositories.
+
+ Enable CI Fixer
+
+ Setting: Enable CI fixer | Type: boolean | Default: Off
+
+ When turned on, Optibot monitors your GitHub Actions workflows. If any CI check fails, Optibot intercepts the error, analyzes the root cause, works through a solution, and opens a new draft PR with the fix along with a detailed explanation of what it changed and why.
+
+ When to use: 
+
+ Enable for projects with complex CI/CD pipelines where failures are common
+
+ Useful for catching and resolving pipeline issues automatically without pulling an engineer away from their current work
+
+ Helps reduce the time spent manually reading CI logs and debugging failures
+
+ What the CI Fixer Does
+
+ When a GitHub Actions workflow fails on an open PR, Optibot:
+
+ Detects the failed workflow run
+
+ Reads the error logs and identifies the affected files
+
+ Analyzes the root cause of the failure
+
+ Applies targeted fixes and opens a new draft PR with the changes
+
+ Posts a comment on the original PR summarizing the issue, what was changed, and why
+
+ Engineers review the draft fix PR, merge it if it looks correct, and the original PR build goes green — without anyone having to manually triage the CI log.
+
+ Common Issues the CI Fixer Can Resolve
+
+ Missing or incorrect environment variables
+
+ Incorrect GitHub Actions workflow syntax
+
+ Dependency installation failures
+
+ Test configuration issues
+
+ Build script errors
+
+ Type errors and syntax issues in source files causing workflow failures
+
+ Requirements
+
+ GitHub Actions must be enabled on the repository
+
+ The repository must be connected to Optibot via the GitHub integration
+
+ Optibot must have read/write permissions on checks and pull requests (granted during GitHub App installation)
+
+ GitLab Users
+
+ This feature is not available for GitLab repositories. The CI Fixer is specific to GitHub Actions. If you are on GitLab, leave this setting off — it will have no effect on GitLab workflows.
+
+ Note: Settings are per-repository. The CI Fixer will begin monitoring new workflow runs as soon as it is turned on.

@@ -1,0 +1,93 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-release---cursor-extension-launch
+TITLE: Optibot: Cursor Extension Launch — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 🖱️ 
+
+ New Release December 1, 2025 Cursor IDE Extension 
+ Optibot: Cursor Extension Launch 
+ Optibot is now in the Cursor Marketplace. Fix PR review comments with one click — Cursor opens with full context and a ready-to-apply fix. 
+
+Optibot is now available natively inside Cursor — with full-context fixes triggered directly from your GitHub PR comments. This release makes Optibot fully integrated into the Cursor editor, giving engineers the fastest possible workflow from PR feedback → in-editor fix → commit, without prompt engineering or manual setup.
+
+ Cursor Marketplace: Live now
+ Extension: marketplace.cursorapi.com 
+ New Features
+ Official Optibot Extension for Cursor
+
+Optibot is now live in the Cursor Marketplace, letting you access your AI reviewer directly inside the Cursor IDE — no terminal setup or configuration required.
+
+ "Solve in Cursor" Deep-Link Integration (GitHub)
+ Every Optibot review comment in GitHub now includes a Solve in Cursor link. Click it, and Cursor will:
+ Open the Cursor editor.
+ Install the Optibot extension if it isn't already installed.
+ Load a chat with full context for that exact issue.
+ Propose a fix right in the file you're working on.
+ This creates a seamless bridge between GitHub PR feedback and your in-editor development flow.
+ One-Click Install From Any PR
+ No pre-install needed. If the Cursor extension isn't detected, clicking Solve in Cursor prompts Cursor to install the Optibot extension automatically. Confirm installation, and you're instantly activated — zero setup overhead for engineers.
+ Context-Aware Fixes Inside Cursor
+ When the extension opens, Optibot automatically understands:
+ The specific file and exact line being reviewed.
+ The full review comment from Optibot.
+ Repo and branch context.
+ You get an immediate fix proposal, with inline diffs and full edit control. Press Accept, adjust the changes, or undo — all directly inside Cursor.
+ Org-Aware Login
+
+Logging in with Optibot Login inside Cursor automatically associates engineers with their existing organization, preserving all permissions and repo access.
+
+ Why This Matters
+ Before Cursor integration: 
+ Copy → open Cursor → find file/line → paste → write a prompt → pray context is correct.
+ Now: 
+ Click "Solve in Cursor" → Cursor opens → fix appears → commit.
+ No prompt engineering.
+ No file navigation.
+ No reloading context.
+ Just fast, accurate fixes with full repo grounding.
+
+Previous
+ VS Code Extension Support and GitLab Enhancements 
+Next
+ Automatic Reviews on New Commits 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

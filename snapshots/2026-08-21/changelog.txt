@@ -1,0 +1,290 @@
+SOURCE: https://getoptimal.ai/changelog
+TITLE: Changelog — Optimal AI
+CLASS: changelog
+
+Always shipping
+
+Changelog
+
+Every feature, improvement, and fix we ship — straight from the team building Optibot and Insights.
+
+ All Releases Improvements Retired 
+
+Follow @optimaldotai
+
+Latest Release
+
+ New Release August 19, 2026 
+ Auto-Fixer v2: New Engine, Faster Fixes 
+ Choose which model applies your fixes (open-source Kimi K3 or Claude Sonnet 5), control delivery and budget from a new dashboard tab, plus a faster fixer engine with a built-in syntax check.
+ Auto-Fix Performance Dashboard Jira 
+
+Read more
+
+ August
+11, 2026 
+ August 11, 2026 Improvement Code Review Configuration DX 
+ 👁️ Optibot Now Reviews Your CI & Tooling Config 
+
+ Optibot's search tools can now read config in dot-folders, like .github/workflows, .circleci, and .husky, instead of skipping hidden directories entirely. 
+
+ August
+4, 2026 
+ August 4, 2026 New Release Insights GitHub Metrics Analytics 
+ 🥞 Stacked Pull Request Support 
+
+ Insights now supports viewing stacked pull requests directly inside your PR Cycle Time view, with stack-level cycle time and stalled-stack visibility. 
+
+ July
+22, 2026 
+ July 22, 2026 Improvement Jira Code Review Integrations 
+ 🎯 Jira: Accurate Ticket Detection from Titles and Branches 
+
+ Optibot now reads the Jira ticket from your PR title or branch name, supports [ABC-123] and ABC-123 formats, and ignores tickets only mentioned in the body. 
+
+ July
+16, 2026 
+ July 16, 2026 Improvement Code Review Reliability Performance DX 
+ 🛡️ Review Wait-Time Estimates & More Resilient Reviews 
+
+ Optibot now tells you how long a review will take, fails over more reliably when a reviewer hits a rate limit, and detects duplicate code faster on large repos. 
+
+ July
+9, 2026 
+ July 9, 2026 Improvement Jira Integrations Reliability 
+ 🔄 Jira: Reconnect Instantly, Connect More Reliably 
+
+ Broken Jira credentials? Just re-save them, no need to disconnect first. This update adds a Cloud / Server toggle and fixes service account setup failures. 
+
+ July
+5, 2026 
+ July 5, 2026 New Release CLI Code Review DX Reliability 
+ 🚀 CLI: Async Reviews, Pre-Push Gate & Reliability Fixes 
+
+ Reviews now run in the background so you can keep working. A new --fail-on-issues flag blocks a push when the review does not pass, giving you a final check before code ships. 
+
+ July
+1, 2026 
+ July 1, 2026 New Release Code Review AI Reliability Duplicate Detection 
+ 🪞 Optibot Now Catches Duplicate Code Before It Ships 
+
+ Optibot proactively detects when new code duplicates something already in your codebase, re-verifies prior issues more accurately, and handles model failures more gracefully. 
+
+ June
+25, 2026 
+ June 25, 2026 Improvement Monorepo Configuration Code Review DX 
+ 🔍 Auto-Detect Review Instructions 
+
+ Stop registering review instruction files by hand. Give Optibot a glob pattern like **/REVIEW.md and it discovers every matching file automatically. 
+
+ June
+23, 2026 
+ June 23, 2026 New Release Insights Analytics Metrics Code Review 
+ 📊 Review Stats: Track Review Metrics for Your Team 
+
+ A new Review Statistics page gives you a live view of review activity across your team — total reviews, per-member breakdowns, top repositories, and a timeline chart you can filter by day, week, or month. 
+
+ June
+19, 2026 
+ June 19, 2026 New Release Code Review Performance AI Reliability 
+ ⚡ Reviews That Learn As You Push 
+
+ A foundational upgrade to the review engine. Push reviews now zero in on your latest commits for faster, more targeted feedback with every push, automatically. 
+
+ June
+11, 2026 
+ June 11, 2026 New Release Review Memory AI Organization Knowledge Management 
+ 🧠 Review Memory: Shared Knowledge & Smarter Suggestions 
+
+ Review Memory now operates across your entire organization — shared patterns, automatic contradiction detection, and a self-maintaining knowledge base that stays accurate over time. 
+
+ June
+8, 2026 
+ June 8, 2026 New Release Monorepo Configuration Code Review 
+ 🗂️ Monorepo Guidelines — Per-Directory Review Instructions 
+
+ Define different review standards for different parts of your monorepo. Optibot applies the right rules based on which directories each PR touches. 
+
+ June
+3, 2026 
+ June 3, 2026 New Release Code Review AI Performance Reliability 
+ 🔍 Pair Review 
+
+ Optibot's biggest review upgrade yet: multiple passes on every review, instant PR summaries, faster replies, and a rebuilt, more reliable engine. 
+
+ June
+1, 2026 
+ June 1, 2026 New Release Re-review Slack GitHub GitLab UX 
+ 🔄 Optibot Release - Re-review code in one click 
+
+ One click re-review in GitHub and Slack, richer Slack notifications with author and comment counts, and clearer review status messages. 
+
+ April
+15, 2026 
+ April 15, 2026 New Release Quality UX Performance Members AI 
+ 🎯 Arcadia 2.5.1: Smarter Reviews with Noise reduction 
+
+ Suppress repeated issues with context-aware tracking, revamped members page with pagination and search for large teams, upgraded AI engine, and smarter bot responses. 
+
+ March
+30, 2026 
+ March 30, 2026 New Release Security AI Agent 
+ 🔐 Optibot for AppSec — AI Security Agent 
+
+ Optibot now ships with a dedicated AppSec mode. On every PR it automatically surfaces OWASP Top 10 vulnerabilities, insecure dependency versions, injection risks, and secrets exposure — without any manual configuration. 
+
+ March
+18, 2026 
+ March 18, 2026 New Release Integration Claude Code 
+ ⚡ Optibot Claude Code Skill — Code Reviews Built Into Claude Code 
+
+ Optibot is now available as a native Claude Code skill. Trigger a full code review from inside your AI coding session — no tab-switching, no copy-paste. The review comes back in the same chat with file-level context. 
+
+ February
+24, 2026 
+ February 24, 2026 New Release Performance Monorepo 
+ 🚀 Optibot February II — Release Notes 
+
+ Improved multi-file reasoning, faster review latency, and better handling of large monorepo PRs. Plus: Optibot now understands your team's custom linting rules and incorporates them in every review. 
+
+ February
+12, 2026 
+ February 12, 2026 New Release Review Testing 
+ ✨ Optibot February Feature Update 
+
+ New: ask Optibot follow-up questions directly on any review comment. Added support for test coverage analysis and detection of missing test cases for changed code paths. 
+
+ February
+6, 2026 
+ February 6, 2026 Improvement Insights Metrics 
+ 📊 Optimal Insights February Release Log 
+
+ Engineering Insights now shows PR size trends over time, reviewer load distribution, and a new "bottleneck score" that pinpoints exactly where cycle time is being lost. 
+
+ January
+30, 2026 
+ January 30, 2026 New Release Code Quality Static Analysis 
+ 🧹 Optibot Now Finds Dead Code and Code Quality Issues 
+
+ Optibot's static analysis engine now flags unreachable functions, unused exports, and redundant abstractions — helping teams keep codebases clean as AI-generated code volumes increase. 
+
+ December
+11, 2025 
+ December 11, 2025 Improvement Review Branch 
+ 🌿 Branch Review: Analyze Entire Pull Requests 
+
+ Branch Review is a new mode that analyzes all commits in a PR together, giving Optibot full context of the entire changeset rather than reviewing commits individually. 
+
+ December
+4, 2025 
+ December 4, 2025 Improvement Quality UX 
+ ✏️ Shorter Summaries. Better Comments. Cleaner CI in Optibot 
+
+ Reviewed and tightened Optibot's output quality across the board. Summaries are now 40% shorter on average. Comments are more actionable. CI check output is cleaner and easier to skim. 
+
+ December
+3, 2025 
+ December 3, 2025 New Release Slack Notifications 
+ 🔔 Optibot + Slack Integration — Real-Time PR Reviews & Productivity Alerts 
+
+ Optibot now posts review summaries and productivity alerts directly to Slack. Get notified when a PR is ready to merge, when a review is blocked, or when an engineer is overloaded. 
+
+ December
+3, 2025 
+ December 3, 2025 Improvement Automation Reviews 
+ 🔄 Automatic Reviews on New Commits 
+
+ Optibot now automatically triggers a fresh review whenever new commits are pushed to an open PR, keeping your review always up to date without manual re-requests. 
+
+ December
+1, 2025 
+ December 1, 2025 New Release Cursor Extension 
+ 🖱️ Optibot Release — Cursor Extension Launch 
+
+ Optibot is now available in the Cursor editor. Run full code reviews and ask questions about your repository inside the AI-native editor you already use. 
+
+ November
+24, 2025 
+ November 24, 2025 Improvement VS Code GitLab 
+ 🔧 VS Code Extension Support and GitLab Enhancements 
+
+ VS Code extension now supports all Optibot review features. GitLab integration improvements include better diff rendering, faster MR analysis, and inline comment threading. 
+
+ November
+18, 2025 
+ November 18, 2025 New Release VS Code Extension 
+ 🖥️ Optibot, Now in VS Code 
+
+ The Optibot VS Code extension is now available. Review PRs, ask questions about your codebase, and get inline suggestions without leaving your editor. 
+
+ November
+17, 2025 
+ November 17, 2025 Improvement GitLab Compliance 
+ 💬 Inline GitLab Comments, On-Demand Compliance Checks, and Smarter Re-reviews 
+
+ GitLab now gets inline diff comments just like GitHub. Added on-demand compliance checks you can trigger any time. Re-reviews are now smarter — Optibot only re-examines what changed. 
+
+ November
+13, 2025 
+ November 13, 2025 New Release Insights Analytics 
+ 📈 Individual vs. Team Comparison Now Live in Insights 
+
+ The Insights dashboard now lets you compare any individual engineer's metrics against team averages — PR cycle time, review turnaround, comment resolution rate, and more. 
+
+ November
+5, 2025 
+ November 5, 2025 Improvement AI Architecture 
+ 🧠 Optibot Improved Context Understanding and Unified Architecture 
+
+ Optibot now understands cross-file dependencies and import chains at review time. The underlying architecture has been unified across GitHub and GitLab for consistent review quality. 
+
+ September
+29, 2025 
+ September 29, 2025 New Release GitLab Performance 
+ 🦊 GitLab Integration and Faster Code Review Performance 
+
+ Optibot now works with GitLab. Inline comments, MR summaries, and CI checks all work the same way as with GitHub. Review latency improved by 2× across all platforms. 
+
+ No entries in this category yet.
+
+ Stay up to date
+
+New releases ship regularly. Follow us on X for real-time updates when something new drops.
+
+Follow on X
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

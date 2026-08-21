@@ -13,19 +13,22 @@ and reports only the assertions whose status changed.
 (testimonial rotation, nav edits, A/B copy) and misses the changes that matter (a
 competitor ships a feature and never edits the page you watch). Claims are the unit.
 
-## Targets
+## Layout
 
-Everything lives under `targets/<slug>/`, so the skill carries nothing about any one
-company. Point it at a new company by adding a directory.
+This repository is one target: getoptimal.ai. Config and state sit at the root next to
+the tools.
 
 ```
-targets/<slug>/
-  owner.yaml         the site you are defending: page classes, anchors, page floor
-  competitors.yaml   who the digest watches
-  claims.yaml        input and state
-  snapshots/<date>/  one text file per page, git is the history
-  reports/<date>.md
+owner.yaml         the site being defended: page classes, anchors, page floor
+competitors.yaml   who the digest watches
+claims.yaml        input and state
+snapshots/<date>/  one text file per page; git is the history
+reports/<date>.md
+tools/
 ```
+
+To point the skill at a different company, set `CLAIM_CHECK_TARGETS` to a directory
+holding the same four files. The tools read it if present and fall back to the repo root.
 
 ## Inputs
 

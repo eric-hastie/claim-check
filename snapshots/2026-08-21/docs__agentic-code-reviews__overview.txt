@@ -1,0 +1,121 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/overview
+TITLE: Agentic Code Reviews — Optimal Docs
+CLASS: docs
+
+Agentic Code Reviews — Optimal Docs 
+ / Docs / Agentic Code Reviews / Overview 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Agentic Code Reviews
+
+ Optibot — Autonomous, context-aware, and built to transform how engineering teams handle code reviews.
+
+ What is Optibot?
+
+ Optibot is Optimal AI’s agentic code reviewer — an autonomous assistant that reviews pull requests with the depth, precision, and consistency of a senior engineer.
+
+ Unlike static linters or suggestion engines, Optibot understands your entire repository. It provides context-aware feedback, identifies performance or security issues, and even explains its reasoning directly in your PR threads.
+
+ It integrates seamlessly with both GitHub and GitLab, becoming an intelligent participant in your workflow. From summarizing pull requests to suggesting fixes, Optibot helps your team move faster, with more confidence and less noise.
+
+ The Problem
+
+ Code reviews are essential — but they’re often slow, inconsistent, and overloaded with minor feedback. Developers wait for reviews, PR queues pile up, and critical issues slip through. Manual reviews can vary in quality depending on who’s reviewing, while automated tools often produce noisy or irrelevant feedback.
+
+ The result? Reduced velocity, frustrated teams, and inconsistent code quality.
+
+ The Solution
+
+ Optibot changes the way teams approach reviews by combining LLM-based reasoning with deep repository understanding. It automatically reviews pull requests, summarizes code changes, detects regressions, and posts helpful comments in natural language — all within seconds of a PR being opened.
+
+ With Optibot, you’ll:
+
+ Reduce average review times
+
+ Maintain consistent code quality
+
+ Empower engineers to focus on building, not debugging
+
+ Catch issues before they merge
+
+ Key Capabilities
+
+ Full Codebase Context
+
+ Optibot reviews your PRs with a full understanding of your repository history, dependencies, and team conventions. This enables it to deliver precise, context-aware feedback that aligns with how your team actually writes code, not just how it looks syntactically.
+
+ That context also includes common CI and tooling config that lives in dot-folders, like .github/workflows , .circleci , and .husky , so reviews account for the checks and hooks that actually govern your repo.
+
+ Smart PR Summaries
+
+ Optibot automatically creates clear, concise summaries describing what changed, why it matters, and any associated risks. Summaries include:
+
+ Changed files and functions
+
+ Dependency or logic updates
+
+ Potential regressions
+
+ Related JIRA or issue links
+
+ CI Fixer Agent
+
+ When a CI run fails, Optibot detects the issue, analyzes logs, and suggests possible fixes automatically. It flags:
+
+ Broken or flaky tests
+
+ Misconfigurations in pipelines
+
+ Missing environment variables
+
+ Syntax or dependency errors
+
+ Security Checks
+
+ Optibot automatically performs AI-powered security scans on each PR — identifying risky imports, vulnerable packages, or unsafe patterns. When issues are found, it provides line-level explanations and recommendations.
+
+ Automated & Contextual Comments
+
+ Every suggestion is posted as a natural-language comment in the PR thread, explaining the reasoning, context, and potential alternatives. Developers can respond, accept, or dismiss suggestions — just like human feedback.
+
+ Get Started
+
+ GitHub Integration 
+
+ GitLab Integration 
+
+ Optibot Features Overview

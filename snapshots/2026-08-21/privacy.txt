@@ -1,0 +1,123 @@
+SOURCE: https://getoptimal.ai/privacy
+TITLE: Privacy Policy — Optimal AI
+CLASS: other
+
+// privacy.policy
+
+OPTIMAL AI, INC.
+Privacy Policy
+
+ Last Modified: December 1, 2025
+
+ 1. Introduction
+
+Optimal AI, Inc. ("Company," "we," "our," or "us") respects your privacy. This Privacy Policy ("Policy") describes how we collect, use, process, and disclose information through our website, our AI-powered applications, our agents, and our broader technology platform (collectively, the "Services").
+
+We design our Services to assist developers, engineering teams, and enterprises. We are committed to protecting the proprietary nature of the data you trust us with—whether that is source code, documentation, project metadata, or natural language prompts—and being transparent about how our AI systems process that information.
+
+By accessing or using our Services, you agree to this Privacy Policy. This Policy incorporates by reference our Terms of Service.
+
+ 2. Information We Collect
+ We collect information to provide our AI Agents and Services to you. We group this information into three distinct categories:
+ A. Information You Provide (Account & Admin Data)
+ Registration & Authentication: We collect information when you create an account to verify your identity.
+ Direct Login (Email): If you sign up via email, we collect your name, email address, username, and organization name. If you create a password, we process it using industry-standard hashing and encryption; we do not store passwords in plain text.
+ Single Sign-On (SSO): If you sign up or log in via a third-party platform (e.g., Login with GitHub, Google, or Microsoft), we do not collect a password. Instead, we authenticate you via that platform using secure tokens (OAuth) and receive basic profile information (name, email) permitted by your settings on that platform.
+
+ Billing Information: If you purchase a subscription, our third-party payment processors (e.g., Stripe) collect your financial information. We do not store this data directly.
+ Communications: Information sent to us via support tickets, feedback forms, or direct interaction with our team.
+ B. Customer Content (Inputs & Outputs)
+ To provide our Services, our Apps need to process the specific data you ask us to analyze, generate, or act upon ("Customer Content").
+ Connected Repositories & Workspaces: When you connect our Apps to third-party platforms (e.g., GitHub, GitLab, Jira, Linear, Slack), we access the data required to fulfill your request. This may include Source Code, Pull Request Metadata, Issue Descriptions, Documentation, and Chat Logs.
+ Workforce & Contributor Metrics: To provide "Engineering Insights," we process metadata regarding the activity of individual contributors (e.g., commit frequency, merge times, PR review velocity). We process this data solely to provide analytics to the Customer (your organization).
+ Direct Inputs: Prompts, queries, and instructions you provide directly to our AI Agents (e.g., "Generate a unit test for this function" or "Summarize this sprint").
+ Authentication Tokens: We store encrypted access tokens (OAuth) to authenticate with these platforms on your behalf. We do not store your root passwords or private keys.
+ C. Usage & Telemetry Data (System Data)
+ Service Usage: We automatically collect metadata about how you interact with our Apps, such as the volume of data processed, response times of our agents, feature utilization, and command history.
+ Device Data: We collect technical data including IP addresses, browser types, operating systems, and logs to ensure the security and performance of the Services.
+ Cookies: We use cookies and similar technologies (both session and persistent) to manage sessions, verify identity, and analyze aggregate usage trends.
+
+ 3. How We Use Your Information
+ We use your information for the following specific purposes:
+ To Provide the Services: To authenticate users, process Customer Content, and generate AI-driven Outputs (e.g., code reviews, insights, documentation, or automated actions) as requested by you.
+ To Improve Our Models (With Strict Limits): We use aggregated, anonymized usage data (e.g., "How often is the 'Refactor' agent used?") to improve our platform. We do not use your proprietary Customer Content (such as private source code) to train our foundational third-party AI models.
+ Service Context (Memory): To allow our AI Agents to maintain context across sessions, we may generate and store Vector Embeddings. These are numerical, abstract representations of your Customer Content that allow the AI to "remember" relevant codebase context without storing the raw text permanently.
+ Beta & Experimental Features: We may use data from specific "Beta" or "Early Access" features to explicitly improve those specific tools, but only with your consent or transparent notice.
+ Communication: To send transactional alerts (e.g., "Analysis Complete"), administrative notices, and product updates.
+ Security & Compliance: To prevent fraud, verify identity, and comply with legal obligations.
+
+ 4. Data Privacy & AI Processing Standards
+ We distinguish between your Customer Content (your proprietary IP) and our System Data (how our platform runs).
+ Ephemeral Processing (Source Code): Generally, we process the raw text of your Source Code ephemerally for the purpose of generating AI reviews or agentic outputs. This means the code is retrieved, processed by the model, and not permanently retained in raw text form, except where necessary for active caching or user-requested history logs.
+ Retention for Insights: To provide Engineering Insights (e.g., historical trends, cycle time), we retain metadata and calculated metrics derived from your repositories (such as timestamps, commit hashes, PR statuses, and contributor statistics) for the duration of your subscription.
+ No Training on Private IP: We prioritize the confidentiality of your intellectual property. We do not use your private Customer Content to train the large language models (LLMs) of our third-party AI partners (e.g., OpenAI, Anthropic). Our agreements with these partners explicitly prohibit them from training on data sent via our API integrations.
+ Ownership: As between you and us, you retain all rights, title, and interest in and to your Customer Content.
+
+ 5. Sharing of Information
+ We do not sell your personal information. We share data only as follows:
+ Sub-processors & AI Partners: We work with trusted third-party vendors to provide infrastructure (e.g., AWS, Google Cloud), AI processing (e.g., OpenAI, Anthropic), and analytics. These vendors are bound by strict confidentiality and data protection obligations.
+ Third-Party Integrations: When you direct our Apps to interact with a third-party service (e.g., "Post this comment to Jira" or "Open a PR in GitHub"), we transmit the necessary data to that service to fulfill your command.
+ Enterprise Accounts: If you use the Services through an account provided by your organization (e.g., your employer), usage data and Customer Content may be accessible to that organization's administrators.
+ Legal Requirements: We may disclose information if required by law, subpoena, or to protect the rights and safety of the Company or others.
+ Business Transfers: In the event of a merger, acquisition, or sale of assets, user information may be transferred as a business asset.
+
+ 6. Security
+
+We employ industry-standard physical, technical, and organizational safeguards designed to protect your data. This includes encryption of data in transit (TLS/SSL) and at rest, strict access controls for our employees, and regular security audits. However, no digital service is completely secure, and we cannot guarantee absolute security.
+
+ 7. Your Rights and Choices
+ Account Management: You may access, update, or delete your account information via the Apps or by contacting [email protected] .
+ Opt-Out of Context Storage: You may request that we disable the storage of Vector Embeddings for your workspace, though this may degrade the "memory" capabilities of our AI Agents.
+ Marketing Communications: You may opt out of marketing communications at any time. Transactional messages related to Service performance will still be sent.
+ Jurisdiction-Specific Rights: California Residents (CCPA): You have the right to know what personal information we collect, request deletion, and opt out of the sale of personal information (Note: We do not sell your data).
+ EEA/UK Residents (GDPR): You have the right to access, rectification, erasure, and portability of your data. We process your data based on contractual necessity and legitimate interests.
+
+ 8. International Transfers
+
+Our Services are hosted in the United States. If you use our Apps from outside the U.S., you acknowledge that your information will be transferred to, stored, and processed in the U.S. in accordance with this Policy.
+
+ 9. Changes to This Policy
+
+We may update this Policy to reflect changes in our Apps, laws, or data practices. If we make material changes, we will notify you (e.g., via email or an in-app notification). Continued use of the Services implies acceptance of the updated Policy.
+
+ 10. Contact Us
+ If you have questions about this Policy or our data practices, please contact us at:
+ Optimal AI, Inc. 
+
+Email: [email protected] 
+
+548 Market St #36879, San Francisco, CA 94104
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,127 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/github-integration
+TITLE: GitHub Integration Setup Guide (Optibot) — Optimal Docs
+
+GitHub Integration Setup Guide (Optibot) — Optimal Docs 
+ / Docs / Agentic Code Reviews / GitHub integration setup 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ GitHub Integration Setup Guide (Optibot)
+
+ This guide walks you through how to install and configure Optibot — Optimal AI’s secure AI code review agent — directly within your GitHub workflow.
+
+ Prerequisites
+
+ Before you begin, ensure you have:
+
+ Admin access to your GitHub organization or repo
+
+ A GitHub account with permission to install apps
+
+ Access to your org’s GitHub repositories
+
+ Step 1: Sign Up & Install the GitHub App
+
+ Visit the Sign-Up Link — Begin by signing up through the Optibot signup link . This activates your free trial.
+
+ Authorize the GitHub App Installation — During onboarding, you’ll be prompted to install the Optibot GitHub App:
+
+ Select the organization and repositories where you want Optibot active.
+
+ Grant the required read/write permissions for pull requests and metadata.
+
+ Select Repositories — Choose either:
+
+ All Repositories (for full org coverage), or
+
+ Specific Repos where you’d like Optibot to run.
+
+ Wait for Context Indexing — Once installed, Optibot begins indexing your codebase to build context.
+
+ For small repos: indexing completes in minutes
+
+ For large repos or monorepos: indexing can take a few hours
+
+ Very large codebases may take up to a week
+
+ ⏳ During indexing, the app may appear as “Installing…” — no action is needed during this phase.
+
+ Step 2: Optibot Starts Reviewing PRs
+
+ Once indexing is complete, Optibot begins functioning automatically:
+
+ PR Summaries — You’ll receive rich, contextual summaries with functional intent, not just diffs.
+
+ Automated Code Reviews — Optibot flags bugs, security issues, anti-patterns, and logic problems across the repo.
+
+ 🟢 Merge recommendations or 🛑 blocking flags will appear as part of the PR review flow.
+
+ Step 3: Customize with .optibot file (Optional)
+
+ Upon installation, Optibot opens a PR containing a default .optibot file. You can customize:
+
+ ✅ Repos or folders where Optibot should/shouldn’t review code
+
+ 🧪 Enable or disable certain review features (e.g. test fixing, CI failure handling)
+
+ 🛡️ Turn on optional security enforcement or guidelines
+
+ Once merged, these settings go live and will be applied on future PRs.
+
+ Optional Features to Turn On (Post-Setup)
+
+ Once you’re familiar with the baseline functionality, you can optionally enable:
+
+ Guidelines Enforcement — Upload a shared ruleset to enforce team practices across PRs
+
+ Dependabot Bundling — Automatically test, merge, and close PRs opened by Dependabot
+
+ SOC 2 Compliance Checks — Run #optibot compliance in PR comments for risk assessments
+
+ Troubleshooting & Support
+
+ Join a shared Slack channel with the Optimal AI team for real-time help
+
+ Installation status, indexing progress, and detailed logs are visible in your dashboard
+
+ Questions? Use @optibot inside PRs to request additional reviews or ask for clarifications
+
+ Security Notes
+
+ No code is stored — all analysis is done ephemerally during the review
+
+ Optibot supports fine-grained repo-level access
+
+ Your .optibot file config stays version-controlled inside your repo

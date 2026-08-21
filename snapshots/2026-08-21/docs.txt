@@ -1,0 +1,118 @@
+SOURCE: https://getoptimal.ai/docs
+TITLE: Documentation — Optimal Docs
+CLASS: docs
+
+Documentation — Optimal Docs 
+
+ / Docs 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+
+ Optimal Platform Documentation
+
+Everything you need
+ to use Optibot. 
+
+Set up AI code reviews, integrate with GitHub or GitLab, track engineering
+ metrics, and use Optibot from your terminal or IDE — all in one place.
+
+Get started
+ CLI reference Talk to us 
+
+ New to Optibot? Start here — connect GitHub in minutes Set up code reviews GitHub & GitLab integration guides Use the CLI Review code from your terminal or CI 
+ All topics 
+ Getting Started
+
+ Connect your GitHub repos, activate Optibot, and set up Engineering Insights.
+ Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+
+ Agentic Code Reviews
+
+ Automated AI code reviews on every GitHub and GitLab pull request.
+ Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+
+ Optibot CLI
+
+ Run code reviews from your terminal, CI/CD pipelines, or any automated workflow.
+ Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+
+ Optibot Config
+
+ Customize review depth, summaries, CI fixer, and dependency bundler per repo.
+ Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+
+ Engineering Insights
+
+ Track PR cycle time, team velocity, and get AI-powered trend analysis.
+ Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+
+ Optibot Claude Code Skill
+ New 
+
+ AI code reviews built directly into your Claude Code sessions.
+ Getting started 
+
+ Optibot for IDE
+
+ Use the Optibot MCP server in Cursor, Windsurf, Claude Desktop, and Claude Code.
+ Optibot MCP 
+ Reviewing code with MCP

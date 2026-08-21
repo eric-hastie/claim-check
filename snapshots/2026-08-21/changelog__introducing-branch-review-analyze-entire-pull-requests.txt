@@ -1,0 +1,80 @@
+SOURCE: https://getoptimal.ai/changelog/introducing-branch-review-analyze-entire-pull-requests
+TITLE: Introducing Branch Review — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 🌿 
+
+ Improvement December 11, 2025 Branch Review VS Code Cursor 
+ Introducing Branch Review 
+ Review all changes on your branch before opening a PR. Includes smart branch selector, merge conflict detection, and one-click applied suggestions. 
+
+ Branch Review: Analyze Entire Pull Requests
+
+You can now review all changes on your current branch compared to a target branch like main or develop . Get a full AI-powered review of your feature or bug fix before opening a pull request.
+
+ What's new
+ Local Changes Review: Analyze any unstaged changes before committing.
+ Branch Changes Tab: Switch between local uncommitted changes and all changes on your current branch.
+ Smart Branch Selector: Searchable dropdown for quickly selecting any remote branch. We auto-detect your repository's default base branch ( origin/main , origin/master , etc.) for a faster start.
+ Merge Conflict Detection: Get instant alerts when your branch conflicts with the target branch.
+ Apply Suggested Code Changes: Apply Optibot's inline suggestions directly to your code with one click.
+ Improvements
+ More Readable, More Helpful Review Comments
+
+Review comments now support full Markdown formatting — including bold text, lists, code blocks, and italics — making suggestions clearer and easier to digest.
+
+ UI & Quality-of-Life Enhancements
+ File Status Indicators: Every file now shows a status label ( A , M , D ) with color-coding for quick scanning.
+ Cursor Editor Support: Official support added for Cursor users.
+ Auto-Collapsing File List: After a review completes, the file list collapses automatically so the AI feedback takes center stage. Expand anytime.
+ Clearer Error & Upgrade Notifications: Subscription and rate-limit messages have been redesigned to be clearer and more actionable.
+ Bug Fixes
+ Improved File Detection: Better detection of all changed files in your workspace, including newly added untracked files that were sometimes missed.
+ More Reliable Git Initialization: The extension now waits for Git to fully load when opening a new window, preventing missing file lists on startup.
+ Cleaner Login Messaging: The login success message has been simplified for a smoother flow.
+
+Previous
+ Shorter Summaries. Better Comments. Cleaner CI in Optibot 
+Next
+ Optibot Now Finds Dead Code and Code Quality Issues 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

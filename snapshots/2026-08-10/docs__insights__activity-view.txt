@@ -1,0 +1,104 @@
+SOURCE: https://getoptimal.ai/docs/insights/activity-view
+TITLE: Activity View — Optimal Docs
+
+Activity View — Optimal Docs 
+ / Docs / Engineering Insights / Activity view 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Activity View | Track Code and Review Workload Distribution
+
+ The Activity view helps teams understand how PRs and commits are distributed across contributors. Use it to spot bottlenecks, review load imbalance, or uneven code activity.
+
+ Where to Find It
+
+ You’ll find Activity listed under Velocity , alongside PR Cycle Time and Deployment Frequency.
+
+ How It Works
+
+ 1. Select a Team or Individual
+
+ Click the team selector dropdown to choose a Team (e.g., Engineering Core, Backend) or switch to Individuals to pick specific engineers.
+
+ You can multi-select teammates for side-by-side comparison.
+
+ 2. Adjust the Time Range
+
+ Use the calendar picker (top-right) to select a date range.
+
+ Toggle between Week and Month to zoom in or out on activity trends.
+
+ Use the zoom slider (– / +) to adjust how much data you see on the timeline.
+
+ 3. Interpret the Visualization
+
+ Each bubble represents a specific type of activity:
+
+ Color Event 
+ ⚪ Commit – Code pushed to the repository 
+ 🔵 PR Open – New pull request created 
+ 🟡 PR Review – Pull request reviewed 
+ 🟢 Merge Commit – Pull request merged into the main branch 
+ 🔴 Comment – Review comment added on a pull request 
+
+ Bubble size = amount of activity. Hover over a bubble to see detailed counts (e.g., 6 PRs opened, 7 merged).
+
+ 4. Filter by Activity Type
+
+ At the top of the chart, toggle on/off activity categories: Commit, PR Review, PR Open, Merge Commit, and Comment.
+
+ Deselect “Comments” to focus purely on delivery work (commits and merges).
+
+ 5. Generate AI Insights
+
+ Click AI Insight to get an instant summary of team performance — including busiest contributors, review patterns, and collaboration trends for the selected period.
+
+ Pro Tips
+
+ Use filters to isolate specific actions (e.g., only PR reviews).
+
+ Pair Activity with PR Cycle Time for deeper insight into how reviews affect speed.
+
+ Click AI Insight regularly to surface patterns you might overlook manually.
+
+ Month view is ideal for spotting long-term productivity trends or comparing sprint outputs.
+
+ Troubleshooting
+
+ Issue Fix 
+ No bubbles appearing Check your date range or filters — you may have deselected all activity types 
+ Missing members Switch from Teams to Individuals and search by name 
+ Slow loading For large teams, narrow the range to a single week 
+ Overlapping bubbles Zoom in using the slider for clearer visualization

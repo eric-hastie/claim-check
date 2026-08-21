@@ -1,0 +1,184 @@
+SOURCE: https://getoptimal.ai/docs/getting-started/trial-setup
+TITLE: Trial Setup — Optibot + Insights — Optimal Docs
+CLASS: docs
+
+Trial Setup — Optibot + Insights — Optimal Docs 
+ / Docs / Getting Started / Trial setup 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Setting up your trial in Optimal AI | Optibot + Insights
+
+ This guide walks you through connecting your GitHub repos, activating Optibot, and exploring key Insights dashboards.
+
+ 1. What “Activated” Looks Like
+
+ You’re activated when:
+
+ Optibot installed on 1–2 active repos (fresh PRs are getting reviewed)
+
+ Insights connected to GitHub + Jira
+
+ Members added in Insights (so their metrics show)
+
+ Slack set up: shared support channel + notifications channel
+
+ You’ve seen Allocations → Distributions populate and one Optibot inline review + Slack ping
+
+ 2. Prerequisites
+
+ GitHub org admin permissions
+
+ Jira admin (ability to create a service account or API token if you use Jira)
+
+ Slack permissions to install apps / create channels
+
+ 3. Step-by-Step Onboarding (15–25 minutes)
+
+ Step 1 — Install Optibot (GitHub App)
+
+ Open your Optibot install link .
+
+ Choose your GitHub org → select 1–2 core repos (you can add more later).
+
+ Authorize and continue to the Optibot Dashboard.
+
+ Tip: Pick repos with daily PR activity for fastest feedback.
+
+ Step 2 — Create your Insights account (analytics)
+
+ Open the Insights Sign Up link.
+
+ Sign up with GitHub (not Sign In, on first run).
+
+ When asked which repos to monitor, select All or the set with active commits/PRs.
+
+ Optibot and Insights can run independently, but together you’ll see agent impact + metrics side-by-side.
+
+ Step 3 — Connect Slack (two parts)
+
+ A. Shared Support Channel (with Optimal AI) 
+
+ Accept the invite from our team. This is your fastest path to help during trial. If you have not received an invite to Slack, please email [email protected] .
+
+ B. Optibot Notifications 
+
+ In Optibot → Connect Slack → pick or create a channel (e.g., #optibot-reviews ). You’ll get messages when Optibot posts reviews/summaries.
+
+ Step 4 — Add Members in Insights (critical)
+
+ Insights → Settings → Members → add the engineers you want in dashboards.
+
+ If a person isn’t added, their metrics won’t appear.
+
+ Step 5 — (Optional) Set up Teams in Insights
+
+ If you already use GitHub Teams, ping us to import them.
+
+ Or create teams in Insights and assign members for team-level views (Activity, PR Cycle Time by team).
+
+ Step 6 — (Optional) Connect Jira to Insights
+
+ In Jira: Profile → Account Settings → Security → API tokens → create token. (Prefer a service account for fewer expirations.) 
+
+ In Insights → Settings → Integrations → Jira → enter your Jira email, API token → Save.
+
+ Notes:
+
+ Jira backfills historical data.
+
+ GitHub metrics populate from connection time forward (allow 24–48h for most views).
+
+ Step 7 — (Optional) Connect Jira to Optibot
+
+ Optibot → Integrations → Jira → reuse the same service account + token.
+
+ Best practice: Include Jira ticket ID in branch names or PR titles (e.g., feat/ECOM-123-checkout ).
+
+ Step 8 — Validate Events & Notifications
+
+ Open/merge a small PR on a connected repo.
+
+ Confirm Optibot leaves an inline review + summary in GitHub.
+
+ Confirm a Slack notification appears.
+
+ After Setup: First Steps in Platform
+
+ Insights → Investments → Distributions — See the mix of work across GitHub/Jira (bugs, hotfixes, features, dependencies, etc.).
+
+ Within 24–48 Hours
+
+ PR Cycle Time — will populate as new PRs flow post-install.
+
+ Activity — becomes meaningful as members/teams are set.
+
+ Quick Wins to Try This Week
+
+ Set one guardrail Goal — Example: “Bugs ≤ 40% of work” or “Median PR size ≤ 300 LOC”. Go to Insights → Goals .
+
+ Tune Review Flow with Optibot — Have Optibot review 3 fresh PRs. Reply to its inline comments in GitHub (it supports back-and-forth conversation).
+
+ Invite your VP Eng / Staff Eng to Insights — Add them in Settings → Members .
+
+ Troubleshooting & Gotchas
+
+ Issue Fix 
+ I don’t see metrics for someone Add them in Insights → Settings → Members 
+ Teams are empty Create teams in Insights or ask us to import from GitHub 
+ Slack isn’t posting Re-connect Optibot → Slack and re-select the channel 
+ Jira data looks off Ensure GitHub + Jira profiles map to the same emails 
+ PR views are empty New PRs only populate PR Cycle Time; give it 24–48h after install 
+
+ FAQ
+
+ Q: Do Optibot and Insights require each other? 
+A: No. They work independently. Using both shows agent impact alongside team metrics.
+
+ Q: Can you import GitHub Teams automatically? 
+A: Yes, ask us in Slack; we’ll assist with import so team views populate.
+
+ Q: How far back does data go? 
+A: Jira backfills historical data. GitHub events count from the time of connection forward.
+
+ Q: What’s the fastest path to value? 
+A: Install Optibot on an active repo, add members in Insights, connect Slack, then open one small PR.
+
+ Need Help?
+
+ Post in the shared Slack channel (fastest).
+
+ We also schedule a 30-min check-in mid-way through the trial to review your data and set the right goals.

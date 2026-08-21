@@ -1,0 +1,101 @@
+SOURCE: https://getoptimal.ai/docs/optibot-cli/organizations
+TITLE: Optibot CLI — Organizations & Status — Optimal Docs
+
+Optibot CLI — Organizations & Status — Optimal Docs 
+ / Docs / Optibot CLI / Organizations & account status 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Organizations & Account Status
+
+ The Optibot CLI always acts as exactly one organization at a time. Your review quota, repositories, API keys, and security scans all belong to that active organization . If you belong to more than one organization, the CLI gives you commands to see which one is active and to switch between them.
+
+ How the Active Organization Works
+
+ When you authenticate, Optibot issues a token that is scoped to a single organization . The active organization is encoded in that token, not stored separately on disk. Switching organizations means exchanging your current token for a new one scoped to the organization you pick.
+
+ A few consequences worth knowing:
+
+ API keys are bound to the organization that was active when you created them. A key minted for one organization will not act on another. To create a key for a different organization, switch first, then create the key.
+
+ Switching is instant and does not require a new browser login. The CLI re-scopes your existing session.
+
+ During optibot login , if you belong to more than one organization, the CLI shows an arrow-key picker so you can choose which one to start in.
+
+ Checking Your Status
+
+ Run optibot status to see how you are authenticated, which organization is active, and how much of your review quota remains:
+
+ optibot status 
+
+ The output includes:
+
+ Auth method — whether the CLI is using the OPTIBOT_API_KEY environment variable or your saved config file.
+
+ Org — the active organization (and your role in it). If you belong to more than one, it reminds you that optibot org switch can change it.
+
+ Reviews — quota used, limit, and remaining, plus when the quota resets.
+
+ A nudge to run optibot setup ci if you have no API keys yet and are wiring Optibot into CI.
+
+ Listing Your Organizations
+
+ optibot org list 
+
+ Lists every organization you belong to. The active one is marked with a * , and your role in each is shown in parentheses.
+
+ Showing the Active Organization
+
+ optibot org current 
+
+ Prints just the currently active organization and your role in it.
+
+ Switching Organizations
+
+ optibot org switch 
+
+ Opens an interactive arrow-key picker of your organizations. Selecting a different one re-scopes your stored session to that organization. If you only belong to one organization, there is nothing to switch and the command says so.
+
+ Heads up: API keys are bound to the organization active at the time they were created. After switching, run optibot setup ci (or optibot apikey create <name> ) if you need a key that acts as the newly selected organization.
+
+ optibot org switch requires an interactive terminal. In a non-interactive environment (such as CI), set the correct organization on a dev machine first and use the API key it produces.
+
+ Command Reference
+
+ Command Description 
+ optibot status Show auth method, active organization, role, and review quota 
+ optibot org list List organizations you belong to (active marked with * ) 
+ optibot org current Show the currently active organization 
+ optibot org switch Switch the active organization (interactive)

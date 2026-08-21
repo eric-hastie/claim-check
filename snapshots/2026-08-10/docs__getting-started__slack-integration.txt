@@ -1,0 +1,105 @@
+SOURCE: https://getoptimal.ai/docs/getting-started/slack-integration
+TITLE: Slack Integration — Optimal Docs
+
+Slack Integration — Optimal Docs 
+ / Docs / Getting Started / Slack integration 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Slack Integration
+
+ Connect your Slack workspace to receive live notifications, pull-request updates, and weekly reports from Optibot directly in your team channels.
+
+ Overview
+
+ Once connected, Optibot will automatically post updates in your selected Slack channel — including:
+
+ Pull Request Reviews — see approvals, comments, and linked PRs as they happen.
+
+ Weekly Reports — get summarized repository insights every Friday at 5 PM PST.
+
+ This integration keeps engineering teams aligned on progress without switching between GitHub, GitLab, and Slack.
+
+ How to Connect Slack
+
+ 1. Go to Slack Integration Settings
+
+ In your Optibot dashboard, open Settings → Integrations → Slack Integration , then click Integrate with Slack .
+
+ 2. Authorize in Slack
+
+ You’ll be redirected to Slack to approve permissions for Optibot. Click Allow to grant access.
+
+ Optibot will be able to:
+
+ View basic workspace and channel info
+
+ Post messages in conversations
+
+ 3. Select a Default Channel
+
+ After authorization, return to Optibot to choose the Slack channel where notifications should appear. Use the dropdown search to filter and select your preferred channel.
+
+ 4. Confirmation in Slack
+
+ Once the integration is complete, you’ll see a welcome message in the selected channel:
+
+ ”👋 Hello! Optibot was installed in this channel. From now on, I’ll be posting information about all my interactions with your code here.”
+
+ What You’ll Receive
+
+ PR Review Notifications
+
+ Each time a pull request is reviewed by Optibot, a detailed message is sent to Slack showing:
+
+ Repository name
+
+ PR title and link
+
+ Review outcome (✅ Approved / ❌ Not Approved)
+
+ Any code review comments
+
+ Weekly Summary Reports
+
+ Every Friday at 5 PM PST, Optibot automatically posts a weekly summary to your Slack channel. This report highlights:
+
+ Total PRs reviewed
+
+ Average cycle time
+
+ Top-performing repositories
+
+ Key metrics comparing before vs. after Optibot adoption

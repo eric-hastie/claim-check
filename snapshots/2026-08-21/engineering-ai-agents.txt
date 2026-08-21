@@ -1,0 +1,467 @@
+SOURCE: https://getoptimal.ai/engineering-ai-agents
+TITLE: How Optibot Works — AI Code Review with Codebase Context
+CLASS: product
+
+Optibot Senior Engineer 
+
+Deploy a Senior Engineer for the Highest Quality Code Reviews
+
+Optibot creates a full-codebase knowledge graph to understand context across every PR, catching 2x more complex bugs without the noise.
+
+GET A DEMO
+
+START FOR FREE
+
+2 click install
+
+Helping optimize code reviews and engineering productivity at:
+
+Trusted by world-class engineering teams building with AI.
+
+ The Market's Largest Context Window 
+ Why does Optibot deliver deeper AI code reviews than any other agent?
+
+Optibot maps your full engineering ecosystem across repos, history, and issues — creating a Knowledge Graph that understands intent at scale. See how deep code reviews compare to shallow ones → 
+
+ Cross-Repository Context
+
+ Traces dependencies across multiple repositories.
+
+ Learns your team and their coding patterns
+
+ Learns your team's architectural patterns and coding standards.
+
+ Issue and comment analysis
+
+ Reads developer comments and PR descriptions.
+
+ Understanding Intent at Scale
+
+ Builds a dynamic knowledge graph capturing why decisions were made, not just what changed.
+
+ Cross-Repository Context
+
+ Traces dependencies across multiple repositories
+
+ Learns your team and their coding patterns
+
+ Learns your team's architectural patterns and coding standards
+
+ Issue and comment analysis
+
+ Reads developer comments and PR descriptions
+
+ Building Dynamic Knowledge Graph
+
+ Understanding Intent at Scale
+
+ Comparisons 
+ Human-level reviews. Machine-level memory.
+
+ The only agent that truly understands your full multi-repo context.
+
+ Human Claude Code Cursor Bugbot 
+ chelseatroy reviewed on Sep 17 
+
+ 27
+ import { axeTkap } from "cone" ; 
+
+ 28
+
+ 29
+ const applyDiscount = () => { 
+
+ 30
+ if ( pricing . login ) { 
+
+ 31
+ return savePrice = appleylogity (); 
+
+ 32
+ } 
+
+ 33
+ };
+
+ chelseatroy on Sep 17 Member 
+ LGTM 
+
+ Generic AI tools provide noise; humans lack the context to see cross-repo dependencies.
+
+ VS 
+ VS 
+
+ Optibot 
+
+ Pull Request 
+ 27
+ import { getDiscountTier } from "@org/shared-utils" ; 
+
+ 28
+
+ 29
+ export const applyDiscount = ( user : User , price : number): number => { 
+
+ 30
+ // Optibot Context: "user.login" was renamed to "user.username" 
+
+ 31
+ if ( user . username && user . isPremium ) { 
+ Suggested by Optibot
+
+ 32
+ const tier = getDiscountTier ( user . id ); 
+
+ 33
+ return price * tier . multiplier ; 
+
+ 34
+ }
+
+ 32
+ return price ; 
+
+ 33
+ };
+
+ Optibot sees the invisible connections in your architecture that others miss.
+
+ The Math Saves 40 hours/week for a team of 4.
+
+ The Social Proof "Optibot is like having a Senior AI Engineer on my team."
+ — Simon B, Nearfleet 
+ The Security Stat 2x more security vulnerabilities caught vs. standard reviewers.
+
+ Nearfleet 
+
+ How does Optibot's AI code review work in action?
+
+A 2-minute look at how full-codebase context allows Optibot to reason through complex logic errors. Learn more about AI code reviews → 
+
+ Watch demo
+
+How does Optibot work as your senior engineer in every environment?
+
+The only engineering copilot that scales production-ready standards across your entire pipeline, from IDE feedback to the final merge.
+
+ 1 
+
+ 2 
+
+ 3 
+
+ Make Every PR a One-Shot Merge
+ Trigger a full-context review in VS Code or Cursor. Catch the edge cases that usually trigger "Request Changes" before you even hit push.
+
+ Your Most Meticulous Senior Reviewer in Git
+ Eliminate the wait for lead approvals. Optibot mirrors a senior's rigor to deliver instant, high-quality reviews—maintaining uncompromising standards at the speed of your fastest developer.
+
+ Self-Healing CI/CD Pipelines & Releases
+ Don't let a failing CI slow you down. Optibot autonomously repairs builds and crafts detailed changelogs, ensuring your shipping cycle is seamless from start to finish.
+
+GET STARTED FOR FREE
+
+ What You Can Do With Optibot 
+
+How does Optibot review code like a human reviewer on your team?
+
+ optibot-dev bot 3 days ago 
+
+Spaces after commas in --set-env-vars will cause gcloud CLI parsing errors. Remove spaces after LOGGING_ENABLED="true", 
+
+Suggested change
+
+ - 
+
+--set-env-vars=TYPEORM_SOCKET_PATH="optibot-prod",NODE_ENV="production", APP_ENV="production"
+
+ + 
+
+--set-env-vars=TYPEORM_SOCKET_PATH="optibot-prod",NODE_ENV="production",APP_ENV="production"
+
+ Solve it in vscode or cursor 
+
+ Inline Reviews & Suggestions
+ Receive specific, line-by-line suggestions directly in PR comments. Optibot automatically only highlights what your team needs to know when reviewing code.
+
+ Architecture Patterns
+
+ Naming Conventions
+
+ Tribal Knowledge
+
+ Codebase/ Ruleset
+
+ Security Rules
+
+ Best Practices
+
+ Workflow Logic
+
+ Team Preferences
+
+ Customize fully to match how your team ships
+ Customize everything from your coding guidelines to your workflow. Optibot understands specific architectural patterns, naming conventions, and best practices.
+
+ agent-optibot bot 2 min ago 
+
+Looks like this line commits twice, might cause a transaction error.
+
+ syedahmedz 2 min ago 
+
+Good catch, fixing now.
+
+ agent-optibot bot just now 
+ ✓ All set after the latest commit. 
+
+ Talk to Your Code
+ Ask questions like "Where is this function used?" and get instant answers backed by actual file references.
+
+ Optibot Dev APP 12.16 
+ Here's a overall activity for the week
+ Total PRs With Optibot: 354
+ Total repositories synced with Optibot: 3
+ Total cycle time reduced by 30%
+ • Total PRs With Optibot: 354
+ • Total repositories synced with Optibot: 3
+
+ Solve in VS Code 
+
+ Work in Your IDE
+ Access Optibot directly in VS Code & Cursor. Review summaries, ask questions, and triage PRs without leaving your editor.
+
+ Generated by Optibot 
+ Summary
+ Switches users whose Stripe trial has expired to the free plan instead of leaving their subscription in an errored state.
+
+ Key changes
+ Proactive Switch to Free Plan: When a customer 's subscription hits past_due 
+
+ Prevents subscriptions from becoming trialing or past_due 
+
+ Low-Noise Summaries
+ Optibot automatically summarizes every PR. Reviewers get immediate, structured context to start verifying code faster.
+
+ The Optibot Agent Suite 
+ What specialized AI code review agents does Optibot deploy?
+
+ The CI Fixer Agent Dependabot Bundler Release Notes Copywriter Jira Spec Verifier SOC 2 Compliance Analyser Slack-tibot 
+ The CI Fixer Agent
+ Optibot analyzes CI/CD failures, identifies the root cause, and auto-generates the fix to get your build green again.
+
+ 0 0 1 0 0 0 0 1 1 1 0 1 1 1 0 0 1 0 1 0 1 1 0 1 0 1 1 0 1 1 0 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 1 0 1
+ 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 1 0 0 1 0 1 1 1 0 1 1 1 1 0 1 0 0 0 1 1 0 1 0 1 1
+ 0 0 0 0 1 0 0 0 0 0 1 0 1 1 1 1 1 0 1 1 0 0 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1
+ 1 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 1 1 0 1 1 0 1 1 1 1 0 1 1
+ 0 0 0 0 1 1 0 0 1 0 0 1 0 1 1 0 1 0 0 0 0 1 1 1 1 1 0 1 1 1 0 0 0 1 1 0 0 1 1 1 0 1 0 1 0 1 0 0 1 0
+ 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 1 1 1 0 1 1 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 1
+ 0 1 1 1 0 1 1 1 1 1 0 1 1 0 1 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 0 0 0 1 0 1 0 0 1
+ 0 0 0 0 0 0 1 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 1 1 1 0 0 1
+ 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 1 1 1 1 0 0 1 0 0 0 1 1
+ 0 1 0 0 1 1 1 0 1 0 0 1 0 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 0 1 1 0 0 1 1 1 0 1 1 1 0 0 1 1 0 0 0 0 1 1
+ 0 0 1 0 0 1 1 0 0 0 1 0 0 1 0 1 1 0 1 1 0 0 1 0 1 0 1 0 0 1 1 1 0 1 1 0 0 1 0 0 0 1 1 1 0 1 1 1 0 1
+ 1 0 1 0 1 1 0 0 1 0 1 0 1 0 0 1 1 1 1 0 1 1 0 0 1 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 1 1 1 0 0 0 1 1 0
+ 0 0 0 0 0 0 1 0 1 0 1 1 1 1 1 0 0 1 1 1 1 0 1 0 1 1 1 0 0 0 0 1 0 0 1 1 1 0 1 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 1 0 0 0 0 1 0 1 0 1 0 1 0 1 0 0 0 1 1 0 0 1 1 1 0 0 0 1 0 1 0 1 1 0 0 0 0 0 0 1 0 1 0 0 0 1 1 1
+ 0 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 0 0
+ 0 1 1 0 0 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 0 0 1 0 0 0 1 1 0 0 0 1 1 1 1 1 0 1 1 0 1 0 1 0 0 0
+ 0 1 1 0 1 1 1 1 1 1 1 0 1 0 1 0 0 0 1 1 1 1 1 1 1 0 0 1 0 1 1 1 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 1 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 1 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 1 1 1 1 0 0 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 0 1 1 1 0 0 0
+ 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 1 1 0 0 0 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 1 0 0 0
+
+ Your pipeline
+ has failed
+
+ Pipeline
+ fixed
+
+ Request an agent or feature 
+
+ AppSec Agent 
+ How does Optibot stop security vulnerabilities from reaching production?
+
+Stop paying for separate static analysis tools. Optibot does their job for them.
+
+ Replaces : 
+
+ Replace legacy scanners
+ Get superior detection without the extra seat cost.
+
+ Context-aware security
+ Identifies vulnerabilities that only exist due to specific cross-file interactions.
+
+ Hardened Code
+ Prevent risky patterns from ever merging to main.
+
+Optibot scans for security vulnerabilities, secret leaks, and anti-patterns during the review process.
+
+ Which languages and frameworks does Optibot support?
+
+Optibot is optimized for these languages and frameworks.
+
+However, our superpower is quickly supporting new technology. Ask us if you don't see what you need!
+
+ RUBY TYPESCRIPT JAVASCRIPT JAVA GOLANG C# C++ PHP HTML ELIXIR KOTLIN SWIFT SCALA PYTHON RUBY TYPESCRIPT JAVASCRIPT JAVA GOLANG C# C++ PHP HTML ELIXIR KOTLIN SWIFT SCALA PYTHON 
+ JAVASCRIPT TYPESCRIPT JAVA PYTHON PHP C# GOLANG SCALA ELIXIR KOTLIN C++ HTML SWIFT RUBY JAVASCRIPT TYPESCRIPT JAVA PYTHON PHP C# GOLANG SCALA ELIXIR KOTLIN C++ HTML SWIFT RUBY 
+
+ SCMs Supported:
+ GITHUB GITLAB 
+
+Why do engineering teams trust Optibot?
+
+ Engineers are skeptical of AI… Until they use Optibot.
+
+ Watch video
+
+ Love for Optibot, directly from engineers
+
+ Grainger Blackett 2:37 PM 
+ Found a P1 bug we had to fix today, Optibot nailed it.
+
+ Simon Balkau 2:39 PM 
+ It already caught a few bugs and summarizing the changes is a game-changer for us.
+
+ Ernest 2:40 PM 
+ I'm impressed with this review of my PR. It's spot on! So does this mean I no longer have to write descriptions? 😅
+
+ Grainger Blackett 2:43 PM 
+ I'm blown away by these summaries sometimes. It knew exactly what the goal of the PR was.
+
+ Tommy 3:50 PM 
+ I just had my first review... and for funzies, i compared it with my code review prompt file. color me impressed
+
+ Grainger Blackett 3:55 PM 
+ I like that it doesn't have as much 'floof' as some of these bots. It gets to the point.
+
+ Vladimir Dvorkin 3:58 PM 
+ We just completed a feedback cycle with the team on OptiBot's reviews. Bottom line is it is doing great!
+
+ Grainger Blackett 2:37 PM 
+ Found a P1 bug we had to fix today, Optibot nailed it.
+
+ Simon Balkau 2:39 PM 
+ It already caught a few bugs and summarizing the changes is a game-changer for us.
+
+ Ernest 2:40 PM 
+ I'm impressed with this review of my PR. It's spot on! So does this mean I no longer have to write descriptions? 😅
+
+ Tommy 3:50 PM 
+ I just had my first review... and for funzies, i compared it with my code review prompt file. color me impressed
+
+ Vladimir Dvorkin 3:58 PM 
+ We just completed a feedback cycle with the team on OptiBot's reviews. Bottom line is it is doing great!
+
+ Is your code ever stored by Optibot?
+ Your code is processed ephemerally, encrypted end-to-end, and never stored. Optibot is designed for teams that need speed and enterprise-grade security from day one.
+
+ Zero Retention
+
+ Code is processed ephemerally in real-time and never stored.
+
+ Admin Controls
+
+ We never train our models on your proprietary code.
+
+ AICPA 
+ SOC2 
+
+ SOC 2 Compliant
+
+ Fully audited security controls and encryption.
+
+ On-Prem Options
+
+ Single-tenant deployments available for strict compliance needs.
+
+ Enterprise Ready
+ SOC 2 roadmap • Audit logs • IP allowlisting • API governance • AES-256 encryption
+
+ Frequently Asked Questions
+ Everything you need to know about Optibot before getting started.
+
+ How does Optibot get full context on my codebase? Optibot builds a knowledge graph of your entire repository — mapping file relationships, module dependencies, historical patterns, and team conventions. When a PR is opened, it uses this graph to understand the full impact of every change, not just what's visible in the diff.
+
+ Do engineers still review code manually? Yes — but far less frequently for routine checks. Optibot handles the first-pass review: surfacing bugs, flagging security issues, validating logic, and summarizing intent. Engineers then focus their attention on architectural decisions, design feedback, and knowledge sharing.
+
+ Does Optibot store our code? No. Your code is processed ephemerally and is never persisted. Optibot never trains on your codebase. For teams with strict compliance needs, single-tenant and on-prem deployments are available.
+
+ Can Optibot detect security or performance issues? Yes. Optibot includes a dedicated AppSec agent that scans for OWASP vulnerabilities, injection risks, and misconfigurations. It also flags N+1 queries, unbounded loops, and other performance anti-patterns — with remediation suggestions inline on the PR.
+
+ Will this slow my CI/CD or workflows? No. Optibot runs asynchronously in parallel with your existing CI pipeline. Reviews typically complete in under 90 seconds, and results are posted as PR comments without blocking any checks.
+
+ How is this different from GitHub Copilot Code Review? Optibot builds a persistent knowledge graph of your codebase so reviews reflect your actual architecture and conventions — not just the current diff. It also includes specialized agents for security, dependency management, release notes, and Jira alignment that go far beyond basic AI suggestions.
+
+Deploy Optibot into your team and save 40+ hours a week on PR reviews
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+GET A DEMO
+
+Backed by real customer metrics 
+
+ AICPA 
+ SOC2 
+
+ AES 
+ 256 
+
+ SSO 
+ RBAC 
+
+ src/config/securityConfig.ts Outdated 
+ Comment on lines 30 to 31
+ 30
+ + "'unsafe-inline'" , // Required for inline scripts in VSCode/editor auth pages 
+
+ 31
+ + "https://fonts.googleapis.com" , 
+
+ Optibot code review 2 minutes ago 
+
+This JWT is being decoded but not verified.
+
+Use jwt.verify(...) instead of jwt.decode(...) to ensure the token's integrity.
+
+ syedahmedz 2 minutes ago 
+ Optibot, can you give me an example of the fix?
+
+ Optibot code review just now 
+ Here's the PR
+ import jwt from "jsonwebtoken" ; 
+ const user = jwt.verify(token, process.env.JWT_SECRET); 
+ // user is now fully validated and verified
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

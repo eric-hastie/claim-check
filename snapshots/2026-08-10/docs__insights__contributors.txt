@@ -1,0 +1,180 @@
+SOURCE: https://getoptimal.ai/docs/insights/contributors
+TITLE: Contributors — Optimal Docs
+
+Contributors — Optimal Docs 
+ / Docs / Engineering Insights / Contributors 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Contributors View | Individual Engineer Performance Lens
+
+ The Contributors view gives engineering managers an individual-level lens on each engineer’s activity, performance, and collaboration patterns. It’s designed for 1:1s, performance reviews, and career development conversations.
+
+ Overview
+
+ Contributors pulls real GitHub data — commits, PR cycle times, reviews, and code churn — and presents them as a personalized activity breakdown for each engineer.
+
+ Access it from the left sidebar: Contributors .
+
+ What You’ll See
+
+ Contributor Summary
+
+ At the top of the page, you’ll see a Profile Card showing the engineer’s:
+
+ Name, avatar, and GitHub handle
+
+ Total PRs opened and merged
+
+ Unique repositories contributed to
+
+ Highlights
+
+ Compact stat cards surface the most relevant signals:
+
+ Coding Days — number of unique days with at least one commit or PR activity
+
+ Average Cycle Time — this engineer’s personal average time from first commit to merge
+
+ Review Participation — how many PRs they reviewed vs. opened
+
+ Efficiency Score
+
+ The Efficiency Score is a composite metric showing how streamlined an engineer’s delivery workflow is. It factors in cycle time, reworks, and review response time.
+
+ High score → fast, clean delivery with minimal back-and-forth
+
+ Lower score → may indicate PRs getting stuck in review or high churn
+
+ Team Performance
+
+ Situates the engineer relative to their team:
+
+ Side-by-side comparison with team averages for key metrics
+
+ Useful for identifying whether an individual is above or below the team baseline
+
+ AI Insight Integration
+
+ Click ⚡ AI Insight to generate a personalized coaching summary for this engineer. It covers:
+
+ Weekly or monthly performance trends
+
+ What’s going well (high coding days, fast reviews)
+
+ What to focus on (reducing large PR sizes, improving review participation)
+
+ Specific actionable suggestions
+
+ Ideal for 1:1s — paste the summary into your notes or share it directly.
+
+ Metrics & Trends
+
+ Average PR Cycle Time
+
+ How long this engineer’s PRs take from first commit to merge, on average. Compare against team median to identify outliers.
+
+ Coding Days
+
+ Number of days in the selected period with at least one GitHub activity (commit, PR, review, comment). Useful for tracking sustained engagement.
+
+ Total Lines Added / Deleted
+
+ Total volume of code authored. High variance week-over-week may indicate major refactors or cleanup sprints.
+
+ Time to First Review
+
+ Average time between when the engineer opens a PR and when they receive the first review comment. If consistently long, it may indicate review bottlenecks for that engineer’s work.
+
+ PRs Reviewed
+
+ Number of PRs the engineer reviewed (not authored). A measure of cross-team collaboration and review bandwidth contribution.
+
+ PRs Opened / PRs Assigned
+
+ PRs Opened — code the engineer shipped
+
+ PRs Assigned — code the engineer was assigned to review or own
+
+ Activity Timeline
+
+ A day-by-day waterfall chart showing commits, PR opens, reviews, and merges. Useful for spotting:
+
+ Uneven work distribution (all activity on one day)
+
+ Periods of low output (vacation, sprint context switches)
+
+ Collaboration bursts (e.g., lots of reviews near end of sprint)
+
+ Commit Contribution & Review Collaboration
+
+ Two bar charts side by side:
+
+ Commit Contribution — which repositories this engineer contributed code to, and how much
+
+ Review Collaboration — which other engineers they reviewed most often, visualizing who they collaborate with closely
+
+ Why It Matters
+
+ Individual performance data helps managers:
+
+ Make fair, data-backed decisions in performance reviews
+
+ Identify engineers who are carrying disproportionate review load
+
+ Spot patterns in delivery (e.g., habitually large PRs) before they become issues
+
+ Recognize high performers who consistently deliver fast, quality work
+
+ Pro Tips
+
+ Use the AI Insight button before every 1:1 — it generates a fresh summary based on the current date range you’ve selected.
+
+ Compare two engineers side by side using the multi-select filter at the top.
+
+ Pair with PR Cycle Time page to dig deeper into which specific PRs are outliers.
+
+ Check Coding Days over time — low Coding Days relative to the team average can surface early blockers worth discussing.
+
+ Don’t over-index on Lines Added/Deleted — high volume doesn’t always equal high impact. Use it alongside cycle time and review participation.
+
+ Troubleshooting
+
+ Issue Fix 
+ Missing data for an engineer Make sure they are added as a team member in Settings 
+ ”No PRs found” for the selected period Widen the date range or confirm their GitHub handle is linked correctly 
+ AI Insight shows generic text Select a longer time window — e.g., 30 days — for richer analysis 
+ Efficiency Score missing This appears after sufficient data is available; check back after a few weeks of activity 
+ Review counts seem low This reflects code reviews the engineer performed, not Optibot automated reviews

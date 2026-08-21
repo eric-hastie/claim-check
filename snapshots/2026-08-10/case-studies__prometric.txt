@@ -1,0 +1,176 @@
+SOURCE: https://getoptimal.ai/case-studies/prometric
+TITLE: Prometric Case Study — 50% Faster PR Cycles, 40+ Hours Saved
+
+FineTune, Prometric's engineering subsidiary, was drowning in manual data work. Their Director of
+ Project Management, Kat Heath, was spending half a day every few weeks reconciling data from Jira,
+ GitHub, and spreadsheets just to produce a single snapshot of engineering health.
+
+After adopting Optimal AI Insights, Prometric replaced fragmented, lagging reports with a unified
+ real-time dashboard — giving every developer, lead, and executive direct access to the metrics that matter.
+
+ The Problem 
+
+Prometric's Engineering Org Was Running on Spreadsheets
+
+Tracking engineering health was a retrospective, manual process. The data was scattered across Jira,
+ GitHub, and spreadsheets — and insights only arrived after sprints ended, too late to act on:
+
+ Half a day of manual data entry every few weeks to reconcile metrics into a single view
+
+ Lagging indicators — insights only generated after sprints ended, making mid-flight pivots impossible
+
+ Subjective financials — client billing and cost capitalization relied on story-point estimates rather than verifiable effort data
+
+"Before bringing on Optimal, we were focused on the work right in front of us."
+
+ Kat Heath
+ Director of Project Management, Prometric
+
+The result was a leadership team perpetually reactive — unable to spot bottlenecks before they
+ became blockers, and unable to prove engineering value to finance with anything more than
+ "story-point guesswork."
+
+ The Solution 
+
+Real-Time Visibility Across Jira, GitHub, and Every Team
+
+Prometric implemented Optimal AI Insights to unify their Jira and GitHub data into a single pane of
+ glass — replacing manual correlation with dynamic dashboards and AI-generated narratives that explain
+ the "why" behind every metric.
+
+ Unified Teams View
+ Dynamic dashboards for Strike Teams — hybrid squads pulled from various departments — with real-time status for every member.
+
+ Allocation Intelligence
+ Instant confirmation of active contributors and PR review distribution, removing guesswork from capacity planning.
+
+ Pipeline Velocity
+ PR Cycle Time used as a core KPI to ensure work moves through the engineering pipeline without stalling.
+
+ AI Insights
+ The platform narrates the story behind the metrics — developers and managers spot bottlenecks instantly without digging through months of history.
+
+"Optimal is the first place I go when I need to understand what's happening in our teams.
+ I use it constantly. Everything I need is right there, and it's given us a level of clarity
+ we never had before."
+
+ Kat Heath
+ Director of Project Management, Prometric
+
+ The Results 
+
+50% Faster Cycles, 40+ Hours Back, and Audit-Ready Billing
+
+The shift to real-time intelligence delivered immediate velocity improvements and financial precision:
+
+ ~50% faster PR cycle time — 40% drop in review time, 45% drop in time to merge
+ 40+ hours per leader saved annually by eliminating manual spreadsheet reporting
+ 100% billing accuracy — hard activity data replaced story-point estimates for capitalization
+ Developers self-correct mid-sprint using real-time AI Insights
+ Leadership operates proactively — spotting bottlenecks before they become blockers
+
+"Optimal puts the data directly in our developers' hands. They can course-correct mid-sprint
+ and understand the narrative behind their work instantly."
+
+ Kat Heath
+ Director of Project Management, Prometric
+
+"It's like working with your eyes open. I'm no longer the bottleneck — the whole team
+ has direct access to insights in real-time."
+
+ Kat Heath
+ Director of Project Management, Prometric
+
+ The Impact in Numbers
+
+Before and after metrics for Prometric's team using Optimal AI Insights
+
+Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before Insights
+
+ After Insights
+
+ Improvement
+
+ PR Cycle Time
+
+ Lagging, retrospective data — only visible after sprints ended
+
+ Real-time visibility; pipeline velocity tracked as a core KPI
+
+ 50% faster (40% review ↓, 45% merge ↓) 
+
+ Team Autonomy
+
+ Reactive; developers dependent on managers for status updates
+
+ Proactive; self-serve insights let teams course-correct mid-sprint
+
+ Developers self-correct mid-sprint 
+
+ Leadership Time
+
+ Half a day of manual spreadsheet entry every few weeks
+
+ Instant automated reporting via unified Jira + GitHub dashboard
+
+ 40+ hrs/leader saved per year 
+
+ Billing Accuracy
+
+ Subjective "story-point" estimates with no audit trail
+
+ Verified, audit-ready data for cost capitalization and invoicing
+
+ 100% financial accuracy 
+
+ Reporting Process
+
+ Data siloed across Jira, GitHub, and spreadsheets
+
+ Single pane of glass with AI-generated narrative insights
+
+ Zero manual data correlation 
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,204 @@
+SOURCE: https://getoptimal.ai/pricing
+TITLE: Pricing — Optimal AI
+CLASS: pricing
+
+OPTIMAL AI
+
+The quality and judgement layer for code
+
+Optibot reviews every PR, catches real bugs, and keeps your codebase clean — automatically.
+
+Finally. Predictable AI spend is now here.
+
+Deep code reviews with full codebase context for as low as $29 per month.
+
+ Annual Monthly 
+ Annual billing — save up to 18% vs. monthly
+
+ Optibot Plus
+ Best for individuals
+
+ $ 29 / user / mo 
+ Save 17% with annual
+
+ Start Free Trial Up to 50 deep PR reviews per user per month 
+ High speed codebase context reviews 
+ Chat with Optibot in PRs and ask questions about your codebase 
+ Unlimited repositories 
+ Optibot as a Claude Code Skill 
+ VSCode, Cursor plugins 
+ GitHub and GitLab fully supported 
+ Autonomous CI fixing 
+ Optibot Slack Notifications and syncing 
+
+ MOST POPULAR 
+ Optibot Pro
+ Best for teams starting with AI and autonomous code reviews
+
+ $ 49 / user / mo 
+ Billed annually
+
+ Start Free Trial Up to 100 deep PR reviews per user per month 
+ Priority codebase context reviews 
+ Expanded rolling rate limits; 2x usage of Plus 
+ Codegraph with full codebase context 
+ Chat with Optibot in PRs and ask questions about your codebase 
+ Unlimited repositories 
+ Optibot as a Claude Code Skill 
+ VSCode, Cursor plugins 
+ GitHub and GitLab fully supported 
+ CI fixing + Optibot code fixer agent 
+ Optibot Slack Notifications and syncing 
+ Optibot security agent: full codebase security scans 
+ CWE/CVE database scans for latest vulnerabilities 
+ Insights and engineering productivity platform 
+ PR Cycle times, code review times, and deployment frequency 
+ AI code ratio measurement 
+ Contributor and agent productivity 
+ Jira Integration 
+ Ask Optibot: engineering productivity analyst 
+
+ HIGH VELOCITY 
+ Optibot Max
+ Best for high velocity, agent-native teams shipping frequently with AI
+
+ Contact Sales
+ Custom volume, SLAs & enterprise security
+
+ Contact Sales Up to 350 deep PR reviews per user per month 
+ Highest priority codebase context reviews 
+ Expanded rolling rate limits; 3.5x usage of Pro 
+ Multi-repo codebase context and codebase maps 
+ Chat with Optibot in PRs and ask questions about your codebase 
+ Unlimited repositories 
+ Optibot as a Claude Code Skill 
+ VSCode, Cursor plugins 
+ GitHub and GitLab fully supported 
+ CI fixing + Optibot code fixer agent 
+ Optibot Slack Notifications and syncing 
+ Optibot security agent: full codebase security scans 
+ CWE/CVE database scans for latest vulnerabilities 
+ Insights and engineering productivity platform 
+ PR Cycle times, code review times, and deployment frequency 
+ AI code ratio measurement 
+ Contributor and agent productivity 
+ Jira Integration 
+ Ask Optibot: engineering productivity analyst 
+
+Helping optimize code reviews and engineering productivity at:
+
+Trusted by world-class engineering teams building with AI.
+
+Not sure which plan fits?
+
+Enter your team's PR velocity and we'll recommend the best fit
+
+ Engineers on your team
+ 10 
+
+ 1 200 
+
+ PRs shipped per engineer per month
+ 15 
+
+ 1 500 
+
+ Your team ships ~ 150 PRs / month — recommended plan:
+ Optibot Plus
+ $ 29 / user / mo (annual) 
+ 10 engineers = $290 / mo 
+
+ Start Free Trial 
+
+ Optibot Plus
+ $290 /mo 
+
+ vs
+
+ Cursor + BugBot
+ ~ $580 /mo 
+
+ You save
+ $290 /mo 
+
+ Cursor + BugBot = Cursor Business ( 10 × $40/mo) + BugBot reviews ( 150 × $1.20). Excludes high-effort review surcharges.
+
+Comparing against Cursor BugBot, Claude Code, or Qodo? Use our free calculators: BugBot vs Optibot · Claude Code vs Optibot · Qodo vs Optibot 
+
+Need more? Talk to us about Enterprise
+
+Custom volume, SSO, dedicated support, advanced security, and SLAs.
+
+Contact Us
+
+ How Optibot compares
+
+See how Optibot stacks up
+
+ Full codebase context, engineering metrics, and flat pricing — not available in most alternatives.
+
+ vs CodeRabbit
+ Full context vs. diff-only. Engineering metrics included.
+ See comparison →
+ vs Greptile
+ Both have full context — only Optibot has DORA metrics.
+ See comparison →
+ vs GitHub Copilot
+ Purpose-built review vs. a Copilot add-on.
+ See comparison →
+
+ Frequently Asked Questions
+
+ What counts as a "deep PR review"? A deep PR review is a full AI-powered code review with complete codebase context — Optibot reads across your repos, understands dependencies, and catches bugs that a line-by-line review would miss. It's not just a lint check; it's a full reasoning pass on your PR.
+
+ What is Optibot Insights? Insights is Optimal AI's engineering productivity platform — included on Pro and Max. It tracks PR cycle times, code review times, deployment frequency, AI code ratio, and contributor and agent productivity. You can also ask Optibot natural language questions about your engineering data directly.
+
+ Does my free trial start on the Max plan? Yes. Every Optibot trial starts on the Max plan so you can experience the full platform — multi-repo context, every sub-agent, the security agent, and Insights — with no caps. When the trial ends, you can choose the plan that fits your team's velocity.
+
+ What happens when I hit my monthly review limit? Deep reviews pause until the start of your next billing cycle. You can upgrade your plan at any time to restore them immediately.
+
+ Can I try Optibot before paying? Yes, all plans come with a free trial. No credit card required to get started.
+
+ Do I need to buy a seat for every engineer on my team? Yes, seats should reflect your full team size. Optibot's pricing is per user, and review limits are calculated per user per month — so buying fewer seats than you have engineers will impact the quality and limits available to your team.
+
+ What's the difference between CI fixing and the Optibot code fixer agent? CI fixing (available on Plus) automatically re-runs and attempts to fix failed CI checks. The Optibot code fixer agent (Pro and Max) goes deeper — it actively rewrites and fixes the code in your PR, not just the CI pipeline.
+
+ What is the Optibot security agent? The security agent runs full codebase security scans, checks against the CWE/CVE database for the latest known vulnerabilities, and flags issues at the PR level before they ever hit production. It's included on Pro and Max plans.
+
+ Can I switch plans or add seats later? Yes, you can upgrade or add seats at any time — changes take effect immediately and are prorated for the rest of your billing cycle. Plan tier is set at the org level, so a plan change applies to everyone in your organization rather than per-seat.
+
+Pricing shown reflects current Optibot plans as of August 2026.
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -16,19 +16,22 @@ and reports only the assertions whose status changed.
 (testimonial rotation, nav edits, A/B copy) and misses the changes that matter (a
 competitor ships a feature and never edits the page you watch). Claims are the unit.
 
-## Targets
+## Layout
 
-Everything lives under `targets/<slug>/`, so the skill carries nothing about any one
-company. Point it at a new company by adding a directory.
+This repository is one target: getoptimal.ai. Config and state sit at the root next to
+the tools.
 
 ```
-targets/<slug>/
-  owner.yaml         the site you are defending: page classes, anchors, page floor
-  competitors.yaml   who the digest watches
-  claims.yaml        input and state
-  snapshots/<date>/  one text file per page, git is the history
-  reports/<date>.md
+owner.yaml         the site being defended: page classes, anchors, page floor
+competitors.yaml   who the digest watches
+claims.yaml        input and state
+snapshots/<date>/  one text file per page; git is the history
+reports/<date>.md
+tools/
 ```
+
+To point the skill at a different company, set `CLAIM_CHECK_TARGETS` to a directory
+holding the same four files. The tools read it if present and fall back to the repo root.
 
 ## Inputs
 
@@ -542,42 +545,1033 @@ claims total {{N}} | selected {{N}} | verdicts returned {{N}} | sources attempte
 
 ---
 
-# Appendix C: example target config
+# Appendix C: owner site config
 
 
 ```yaml
-# Sample target. Copy this directory, rename it, and point it at your own site.
+# The company whose published claims this target defends.
 #
-# Targets can live outside this repo. A filled-in target is competitive research
-# about a real company; the tool is public and the findings usually should not be.
-#   export CLAIM_CHECK_TARGETS=~/my-private-research/claim_check_targets
+# claim-check watches two surfaces. `competitors.yaml` is what the field shipped.
+# This file is what YOU published, and it is the surface that produces P0 findings:
+# a sentence on your own site that a prospect can disprove in one click.
+#
+# Page classes carry the whole design. Everything gets crawled and diffed, because a
+# claim can leak across the marketing surface (the "unlimited reviews" line was live on
+# about twenty pages in August 2026, and a /vs-only crawl would have caught six of them).
+# Only pages marked `mine: true` are read for claims. Blog and changelog copy is
+# assertion-shaped by nature and would flood the untracked bucket with marketing prose.
+
 owner:
-  id: example
-  name: Example Inc
-  product: ExampleBot
-  domain: example.com
-  root: https://example.com
+  id: getoptimal
+  name: Optimal AI
+  product: Optibot
+  domain: getoptimal.ai
+  root: https://getoptimal.ai
 
 crawl:
   max_pages: 400
   delay_seconds: 0.4
-  strip_after: ["Get a Demo"]
-  strip_before_footer: ["Privacy Policy"]
+  timeout_seconds: 25
+  skip_paths:
+    - /api/
+  # Nav and footer are stripped so a menu edit does not read as a content change.
+  strip_after:
+    - Get a Demo
+    - Get Started - Free
+  strip_before_footer:
+    - Designed and Built in San Francisco
+    - Privacy Policy | Terms of Use
 
-# mine:   claims are extracted and published-state is checked here
-# weight: how expensive an error on this page class is; seeds severity
+# mine:   claims are extracted here, and published-state is checked here
+# weight: how expensive an error on this page class is, which seeds severity
 page_classes:
-  - {id: comparison, match: ["/vs/", "/alternatives"], mine: true,  weight: p0}
-  - {id: pricing,    match: ["/pricing"],              mine: true,  weight: p0}
-  - {id: security,   match: ["/security", "/trust"],   mine: true,  weight: p0}
-  - {id: product,    match: ["/product", "/features"], mine: true,  weight: p1}
-  - {id: docs,       match: ["/docs"],                 mine: true,  weight: p1}
-  - {id: blog,       match: ["/blog"],                 mine: false, weight: p2}
+  - id: comparison
+    match: ["/vs/", "/alternatives", "-alternatives"]
+    mine: true
+    weight: p0
+    why: Highest purchase intent on the site. A prospect reading these is evaluating.
 
-# Every URL here must return 200 AND contain its anchor, or the run fails loudly.
+  - id: pricing
+    match: ["/pricing", "-pricing", "-cost-calculator"]
+    mine: true
+    weight: p0
+    why: Numbers a competitor's own customer can check from memory.
+
+  - id: security
+    match: ["/security", "/trust"]
+    mine: true
+    weight: p0
+    why: Read during procurement. An overclaim here fails a deal late and loudly.
+
+  - id: product
+    match: ["/agents/", "/integrations/", "/ai-code-reviews", "/engineering-ai-agents"]
+    mine: true
+    weight: p1
+
+  - id: docs
+    match: ["/docs"]
+    mine: true
+    weight: p1
+
+  - id: case_study
+    match: ["/case-studies"]
+    mine: false
+    weight: p2
+    why: Customer quotes are internal-sourced by nature. Diff them, never mine them.
+
+  - id: changelog
+    match: ["/changelog"]
+    mine: false
+    weight: p2
+
+  - id: blog
+    match: ["/blog"]
+    mine: false
+    weight: p2
+
+# Fail loudly. Every URL here must return 200 AND contain its anchor, or the run is a
+# failure rather than a quiet all-clear. This is what catches a JavaScript shell that
+# returns 200 with no content, which otherwise reads as "nothing changed this week."
 required:
-  - {url: "https://example.com/pricing", anchor: "per user"}
+  - url: https://getoptimal.ai/
+    anchor: Optibot
+  - url: https://getoptimal.ai/pricing
+    anchor: Optibot Pro
+  - url: https://getoptimal.ai/security
+    anchor: SOC 2
 
-floor_pages: 10
+# A crawl that returns fewer pages than this is treated as broken, not as a site that
+# shrank. Set from the previous run and reviewed when it legitimately changes.
+floor_pages: 90
+
+```
+
+
+---
+
+# Appendix D: competitors (digest watchlist)
+
+
+```yaml
+# Who the digest watches.
+#
+# A competitor here does NOT need any claims in claims.yaml. That is the point: the
+# digest tells you what the field shipped, and the claims file tells you what you
+# published. Most weeks the interesting item is a competitor you have never written a
+# comparison row about.
+#
+# To add one: copy a block, fill in a dated source, set digest: true. Nothing else.
+#
+# Fields
+#   tier      1 = every run. 2 = every run if cheap, drop first when a run gets long.
+#             3 = claims only, never in the digest (slow movers).
+#   digest    include in the "what shipped" section
+#   sources   dated release feeds only. A marketing page is not a source for a digest.
+#   anchor    string that must appear in the fetched text, or the fetch FAILED
+#   verified  date the URL was last confirmed to load with its anchor present
+#
+# Never guess a changelog URL. An invented one 404s or, worse, returns a 200 shell and
+# reads as "they shipped nothing this week." Leave it null and say so.
+
+competitors:
+
+  # ---------------------------------------------------------------- tier 1
+
+  - id: greptile
+    name: Greptile
+    tier: 1
+    digest: true
+    has_claims: true
+    sources:
+      - url: https://www.greptile.com/changelog
+        kind: changelog
+        anchor: "Greptile v"
+        verified: 2026-08-14
+      - url: https://www.greptile.com/pricing
+        kind: pricing
+        anchor: "per seat"
+        verified: 2026-08-12
+    why: >
+      Ships fastest in the category: ten releases between 2026-04-15 and 2026-08-05, six
+      of them competitively relevant. The changelog is the single highest-yield URL in
+      this file.
+
+  - id: coderabbit
+    name: CodeRabbit
+    tier: 1
+    digest: true
+    has_claims: true
+    sources:
+      - url: https://www.coderabbit.ai/pricing
+        kind: pricing
+        anchor: "per developer per hour"
+        verified: 2026-08-12
+      - url: https://docs.coderabbit.ai
+        kind: docs
+        anchor: "CodeRabbit"
+        verified: 2026-08-12
+    gap: >
+      No dated changelog feed located. Their releases cannot be tracked by date, so the
+      digest will catch CodeRabbit changes late, through pricing and docs diffs. Say
+      this in the report rather than letting it read as a quiet week on their side.
+
+  - id: cursor-bugbot
+    name: Cursor (Bugbot)
+    tier: 1
+    digest: true
+    has_claims: false
+    sources:
+      - url: https://cursor.com/changelog
+        kind: changelog
+        anchor: "Changelog"
+        verified: 2026-08-14
+      - url: https://cursor.com/pricing
+        kind: pricing
+        anchor: "Pricing"
+        verified: 2026-08-14
+    why: >
+      The highest-stakes watch in the file. The current pitch rests on Bugbot's
+      2026-05 move to usage billing at roughly $1.00 to $1.50 per run, and two public
+      calculators are built on it. If Cursor caps, bundles or reverses that, the wedge
+      disappears and nothing else in the tool would notice, because no comparison row
+      names Bugbot.
+
+  - id: claude-code
+    name: Claude Code
+    tier: 1
+    digest: true
+    has_claims: false
+    sources:
+      - url: https://code.claude.com/docs/en/changelog
+        kind: changelog
+        anchor: "Claude Code"
+        verified: 2026-08-14
+    why: >
+      Both a competitor and a distribution surface: Optibot ships as a Claude Code
+      Skill, and there is a published Claude Code cost calculator. Changes to native
+      review, subagents or pricing move both sides at once. Ships near daily, so cap
+      digest items to what touches review, cost or agent delegation.
+
+  - id: github-copilot
+    name: GitHub Copilot code review
+    tier: 1
+    digest: true
+    has_claims: true
+    sources:
+      - url: https://github.blog/changelog/label/copilot/
+        kind: changelog
+        anchor: "Copilot"
+        verified: 2026-08-14
+    why: >
+      Distribution, not product quality, is the threat: it arrives bundled with a seat
+      the customer already owns. The feed is dated and filterable, so this is the
+      cheapest tier-1 to track. Live example, 2026-08-07: "Copilot code review effort
+      levels are generally available."
+
+  # ---------------------------------------------------------------- tier 2
+
+  - id: qodo
+    name: Qodo (Merge)
+    tier: 2
+    digest: true
+    has_claims: true
+    sources:
+      - url: https://docs.qodo.ai/changelog
+        kind: changelog
+        anchor: "chronological record of changes to Qodo"
+        verified: 2026-08-14
+    caveat: >
+      The changelog is Qodo Gen heavy and mentions Qodo Merge rarely, so PR-review
+      changes may not surface here. Pair with the pricing page.
+
+  - id: graphite
+    name: Graphite Agent
+    tier: 3
+    digest: false
+    has_claims: false
+    sources:
+      - url: https://graphite.com/blog
+        kind: blog
+        anchor: "Graphite"
+        verified: 2026-08-14
+    gap: >
+      No usable release feed. There is no changelog page, /docs/cli-changelog covers the
+      CLI only, and the blog is not a release log: as of 2026-08-14 the newest post is
+      2026-04-01. Demoted to tier 3 for that reason, not because Graphite stopped
+      mattering. Revisit if a changelog appears. Note the rename: Diamond was folded
+      into Graphite Agent on 2025-10-08, so a claim naming Diamond is already stale.
+
+  - id: augment
+    name: Augment Code
+    tier: 2
+    digest: false
+    has_claims: false
+    sources:
+      - url: null
+        kind: changelog
+        anchor: null
+        verified: null
+    why: >
+      Tracked for published benchmarks rather than releases. Their comparison benchmark
+      scores Greptile at 45% precision and 45% recall against Augment at 65/55, and
+      numbers like that get quoted at reps on live calls. Worth knowing the week it
+      moves.
+    todo: Locate a dated release feed before enabling. Do not guess the URL.
+
+  - id: cubic
+    name: Cubic
+    tier: 2
+    digest: false
+    has_claims: false
+    sources:
+      - url: null
+        kind: changelog
+        anchor: null
+        verified: null
+    why: >
+      Named alongside Greptile, CodeRabbit and Macroscope as a pure-play review agent in
+      Greptile's own 2026-01-24 survey of the field. Small today, and the kind of
+      competitor that shows up in a bake-off before it shows up in a comparison page.
+    todo: Locate a dated release feed, then set digest true.
+
+  # ---------------------------------------------------------------- tier 3
+
+  - id: sonarqube
+    name: SonarQube
+    tier: 3
+    digest: false
+    has_claims: true
+    sources:
+      - url: https://www.sonarsource.com/plans-and-pricing/
+        kind: pricing
+        anchor: "lines of code"
+        verified: 2026-08-14
+      - url: https://docs.sonarsource.com/sonarqube-server/2026.1/ai-capabilities/ai-codefix
+        kind: docs
+        anchor: "AI CodeFix"
+        verified: 2026-08-14
+    why: >
+      Claims only, because rule-based analysis moves slowly. Reconsider for the digest:
+      AI Code Assurance holds AI-generated code to stricter quality gates, which is the
+      same thesis Optibot sells, aimed at an installed base that already has budget.
+      If Sonar keeps shipping AI capabilities, promote to tier 2.
+
+  - id: deepsource
+    name: DeepSource
+    tier: 3
+    digest: false
+    has_claims: true
+    sources:
+      - url: https://deepsource.com/pricing
+        kind: pricing
+        anchor: "Autofix"
+        verified: 2026-08-14
+    why: Claims only. Slow-moving, and the comparison page is the thing that needs watching, not the release feed.
+
+```
+
+
+---
+
+# Appendix E: claims (state)
+
+
+```yaml
+# claim-check state file.
+#
+# One entry per assertion published on a comparison page. This file is both the input
+# and the output: a run updates status, evidence, source, shipped and last_verified.
+# Git history is the audit trail.
+#
+# Fields
+#
+# status         CONFIRMED | WEAKENED | OUT_OF_DATE | UNVERIFIABLE | UNCHECKED
+# cause          why it moved, on OUT_OF_DATE and WEAKENED only:
+#                  competitor_shipped  a dated release or announcement changed the facts
+#                  source_check        the current source does not support the claim as written,
+#                                      with no release to point at
+#                  internal_conflict   one of our own pages says something different
+# evidence_date  the date on the source: the release, changelog entry or page capture.
+#                "undated" when the vendor published no date. This is the "out of date as
+#                of" date shown in the report. Never guess it.
+# observed       the date a run first recorded this status. Always present. When
+#                evidence_date is "undated", the report says "as of at least <observed>".
+# source         the single URL a reader can open to see it for themselves. Required on
+#                anything other than CONFIRMED and UNVERIFIABLE.
+# frozen         true -> skip on routine runs (strategic claims, checked quarterly)
+#
+# Seeded 2026-08-14 from primary sources captured 2026-08-12.
+
+meta:
+  owner: getoptimal.ai
+  pages:
+    - https://getoptimal.ai/vs/coderabbit
+    - https://getoptimal.ai/vs/coderabbit-pricing
+    - https://getoptimal.ai/vs/greptile
+    - https://getoptimal.ai/vs/qodo
+    - https://getoptimal.ai/vs/sonarqube
+    - https://getoptimal.ai/vs/deepsource
+    - https://getoptimal.ai/vs/github-copilot
+  cadence: weekly
+  aging_days: 90
+
+claims:
+
+  # ---------------------------------------------------------------- CodeRabbit
+
+  - id: cr-rate-limit-unit
+    competitor: coderabbit
+    page: /vs/coderabbit-pricing
+    claim: "Pro caps each developer at 5 reviews. Hit the cap and the next review queues until your limit resets."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: OUT_OF_DATE
+    cause: source_check
+    evidence_date: undated
+    observed: 2026-08-12
+    evidence: "CodeRabbit's pricing page reads '5* PR reviews per developer per hour' (Pro Plus 10/hour, Enterprise 12/hour). The published claim omits the time unit."
+    source: https://www.coderabbit.ai/pricing
+    last_verified: 2026-08-12
+    severity: critical
+    note: >
+      Load-bearing. This omission drives the ~$380/user/mo figure in the cost
+      calculator, which charges usage credits for "the 95 reviews past the 5/developer
+      cap". At 5/hour a developer would need roughly 800 reviews a month to throttle.
+      Any prospect running CodeRabbit can spot this from memory.
+    published: AMBIGUOUS
+  - id: cr-diff-only
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Diff-only by default; limited cross-file context. Reviews changed lines only, misses cross-file bugs and architectural issues."
+    sources:
+      - https://www.coderabbit.ai/blog/how-coderabbit-delivers-accurate-ai-code-reviews-on-massive-codebases
+      - https://www.coderabbit.ai/blog/Coderabbit-multi-repo-analysis
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-12
+    evidence: "CodeRabbit ships CodeGraph, which maps the codebase and reasons over relationships between files, functions and modules, plus Multi-Repo Analysis for cross-repo context."
+    source: https://www.coderabbit.ai/blog/how-coderabbit-delivers-accurate-ai-code-reviews-on-massive-codebases
+    last_verified: 2026-08-12
+    severity: high
+    published: AMBIGUOUS
+  - id: cr-no-metrics
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "No engineering metrics. Review-only product."
+    sources: [https://docs.coderabbit.ai/guides/reports-overview]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-12
+    evidence: "CodeRabbit has a dashboard plus scheduled reports covering PR activity, review patterns, contributor activity and quality metrics, delivered to email, Slack, Discord or Teams, customizable by natural-language prompt. Pro and above."
+    source: https://docs.coderabbit.ai/guides/reports-overview
+    last_verified: 2026-08-12
+    severity: high
+    note: >
+      The defensible version is depth, not presence. CodeRabbit reports on review
+      activity; Optibot Insights adds deployment frequency, cycle-time breakdown, AI
+      code ratio, Jira sprint health and allocations.
+    published: AMBIGUOUS
+  - id: cr-usage-pricing
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Usage-based tiers; costs scale with PR volume."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: CONFIRMED
+    evidence: "Usage-based credit add-on plus a Slack agent billed at $0.50 per agent minute, alongside per-seat pricing."
+    source: https://www.coderabbit.ai/pricing
+    last_verified: 2026-08-12
+    severity: medium
+    published: PUBLISHED
+  - id: cr-security-separate
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Security scanning is a separate paid product, not included in the review seat."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: CONFIRMED
+    evidence: "CodeRabbit Security is listed as a standalone product at $40/month per user, with full repo scan on usage-based billing."
+    source: https://www.coderabbit.ai/pricing
+    last_verified: 2026-08-12
+    severity: medium
+    note: "Not currently on the comparison page. It is the strongest true row available against CodeRabbit and should be added."
+    published: PUBLISHED
+  - id: cr-multirepo-tiers
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Multi-repo analysis is limited by tier: 1 repository on Pro, 10 on Pro Plus, 20 on Enterprise."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: CONFIRMED
+    evidence: "Pro: multi-repo analysis 1 repository. Pro Plus: 10. Enterprise: 20."
+    source: https://www.coderabbit.ai/pricing
+    last_verified: 2026-08-12
+    severity: medium
+    published: PUBLISHED
+  - id: cr-soc2-enterprise-only
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "SOC 2 on Enterprise plan only."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: UNVERIFIABLE
+    evidence: "Not stated on the current pricing page. No primary source located either way."
+    source: null
+    last_verified: 2026-08-12
+    severity: high
+    note: "Compliance claims about a competitor carry legal and credibility risk. Do not publish until a primary source settles it."
+    published: AMBIGUOUS
+  - id: cr-token-budget
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Uses your Claude/OpenAI token budget."
+    sources: [https://www.coderabbit.ai/pricing, https://docs.coderabbit.ai]
+    status: UNVERIFIABLE
+    evidence: "No primary source located. CodeRabbit's published pricing does not describe bring-your-own-key or customer token consumption."
+    source: null
+    last_verified: 2026-08-12
+    severity: medium
+    published: UNPUBLISHED
+  - id: cr-gitlab-selfhosted-enterprise
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Cloud GitLab; self-hosted requires Enterprise plan."
+    sources: [https://www.coderabbit.ai/pricing, https://docs.coderabbit.ai]
+    status: UNVERIFIABLE
+    evidence: "Not confirmed on the pricing page."
+    source: null
+    last_verified: 2026-08-12
+    severity: low
+    published: PUBLISHED
+  - id: cr-single-pass-security
+    competitor: coderabbit
+    page: /vs/coderabbit
+    claim: "Single-pass static analysis. Misses layered vulnerabilities."
+    sources: [https://www.coderabbit.ai/pricing]
+    status: UNVERIFIABLE
+    evidence: "CodeRabbit sells a dedicated security product with continuous monitoring, PR security reviews and full repo scans. 'Single-pass' is not supported by any located source."
+    source: https://www.coderabbit.ai/pricing
+    last_verified: 2026-08-12
+    severity: medium
+
+  # ------------------------------------------------------------------ Greptile
+    published: UNPUBLISHED
+  - id: gt-no-analytics
+    competitor: greptile
+    page: /vs/greptile
+    claim: "No engineering analytics. Review-only product."
+    sources: [https://www.greptile.com/docs/analytics, https://www.greptile.com/changelog]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "Analytics Dashboard: PRs reviewed, average merge time, addressed rate, critical bugs caught, upvote/downvote ratio. Filter by team, repository, author and time period, with export."
+    source: https://www.greptile.com/docs/analytics
+    evidence_date: 2026-04-15
+    last_verified: 2026-08-12
+    severity: critical
+    published: AMBIGUOUS
+  - id: gt-no-cycle-time
+    competitor: greptile
+    page: /vs/greptile
+    claim: "PR cycle time analytics: Not available."
+    sources: [https://www.greptile.com/docs/analytics]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "'Average time to merge' is one of four headline metrics, with a time series and a top-repos-by-merge-time leaderboard."
+    source: https://www.greptile.com/docs/analytics
+    evidence_date: 2026-04-15
+    last_verified: 2026-08-12
+    severity: critical
+    published: AMBIGUOUS
+  - id: gt-single-pass-security
+    competitor: greptile
+    page: /vs/greptile
+    claim: "Single-pass code review with security notes."
+    sources: [https://www.greptile.com/changelog]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "Security Agent pairs Opengrep pattern-matching rules, SCA dependency checks against known vulnerability databases, and AI detection of chained exploits. On by default for all users."
+    source: https://www.greptile.com/changelog
+    evidence_date: 2026-07-28
+    last_verified: 2026-08-12
+    severity: critical
+    note: "Optibot gates its security agent and CVE scanning behind Pro at $49. Greptile enabled equivalent scanning by default at every tier including free."
+    published: PUBLISHED
+  - id: gt-no-ide
+    competitor: greptile
+    page: /vs/greptile
+    claim: "No IDE extension for code review."
+    sources:
+      - https://www.greptile.com/docs/mcp-v2/overview
+      - https://www.greptile.com/docs/code-review/key-features
+      - https://www.greptile.com/changelog
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "MCP v2 resolves review comments from Cursor, Windsurf, Claude Desktop and Codex CLI, alongside a Claude Code plugin and a CLI that runs a full review locally via 'greptile review'."
+    source: https://www.greptile.com/docs/code-review/key-features
+    evidence_date: 2026-06-04
+    last_verified: 2026-08-12
+    severity: high
+    published: PUBLISHED
+  - id: gt-multirepo-optibot-only
+    competitor: greptile
+    page: /vs/greptile
+    claim: "Full multi-repo indexing and inter-service dependency understanding is Optibot-only."
+    sources: [https://www.greptile.com/changelog]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "context.repos multi-repo context, then Repo Clusters: Greptile reads up to 7 related repositories per review and suggests clusters from shared contributors over the last 90 days."
+    source: https://www.greptile.com/changelog
+    evidence_date: 2026-06-02
+    last_verified: 2026-08-12
+    severity: high
+    published: PUBLISHED
+  - id: gt-usage-pricing
+    competitor: greptile
+    page: /vs/greptile
+    claim: "Usage-based; costs increase with PR volume."
+    sources: [https://www.greptile.com/pricing, https://www.greptile.com/docs/code-review-bot/billing-seats]
+    status: WEAKENED
+    cause: competitor_shipped
+    observed: 2026-08-12
+    evidence: "Still usage-based ($30/seat including 50 credits, $1 per additional credit), but Flex Usage Limit lets an org set a dollar cap: reviews beyond it are skipped rather than billed. Set to $0 to disable overage entirely."
+    source: https://www.greptile.com/docs/code-review-bot/billing-seats
+    evidence_date: 2026-04-30
+    last_verified: 2026-08-12
+    severity: high
+    note: >
+      Literally true, but the unpredictable-bill pitch no longer lands. At the entry
+      tier the two products are the same: $30 for 50 reviews versus $29 for 50 deep
+      reviews. Flat-rate wins above roughly 60 reviews per developer per month.
+    published: PUBLISHED
+  - id: gt-no-ai-adoption
+    competitor: greptile
+    page: /vs/greptile
+    claim: "AI code adoption tracking: Not available."
+    sources: [https://www.greptile.com/docs/analytics, https://www.greptile.com/agent-leaderboard]
+    status: CONFIRMED
+    evidence: "No per-customer AI code ratio in the analytics dashboard."
+    source: https://www.greptile.com/docs/analytics
+    last_verified: 2026-08-12
+    severity: medium
+    note: >
+      WATCH. Greptile publishes an Agent Leaderboard with monthly AI-authored PR share
+      (0.86% to 27.6% of opened PRs, Feb 2025 to Apr 2026), revert rate per 1,000
+      merged PRs by agent, seven-day churn and P0s per 10k merged LOC. The fleet
+      pipeline exists; only a customer-facing view is missing. Recheck every run.
+    published: AMBIGUOUS
+  - id: gt-selfhost-enterprise
+    competitor: greptile
+    page: /vs/greptile
+    claim: "GitLab self-hosted on Enterprise only."
+    sources: [https://www.greptile.com/pricing, https://www.greptile.com/docs/deployment-options]
+    status: CONFIRMED
+    evidence: "Self-hosting is listed under Enterprise, and the deployment docs state 'Self-hosted requires a license. Contact hello@greptile.com.'"
+    source: https://www.greptile.com/docs/deployment-options
+    last_verified: 2026-08-12
+    severity: medium
+    published: PUBLISHED
+  - id: gt-no-codegen
+    competitor: greptile
+    page: /vs/greptile
+    claim: "Greptile does not write code, so it cannot fix CI failures or rewrite the code in a PR."
+    sources: [https://www.greptile.com/blog/ai-code-review-bubble, https://www.greptile.com/blog/auditor]
+    status: CONFIRMED
+    frozen: true
+    evidence: "'In spite of multiple requests, we have never shipped codegen features. We don't write code; an auditor doesn't prepare the books, a fox doesn't guard the henhouse.' (2026-01-24)"
+    source: https://www.greptile.com/blog/ai-code-review-bubble
+    last_verified: 2026-08-12
+    severity: low
+    note: >
+      The most durable row on the page: a stated strategic position, not a feature gap.
+      Frozen because it changes only if Greptile publicly reverses. Recheck quarterly.
+    published: AMBIGUOUS
+  - id: gt-validation-roadmap
+    competitor: greptile
+    page: /vs/greptile
+    source_type: internal
+    claim: "Greptile is expanding from code review into full code validation (execution, test generation, QA, security), targeting regulated buyers."
+    sources:
+      - https://www.greptile.com/blog/automating-code-validation
+      - https://www.greptile.com/blog/trex
+      - https://www.greptile.com/changelog
+    status: CONFIRMED
+    evidence: "'A large, regulated bank should be able to merge a change to flow-of-funds with only Greptile's approval. No manual code review, no tests, no QA.' TREX shipped 2026-06-15 and runs code in a sandbox."
+    source: https://www.greptile.com/blog/automating-code-validation
+    evidence_date: 2026-07-10
+    last_verified: 2026-08-12
+    severity: high
+    note: "Not a comparison-page row. Tracked because it is the roadmap that threatens the security and compliance wedge for regulated accounts."
+
+  # ------------------------------------------------------------- own claims
+    published: INTERNAL
+  - id: self-unlimited-reviews
+    competitor: self
+    page: [/vs/coderabbit, /vs/greptile, /vs/qodo, /vs/github-copilot, /vs/sonarqube, /vs/deepsource, /bugbot-cost-calculator, /claude-code-review-cost-calculator]
+    claim: "Flat $29/user/month: flat pricing that doesn't spike as you ship more, the lowest total cost for actively-shipping teams."
+    sources: [https://getoptimal.ai/pricing, https://getoptimal.ai/vs, https://getoptimal.ai/vs/greptile]
+    status: CONFIRMED
+    evidence: "Consistent with the pricing page, which caps deep reviews at 50 / 100 / 350 per user per month. The wording no longer asserts unlimited reviews."
+    source: https://getoptimal.ai/vs
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
+    severity: critical
+    note: >
+      Resolved. Between 2026-08-10 and 2026-08-14 this row read "flat $29/user/month
+      with unlimited reviews", which the pricing page contradicted. Checked on /vs and
+      /vs/greptile: neither now contains the word unlimited. Keep the claim registered,
+      because pricing copy is the row most likely to drift back.
+    published: PUBLISHED
+  - id: self-2x-vulnerabilities
+    competitor: self
+    page: [/vs/coderabbit, /vs/greptile]
+    claim: "2x more security vulnerabilities found per review, in independent benchmarks."
+    sources: [https://getoptimal.ai/vs/coderabbit]
+    status: UNVERIFIABLE
+    evidence: "No benchmark, methodology or third party is cited on any page carrying the claim."
+    source: null
+    last_verified: 2026-08-12
+    severity: high
+    note: "Either publish the methodology or drop the word independent. Engineers ask for the benchmark."
+    published: PUBLISHED
+  - id: self-43-edge-cases
+    competitor: self
+    page: [/vs/coderabbit, /vs/greptile]
+    claim: "+43% more edge cases caught vs diff-only tools."
+    sources: [https://getoptimal.ai/vs/coderabbit]
+    status: UNVERIFIABLE
+    evidence: "No methodology or sample published."
+    source: null
+    last_verified: 2026-08-12
+    severity: medium
+
+  # -------------------------------------------------------------- Qodo Merge
+    published: PUBLISHED
+  - id: qd-pr-scope-context
+    competitor: qodo
+    page: /vs/qodo
+    claim: "PR-scope context, limited to files changed in the current PR."
+    sources: [https://qodo-merge-docs.qodo.ai/core-abilities/rag_context_enrichment/]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "RAG context enrichment searches configured repositories for relevant code beyond the PR, and Qodo indexes multiple repositories for cross-repo context via the Qodo Aware context engine."
+    source: https://qodo-merge-docs.qodo.ai/core-abilities/rag_context_enrichment/
+    last_verified: 2026-08-14
+    severity: high
+    note: >
+      Nuance worth keeping: RAG is documented as enterprise plan only, single tenant or
+      on-prem. The honest replacement row is "full-repo context requires Qodo's
+      enterprise tier", not "PR scope only".
+    published: UNPUBLISHED
+  - id: qd-no-metrics
+    competitor: qodo
+    page: /vs/qodo
+    claim: "No engineering metrics. Review-only product."
+    sources: [https://qodo.ai/pricing/]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-12
+    evidence: "Pricing lists a dashboard with real-time credit balance and burn rate plus analytics showing review activity and team metrics, with Advanced Analytics on Enterprise."
+    source: https://qodo.ai/pricing/
+    last_verified: 2026-08-14
+    severity: high
+    note: "Same fix as the CodeRabbit and Greptile rows: compete on depth (DORA, deployment frequency, AI code ratio), not on presence."
+    published: PUBLISHED
+  - id: qd-no-fix
+    competitor: qodo
+    page: /vs/qodo
+    claim: "Suggestions only. No auto-fix capability. No CI fixing capability."
+    sources: [https://qodo-merge-docs.qodo.ai/core-abilities/rag_context_enrichment/]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "The /implement tool uses RAG for repository context to generate code output, and review suggestions can be applied to the PR."
+    source: https://qodo-merge-docs.qodo.ai/core-abilities/rag_context_enrichment/
+    last_verified: 2026-08-14
+    severity: high
+    note: "CI fixing specifically may still hold. Split the row: code fixing is out of date, CI repair is not yet checked."
+    published: UNPUBLISHED
+  - id: qd-pricing-19
+    competitor: qodo
+    page: /vs/qodo
+    claim: "Free tier; paid from ~$19/user/month with review limits."
+    sources: [https://qodo.ai/pricing/]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-12
+    evidence: "Pro Team is $30/month for up to 30 users, credit-metered at $0.012 per credit pooled across the team, with 2,500 / 5,000 / 20,000 credit packs and a 14-day trial."
+    source: https://qodo.ai/pricing/
+    last_verified: 2026-08-14
+    severity: medium
+    published: AMBIGUOUS
+  - id: qd-no-slack
+    competitor: qodo
+    page: /vs/qodo
+    claim: "No native Slack integration. Review notifications stay in GitHub/GitLab only."
+    sources: [https://docs.qodo.ai/code-review]
+    status: UNVERIFIABLE
+    evidence: "No Slack integration documented, and an open PR-Agent feature request from 2025-09 asks for Slack notifications. Absence of a doc is not proof of absence."
+    source: null
+    last_verified: 2026-08-14
+    severity: low
+    published: AMBIGUOUS
+  - id: qd-soc2-enterprise
+    competitor: qodo
+    page: /vs/qodo
+    claim: "SOC 2 Type II on Enterprise plans only."
+    sources: [https://qodo.ai/pricing/]
+    status: UNVERIFIABLE
+    evidence: "Not stated on the pricing page. Same class of risk as the CodeRabbit SOC 2 row."
+    source: null
+    last_verified: 2026-08-14
+    severity: high
+    published: AMBIGUOUS
+  - id: qd-azure-beta
+    competitor: qodo
+    page: /vs/qodo
+    claim: "GitHub + GitLab; Azure DevOps in beta."
+    sources: [https://docs.qodo.ai/code-review]
+    status: UNVERIFIABLE
+    evidence: "Beta status not confirmed on a current page."
+    source: null
+    last_verified: 2026-08-14
+    severity: low
+    note: "Odd row to run at all: Optibot does not support Azure DevOps natively, so this comparison advertises a competitor capability."
+
+  # --------------------------------------------------------------- SonarQube
+    published: PUBLISHED
+  - id: sq-per-developer-pricing
+    competitor: sonarqube
+    page: /vs/sonarqube
+    claim: "Per-developer licensing makes enterprise costs unpredictable at scale. Enterprise starts ~$25k/year."
+    sources: [https://www.sonarsource.com/plans-and-pricing/]
+    status: OUT_OF_DATE
+    cause: source_check
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "Sonar prices per instance per year based on lines of code, not per developer. Cloud Team starts at $34/month covering up to 100k LOC, and private projects are free to 50k LOC."
+    source: https://www.sonarsource.com/plans-and-pricing/
+    last_verified: 2026-08-14
+    severity: critical
+    note: >
+      Wrong on the pricing model itself, not just the number, and it is the load-bearing
+      row on the page. Anyone who has bought Sonar knows it is LOC-based. The true
+      argument is that LOC pricing is unpredictable for a fast-growing codebase, which
+      is a better argument anyway.
+    published: PUBLISHED
+  - id: sq-not-pr-native
+    competitor: sonarqube
+    page: /vs/sonarqube
+    claim: "Not PR-native. Scans run in CI, not as a reviewer on the pull request."
+    sources: [https://docs.sonarsource.com/sonarqube-cloud/analyzing-source-code/pull-request-analysis]
+    status: OUT_OF_DATE
+    cause: source_check
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "Pull request analysis decorates the PR in GitHub, GitLab, Bitbucket Cloud and Azure DevOps with quality gate status, and issues may be reported as inline annotations."
+    source: https://docs.sonarsource.com/sonarqube-cloud/analyzing-source-code/pull-request-analysis
+    last_verified: 2026-08-14
+    severity: high
+    published: PUBLISHED
+  - id: sq-no-ai-reasoning
+    competitor: sonarqube
+    page: /vs/sonarqube
+    claim: "Rule-based pattern matching only. Rules cannot reason. No AI."
+    sources: [https://docs.sonarsource.com/sonarqube-server/2026.1/ai-capabilities/ai-codefix]
+    status: WEAKENED
+    cause: competitor_shipped
+    evidence_date: 2026.1
+    observed: 2026-08-14
+    evidence: "AI CodeFix generates one-click LLM fix suggestions (Enterprise and Data Center editions), and AI Code Assurance labels projects containing AI-generated code, holding them to stricter quality gates with taint analysis."
+    source: https://docs.sonarsource.com/sonarqube-server/2026.1/ai-capabilities/ai-codefix
+    last_verified: 2026-08-14
+    severity: high
+    note: >
+      Detection is still rule and pattern based, so the core claim holds. What does not
+      hold is "no AI". AI Code Assurance is the competitively significant part: Sonar is
+      selling the same thesis, that AI-written code needs independent verification, to
+      an installed base that already has budget.
+    published: PUBLISHED
+  - id: sq-no-metrics
+    competitor: sonarqube
+    page: /vs/sonarqube
+    claim: "No engineering metrics. Analysis tool only."
+    sources: [https://www.sonarsource.com/plans-and-pricing/]
+    status: CONFIRMED
+    evidence: "Quality and coverage metrics only. No DORA, cycle time or contributor analytics located."
+    source: https://www.sonarsource.com/plans-and-pricing/
+    last_verified: 2026-08-14
+    severity: medium
+
+  # -------------------------------------------------------------- DeepSource
+    published: PUBLISHED
+  - id: ds-no-autofix
+    competitor: deepsource
+    page: /vs/deepsource
+    claim: "No auto-fix agents. Findings require manual developer action."
+    sources: [https://deepsource.com/pricing]
+    status: OUT_OF_DATE
+    cause: source_check
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "Autofix is a headline feature: pay-as-you-go on Open Source, unlimited on Team and Enterprise."
+    source: https://deepsource.com/pricing
+    last_verified: 2026-08-14
+    severity: critical
+    note: "Autofix has been a DeepSource feature for years. This is the row most likely to be challenged by anyone who has used the product."
+    published: PUBLISHED
+  - id: ds-analyzer-only
+    competitor: deepsource
+    page: /vs/deepsource
+    claim: "Analyzer-based: flags issues its language analyzers know about, misses novel bugs. No AI reasoning."
+    sources: [https://deepsource.com/pricing]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "The pricing page sells 'AI Review and Autofix' as AI-powered code review that detects bugs, security issues and anti-patterns, alongside static analysis, SAST and IaC."
+    source: https://deepsource.com/pricing
+    last_verified: 2026-08-14
+    severity: high
+    published: PUBLISHED
+  - id: ds-per-dev-pricing
+    competitor: deepsource
+    page: /vs/deepsource
+    claim: "Per-developer tiers."
+    sources: [https://deepsource.com/pricing]
+    status: CONFIRMED
+    evidence: "Open Source free, Team $24 per user per month billed yearly, Enterprise custom."
+    source: https://deepsource.com/pricing
+    last_verified: 2026-08-14
+    severity: medium
+    note: "Worth knowing before leading with price: Team is $24 against Optibot Plus at $29, with unlimited Autofix included."
+    published: PUBLISHED
+  - id: ds-no-metrics
+    competitor: deepsource
+    page: /vs/deepsource
+    claim: "No engineering metrics layer."
+    sources: [https://deepsource.com/pricing]
+    status: UNVERIFIABLE
+    evidence: "Code coverage is included; no metrics dashboard located either way."
+    source: null
+    last_verified: 2026-08-14
+    severity: medium
+
+  # ---------------------------------------------------------- GitHub Copilot
+    published: PUBLISHED
+  - id: cop-pricing-addon
+    competitor: github-copilot
+    page: /vs/github-copilot
+    claim: "Copilot Pro $19/mo + Copilot Reviews is a separate add-on on Business/Enterprise."
+    sources: [https://github.com/features/copilot/plans]
+    status: OUT_OF_DATE
+    cause: competitor_shipped
+    evidence_date: undated
+    observed: 2026-08-14
+    evidence: "Plans are Free $0, Pro $10, Pro+ $39, Max $100. Code review is included on every paid plan, listed as pull request reviews in GitHub and file diff reviews in code editors. It is not a separate add-on."
+    source: https://github.com/features/copilot/plans
+    last_verified: 2026-08-14
+    severity: critical
+    note: >
+      Both halves are wrong and one of them understates the competitor's price while
+      overstating their packaging. The replacement row is stronger than the original:
+      code review is included, but it consumes GitHub AI Credits, and since 2026-06-01
+      it also consumes GitHub Actions minutes. That is metered cost inside a bundled
+      product, which is the exact argument the flat-rate pitch is built on.
+    published: PUBLISHED
+  - id: cop-shared-token-budget
+    competitor: github-copilot
+    page: /vs/github-copilot
+    claim: "Shares Copilot subscription with code completion and chat; shared token budget."
+    sources: [https://github.com/features/copilot/plans, https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review]
+    status: CONFIRMED
+    evidence: "Chat, agent mode, code review, Copilot cloud agent, Copilot CLI and Copilot Apps all consume GitHub AI Credits. From 2026-06-01, code review workflows also consume GitHub Actions minutes."
+    source: https://github.com/features/copilot/plans
+    last_verified: 2026-08-14
+    severity: high
+    note: "Now stronger than published. Add the Actions minutes detail: it is a second meter the buyer has probably not counted."
+    published: PUBLISHED
+  - id: cop-diff-only
+    competitor: github-copilot
+    page: /vs/github-copilot
+    claim: "Diff-only analysis. Reviews changed lines only, no cross-file or architectural context."
+    sources: [https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review]
+    status: UNVERIFIABLE
+    evidence: "The docs do not state review scope. They do describe agentic behaviour: GitHub Actions running an ephemeral environment, custom instructions and AGENTS.md read from the head branch, MCP servers and agent skills. That is not consistent with diff-only, but no source settles it."
+    source: https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review
+    last_verified: 2026-08-14
+    severity: high
+    note: "Treat as likely out of date. Needs a primary source before it can be published again."
+    published: PUBLISHED
+  - id: cop-github-only
+    competitor: github-copilot
+    page: /vs/github-copilot
+    claim: "GitHub only. No GitLab support."
+    sources: [https://github.com/features/copilot/plans]
+    status: CONFIRMED
+    evidence: "Copilot code review operates on GitHub pull requests and in code editors. No GitLab support."
+    source: https://github.com/features/copilot/plans
+    last_verified: 2026-08-14
+    severity: medium
+    published: PUBLISHED
+  - id: cop-no-metrics
+    competitor: github-copilot
+    page: /vs/github-copilot
+    claim: "No engineering analytics."
+    sources: [https://github.com/features/copilot/plans]
+    status: CONFIRMED
+    evidence: "No cycle time, DORA or contributor analytics in the Copilot product surface."
+    source: https://github.com/features/copilot/plans
+    last_verified: 2026-08-14
+    severity: medium
+    note: "Copilot usage metrics exist at the org level, but they measure Copilot adoption, not delivery. Do not overstate the row."
+
+  # ------------------------------------------------- registered from run 2/3
+    published: AMBIGUOUS
+  - id: self-cap-behaviour
+    competitor: self
+    page: /pricing
+    claim: "At the deep-review cap, reviews pause until the start of the next billing cycle."
+    sources: [https://getoptimal.ai/pricing]
+    status: CONFIRMED
+    evidence: "Deep reviews pause until the start of your next billing cycle. You can upgrade your plan at any time to restore them immediately."
+    source: https://getoptimal.ai/pricing
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
+    severity: high
+    note: >
+      Registered after run 2 caught it changing. On 2026-08-10 the same page described a
+      downgrade to quick reviews; it now describes a pause. This is load-bearing for
+      every flat-versus-metered argument on the comparison pages: a hard stop is harder
+      to defend than a degraded review, and the metered competitor it is aimed at lets
+      the customer set their own spend cap instead.
+    published: PUBLISHED
+  - id: bugbot-usage-billing
+    competitor: cursor-bugbot
+    page: /bugbot-cost-calculator
+    claim: "Cursor Bugbot is billed on usage, so review cost scales with PR volume."
+    sources: [https://cursor.com/pricing]
+    status: CONFIRMED
+    evidence: "Bugbot on usage-based billing on both Individual and Teams tiers, with on-demand usage billed in arrears once the included amount is consumed."
+    source: https://cursor.com/pricing
+    evidence_date: 2026-08-14
+    observed: 2026-08-14
+    last_verified: 2026-08-14
+    severity: critical
+    note: >
+      The single highest-stakes claim in the file: two public calculators are built on
+      it. One qualifier the calculators do not carry: Enterprise lists "agentic code
+      reviews with Bugbot" as included, so against a Cursor Enterprise account the
+      metered-cost argument does not apply. Ask which Cursor tier they are on before
+      running the cost pitch.
+    published: PUBLISHED
 
 ```

@@ -1,0 +1,202 @@
+SOURCE: https://getoptimal.ai/token-spend-calculator
+TITLE: LLM Token Cost Calculator: Claude vs GPT vs Gemini | Optimal
+
+Free Tool
+
+LLM Token Cost Calculator
+
+Enter your monthly token volume. See estimated costs for Claude, GPT, and Gemini models side by side, sorted cheapest first.
+
+ Prices last fetched: August 7, 2026 · Verify at: Anthropic OpenAI Google Together AI 
+ By task By token volume 
+ What are you building?
+ Article summary Support reply Email draft PR review Product copy Document Q&A Agent run Blog post draft 
+ ~1,500-word article → short summary · 2K input + 300 output tokens per task
+
+ How many article summary s per month?
+ 100 1K 10K 100K per month 
+
+ Model Per task $100 buys 1K/mo cost 
+
+ Google Gemini 2.5 Flash-Lite
+ 0.032¢ · 313K per $100
+
+ 0.032¢ 313K $0.32 
+
+ OSS DeepSeek V4 Flash
+ via Baseten
+ 0.036¢ · 275K per $100
+
+ 0.036¢ 275K $0.36 
+
+ OpenAI GPT-4o mini
+ 0.048¢ · 208K per $100
+
+ 0.048¢ 208K $0.48 
+
+ OSS Gemma 4 31B
+ via Together AI
+ 0.11¢ · 93K per $100
+
+ 0.11¢ 93K $1.07 
+
+ OSS Qwen 3.7 Plus
+ via Fireworks AI
+ 0.13¢ · 78K per $100
+
+ 0.13¢ 78K $1.28 
+
+ Google Gemini 2.5 Flash
+ 0.13¢ · 74K per $100
+
+ 0.13¢ 74K $1.35 
+
+ OSS Llama 3.3 70B
+ via Together AI
+ 0.24¢ · 42K per $100
+
+ 0.24¢ 42K $2.39 
+
+ Claude Claude Haiku 4.5
+ 0.35¢ · 29K per $100
+
+ 0.35¢ 29K $3.50 
+
+ OpenAI o4-mini
+ 0.35¢ · 28K per $100
+
+ 0.35¢ 28K $3.52 
+
+ OSS DeepSeek V4 Pro
+ via Together AI
+ 0.45¢ · 22K per $100
+
+ 0.45¢ 22K $4.52 
+
+ Google Gemini 3.6 Flash
+ 0.52¢ · 19K per $100
+
+ 0.52¢ 19K $5.25 
+
+ Google Gemini 2.5 Pro
+ 0.55¢ · 18K per $100
+
+ 0.55¢ 18K $5.50 
+
+ OpenAI GPT-4.1
+ 0.64¢ · 16K per $100
+
+ 0.64¢ 16K $6.40 
+
+ OpenAI o3
+ 0.64¢ · 16K per $100
+
+ 0.64¢ 16K $6.40 
+
+ Claude Claude Sonnet 5
+ Intro pricing through Aug 31, 2026
+ 0.70¢ · 14K per $100
+
+ 0.70¢ 14K $7.00 
+
+ OpenAI GPT-4o
+ 0.80¢ · 13K per $100
+
+ 0.80¢ 13K $8.00 
+
+ Claude Claude Opus 5
+ 1.8¢ · 5.7K per $100
+
+ 1.8¢ 5.7K $18 
+
+ OpenAI GPT-5.5
+ 1.9¢ · 5.3K per $100
+
+ 1.9¢ 5.3K $19 
+
+ Claude Claude Fable 5
+ 3.5¢ · 2.9K per $100
+
+ 3.5¢ 2.9K $35 
+
+ Token estimates are approximations. Actual costs vary with prompt length, conversation history, and system prompt size. Standard (non-cached, non-batch) rates.
+
+Reading the results
+
+The calculator uses standard (non-cached, non-batch) rates and sorts models cheapest to most expensive for your specific input/output ratio. Costs scale linearly with token volume, so doubling your traffic doubles your bill unless you layer in prompt caching (10% of input price on cache hits) or the batch API (50% discount on both input and output).
+
+Why output tokens cost more than input tokens
+
+Generating each output token requires a full autoregressive forward pass through the model. Reading input tokens uses a more efficient parallel attention mechanism. The compute asymmetry is real: most providers charge 3–6x more per output token than per input token. If your workload is output-heavy (long generations, step-by-step reasoning), the output rate matters more than the headline input price.
+
+How to estimate your token volume
+
+If you are not yet in production, rough estimates by use case:
+
+ Short chatbot turn — 200–500 tokens total
+ RAG answer with retrieved documents — 2,000–8,000 tokens
+ Code review (medium PR) — 5,000–25,000 tokens
+ Document summarization — 10,000–100,000 tokens
+ Multi-step agent run — 20,000–200,000 tokens per task
+
+Doing AI code review?
+
+If you are using Claude Code Review or another per-token code reviewer, token costs compound fast at normal PR volumes. A 10-person team opening 8 PRs per week can easily hit $3,000–$8,000 per month in token spend before accounting for other Claude usage.
+
+See the Claude Code Review cost calculator
+
+Try Optibot Free
+
+See Optibot Pricing
+
+ Frequently Asked Questions
+
+ How do I calculate my LLM API cost? Monthly API cost equals your input token volume (in millions) multiplied by the model's input rate, plus your output token volume multiplied by the output rate. For example, 5M input tokens and 2M output tokens on Claude Sonnet 5 (at $2 and $10 per million) comes to $10 + $20 = $30 per month at introductory pricing.
+
+ Why are output tokens more expensive than input tokens? Generating each output token requires a full forward pass through the model. Reading input tokens uses a more efficient attention mechanism. Output generation is computationally heavier, so providers charge 3–6x more per output token than per input token across almost every model.
+
+ What is prompt caching and how does it reduce costs? Prompt caching stores frequently reused context (system prompts, documents, conversation history) so the model reads from cache instead of re-processing it. Anthropic charges cache reads at 10% of the standard input price. If your prompts repeat large chunks of context, caching can cut input costs dramatically.
+
+ Which LLM is cheapest for high-volume production workloads? At high token volumes, the budget models — Claude Haiku 4.5 ($1/$5 per MTok), Gemini 2.5 Flash-Lite ($0.10/$0.40), and GPT-4o mini ($0.15/$0.60) — are typically the cheapest. The right choice depends on the quality threshold your workload needs. Use the calculator above to compare costs for your specific input/output ratio.
+
+ How many tokens is a typical API request? A short chatbot turn might be 200–500 tokens total. A RAG-based answer with retrieved documents can run 2,000–8,000 tokens. Code review of a medium-sized pull request uses 5,000–25,000 tokens. A full document summarization can exceed 50,000 tokens. Token count scales with context size, not just response length.
+
+ What is the difference between Claude Sonnet, Haiku, and Opus? Haiku is Anthropic's fastest and cheapest model, suited for simple classification, extraction, and routing tasks. Sonnet balances speed and intelligence for most production workloads. Opus and Fable are the most capable but most expensive, suited for complex reasoning, long-context analysis, and tasks where quality is the primary constraint.
+
+ How do GPT-4o and Claude Sonnet 5 compare on price? GPT-4o is priced at $2.50 input / $10 output per million tokens. Claude Sonnet 5 is at $2 / $10 per million through August 31, 2026 (introductory pricing), then rises to $3 / $15. For output-heavy workloads, GPT-4o is currently slightly more expensive on output; for input-heavy workloads, Claude Sonnet 5 is cheaper through August 2026.
+
+ Does token pricing include the system prompt? Yes. Every token sent in a request — system prompt, conversation history, tool definitions, and user message — counts as input tokens and is billed at the input rate. Only the model's generated reply counts as output tokens.
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,19 @@
+{
+  "target": "getoptimal",
+  "date": "2026-08-21",
+  "root": "https://getoptimal.ai",
+  "urls_visited": 131,
+  "pages_saved": 126,
+  "fetch_failures": [
+    {
+      "url": "https://getoptimal.ai/llms.txt",
+      "status": 200
+    },
+    {
+      "url": "https://getoptimal.ai/site.webmanifest",
+      "status": 200
+    }
+  ],
+  "problems": [],
+  "ok": true
+}

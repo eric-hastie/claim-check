@@ -1,0 +1,160 @@
+SOURCE: https://getoptimal.ai/docs/optibot-for-ide/optibot-mcp
+TITLE: Optibot MCP Server — Optimal Docs
+CLASS: docs
+
+Optibot MCP Server — Optimal Docs 
+ / Docs / Optibot for IDE / Optibot MCP 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Optibot MCP Server
+
+ The Optibot MCP (Model Context Protocol) server connects Optibot’s code review engine to AI-enabled editors and tools that support the MCP standard — including Claude Desktop, Cursor, Windsurf, and Claude Code.
+
+ Once installed and configured, you can trigger code reviews, compare branches, review diffs, and manage API keys using natural language prompts directly inside your AI editor.
+
+ How It Works
+
+ The MCP server runs locally on your machine and exposes Optibot’s capabilities as tools. When you ask your AI editor to “review my changes” or “compare this branch,” the editor calls the appropriate MCP tool, which sends the code to Optibot’s review engine and streams the results back into your editor session.
+
+ Available actions through MCP: 
+
+ Review uncommitted local changes
+
+ Compare branches and review the full diff
+
+ Review patch or diff files
+
+ Manage Optibot API keys
+
+ Detect merge conflicts
+
+ Install
+
+ npm install -g @optimalai/optibot-mcp 
+
+ Setup
+
+ Claude Desktop
+
+ Add the following to your Claude Desktop MCP configuration file ( claude_desktop_config.json ):
+
+ { 
+ "mcpServers" : { 
+ "optibot" : { 
+ "command" : "optibot-mcp" , 
+ "env" : { 
+ "OPTIBOT_API_KEY" : "your_api_key" 
+ } 
+ } 
+ } 
+ } 
+
+ Cursor
+
+ Add this to your Cursor MCP settings ( .cursor/mcp.json or via Cursor Settings → MCP):
+
+ { 
+ "mcpServers" : { 
+ "optibot" : { 
+ "command" : "optibot-mcp" , 
+ "env" : { 
+ "OPTIBOT_API_KEY" : "your_api_key" 
+ } 
+ } 
+ } 
+ } 
+
+ Windsurf
+
+ Add this to your Windsurf MCP config ( ~/.codeium/windsurf/mcp_config.json ):
+
+ { 
+ "mcpServers" : { 
+ "optibot" : { 
+ "command" : "optibot-mcp" , 
+ "env" : { 
+ "OPTIBOT_API_KEY" : "your_api_key" 
+ } 
+ } 
+ } 
+ } 
+
+ Claude Code
+
+ Run this in your terminal (no config file needed):
+
+ claude mcp add optibot -- optibot-mcp 
+
+ Then set your API key:
+
+ export OPTIBOT_API_KEY = your_api_key 
+
+ Authentication
+
+ You have two authentication options:
+
+ Option 1: API Key (recommended) 
+Set the OPTIBOT_API_KEY environment variable in your MCP configuration as shown above. Generate an API key at agents.getoptimal.ai → Settings → API Keys.
+
+ Option 2: Browser Login 
+If no API key is set, run optibot login in your terminal. This opens a browser window for OAuth login via your Optibot account. After completing the flow, the MCP server uses the stored credentials automatically.
+
+ How to Use
+
+ Once the MCP server is running and your editor is connected, use natural language:
+
+ Command What it does 
+ ”Review my local changes” Reviews your uncommitted working directory changes 
+ ”Review the diff on my branch” Compares your current branch against the default branch 
+ ”Review this patch file” Reviews a specified .diff or .patch file 
+ ”Create an API key called ‘CI‘“ Generates a new API key labeled “CI" 
+ "List my API keys” Shows all your Optibot API keys 
+ ”Am I logged in to Optibot?” Checks your current authentication status 
+
+ Available Tools
+
+ Tool Description 
+ review_local_changes Reviews your current uncommitted local changes 
+ review_branch Reviews all commits on your current branch vs. default branch 
+ review_diff_file Reviews a provided diff or patch file 
+ login Authenticate with Optibot via browser 
+ logout Sign out and clear stored credentials 
+ check_auth Verify current authentication status 
+ create_api_key Create a new named API key for Optibot 
+ list_api_keys List all API keys in your account 
+ delete_api_key Delete an API key by name or ID 
+ get_profile Return the currently authenticated user profile

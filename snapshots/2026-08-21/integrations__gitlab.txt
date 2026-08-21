@@ -1,0 +1,224 @@
+SOURCE: https://getoptimal.ai/integrations/gitlab
+TITLE: GitLab Integration — Optibot by Optimal AI
+CLASS: product
+
+Optibot 
+
+ GitLab 
+
+ GitLab Integration 
+
+Optibot reviews every merge request in GitLab. Automatically.
+
+Connect Optibot to GitLab via a simple token-based setup. No native app required. Optibot indexes your full codebase, posts detailed reviews directly in merge request comments, and flags issues before code merges. Works with GitLab Cloud and self-hosted instances.
+
+GET STARTED FREE
+
+READ THE DOCS
+
+GitLab Cloud and self-hosted
+ · 
+Webhook-based · no app install required
+ · 
+Zero code retention
+
+ What this unlocks 
+ What does Optibot do inside GitLab?
+
+It provides four capabilities that activate the moment your token is connected.
+
+ Automated code reviews on every merge request
+ The moment a merge request opens, Optibot posts a structured review directly in GitLab MR comments. Every review includes line-by-line feedback, a summary of what changed and why it matters, and a clear recommendation — Ready to Merge or Needs Changes — ranked by confidence so engineers know exactly what to address first.
+
+ Full codebase context on every review
+ Optibot doesn't review merge requests in isolation. It indexes your entire GitLab repository on setup — file structure, dependencies, patterns, and history. When it reviews an MR, it understands how the changed code fits into your whole codebase. Cross-file dependencies, breaking changes, and architectural regressions get caught because Optibot reads changes against everything else in the repo, not just the diff.
+
+ AI-generated merge request summaries
+ Every merge request gets a structured summary generated automatically — what changed, what the intent was, and what the potential impact is. Line-by-line breakdowns make large MRs reviewable at a glance, reducing the time engineers spend getting up to speed before they can leave meaningful feedback.
+
+ Security and contextual recommendations
+ Optibot flags potential security concerns, risky patterns, and missing documentation directly in MR comments — based on how your codebase is actually structured, not static rule matching. Issues surface inline where the code lives, not in a separate tool your team has to remember to check.
+
+ How it works 
+ How do you connect Optibot to GitLab?
+
+You connect Optibot in four simple token-based steps, then it starts reviewing merge requests automatically.
+
+ 01 
+ Sign up and select GitLab
+ Go to agents.getoptimal.ai/signup and select "Sign Up with GitLab." Complete your account details and verify your email address. After verification you'll land directly on the GitLab Integration Setup page inside the Optimal AI dashboard.
+ agents.getoptimal.ai/signup 
+
+ 02 
+ Create a GitLab Access Token
+ In GitLab, navigate to your group or repository's Settings → Access Tokens. Group-level tokens are recommended for teams with multiple repositories. Create a new token, set the role to Maintainer, and select the following four scopes: api, read_repository, write_repository, and read_user. Set the expiration date to the maximum allowed and copy the token — you'll need it in the next step. If you're on a self-hosted GitLab instance, this process is identical — just use your own domain.
+
+ 03 
+ Connect GitLab in your Optimal AI dashboard
+ Paste your access token into the GitLab token field in the Optimal AI dashboard. If you're on a self-hosted instance, replace the default gitlab.com URL with your domain before connecting. Then enter your Bot/User ID — you can find this at gitlab.com/admin/users or at /admin/users on your self-hosted domain. Click Connect GitLab.
+
+ 04 
+ Select repos and go live
+ After connecting, select which repositories Optibot should cover. Optibot creates webhooks in each selected repo automatically — no manual webhook setup required. Once repos are selected, Optibot begins reviewing new merge requests immediately. Manage your integration, adjust repo coverage, and customize per-repo review settings any time from agents.getoptimal.ai/dashboard/gitlab-integration.
+
+ Who it's for 
+ Which engineering roles benefit from Optibot?
+
+Optibot is built for senior engineers, engineering managers, and technical leaders who need faster, full-context merge request reviews.
+
+ Senior Engineers & IC Engineers
+ Get detailed, line-by-line feedback on merge requests without waiting for a teammate to have bandwidth. Optibot flags the issues worth addressing — security risks, anti-patterns, breaking changes — and leaves the judgment calls to you. Reviews happen the moment an MR opens, every time, across every repo.
+
+ Engineering Managers
+ Every review Optibot posts is visible in GitLab MR comments. You can see exactly what was flagged, what was addressed, and where issues went unresolved — across every repo and every engineer on the team. Review coverage becomes measurable, not assumed.
+
+ CTOs & VPEs
+ One token-based integration connects Optibot to your entire GitLab group. Consistent review quality across every repo and every team — including contractors and new engineers who don't yet have deep context on your codebase. Works with GitLab Cloud and self-hosted instances, no infrastructure changes required.
+
+ Permissions & access 
+ What token scopes does Optibot request and why?
+
+Optibot requests only the token scopes it needs to read your code and post review comments.
+
+ Token scope Why 
+ api Full API access to interact with GitLab merge requests and repositories 
+ read_repository Clone and read repository contents for full codebase indexing 
+ write_repository Grant git push access to repository refs and contents; merge request comments are covered separately by the api scope 
+ read_user Access user information to attribute reviews correctly 
+
+ Role required: The access token must be created under a bot or service account with the Maintainer role on the group or repository. Group-level tokens are recommended for organizations with multiple repositories.
+
+ Customization 
+ How can you tune Optibot's behavior per repository?
+
+Every connected repository gets its own settings. Toggle behavior, set triggers, and configure exclusions — all from the Optibot dashboard. No config files required.
+
+ Auto-review triggers
+ Review on MR open, on push, or only after a CI workflow completes
+
+ Draft MR inclusion
+ Choose whether draft merge requests get reviewed automatically
+
+ Review sensitivity
+ Control strictness from low to high. Medium is recommended for most teams
+
+ Inline code suggestions
+ Allow Optibot to suggest code fixes directly in MR comments
+
+ Summary detail level
+ Basic or detailed AI-generated MR summaries
+
+ Excluded labels & users
+ Skip MRs with specific labels or from specific usernames (e.g. bot accounts)
+
+ Guidelines URL
+ Point Optibot to your team's coding standards file for context-aware enforcement
+
+ CI fixer
+ Automatically attempt to fix failed CI checks
+
+ Dependency bundler
+ Consolidate dependency update MRs into one clean MR
+
+ Optibot customization settings 
+
+ Settings · per repository UI 
+ Reviews Auto-review · draft inclusion · sensitivity 
+ Summaries Detail level · trigger behavior 
+ CI Fixer Auto-fix failed CI workflows 
+ Dep. Bundler Bundle dependency update MRs 
+ Guidelines Point to your team's coding standards 
+ Access Excluded labels · excluded users 
+
+Configure per repository from your Optibot dashboard → Settings tab. Changes take effect immediately.
+
+ Get started 
+ How quickly can you set up Optibot on GitLab?
+
+You can complete token-based setup in about 15 minutes and start getting merge request reviews without CI changes.
+
+ 01 Sign up with GitLab
+
+Go to agents.getoptimal.ai/signup, select GitLab, and verify your email.
+
+ 02 Create an access token
+
+Maintainer role · Scopes: api, read_repository, write_repository, read_user · Max expiration date.
+
+ 03 Connect and select repos
+
+Paste the token in your Optimal AI dashboard, enter your Bot/User ID, click Connect, and select your repos. Webhooks are created automatically.
+
+Need the full setup guide? 
+Read the setup guide →
+
+ Required token scopes 
+
+ Access token · scopes GitLab 
+ api 
+ read_repository 
+ write_repository 
+ read_user 
+
+Role: Maintainer · Group-level token recommended
+
+ Frequently asked questions
+
+ Does Optibot work with self-hosted GitLab? Yes. During setup, replace the default gitlab.com URL with your self-hosted domain in the Optimal AI dashboard. Everything else in the setup flow is identical — same token scopes, same role requirement, same webhook-based activation.
+
+ Does Optibot store my code? No. All analysis is done ephemerally during the review process. Your code is never stored, logged, or used for model training. Optibot operates under a zero data retention model.
+
+ What permissions does the access token need? Four scopes: api, read_repository, write_repository, and read_user. The token should be created under a bot or service account with the Maintainer role on the group or repository. Group-level tokens are recommended for teams with multiple repos.
+
+ How do I verify the integration is working? After setup, check your GitLab repository under Settings → Webhooks. You should see an active webhook entry pointing to agents.getoptimal.ai. You can also open a new merge request — Optibot will post a review comment automatically once indexing is complete.
+
+ Can I control which repos Optibot reviews and how it behaves? Yes. During setup you select which repositories to connect, and you can update this any time from agents.getoptimal.ai/dashboard/gitlab-integration. Per-repo review behavior — triggers, sensitivity, exclusions, CI fixer, dependency bundler, and more — is managed from the Settings tab in your Optibot dashboard. Changes take effect immediately.
+
+ // connect gitlab
+
+How do you connect GitLab and get your first review?
+ Reviews start on your next merge request. 
+
+Token-based setup in about 15 minutes. Works with GitLab Cloud and self-hosted instances. No CI pipeline changes or infrastructure work required.
+
+GET STARTED FREE
+
+GET A DEMO
+
+ Optibot 
+
+ GitLab 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

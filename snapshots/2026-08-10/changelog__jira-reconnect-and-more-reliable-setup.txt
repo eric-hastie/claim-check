@@ -1,0 +1,78 @@
+SOURCE: https://getoptimal.ai/changelog/jira-reconnect-and-more-reliable-setup
+TITLE: Jira Reconnect & More Reliable Setup | Optibot
+
+All changelog entries
+
+ 🔄 
+
+ Improvement July 9, 2026 Jira Integrations Reliability 
+ Jira: Reconnect Instantly, Connect More Reliably 
+ Broken Jira credentials? Just re-save them, no need to disconnect first. This update adds a Cloud / Server toggle and fixes service account setup failures. 
+
+This release makes the Jira integration easier to fix when it breaks, and more reliable to set up in the first place, especially for teams connecting with an Atlassian service account.
+
+ Improvements
+ Reconnect without disconnecting first
+
+If your API token expires or your credentials change, you can now fix a broken Jira integration directly from the setup form. Come back to the Jira Integration page, re-enter a fresh token, and save. Your existing integration updates in place, so you no longer need to disconnect and reconnect from scratch.
+
+ Cloud / Server & Data Center toggle
+
+The connect form now has an explicit Instance Type toggle instead of assuming Jira Cloud. Selecting Server / Data Center adjusts the form accordingly, asking for a username instead of an email, and the API token hint updates to point you at the right place to generate one: the Atlassian admin console for service accounts, id.atlassian.com for regular Cloud accounts, or your Server instance's Personal Access Token page.
+
+ Clearer errors when setup or sync fails
+
+If Jira projects can't be loaded after connecting, you'll now see a clear message telling you to reconnect with a fresh token, instead of a stale project list or a failure with no explanation.
+
+ Reliability Improvements
+ Service account connections now work reliably
+
+Atlassian service accounts were sometimes rejected during setup with a generic "Invalid Jira credentials" error, even when the credentials were valid. This is now fixed, and service accounts connect successfully.
+
+ Setup no longer hangs on a slow Jira response
+
+If your Jira instance is slow to respond during setup, you'll now get a clear error quickly instead of a page that stays stuck loading.
+
+Previous
+ CLI: Async Reviews & Pre-Push Gate 
+Next
+ Review Wait-Time Estimates & More Resilient Reviews 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

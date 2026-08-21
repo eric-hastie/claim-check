@@ -1,0 +1,88 @@
+SOURCE: https://getoptimal.ai/changelog/gitlab-integration-and-faster-code-review-performance
+TITLE: GitLab Integration & Review Speed — Optimal AI Changelog
+
+All changelog entries
+
+ 🦊 
+
+ New Release September 29, 2025 GitLab Performance Infrastructure 
+ GitLab Integration & Review Speed 
+ Optibot V2.0.5 Acadia — GitLab.com and self-hosted support, rebuilt context engine, email/password login for GitLab, and a unified GitHub + GitLab dashboard. 
+
+ Optibot — V2.0.5 Acadia Release
+
+Optibot V2.0.5 – "Acadia" is all about cross-platform support and performance foundation-building. The big story: Optibot now works beyond GitHub — it's officially integrated with GitLab, and the core engine has been rebuilt to handle larger, more complex reviews faster and smarter.
+
+ Features
+ GitLab Integration is Here!
+
+You can now connect your GitLab accounts (both GitLab.com and self-hosted instances) to Optibot. This brings our powerful AI-driven code reviews, summaries, and analytics to your GitLab Merge Requests. The integration includes:
+
+ A simple setup process to connect your GitLab account.
+ The ability to select and install Optibot on your GitLab projects.
+ Full support for automated reviews and summaries on your Merge Requests.
+ Improvements
+ New Email & Password Login for GitLab Users
+
+To better support our new integrations, you can now sign up and log in using your email and password, providing a new alternative to GitHub authentication.
+
+ Unified Organization View
+
+Your dashboard has been updated to seamlessly display all your organizations and repositories from both GitHub and GitLab in a single, unified view.
+
+ More Reliable Reviews for Large Pull Requests
+
+We've improved our AI's ability to handle very large and complex pull requests. The system is now smarter at processing extensive changes, reducing failures and ensuring you get a complete review every time.
+
+ Under the Hood Improvements
+ Re-architected Repository Context Engine
+
+We've completely rebuilt our core engine for analyzing and understanding your codebases. This new architecture is faster, more reliable, and is the foundation that allows us to support multiple platforms like GitLab. You'll notice faster initial repository setup and more accurate context for your reviews.
+
+ Enhanced Performance and Stability
+
+We've made significant upgrades to our backend infrastructure, resulting in a faster, more stable, and more scalable platform. These changes ensure a smoother experience and lay the groundwork for exciting new features to come.
+
+ Fun fact: These notes were generated with Optibot. In order to generate release notes like these, simply open up a Release PR and ask Optibot in the comments "Optibot can you generate release notes" to get this output.
+
+Next
+ Optibot improved context understanding and unified architecture for smarter reviews 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

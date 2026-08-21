@@ -1,0 +1,94 @@
+# The company whose published claims this target defends.
+#
+# claim-check watches two surfaces. `competitors.yaml` is what the field shipped.
+# This file is what YOU published, and it is the surface that produces P0 findings:
+# a sentence on your own site that a prospect can disprove in one click.
+#
+# Page classes carry the whole design. Everything gets crawled and diffed, because a
+# claim can leak across the marketing surface (the "unlimited reviews" line was live on
+# about twenty pages in August 2026, and a /vs-only crawl would have caught six of them).
+# Only pages marked `mine: true` are read for claims. Blog and changelog copy is
+# assertion-shaped by nature and would flood the untracked bucket with marketing prose.
+
+owner:
+  id: getoptimal
+  name: Optimal AI
+  product: Optibot
+  domain: getoptimal.ai
+  root: https://getoptimal.ai
+
+crawl:
+  max_pages: 400
+  delay_seconds: 0.4
+  timeout_seconds: 25
+  skip_paths:
+    - /api/
+  # Nav and footer are stripped so a menu edit does not read as a content change.
+  strip_after:
+    - Get a Demo
+    - Get Started - Free
+  strip_before_footer:
+    - Designed and Built in San Francisco
+    - Privacy Policy | Terms of Use
+
+# mine:   claims are extracted here, and published-state is checked here
+# weight: how expensive an error on this page class is, which seeds severity
+page_classes:
+  - id: comparison
+    match: ["/vs/", "/alternatives", "-alternatives"]
+    mine: true
+    weight: p0
+    why: Highest purchase intent on the site. A prospect reading these is evaluating.
+
+  - id: pricing
+    match: ["/pricing", "-pricing", "-cost-calculator"]
+    mine: true
+    weight: p0
+    why: Numbers a competitor's own customer can check from memory.
+
+  - id: security
+    match: ["/security", "/trust"]
+    mine: true
+    weight: p0
+    why: Read during procurement. An overclaim here fails a deal late and loudly.
+
+  - id: product
+    match: ["/agents/", "/integrations/", "/ai-code-reviews", "/engineering-ai-agents"]
+    mine: true
+    weight: p1
+
+  - id: docs
+    match: ["/docs"]
+    mine: true
+    weight: p1
+
+  - id: case_study
+    match: ["/case-studies"]
+    mine: false
+    weight: p2
+    why: Customer quotes are internal-sourced by nature. Diff them, never mine them.
+
+  - id: changelog
+    match: ["/changelog"]
+    mine: false
+    weight: p2
+
+  - id: blog
+    match: ["/blog"]
+    mine: false
+    weight: p2
+
+# Fail loudly. Every URL here must return 200 AND contain its anchor, or the run is a
+# failure rather than a quiet all-clear. This is what catches a JavaScript shell that
+# returns 200 with no content, which otherwise reads as "nothing changed this week."
+required:
+  - url: https://getoptimal.ai/
+    anchor: Optibot
+  - url: https://getoptimal.ai/pricing
+    anchor: Optibot Pro
+  - url: https://getoptimal.ai/security
+    anchor: SOC 2
+
+# A crawl that returns fewer pages than this is treated as broken, not as a site that
+# shrank. Set from the previous run and reviewed when it legitimately changes.
+floor_pages: 90

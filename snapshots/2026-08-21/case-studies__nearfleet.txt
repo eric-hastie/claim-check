@@ -1,0 +1,175 @@
+SOURCE: https://getoptimal.ai/case-studies/nearfleet
+TITLE: Nearfleet — 75% Faster PRs, 30 Hours Reclaimed Weekly
+CLASS: case_study
+
+Nearfleet's engineering team spans Europe and both coasts of the United States. With only two senior
+ engineers qualified to perform final reviews, every PR was filtered through a bottleneck that never
+ slept — but wasn't always awake in the right timezone.
+
+After integrating Optibot, the team broke free from timezone dependency. Reviews happen instantly,
+ compliance is now automated, and the team has reclaimed 30 hours every week — allowing seniors to
+ focus on architecture instead of clearing an endless queue.
+
+ The Problem 
+
+Timezone Friction and Senior Bottlenecks in a Distributed Team
+
+Nearfleet's engineering team is geographically distributed, spanning from Central Europe to both coasts
+ of the United States. This created a "relay race" workflow where the baton was constantly being dropped
+ due to sleep schedules.
+
+ The 24-hour wait — US-based junior engineers often waited a full day for European seniors to wake up
+
+ Senior burnout — reviewers spent up to 12 hours a day clearing the global PR queue across their entire shift
+
+ Repetitive friction — seniors spent excessive time pointing out obvious mistakes that should have been caught before the PR even reached review
+
+"We are a geographically distributed team... juniors often had to wait for me to actually wake up because it was nighttime for me. That added hours and even a full day of delay."
+
+ Simon Balkau
+ Senior DevOps Engineering Manager, Nearfleet
+
+Without an automated layer, the team couldn't scale their velocity. Every new feature was held hostage
+ by a manual review queue that never slept — but wasn't always awake in the right timezone.
+
+ The Solution 
+
+An AI "Senior Engineer" for a 24/7 Workflow
+
+NearFleet integrated Optibot as the first line of defense. Rather than replacing humans, Optibot acted
+ as an automated "second senior engineer" — providing immediate, high-context reviews regardless of
+ which timezone the developer was in.
+
+ Closing the timezone gap
+ Optibot reviews every PR at 2:00 AM. US-based juniors can fix issues before European seniors even wake up — shipping progresses overnight.
+
+ Human-readable summaries
+ Optibot generates clean summaries of every PR, letting seniors understand the intent of a change instantly — no synchronous hand-off call needed.
+
+ Compliance at scale
+ During a major 15,000-line refactor, Optibot identified PII leaks that had slipped past manual QA — preventing a major compliance breach in production.
+
+ A self-running system
+ After introducing the team to Optibot, Simon barely had to manage it. The team adopted it on their own because the value was immediately obvious.
+
+"I pretty much didn't do anything after just introducing the team to it. It was a self-runner. My team is really liking it... it takes the blame off."
+
+ Simon Balkau
+ Senior DevOps Engineering Manager, Nearfleet
+
+ The Results 
+
+75% Faster PR Cycles, 30 Hours Reclaimed, and 99% PII Detection
+
+By removing the "low-level friction" from the review process, NearFleet transformed their culture from
+ one of waiting to one of building:
+
+ 30 hours reclaimed every week — previously lost to manual review cycles and timezone hand-offs
+ 75% faster PR reviews — total manual time per PR slashed from 4 hours to 1 hour
+ Asynchronous velocity — juniors receive instant feedback; features move from submitted to merged without waiting
+ Permanent security auditor — Optibot caught a 15,000-line PII leak that had already passed QA
+ Cultural shift — juniors now use Optibot proactively to learn and self-correct before a senior ever sees the code
+
+"Optibot caught a PII leak across 15,000 lines of code... it had slipped through QA, but Optibot made sure it was caught before it rolled out to staging. Those moments make it clear this is a second pair of eyes you can trust."
+
+ Simon Balkau
+ Senior DevOps Engineering Manager, Nearfleet
+
+"My team is really liking it. It takes the blame off. Juniors can learn from the mistakes Optibot catches before a senior even sees the code. It has become an integral part of how we interact as a team."
+
+ Simon Balkau
+ Senior DevOps Engineering Manager, Nearfleet
+
+ The Impact in Numbers
+
+Before and after metrics for Nearfleet's team using Optimal AI
+
+ Real numbers verified by the leaders using the tech.
+
+ Metric
+
+ Before
+
+ After
+
+ Improvement
+
+ Review Time per PR
+
+ 3–4 hours of manual senior review
+
+ ~1 hour with AI handling first pass
+
+ 75% Reduction 
+
+ Senior Weekly PR Load
+
+ ~30–40 hours clearing the global queue
+
+ ~10 hours — focused on architecture
+
+ 30 Hours Saved 
+
+ Timezone Friction
+
+ Up to 24-hour delays across time zones
+
+ Instant review (24/7) — no timezone dependency
+
+ Eliminated Waiting 
+
+ Security / PII Catch
+
+ Manual / QA dependent, scoped to the PR
+
+ Automated scanning with full codebase context
+
+ Caught 15k-line leak 
+
+ Reviewer Morale
+
+ Burnout; 12-hour review shifts
+
+ "Faster and Calmer" — team reported clear shift
+
+ Significant Shift 
+
+Cut cycle time by 50% and get visibility into engineering productivity
+
+ Start reviewing PRs faster, catching issues earlier, and shipping with confidence.
+
+Get a Demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

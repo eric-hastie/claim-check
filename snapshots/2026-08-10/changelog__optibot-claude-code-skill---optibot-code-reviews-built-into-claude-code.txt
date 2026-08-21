@@ -1,0 +1,86 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-claude-code-skill---optibot-code-reviews-built-into-claude-code
+TITLE: Optibot Claude Code Skill — Optimal AI Changelog
+
+Product Core Platform
+ AI Code Reviews Engineering Insights Deployment Frequency How It Works AI Agents
+ AppSec Agent CI Fixer Agent Dependency Bundler 
+ Resources Learn
+ Changelog Docs Blog Case Studies Tools
+ Integrations Comparisons LLM Token Calculator Claude Code Review Calculator Bugbot Cost Calculator Contact Us 
+
+Security
+ Careers 
+We're hiring
+
+Login
+
+Get Started - Free
+
+Get a Demo
+
+All changelog entries
+
+ ⚡ 
+
+ New Release March 18, 2026 Integration Claude Code CLI 
+ Optibot Claude Code Skill 
+ Install the Optibot skill in Claude Code and get a full AI code review without leaving your session. Claude reviews your diff and offers fixes on the spot. 
+
+ New Features
+ Optibot Claude Code Skill
+ For teams already working in Claude Code CLI. Install the Optibot skill and get a full code review without ever leaving your session — Claude reviews your diff, surfaces issues, and offers to fix them on the spot.
+ Install
+ claude plugin marketplace add Optimal-AI/optibot-skill
+claude plugin install optibot@optimal-ai 
+ For installation through the Claude Code UI, refer to the getting started guide .
+ What's included
+ In-session reviews: Claude reviews your diff and surfaces issues without switching context.
+ Inline fix suggestions: Optibot offers to fix flagged issues directly in the same Claude Code session.
+ Ideal for risky changes: Useful when you're refactoring or landing something complex and want a second pass before pushing.
+ Flexible auth: Authenticate via browser ( optibot login ) or use an API key for headless use.
+ Requires Node ≥ 20+ and Git.
+ GitHub repo | Getting started guide | Learn more 
+
+Previous
+ Optibot February II — Release Notes 
+Next
+ Optibot for AppSec — AI Security Agent 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

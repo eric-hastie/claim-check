@@ -1,0 +1,150 @@
+SOURCE: https://getoptimal.ai/integrations/slack
+TITLE: Slack Integration — Optibot by Optimal AI
+
+Optibot 
+
+ Slack 
+
+ Slack Integration 
+
+Keep your team updated on reviews without leaving Slack.
+
+Connect Optibot to your Slack channel and get real-time PR review notifications and weekly impact reports delivered where your team already communicates. See what was reviewed, what was fixed, and how much time was saved — without checking GitHub.
+
+GET STARTED FREE
+
+READ THE DOCS
+
+2-minute OAuth setup
+ · 
+No bots to configure
+ · 
+Zero code retention
+
+ What Optibot posts 
+ Two types of updates, delivered automatically
+
+Real-time review notifications and a weekly impact summary — all in the Slack channel your team already uses.
+
+ Posted after every review 
+ PR Review Notifications
+ Every time Optibot reviews a pull request, a message lands in your Slack channel. Each notification includes the repository name, the PR title with a direct link to GitHub, the review outcome — Approved or Not Approved — and a summary of what Optibot flagged. Engineers and managers see what's being reviewed and what was found, in the channel where they already communicate. No GitHub tab required.
+
+ Posted every Friday at 5 PM PST 
+ Weekly Impact Reports
+ Every Friday, Optibot automatically posts a weekly summary to your Slack channel. The report covers total PRs reviewed, average cycle time, top-performing repositories, and before vs. after metrics — exactly what changed, what was fixed, and how much time the team saved. Engineering Managers get a ready-made weekly update on team performance without pulling any data manually.
+
+ How it works 
+ Live in 3 steps
+
+ 01 
+ Open Slack Integration in your Optibot dashboard
+ In your Optibot dashboard, go to Settings → Integrations → Slack Integration and click Integrate with Slack. You'll be redirected to Slack to authorize the connection.
+
+ 02 
+ Authorize Optibot in Slack
+ Slack will ask you to approve two permissions for Optibot: view basic workspace and channel info, and post messages in conversations. Click Allow. That's all Optibot needs — it doesn't read messages, access files, manage channels, or interact with your Slack workspace in any other way.
+
+ 03 
+ Select your channel and go live
+ After authorization, return to the Optibot dashboard and select the Slack channel where updates should appear using the channel search dropdown. Once saved, Optibot posts a welcome message in the channel confirming it's active. PR review notifications start immediately. The first weekly report arrives the following Friday at 5 PM PST.
+
+ Who it's for 
+ Built for teams who want review visibility without checking GitHub
+
+ Engineering Managers
+ Get a real-time feed of what Optibot is reviewing and what it's finding — in the Slack channel you're already in. The Friday weekly report gives you a ready-made summary of team performance, cycle times, and Optibot's impact without pulling any data manually. Stay on top of review activity without asking for status updates or opening GitHub.
+
+ Senior Engineers & Tech Leads
+ See when PRs are reviewed and what Optibot flagged — in Slack, as it happens. If something was marked Not Approved, it shows up in the channel immediately. No one has to remember to check GitHub notifications or follow up on whether a review ran. The review activity is visible to the whole team, automatically.
+
+ Engineering Teams
+ Weekly reports give the whole team visibility into output — total PRs reviewed, average cycle time, and how performance is trending week over week. It's a shared pulse check that arrives automatically every Friday, without anyone having to compile or present the data.
+
+ Permissions & access 
+ Two permissions. Nothing more.
+
+Optibot requests only what it needs to post messages. It does not read your Slack messages, access files, or interact with anything beyond the channel you select.
+
+ Permission Why 
+ View basic workspace and channel info To display available channels in the setup dropdown and confirm where to post 
+ Post messages in conversations To send PR review notifications and weekly summary reports to your selected channel 
+
+ Least-privilege access: Optibot does not read messages, access files, manage channels, or interact with your Slack workspace beyond posting to the single channel you configure. Permissions can be revoked at any time from your Slack workspace's Apps settings.
+
+ Get started 
+ Under 2 minutes to connect
+
+ 01 Open Slack Integration
+
+Optibot dashboard → Settings → Integrations → Slack Integration → Integrate with Slack.
+
+ 02 Authorize in Slack
+
+Click Allow. Two permissions only: view channel info and post messages.
+
+ 03 Select your channel
+
+Pick the channel from the dropdown in your Optibot dashboard. Optibot posts a welcome message confirming it's live. Done.
+
+Full setup guide →
+
+ Frequently asked questions
+
+ Can I choose which channel Optibot posts to? Yes. During setup you select the channel from a dropdown search in your Optibot dashboard. You can update the channel any time from Settings → Integrations → Slack Integration.
+
+ Does Optibot read my Slack messages? No. Optibot only posts messages — it does not read conversations, access files, manage channels, or interact with your workspace in any other way. The only permissions it requests are view basic channel info (to show the channel picker during setup) and post messages.
+
+ When does the weekly report post? Every Friday at 5 PM PST. The report covers that week's review activity including total PRs reviewed, average cycle time, top-performing repositories, and before vs. after metrics showing Optibot's impact.
+
+ Can I get notifications in multiple Slack channels? The integration currently supports one default channel per Optibot installation. If you need updates across multiple channels, contact the Optimal AI team via your shared Slack channel to discuss your setup.
+
+ What happens if I want to disconnect Slack? You can disconnect the integration at any time from Settings → Integrations → Slack Integration in your Optibot dashboard. You can also revoke access directly from your Slack workspace's Apps settings — Optibot will stop posting immediately.
+
+ // connect slack
+
+Review updates in Slack. Weekly reports on Friday. Zero setup overhead. 
+
+Connect Optibot to Slack in under 2 minutes and start getting real-time PR review notifications and weekly impact reports in the channel your team already uses.
+
+GET STARTED FREE
+
+GET A DEMO
+
+ Optibot 
+
+ Slack 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

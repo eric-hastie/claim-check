@@ -1,0 +1,107 @@
+SOURCE: https://getoptimal.ai/changelog/pair-review
+TITLE: Pair Review - Optibot's biggest review upgrade
+
+All changelog entries
+
+ New Release June 3, 2026 Code Review AI Performance Reliability 
+ Pair Review 
+ Optibot's biggest review upgrade yet: multiple passes on every review, instant PR summaries, faster replies, and a rebuilt, more reliable engine. 
+
+ Deeper reviews, less noise
+
+This is the largest upgrade to Optibot's review engine to date. We rebuilt how reviews run from the ground up. Every pull request now gets a second set of eyes, summaries arrive the moment you open a PR, replies come back faster, and even the largest changes get a complete, reliable analysis.
+
+ Features
+ Every review gets a second set of eyes
+
+Good code review benefits from a second set of eyes. Optibot now pairs every review with one automatically.
+
+The first review digs into your changes line by line to find specific, concrete issues. A follow-up review then steps back and looks at the bigger picture, scanning across files for architectural problems, gaps, and edge cases the first one may have missed. On larger or more complex changes, Optibot brings in additional reviewers, so the depth scales to the work in front of it.
+
+Either way, you get one review with extra layers of scrutiny, so more gets caught before it merges, with nothing extra for you to do.
+
+ What the extra passes catch
+
+Measured on Optibot's internal review-quality evaluation, comparing the previous release with this one.
+
+The hard part of code review isn't flagging issues. It's catching the ones that matter without burying you in noise. That balance is what we optimize for: high recall with a low false-positive rate, and we publish the numbers instead of asking you to take our word for it.
+
+ See how Optibot compares → 
+ Improvements
+ Summaries arrive instantly, reviews start sooner
+
+Summaries and reviews now run on separate tracks. The moment you open a pull request, its summary is generated and posted right away, instead of waiting behind a queue of in-progress reviews.
+
+Reviews themselves start as soon as there is capacity, so a single slow review no longer holds up everything behind it. The practical result is less time watching a pending check and feedback that shows up when you expect it.
+
+ Smarter, faster agents
+
+We rebuilt the core of how Optibot's agents work, with a focus on speed, reliability, and the quality of what lands in your PR.
+
+ Right-sized analysis: Optibot now scales its effort to the change in front of it. Small diffs are reviewed quickly, while large, complex pull requests get the extra depth they need without timing out.
+
+ Faster answers to your questions: the agent that replies to your comments has been reworked for speed, so when you ask Optibot something in a thread, you get a useful answer back sooner.
+
+ More actionable comments: review feedback is now sharper and more concrete. Comments more consistently come with a specific suggestion you can act on, so you spend less time deciphering what to do next.
+
+ Bigger pull requests, handled: very large PRs are reviewed using a smarter method for working through massive changes, so even the biggest reviews stay complete and reliable instead of hitting limits.
+
+ By the numbers
+
+Average times measured before and after this release. Large PR figures are for pull requests over 10,000 lines.
+
+ Bug Fixes
+ More reliable CI failure analysis: fixed a condition that could cause the CI failure analysis to hang. It now recovers gracefully and finishes its work.
+
+ Greater stability across the board: improved error handling and timeout logic throughout Optibot's agents for a more dependable experience.
+
+ Under the Hood
+ A modern agent architecture: we moved Optibot's core agents to a more powerful foundation built for complex, multi-step reasoning. It powers the improvements in this release and sets up more advanced capabilities to come.
+
+ A built-in safety net: a new budgeting system keeps agents from getting stuck in loops or running out of room mid-task. They wrap up cleanly and reliably, which sharply reduces the chance of a failed or incomplete review.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Optibot Release - Re-review code in one click 
+Next
+ Monorepo Guidelines — Per-Directory Review Instructions 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

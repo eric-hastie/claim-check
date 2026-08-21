@@ -6,11 +6,11 @@ Every source it reads is a public vendor page: changelogs, pricing pages, produc
 Every finding carries the date it went stale and a link, so anyone can check it in one
 click. Nothing here is scraped from behind a login, and nothing is inferred.
 
-**Point it at your own site.** Copy `targets/example/`, fill in your comparison pages
-and the claims they make, and the weekly run tells you which ones a competitor has
-already invalidated. Targets can live outside this repo entirely, via
-`CLAIM_CHECK_TARGETS`, so findings about a real company stay private while the tool
-stays shareable.
+**Built for Optimal AI, and running against getoptimal.ai.** `claims.yaml` carries 45
+real claims from the live comparison pages. `reports/` holds every run. The most recent
+is [`reports/2026-08-21.md`](reports/2026-08-21.md), which crawled all 126 pages of the
+site and found a competitor's price published 4x below what that competitor charges.
+This is not a template with placeholder rows.
 
 Comparison pages are high-intent inbound: someone typing "X vs Y" is evaluating right
 now, and the page is the only rep in the room. They are also the fastest-rotting content
@@ -162,8 +162,9 @@ security carry real exposure when nothing backs them.
 
 ## Seed data
 
-`claims.yaml` ships populated with 23 real claims from three live comparison pages, and
-`reports/2026-08-14.md` is the baseline run. It is not a template with placeholder rows:
+`claims.yaml` ships populated with 45 real claims across eight live comparison pages, and
+`reports/` carries every run from the 2026-08-14 baseline to
+[`reports/2026-08-21.md`](reports/2026-08-21.md). It is not a template with placeholder rows:
 9 of the 23 are out of date, each with the date it went stale and a link to the evidence.
 
 ## Etiquette

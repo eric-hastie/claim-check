@@ -1,0 +1,214 @@
+SOURCE: https://getoptimal.ai/agents/review-fixer
+TITLE: Review Fixer Agent — Optibot by Optimal AI
+
+Agent — Review Fixer 
+
+Apply review fixes without leaving GitHub. 
+
+Ask Optibot to apply any fix it flagged in a code review and it commits the change back to your branch — with full codebase context, a summary of what changed, and zero back-and-forth. The gap between review comment and fixed code closes in seconds.
+
+GET A DEMO
+
+Read the docs →
+
+GitHub-native · lives in PR comments
+
+Full codebase context on every fix
+
+All fixes tracked in dashboard
+
+ feat/auth-refactor 
+ feat: extract auth middleware into reusable service
+ SZ syedahmedz opened 12 minutes ago 
+
+ agent-optibot just now 
+
+The logic is sound and directly addresses the issue. For future improvement, the confirmation UI in src/auth/loginSignup.tsx (lines 87-105) could be extracted into its own component. This would simplify the rendering logic within InitialLogin and improve readability.
+
+ SZ syedahmedz just now 
+ @Optibot apply this fix
+
+ agent-optibot just now 
+FIX APPLIED
+
+Extracted confirmation UI into ConfirmationModal component. Updated InitialLogin to use the new component.
+
+2 files changed
+ · fix(auth): extract confirmation UI · a7f3c21 
+
+ // how it works
+ How does the Review Fixer Agent work?
+
+The Review Fixer Agent reads Optibot's review comments, applies the fix with full codebase context, commits the change to your branch, and posts a summary — all from a single PR comment.
+
+ 1 
+ Optibot reviews the PR and flags issues
+ REVIEW 
+ Optibot reviews the pull request and posts inline comments on every flagged line — bugs, logic gaps, code quality issues, security concerns, and improvement suggestions. Each comment includes Optibot's reasoning and a suggested approach to resolving the issue.
+
+ 2 
+ Engineer asks Optibot to apply a fix
+
+ The engineer reads the review and decides which issues to address. For any comment they want Optibot to act on, they reply directly in the PR — naturally, like asking a teammate: "Optibot apply this fix," "Optibot fix this," or "Optibot what’s the best approach here?" No commands, no configuration, no leaving GitHub.
+
+ 3 
+ Agent applies the fix with full codebase context
+
+ The Review Fixer Agent reads the flagged issue, the review comment, and the full codebase context — your repo's patterns, types, existing architecture, and related files. It generates a targeted fix and commits it directly to the PR branch. The fix is codebase-aware, not a naive patch — it understands how the change fits into the rest of your code.
+
+ 4 
+ Fix is committed and logged
+ FIX APPLIED 
+ Optibot posts a PR comment summarizing what was changed, what files were touched, and why — with a commit link. The fix appears immediately in the PR diff for human reviewers to inspect and approve. All fixes applied by the Review Fixer Agent are also logged in the dedicated Fixes page in your Optibot dashboard, giving your team a complete record of every agent-applied change.
+
+ // impact
+ From review comment to committed fix in seconds.
+
+The Review Fixer Agent closes the loop between code review and code change — no manual editing, no context switching, one click to enable.
+
+ Seconds
+ From review comment to committed fix
+
+ 0
+ Files to manually edit
+
+ 1 click
+ To enable in Optibot settings
+
+ // features
+ What does the Review Fixer Agent do?
+
+Six capabilities that activate the moment you enable the agent.
+
+ Full codebase context on every fix
+ Fixes aren't generated from the diff alone. The agent reads your repo's types, imports, patterns, and architecture — so the committed code fits your codebase instead of breaking something three files away.
+
+ Natural language triggers
+ Ask Optibot to apply a fix the same way you'd ask a teammate. Reply to any review comment in a PR and the agent picks up the request instantly — no slash commands, no configuration, no learning curve.
+
+ Targeted commits, not rewrites
+ The agent touches only what the review comment flagged. No scope creep, no reformatting unrelated lines, no surprise changes in the diff. The fix is surgical — reviewers see exactly what changed and why.
+
+ PR comment summaries on every fix
+ Every applied fix is documented with a PR comment explaining what was changed, which files were touched, and the reasoning behind the approach. Reviewers get the full narrative without hunting through the diff.
+
+ Fixes dashboard — full visibility
+ Every fix applied by the Review Fixer Agent appears in the Fixes page in your Optibot dashboard. See a complete history of agent-applied changes across all repositories — what was fixed, when, which PR, and which review comment triggered it. Full audit trail, one place.
+
+ Engineer stays in control
+ The Review Fixer Agent never applies fixes automatically. It only acts when an engineer explicitly asks it to — on the specific comment they choose. Human approval of the PR remains unchanged. The agent does the implementation work; the engineer makes the decisions.
+
+ // setup
+ How do I enable the Review Fixer Agent?
+
+Toggle on from your Optibot settings dashboard — no config files, no pipeline changes. The agent activates on your next PR review.
+
+ Optibot Settings 
+ General 
+ Code Review 
+ Agents 
+ Integrations 
+ Notifications 
+ Security 
+
+ Active agents
+ Enable or disable Optibot agents running on your repositories.
+
+ CI Fixer Agent
+ Auto-detect and repair failed CI builds on every PR
+
+ AppSec Agent
+ Scan for security vulnerabilities on every review
+
+ Review Fixer Agent
+ Apply review comment fixes to your code automatically
+
+ Dependency Bundler
+ Consolidate Dependabot PRs into one weekly update
+
+Enable the Review Fixer Agent from Settings → Agents → Review Fixer Agent in your Optibot dashboard. Once enabled, Optibot responds to fix requests in PR comments on all connected repositories. Fixes are logged automatically to the Fixes page in your dashboard.
+
+ // the difference
+ Review Fixer vs. CI Fixer — what's the difference?
+
+Both agents apply fixes, but they solve different problems and run on different triggers. Here's how they line up side by side.
+
+ Reviews 
+ Review Fixer Agent
+ Fixes code quality and logic issues found during Optibot's PR review 
+ Human-initiated — engineer asks Optibot to apply a specific fix 
+ Triggered by a PR comment — "Optibot apply this fix" 
+ Applies fixes with full codebase context 
+ All fixes tracked in the Fixes dashboard 
+
+ CI / Builds 
+ CI Fixer Agent
+ Fixes failed CI builds — type errors, syntax issues, broken imports 
+ Automatically triggered — runs the moment a workflow goes red 
+ No human input required to trigger a fix 
+ Applies fixes directly to the branch and re-runs CI 
+ Fix summary posted as a PR comment 
+
+Both agents are available from the same Agents settings panel and can be enabled independently.
+
+ Frequently Asked Questions
+
+ How is the Review Fixer different from Copilot or Cursor suggesting fixes? Other tools suggest fixes inline in your editor and require the engineer to manually apply, test, and commit them. The Review Fixer Agent applies the fix directly to the branch, commits it back to the PR, and documents what changed — all from a GitHub PR comment. The engineer stays in GitHub reviewing the fix rather than switching to an editor to implement it.
+
+ Does the Review Fixer Agent apply fixes automatically? No. The agent only acts when an engineer explicitly asks it to in a PR comment. It never applies fixes without being prompted. This keeps engineers in control of every change — the agent does the implementation work, the engineer makes the decisions.
+
+ How does it avoid breaking other parts of the codebase? The agent generates fixes with full codebase context — it reads your repo's types, imports, patterns, and related files before writing the fix. It doesn't patch in isolation. The fix is designed to fit your existing architecture, not just solve the immediate issue.
+
+ Where do I see all the fixes the agent has applied? Every fix is logged in the Fixes page in your Optibot dashboard. You can see a complete history of agent-applied changes across all repositories — what was fixed, when, which PR triggered it, and which review comment was the source.
+
+ Can I use the Review Fixer and CI Fixer at the same time? Yes. Both agents can be enabled independently from the same Agents settings panel. They solve different problems — the Review Fixer handles code quality and logic issues from PR reviews, the CI Fixer handles failed builds. Most teams run both.
+
+ Which source control platforms does the agent support? The Review Fixer Agent works with GitHub repositories connected to Optibot. The agent lives inside PR comments and uses the same GitHub integration that powers Optibot reviews.
+
+ How does the agent handle complex fixes that span multiple files? The agent applies fixes across multiple files when the issue requires it. Because it reads full codebase context before generating the fix, multi-file changes are handled with the same care as single-file ones — touching only the files implicated by the review comment.
+
+ How does Optibot handle my source code? Optibot follows a zero data retention model. Code is analyzed ephemerally to generate fixes and is not retained beyond what's required to deliver the result. Your source code is never stored or used for model training.
+
+ // get started
+
+Ready to close the loop between review and fix?
+
+Engineering teams at MongoDB , Prado , and Blaze already run Optibot across their pull requests. Your next review comment doesn't need manual follow-through.
+
+GET A DEMO
+
+Get started free →
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

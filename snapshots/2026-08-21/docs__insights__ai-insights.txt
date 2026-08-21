@@ -1,0 +1,170 @@
+SOURCE: https://getoptimal.ai/docs/insights/ai-insights
+TITLE: AI Insights — Optimal Docs
+CLASS: docs
+
+AI Insights — Optimal Docs 
+ / Docs / Engineering Insights / AI Insights 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ AI Insights | Automatic Summaries of Engineering Team Trends
+
+ AI Insights provides instant summaries of trends, bottlenecks, and outliers across your Insights dashboards. It’s available via the purple ⚡ AI Insight button on most views.
+
+ Each summary includes real metrics, percentage changes, and practical next steps — helping engineering leads, managers, and CTOs see the story behind the numbers in seconds.
+
+ Overview
+
+ AI Insights analyzes the data on any Insights dashboard you’re viewing — whether it’s PR Cycle Time, Activity, Contributors, or Distributions — and translates it into natural-language insights.
+
+ It automatically applies all the filters you’ve already set (date range, repositories, teams, and users), so every summary is contextual and accurate to what you’re looking at.
+
+ The panel provides five key sections:
+
+ TL;DR — A short, readable summary of overall trends and performance changes since the last time window.
+
+ Trends — Highlights percentage increases or decreases across your main metrics.
+
+ Notable patterns — Points out specific behaviors such as who’s reviewing most often, when work tends to happen, or whether large PRs are becoming more common.
+
+ Actionable insights — Plain-English recommendations on what to investigate or improve next.
+
+ Context — Shows your selected date range, repositories, and teams, with metric definitions.
+
+ Where to Find It
+
+ PR Cycle Time → Click ⚡ AI Insight (top-right)
+
+ Activity (bubble timeline) → click ⚡ AI Insight for team or per-person analysis
+
+ Contributors → click ⚡ AI Insight for an individual’s highlights and coaching prompts
+
+ Allocations / Distributions / Issues / Time in Status → where available, same ⚡ AI Insight button
+
+ The analysis always respects the page’s date picker, team/user filter, and repository filter.
+
+ How It Works
+
+ You set the view — Choose the time window, team/user, and repositories.
+
+ Click “AI Insight” — We compute deltas vs. the prior comparable window and scan for patterns: review behavior, PR sizes, merge cadence, comment density, rework hotspots, weekend activity, etc.
+
+ We generate the panel — The right-rail shows Date Range, TL;DR, Activity/PR Trends, Notable Trends, and Actionable Insights.
+
+ You drill down — Sort PR tables to find which ones drove the metrics. Use the Activity legend to see who did what, when.
+
+ What AI Insights Covers by Page
+
+ PR Cycle Time
+
+ Identifies which parts of your PR process are speeding up or slowing down:
+
+ Tracks Time to Open, In Review, and Time to Merge separately.
+
+ Surfaces likely causes for slowdowns — large PR sizes, review backlogs, or CI failures.
+
+ Flags extreme outliers and suggests switching to Median to get a fairer average.
+
+ Calls out Reworks (code churn) and Check Failure Rate.
+
+ Activity (Bubble Timeline)
+
+ Gives a visual summary of the week’s development activity:
+
+ Highlights review balance (who’s reviewing most vs. least).
+
+ Detects weekend or after-hours work patterns.
+
+ Identifies collaboration trends.
+
+ Contributors
+
+ Provides an AI-generated coaching summary for each engineer:
+
+ Highlights weekly or monthly activity trends.
+
+ Evaluates Coding Days, Average PR Size, Time to First Review, and Lines Added/Deleted.
+
+ Suggests actions like: “Establish a code review rotation” or “Encourage smaller PRs.”
+
+ Useful for 1:1s, performance reviews, and spotting early blockers.
+
+ Allocations / Distributions
+
+ When your team uses labels like feature , tech-debt , security , or bug in GitHub or Jira, AI Insight breaks down your engineering effort by category.
+
+ Why Teams Use It
+
+ AI Insights is most valuable when:
+
+ You want executive-level summaries without manually compiling data.
+
+ You need team-specific coaching points before sprint retros.
+
+ You’re tracking process improvement over time — e.g., faster reviews or fewer reworks.
+
+ You’re running multi-repo organizations and need quick context switching.
+
+ Pro Tips
+
+ Use Median for fairness — Outliers can make averages look worse than they are.
+
+ Review the outliers — Sort PR tables to find which ones drove the metrics up or down.
+
+ High Rework doesn’t always mean bad code — It can indicate a major refactor or architectural cleanup.
+
+ Standardize labels — Consistent GitHub/Jira labeling improves Distributions and makes AI summaries more meaningful.
+
+ Show it live in reviews — Use AI Insights during sprint demos or weekly leadership syncs — the TL;DR is built for quick storytelling.
+
+ Notes & Behavior
+
+ Read-only — AI Insight doesn’t modify or store data beyond your dashboard context.
+
+ Auto-refresh — Summaries update as your repositories sync.
+
+ Supports comparisons — Always compares your selected window to the previous period.
+
+ Privacy-safe — Aggregates data without identifying individuals in sensitive metrics.
+
+ Troubleshooting
+
+ Issue Fix 
+ Panel shows generic text Make sure your selected period contains activity 
+ Not enough data Switch to a longer date range (e.g., 30 days) 
+ Missing data Verify GitHub and Jira integrations are synced and active 
+ Distributions showing “Unlabeled” Add consistent issue/PR labels 
+ Unexpected deltas Toggle from Average → Median in Settings

@@ -1,0 +1,132 @@
+SOURCE: https://getoptimal.ai/docs/claude-code-skill/getting-started
+TITLE: Getting Started with the Claude Code Skill — Optimal Docs
+CLASS: docs
+
+Getting Started with the Claude Code Skill — Optimal Docs 
+ / Docs / Optibot Claude Code Skill / Getting started 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Getting Started with the Optibot Claude Code Skill
+
+ The Optibot Claude Code skill brings AI-powered code reviews directly into your Claude Code sessions. Instead of switching between tools, you can trigger a full Optibot review from within Claude and see results inline as you work.
+
+ Overview
+
+ The skill extends Claude Code with Optibot’s code review capabilities. Once installed, you can ask Claude to review your local changes, a branch diff, or a specific diff file — and Optibot returns a structured review with findings, suggestions, and security checks.
+
+ Requirements
+
+ Claude Code installed and running
+
+ An Optibot account at agents.getoptimal.ai 
+
+ Installation
+
+ Option 1: Inside a Claude Code Session
+
+ Open Claude Code and start a new session.
+
+ Type /plugin to open the Plugin Marketplace.
+
+ Browse the Marketplace tab.
+
+ Add Optimal-AI/optibot-skill to find the Optibot plugin.
+
+ Click Discover to load the plugin listing.
+
+ Click Install to install the skill.
+
+ Run /reload-plugins to activate the newly installed skill.
+
+ Option 2: CLI Terminal
+
+ Run the following commands in your terminal:
+
+ claude plugin marketplace add Optimal-AI/optibot-skill 
+
+ Then install it:
+
+ claude plugin install optibot@optimal-ai 
+
+ Verifying Installation
+
+ After installing, type /plugin inside Claude Code and confirm that optibot appears in your installed plugins list.
+
+ Logging In
+
+ Authenticate with your Optibot account:
+
+ optibot login 
+
+ This opens your browser and prompts you to log in via your Optibot account. Once authorized, Claude Code can access your Optibot API key automatically.
+
+ How It Works
+
+ The skill adds a set of Optibot tools to Claude’s toolbox. When you ask Claude to review code, Claude calls the appropriate Optibot tool (e.g., review_local_changes ), which submits your code to Optibot’s review engine and streams results back into the Claude session.
+
+ Reviews cover:
+
+ Security vulnerabilities
+
+ Logic errors
+
+ Code quality and maintainability
+
+ Test coverage gaps
+
+ Performance concerns
+
+ How to Use Optibot with Claude
+
+ Once the skill is installed, use natural language inside Claude Code:
+
+ What you say What happens 
+ ”review my changes” Reviews your uncommitted local changes 
+ ”review my branch” Reviews all commits on your current branch vs. main 
+ ”review this diff” Reviews a provided diff or patch file 
+ ”set up optibot” Walks you through Optibot configuration for a new repo 
+ ”create an API key for CI” Generates an Optibot API key for use in CI/CD pipelines 
+
+ 💡 You can combine these with Claude’s other capabilities: “Review my changes and explain any security findings in detail.”
+
+ Uninstalling
+
+ To remove the Optibot skill from Claude Code:
+
+ claude plugin uninstall optibot 
+
+ Then run /reload-plugins inside Claude Code to confirm it has been removed.

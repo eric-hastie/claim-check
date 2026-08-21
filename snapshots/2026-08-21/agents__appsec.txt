@@ -1,0 +1,236 @@
+SOURCE: https://getoptimal.ai/agents/appsec
+TITLE: Optibot AppSec Agent — AI Security Scanning | Optimal
+CLASS: product
+
+Optibot AppSec Agent 
+
+Put an AI Security Engineer on Every Repository
+
+Optibot scans your codebase with full context, surfaces evidence-backed vulnerabilities aligned to MITRE ATT&CK and CVE, and files remediation issues directly in GitHub and GitLab.
+
+GET A DEMO
+
+START FOR FREE
+
+MITRE ATT&CK & CVE aligned
+
+ security-agent · scan #1284 COMPLETE 
+ AppSec Scan 
+ api-gateway · main
+ Quality tier: Best Quality · Finished 2m ago
+
+ 11 findings 
+
+ 4 High 
+ 5 Medium 
+ 2 Low 
+
+ HIGH SQL Injection in user lookup
+ src/api/users.ts:42
+
+ CWE-89 
+ HIGH JWT decoded without verification
+ src/auth/middleware.ts:18
+
+ MITRE T1550 
+ MED Hardcoded credential in config
+ src/config/app.ts:7
+
+ CWE-798 
+ MED Missing rate limit on /login
+ src/routes/auth.ts:31
+
+ OWASP A04 
+ All findings filed as issues 
+
+Helping optimize code reviews and engineering productivity at:
+
+Trusted by world-class engineering teams building with AI.
+
+ Security analysis 
+ What can traditional SAST tools miss?
+
+Static scanners flag known patterns but they don't understand how code actually behaves. Click to explore the difference.
+
+ Legacy Scanners 
+ Snyk & SonarQube
+ Rule-based SAST tools that catch known vulnerabilities via pattern matching.
+ Optibot AppSec Agent 
+ Optibot's AppSec agent
+ Context-aware AI that reasons about exploitability across your whole codebase.
+
+ How legacy scanners work
+ Rule-based detection — Flags only known patterns, anything novel or context-dependent goes unnoticed.
+
+ No data flow awareness — Can't trace how user input travels through your system across functions and services.
+
+ High noise, low signal — Routine false positives mean real issues get buried in the backlog.
+
+ CVE pattern matching Regex-based rules No runtime context 
+
+ What does the AppSec Agent do?
+
+The AppSec Agent is a purpose-built AI agent for application security — scanning your codebase for real exploits, opening findings as repository issues, and fitting into the workflow your engineering team already uses.
+
+ Context-Aware Scanning
+ AI understands your code to find real exploits, not just pattern matches — uncovering attack surfaces overlooked by legacy SAST.
+
+ Manual & Scheduled Scans
+ Run scans on demand or recurring — daily, weekly, monthly, or a custom cadence that fits your release cycle.
+
+ Three Quality Tiers
+ Choose Low Cost, Balanced, or Best Quality to trade off scan speed and depth for the job at hand.
+
+ GitHub & GitLab Integration
+ Findings are opened as detailed issues in your repository, so remediation slots into the workflow your team already uses.
+
+ Evidence-Based Findings
+ Every finding is backed by concrete evidence and aligned to MITRE ATT&CK and CVE.org for standards-based triage.
+
+ Real-Time Progress
+ Watch the agent work live in the Optimal UI — no more waiting on opaque CI jobs to learn what was scanned.
+
+ How it works 
+ How does the AppSec Agent work?
+ The AppSec Agent works in five steps: it receives a trigger, scans your codebase with context-aware AI, prioritizes real exploits, opens findings as repository issues, and guides your team through remediation.
+
+ 1 
+ Step 1
+ Trigger a scan
+ Kick off a manual run or let Optibot scan on your configured schedule across any connected repository.
+ Manual or scheduled Any connected repo 
+
+ 2 
+ Step 2
+ Context-aware analysis
+ The agent reads your codebase, traces data flow, and reasons about exploit paths the same way a security engineer would.
+ Data flow tracing Exploit path reasoning 
+
+ 3 
+ Step 3
+ Evidence-backed findings
+ Each issue is documented with supporting evidence and mapped to MITRE ATT&CK techniques and CVE entries where applicable.
+ MITRE ATT&CK CVE mapping Evidence included 
+
+ 4 
+ Step 4
+ Auto-filed issues
+ Findings land as detailed issues in GitHub or GitLab, prioritized by severity and ready to assign to an owner.
+ GitHub GitLab Severity-ranked 
+
+ 5 
+ Step 5
+ Track & remediate
+ Monitor remediation in your usual issue tracker, re-run scans to verify fixes, and keep a running record of your security posture.
+ Re-scan to verify Posture history 
+
+ Prev Step 1 of 5 Next 
+
+ AppSec Agent 
+ How can you prevent security vulnerabilities from reaching production?
+
+You can prevent security vulnerabilities from reaching production by replacing separate static analysis tools with the AppSec Agent — it scans your codebase continuously so exploits are caught and remediated before they ship.
+
+ Replaces : 
+
+ Replace legacy scanners
+ Get superior detection without the extra seat cost.
+
+ Context-aware security
+ Identifies vulnerabilities that only exist due to specific cross-file interactions.
+
+ Hardened Code
+ Prevent risky patterns from ever merging to main.
+
+Optibot scans for security vulnerabilities, secret leaks, and anti-patterns during the review process.
+
+ Frequently Asked Questions
+
+ How is Optibot's AppSec agent different from Snyk or SonarQube? Legacy SAST tools match known rules and CVE signatures. Optibot's AppSec agent uses AI to understand your code's actual behavior — tracing data flow, identifying exploit paths, and surfacing context-specific risks that rule-based scanners miss.
+
+ Which source control platforms does the agent integrate with? Optibot integrates with GitHub and GitLab. Findings are automatically filed as detailed issues in the relevant repository, ready to assign, prioritize, and remediate in your existing workflow.
+
+ Can I schedule scans or only run them manually? Both. You can trigger scans on demand and configure recurring schedules — daily, weekly, monthly, or a custom cadence that aligns with your release process.
+
+ What are the three quality tiers? Low Cost, Balanced, and Best Quality. The tiers let you trade off scan depth and cost — use Best Quality for release-critical audits, and Low Cost for routine incremental scans.
+
+ How are findings prioritized and documented? Every finding ships with supporting evidence and is aligned to MITRE ATT&CK techniques and CVE.org entries where applicable, so your team can triage against an industry-standard framework.
+
+ How does pricing work? AppSec scans consume AI Credits — a prepaid, organization-level shared balance. Top up anytime from Billing settings and monitor usage from the Security Agent page, with automatic low-balance alerts.
+
+ How does Optibot handle my source code? Optibot operates under a zero data retention model for scanned code. Your repositories are analyzed to generate findings and then not retained beyond what's required to deliver the results.
+
+ How quickly can I get started? Connect a GitHub or GitLab repository, purchase credits, and run your first scan in minutes — no CI pipeline changes required.
+
+Put an AI security engineer on every repo and catch vulnerabilities before they ship
+
+Optibot's AppSec agent scans with full code context, backs every finding with MITRE and CVE evidence, and files remediation issues straight into GitHub and GitLab.
+
+GET A DEMO
+
+Backed by real customer metrics 
+
+ AICPA 
+ SOC2 
+
+ AES 
+ 256 
+
+ AICPA 
+ SOC3 
+
+ src/api/users.ts High Severity 
+ Finding on lines 42 to 43 · CWE-89
+ 42
+ - const query = `SELECT * FROM users WHERE id = ${req.query.id}` ; 
+
+ 43
+ - db.exec(query); // unsanitized input flows directly into SQL 
+
+ Optibot appsec finding 2 minutes ago 
+ SQL injection — user-controlled req.query.id is concatenated into a raw SQL string, enabling data exfiltration or table destruction.
+
+ MITRE T1190 CWE-89 CVSS 8.6 
+
+ syedahmedz 2 minutes ago 
+ Optibot, what's the recommended remediation?
+
+ Optibot issue #247 filed just now 
+ Use a parameterized query so user input is never interpreted as SQL:
+ const user = await db.query( 
+ "SELECT * FROM users WHERE id = $1" , [req.query.id] 
+ ); // input bound safely as a parameter 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

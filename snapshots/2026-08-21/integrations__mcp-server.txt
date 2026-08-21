@@ -1,0 +1,251 @@
+SOURCE: https://getoptimal.ai/integrations/mcp-server
+TITLE: MCP Server Integration — Optibot by Optimal AI
+CLASS: product
+
+Optibot 
+
+ MCP 
+
+ MCP Server 
+
+Optibot code reviews in any AI-powered editor.
+
+The Optibot MCP Server brings full AI code reviews to Claude Desktop, Cursor, Windsurf, Claude Code, and any MCP-compatible client. One npm install. Natural language triggers. Works wherever you work.
+
+VIEW ON NPM
+
+READ THE DOCS
+
+Claude Desktop · Cursor · Windsurf · Claude Code
+ · 
+npm install · API key auth
+ · 
+CI/CD compatible
+
+ Works with 
+ One integration. Every AI-powered editor.
+
+The Optibot MCP Server works with any client that supports the Model Context Protocol. Configure it once and use it from whichever editor you work in.
+
+ Claude Desktop
+ Add to your Claude Desktop config JSON and ask for reviews from the desktop app.
+
+ Cursor
+ Add to .cursor/mcp.json and trigger reviews from inside your Cursor sessions.
+
+ Windsurf
+ Add to your Windsurf MCP config and review code from within the Windsurf editor.
+
+ Claude Code
+ Run claude mcp add optibot and review directly from your Claude Code terminal session.
+
+Works with any other MCP-compatible AI assistant as well. If your editor supports MCP, Optibot works there.
+
+ What this unlocks 
+ AI code reviews, available anywhere MCP runs
+
+Four capabilities that activate the moment you configure the MCP server.
+
+ Review local changes before you push
+ Say "review my changes" in any MCP-compatible client and Optibot reviews all uncommitted local changes immediately — no PR required, no GitHub connection needed. Catch issues before they reach your teammates, before CI runs, and before the branch ever leaves your machine.
+
+ Branch diff reviews against any target
+ Ask your AI assistant to "review my branch against main" and Optibot performs a full branch diff review — comparing all changes between your current branch and the specified target. Useful for reviewing large feature branches, pre-merge checks, or getting a full-scope review before opening a PR.
+
+ Real-time review progress via WebSocket
+ The MCP server connects to Optibot via WebSocket and emits real-time progress updates as the review progresses — started, analyzing patch, running analysis tools, generating review, completed. Your AI client receives each stage as it happens, so you can see the review working in real time rather than waiting for a single response.
+
+ CI/CD integration with API key auth
+ The MCP server supports headless use in CI/CD pipelines via the OPTIBOT_API_KEY environment variable. Store the key as a secret in GitHub Actions, GitLab CI, or any other CI provider and trigger Optibot reviews as a pipeline step — no browser login required, no interactive session needed.
+
+ How it works 
+ Install once. Use from any MCP-compatible editor.
+
+01
+
+ Install the MCP server package
+
+Install the Optibot MCP server globally via npm:
+
+ npm install -g @optimalai/optibot-mcp 
+
+Requires Node.js 18+. Once installed, the package is available for any MCP client to reference via npx.
+
+02
+
+ Add to your MCP client configuration
+
+Add the following configuration block to your MCP client's config file. The config is the same JSON for Claude Desktop, Cursor, and Windsurf — only the file path differs. For Claude Code, use the CLI command instead.
+
+ {
+ "mcpServers": {
+ "optibot": {
+ "command": "npx",
+ "args": ["-y", "@optimalai/optibot-mcp"],
+ "env": {
+ "OPTIBOT_API_KEY": "optk_your_key_here"
+ }
+ }
+ }
+} 
+ Config file locations
+ Claude Desktop (macOS): ~/Library/Application Support/Claude/claude_desktop_config.json 
+ Cursor: .cursor/mcp.json in your project root
+
+ Windsurf: ~/.codeium/windsurf/mcp_config.json 
+ Claude Code: claude mcp add optibot -- npx -y @optimalai/optibot-mcp , then export OPTIBOT_API_KEY=optk_your_key_here 
+
+03
+
+ Generate and set your API key
+
+Generate an Optibot API key from your dashboard at agents.getoptimal.ai , or create one directly via the CLI:
+
+ npx @optimalai/optibot-mcp apikey create my-mcp-key 
+
+Replace optk_your_key_here in your config with the generated key. For CI/CD use, store the key as a secret in your CI provider and pass it as the OPTIBOT_API_KEY environment variable.
+
+Alternatively, authenticate via browser: use the login tool inside your MCP client to authenticate interactively — this saves a 90-day token to ~/.optibot/config.json .
+
+04
+
+ Ask for a review in natural language
+
+Once configured, ask your AI assistant naturally:
+
+ "review my changes" — reviews all uncommitted local changes
+
+ "review my branch against main" — full branch diff against main
+
+ "review this diff file" — reviews an arbitrary .patch or .diff file
+
+ "check if I'm authenticated" — confirms your auth status
+
+ "create an API key for CI" — generates a new API key
+
+The MCP server handles the rest — connecting to Optibot, running the review, and streaming real-time progress back to your client.
+
+ Available tools 
+ The full Optibot tool surface, available to your AI assistant
+
+Every tool the MCP server exposes — your AI assistant can call any of these on your behalf.
+
+ Tool What it does 
+ review_local_changes Review uncommitted local changes (git diff HEAD) 
+ review_branch Review changes against a target branch — auto-detects or specify 
+ review_diff_file Review an arbitrary .diff or .patch file 
+ login Authenticate via browser OAuth 
+ logout Remove saved credentials 
+ check_auth Check current authentication status 
+ create_api_key Create a new API key for CI/CD use 
+ list_api_keys List all API keys with metadata 
+ delete_api_key Delete an API key by ID 
+ get_profile Get your user profile and review quota status 
+
+ Who it's for 
+ Built for engineers who want Optibot everywhere
+
+ Platform Engineers & Senior Engineers
+ You work across multiple editors and AI tools. You don't want a separate integration for each one. The MCP server is a single configuration that works with any MCP-compatible client — set it up once and Optibot is available from Claude Desktop, Cursor, Windsurf, Claude Code, or wherever you're working that day. One tool, every editor.
+
+ Teams not yet on GitHub or GitLab
+ The MCP server doesn't require a GitHub or GitLab connection. If your team is evaluating Optibot before connecting a code host, or you're working on a local project that isn't in a remote repo yet, you can still get full Optibot reviews on your local changes and branch diffs through any MCP client.
+
+ CTOs & Engineering Leads
+ The MCP server's CI/CD support means Optibot reviews can run as an automated pipeline step — no human trigger required. Set the API key as a secret, add the review step to your workflow, and every merge to main gets an Optibot review automatically. Programmatic access to Optibot for teams that want it embedded in their delivery process.
+
+ Get started 
+ Up and running in under 5 minutes
+
+ 01 Install
+
+ npm install -g @optimalai/optibot-mcp 
+
+ 02 Configure your MCP client
+
+Add the config JSON to your client's config file (see locations above in Step 2). For Claude Code, use the claude mcp add command.
+
+ 03 Generate an API key and start reviewing
+
+Get a key from agents.getoptimal.ai or run npx @optimalai/optibot-mcp apikey create my-key . Replace the placeholder in your config, restart your client, and say "review my changes." 
+
+Full setup guide and CI/CD integration docs → Read the docs 
+
+ MCP client configuration · Claude Desktop · Cursor · Windsurf 
+
+ mcp_config.json JSON 
+ {
+ "mcpServers": {
+ "optibot": {
+ "command": "npx",
+ "args": ["-y", "@optimalai/optibot-mcp"],
+ "env": {
+ "OPTIBOT_API_KEY": "optk_your_key_here"
+ }
+ }
+ }
+} 
+
+Claude Code: claude mcp add optibot -- npx -y @optimalai/optibot-mcp 
+
+ Frequently asked questions
+
+ What is MCP and why does it matter? MCP (Model Context Protocol) is an open standard by Anthropic that lets AI assistants use external tools and data sources. Once you add the Optibot MCP server to any compatible client, that client's AI assistant can run Optibot code reviews on your behalf through natural language — without you having to copy-paste code, write prompts, or leave the editor.
+
+ Which editors and AI tools does the MCP server work with? Claude Desktop, Cursor, Windsurf, and Claude Code are confirmed compatible. It also works with any other AI assistant that implements the Model Context Protocol. If your editor supports MCP, Optibot works there.
+
+ Do I need a GitHub or GitLab connection to use the MCP server? No. The MCP server reviews local changes, branch diffs, and diff files directly — no connection to a code host is required. If you also have Optibot connected to GitHub or GitLab, those integrations work independently and complement each other.
+
+ How do I use the MCP server in a CI/CD pipeline? Set your Optibot API key as a secret in your CI provider (e.g. OPTIBOT_API_KEY in GitHub Actions secrets or GitLab CI variables), then pass it as an environment variable in your pipeline step. The MCP server uses it automatically for headless authentication — no browser login or interactive session required. See the CI/CD docs for a GitHub Actions example.
+
+ Is the API key stored securely? The API key lives in your MCP client's config file or as an environment variable — wherever you put it. Optibot never stores the key on its servers beyond validating it on each request. For CI/CD use, always store the key as a CI secret, not hardcoded in your pipeline config.
+
+ Does the MCP server store my code? No. All analysis is done ephemerally. Your code is never stored, logged, or used for model training. Optibot operates under a zero data retention model.
+
+ // install the mcp server
+
+Optibot reviews, everywhere you write code. 
+
+One npm install. Works with Claude Desktop, Cursor, Windsurf, Claude Code, and any MCP-compatible editor. Natural language triggers. CI/CD compatible.
+
+VIEW ON NPM
+
+GET A DEMO
+
+ Optibot 
+
+ MCP 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

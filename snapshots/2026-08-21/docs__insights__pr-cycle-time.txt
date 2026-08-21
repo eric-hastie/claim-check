@@ -1,0 +1,159 @@
+SOURCE: https://getoptimal.ai/docs/insights/pr-cycle-time
+TITLE: PR Cycle Time — Optimal Docs
+CLASS: docs
+
+PR Cycle Time — Optimal Docs 
+ / Docs / Engineering Insights / PR Cycle Time 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ PR Cycle Time | Measure How Fast Code Moves from First Commit to Merge
+
+ The PR Cycle Time page gives teams a clear view of how long it takes code to move from first commit to merge. It’s the fastest way to identify where review bottlenecks occur and how efficiently work flows through GitHub.
+
+ Where to Find It
+
+ Go to Velocity → PR Cycle Time in the left sidebar.
+
+ How It Works
+
+ Once you’ve connected GitHub (and optionally Jira), PR Cycle Time begins tracking all merged and open pull requests across repositories. Each PR is broken into measurable stages:
+
+ Time to Open — time between the earliest commit in a branch and when the PR was opened.
+
+ In Review — duration between the PR opening and receiving the first review.
+
+ Time to Merge — time between PR open and PR merge.
+
+ Merged to Staging — optional filter to measure PRs merged into your selected staging branches only.
+
+ Each card updates continuously as events stream in from GitHub. Averages and medians can be viewed for any selected range, repository, or team.
+
+ Filters and Controls
+
+ Teams / Individuals Selector
+
+ Toggle between organization, team, or individual views.
+
+ Teams tab — Aggregates data across all selected teams. Ideal for sprint retros or comparing backend vs. frontend.
+
+ Individuals tab — Filters metrics to specific engineers for 1-on-1 review or performance insights.
+
+ Multi-select supported for combining multiple users or teams in a single view.
+
+ 💡 Pro Tip: Use team-based analysis for sprint retrospectives and individual filters to spot review bottlenecks.
+
+ Repositories
+
+ The All Repositories dropdown narrows your metrics to one or more connected GitHub repositories.
+
+ Supports multi-selection for cross-repo tracking.
+
+ Great for organizations running microservices or separate frontend/backend repos.
+
+ 💡 Pro Tip: Combine related repos (e.g., optibot-be and optibot-fe ) to evaluate cross-service performance.
+
+ Date Range Picker
+
+ Choose quick presets: Last 7 Days, Last 14 Days, Last 30 Days, or Last 90 Days.
+
+ Use the calendar picker for custom date ranges.
+
+ All metrics recalculate dynamically for the selected period.
+
+ 💡 Pro Tip: Use weekly ranges for sprint retros, and monthly or quarterly windows to track long-term efficiency.
+
+ Branch / Staging Filter
+
+ The Branch time to merge policy modal defines which branches count as staging or deployment targets, powering the Merged to Staging metric.
+
+ Click the ➕ icon beside Merged to Staging on the dashboard.
+
+ Under Label , name your policy (e.g., “Staging,” “Production,” or “Feature”).
+
+ Under Select branch(es) , pick one or more GitHub branches to include.
+
+ Under Select Team(s) , optionally scope this to specific teams.
+
+ Click Save .
+
+ 💡 Pro Tip: Create multiple merge policies (for example, staging and main ) to compare deployment speeds between environments.
+
+ AI Insight
+
+ Click AI Insight to open a contextual analysis sidebar:
+
+ Auto-generated TL;DR summary of weekly or monthly trends.
+
+ Highlights week-over-week changes in Time to Open, In Review, and Time to Merge.
+
+ Surfaces activity trends, rework rates, PR sizes, and reviewer patterns.
+
+ Ideal for leadership stand-ups and sprint retrospectives.
+
+ Search & Sorting Controls (Table View)
+
+ Below the main metric cards, the PR Table includes:
+
+ Search Pull Requests — quickly locate a specific PR or issue ID.
+
+ Sort by columns — Reworks, Check Failure Rate, PR Size, or Comment Count.
+
+ Quick-highlight buttons: 
+
+ Longest review time – helps spot slow or stuck PRs.
+
+ Most discussions – surfaces PRs with heavy reviewer activity.
+
+ Most check failures – flags builds needing attention.
+
+ Pro Tips
+
+ Use shorter date ranges (7–14 days) to monitor sprint performance.
+
+ Tag PRs consistently (feature, bugfix, refactor) to correlate cycle time by category in Distributions.
+
+ Combine with Allocations and Activity pages to spot bottlenecks between review and merge.
+
+ Check AI Insight weekly for auto-summarized team health reports.
+
+ Troubleshooting
+
+ Issue Fix 
+ Missing PRs? Ensure the repository is connected and synced 
+ No data for ‘Merged to Staging’? Assign which branches count as staging in settings 
+ Unexpectedly low ‘In Review’ times? Automated reviews by Optibot are included; filter them out for human-only review times 
+ Check Failure Rate = 0%? Confirm CI checks are enabled in your GitHub workflow

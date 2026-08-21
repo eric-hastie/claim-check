@@ -1,0 +1,164 @@
+SOURCE: https://getoptimal.ai/integrations/vscode
+TITLE: VS Code Extension — Optibot by Optimal AI
+
+Optibot 
+
+ VS Code 
+
+ VS Code Integration 
+
+Fix review comments without leaving your editor.
+
+The Optibot VS Code extension connects GitHub review comments directly to your IDE. One click from any Optibot comment opens VS Code at the exact file and line — with the fix suggestion pre-loaded. Apply it, commit, and you're done.
+
+INSTALL THE EXTENSION
+
+READ THE DOCS
+
+Available on VS Code Marketplace
+ · 
+Also works with Cursor
+ · 
+No separate auth required
+
+ What this unlocks 
+ Where do you fix issues with the VS Code extension?
+
+In your editor, not in the browser.
+
+ Jump from review comment to exact file and line
+ Every Optibot review comment in GitHub includes a "Solve it in VS Code" link. Click it and VS Code opens instantly to the exact file and line Optibot flagged — no searching, no copy-pasting the file path, no hunting through the diff. The review comment and fix suggestion are pre-loaded in the Chat panel the moment your editor opens.
+
+ Apply, edit, or reject the fix without leaving VS Code
+ Once VS Code opens with context loaded, you can accept the suggested fix with one click, edit it manually if it needs adjusting, or reject it entirely if it's not relevant. You stay in your editor the whole time. When you're done, commit back to the same PR and request a re-review — no browser switching required.
+
+ Batch multiple fixes in one session
+ Open multiple "Solve it in VS Code" links from the same PR, apply all the fixes in sequence, and commit once. Addressing a full Optibot review goes from a multi-tab browser session to a focused 5-minute editor workflow. Check "Always allow" on the browser prompt once to make every future jump automatic.
+
+ How it works 
+ How quickly can you go from review comment to committed fix?
+
+In minutes, with a streamlined workflow that keeps you in your editor.
+
+ 01 
+ Optibot reviews your PR and posts inline comments
+ Open a pull request as usual. Optibot automatically analyzes it and posts a summary comment along with inline comments on every flagged line. Each inline comment includes Optibot's reasoning — what the issue is, why it matters, and what the suggested fix looks like. It also includes a "Solve it in VS Code" action link.
+
+ 02 
+ Click "Solve it in VS Code"
+ Click the link in any Optibot inline comment. Your browser briefly shows an Optibot confirmation screen, then prompts you to open VS Code. Click Open on the browser prompt — check "Always allow" to skip this prompt for all future fixes from the same domain.
+
+ 03 
+ VS Code opens at the exact location (first-time: install the extension)
+ VS Code opens directly to the file and line Optibot flagged. If you don't have the Optibot AI extension installed yet, VS Code will prompt you to install it automatically — it takes under 30 seconds. Once installed, this step is instant on every future fix.
+
+ 04 
+ Review and apply the fix
+ The Optibot Chat panel opens with the review comment, explanation, and suggested fix pre-loaded. You have three options: accept the fix as-is, edit it manually before applying, or reject it if it's not relevant. You're in full control — the extension never applies changes or commits anything without your confirmation.
+
+ 05 
+ Commit and request a re-review
+ Once you're happy with the fix, commit the change back to the same PR branch. Pull the latest branch first if other changes have come in. Then return to GitHub and request a re-review — Optibot will run another pass and confirm the issue is resolved.
+
+ Who it's for 
+ Which engineers benefit from the VS Code extension?
+
+Engineers who live in their editor and want to fix review comments without switching tabs.
+
+ IC Engineers & Senior Engineers
+ Stop bouncing between GitHub and your editor to address review feedback. The extension keeps you in VS Code from first comment to final commit. Context is pre-loaded, fixes are one click, and you never lose your place in the codebase. Code reviews go from a context-switching tax to a focused, in-editor workflow.
+
+ Engineering Teams on GitHub
+ Works for everyone on the team — no individual setup required beyond installing the extension once. The "Solve it in VS Code" link appears automatically in every Optibot review comment. New engineers and contractors get the same frictionless fix flow from day one, without needing to learn the codebase to find the right file.
+
+ Installation 
+ How do you install the VS Code extension?
+
+Two ways: one-click automatic installation or manual setup.
+
+ Automatic
+ Easiest 
+
+Click any "Solve it in VS Code" link in an Optibot GitHub review comment. If the extension isn't installed, VS Code will prompt you to install it automatically. The entire first-time setup takes under a minute and requires no manual steps.
+
+No install link needed — this flow handles itself.
+
+ Manual install from VS Code Marketplace
+
+Open VS Code and go to Extensions ( ⇧⌘X on Mac · Ctrl+Shift+X on Windows/Linux). Search for Optibot AI and click Install. Once installed, it appears under your enabled extensions and activates immediately.
+
+marketplace.visualstudio.com/items?itemName=OptimalAI.optibot-extension
+ Also works with Cursor: install from Cursor's internal marketplace — same behavior, same extension.
+
+ Requirements 
+ What you need to get started
+
+ VS Code
+ Latest stable version. Also compatible with Cursor IDE.
+
+ GitHub integration
+ Optibot must be active on the repository. The extension connects through your existing GitHub authorization — no separate login.
+
+ Branch write access
+ Standard Git permissions to commit back to the PR branch you're working on.
+
+ Frequently asked questions
+
+ Does the extension auto-commit my changes? No. You stay in full control of every commit. The extension applies suggested fixes in your editor only when you explicitly accept them — it never commits automatically or creates new PRs on your behalf.
+
+ Does it work with Cursor? Yes. The behavior is identical. Install the Optibot AI extension from Cursor's internal marketplace. The "Solve it in VS Code" link in GitHub works the same way — it will open Cursor instead once the extension is installed there.
+
+ Do I need to set up a new login for the extension? No. The extension uses your existing GitHub authorization. When you click "Solve it in VS Code" for the first time, you may see an Optibot login prompt inside the extension sidebar — clicking it reconnects you to your organization automatically, no re-registration needed.
+
+ What if VS Code doesn't open when I click the link? Your browser needs to allow the vscode:// protocol to open external apps. If it's blocked, enable it in your browser or system preferences. On corporate or managed devices, you may need to ask IT to whitelist the vscode:// protocol. You can also install the extension manually from the VS Code Marketplace and use it from there.
+
+ Does this replace PR reviews in GitHub? No. Optibot still performs full code reviews in GitHub — the extension doesn't change that. It speeds up the fix step: instead of reading the comment in GitHub, switching to your editor, finding the file, making the change, and switching back, you do it all in one click from the comment itself.
+
+ // install the extension
+
+How do you fix review comments without switching tabs?
+ Fix review comments in your editor. 
+
+Install the Optibot VS Code extension and turn every review comment into a one-click fix — without ever leaving your editor.
+
+INSTALL THE EXTENSION
+
+GET A DEMO
+
+ Optibot 
+
+ VS Code 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

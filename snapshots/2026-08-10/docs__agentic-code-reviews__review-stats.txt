@@ -1,0 +1,81 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/review-stats
+TITLE: Review Statistics — Optimal Docs
+
+Review Statistics — Optimal Docs 
+ / Docs / Agentic Code Reviews / Review Statistics 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Review Statistics
+
+ Review Statistics gives you a live view of how much reviewing is happening across your organization, broken down by member, repository, and time period.
+
+ Where to Find It
+
+ Navigate to Repo Insights → Review Stats in the left sidebar.
+
+ Summary Cards
+
+ Three headline numbers appear at the top of the page and update whenever you change the date range:
+
+ Card What it shows 
+ Total Reviews Number of Optibot reviews completed in the selected period 
+ Avg Reviews / Member Total reviews divided by the number of active members 
+ Top Repository The repository with the highest review volume in the period 
+
+ Each card also shows a percentage change compared to the previous period of the same length.
+
+ Reviews Over Time
+
+ A bar chart shows review volume across the selected date range. Granularity adjusts automatically based on how wide your range is. A dashed reference line marks the average so you can quickly spot periods above or below your normal pace.
+
+ Reviews by Member
+
+ A paginated table lists each seated team member alongside their review count for the selected period. The member with the most reviews is highlighted with a “Most Active” label.
+
+ Search and sort
+
+ Search : filter by member name using the search box in the top-right of the table
+
+ Reviews column : click the column header to toggle between highest-to-lowest and lowest-to-highest order
+
+ The rank column (# 1, 2, 3…) is only shown when sorted highest to lowest.
+
+ Troubleshooting
+
+ Issue Fix 
+ No data showing Ensure the date range covers a period when Optibot was active on your repositories 
+ Member missing from the table The table shows seated members only. Check that the member has an assigned Optibot seat in Organization Settings. 
+ No data in the chart Check that the date range overlaps with when reviews were completed; the chart reflects the same period as the summary cards

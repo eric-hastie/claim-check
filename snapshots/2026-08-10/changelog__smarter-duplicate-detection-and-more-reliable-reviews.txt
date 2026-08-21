@@ -1,0 +1,109 @@
+SOURCE: https://getoptimal.ai/changelog/smarter-duplicate-detection-and-more-reliable-reviews
+TITLE: Catch Duplicate Code Before It Ships | Optibot
+
+All changelog entries
+
+ New Release July 1, 2026 Code Review AI Reliability Duplicate Detection 
+ Optibot Now Catches Duplicate Code Before It Ships 
+ Optibot now detects duplicate code before every review, re-verifies prior issues more accurately, and handles model failures more gracefully. 
+
+ Smarter reviews, fewer surprises
+
+This release sharpens two things that quietly affect every review: whether Optibot spots code
+ that already exists in your codebase before flagging it as new, and whether the verdicts it
+ carries forward between pushes are still accurate.
+
+Both improvements run automatically. Nothing to configure.
+
+ New: Duplicate code detection
+
+One of the most common review notes is "this already exists somewhere." A helper function that
+ duplicates one three files over, a validation pattern that was already extracted into a shared
+ utility, a constant that lives in two places. These are easy to miss and expensive to fix after
+ they have been merged.
+
+Optibot now checks for this before every review runs. When it finds a meaningful match, it tells
+ the reviewer exactly where the overlap lives so they can confirm whether it is a true duplicate
+ or a justified variation, rather than either missing it entirely or having to go hunting.
+
+ Always on. The check runs on every review automatically. There is nothing to
+ enable or configure.
+
+ Pinpoints the existing code. When a match is found, Optibot links to the
+ specific file where the overlap lives so there is no ambiguity about what it is comparing against.
+
+ Invisible when there is nothing to flag. If no meaningful duplicates are found,
+ the check completes silently and the review continues as normal.
+
+ Improvements
+ More accurate issue carry-forward
+
+When Optibot flags an issue across multiple pushes, it tracks the status of each one. Previously,
+ an issue that had not been addressed could persist with the same verdict even after subsequent
+ changes resolved it.
+
+Optibot now re-evaluates open issues whenever the relevant files change. Issues that were fixed
+ get cleared. Issues that were not stay flagged. The thread reflects what is actually true in the
+ current commit.
+
+ Manual re-reviews re-verify everything
+
+Commenting #optibot review now triggers a full re-evaluation of all open prior
+ issues, not just the ones in files changed most recently. When you explicitly ask for a fresh
+ look, you get one across the entire pull request.
+
+ Under the Hood
+ More resilient reviews. Several categories of intermittent failures are now
+ handled explicitly. Reviews that previously stalled or failed silently now recover and complete.
+
+ More efficient issue verification. The system that tracks prior issues against
+ your current code has been overhauled for better accuracy on large pull requests.
+
+ Tighter file access controls. File reading during reviews now enforces stricter
+ path boundaries for additional security.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Auto-Detect Review Instructions 
+Next
+ CLI: Async Reviews, Pre-Push Gate & Reliability Fixes 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

@@ -1,0 +1,205 @@
+SOURCE: https://getoptimal.ai/blog/dora-metrics-guide
+TITLE: DORA Metrics Guide: Benchmarks, Formulas & Improvement
+CLASS: blog
+
+All articles
+
+ Engineering Guide 
+ DORA Metrics Explained: The Complete Guide for Engineering Teams 
+ What are DORA metrics, how do you measure them, and what separates elite from low performers? Complete guide with 2024 benchmarks and how to improve them. 
+ O 
+ Optimal AI Team
+ Engineering
+
+ June 30, 2026 13 min read 
+ DORA metrics engineering analytics deployment frequency 
+
+DORA metrics are the closest thing software engineering has to a universal performance benchmark. Developed by the DevOps Research and Assessment (DORA) team at Google over more than a decade of research, they measure four dimensions of software delivery that consistently correlate with organizational performance: how often you deploy, how fast changes move through your pipeline, how often deployments cause incidents, and how quickly you recover when they do.
+
+This guide explains each metric, gives you the current benchmarks from the DORA 2024 State of DevOps Report, and covers the most effective levers for improvement, starting with the one most teams have the most direct control over: PR cycle time.
+
+ 4 DORA metrics 
+ <1 day elite lead time benchmark (DORA 2024) 
+ 30–45% cycle time improvement with AI-assisted review (Atlassian internal study) 
+
+ The four DORA metrics
+
+Each metric measures a distinct phase of the software delivery pipeline. They work together as a system: improving one without the others can create new bottlenecks.
+
+ 1. Deployment Frequency
+
+Deployment Frequency measures how often your team successfully deploys code to production. DORA 2024 benchmarks:
+
+ Elite: On demand (multiple times per day)
+ High: Once per day to once per week
+ Medium: Once per week to once per month
+ Low: Less than once per month
+
+Deployment Frequency is both a productivity measure and a risk signal. Teams that deploy infrequently tend to batch changes into larger, higher-risk releases. Smaller, more frequent deployments are easier to test, easier to roll back, and expose less surface area per deployment when something goes wrong.
+
+The most common bottleneck preventing higher deployment frequency is PR review time. When PRs sit waiting for review for hours or days, work accumulates in branches, engineers batch their changes to reduce context-switching overhead, and the release cadence slows to match the review cadence.
+
+ 2. Lead Time for Changes
+
+Lead Time for Changes measures the elapsed time from a code commit to that code running in production. For most teams, this breaks down into:
+
+ Time from commit to PR open
+ Time from PR open to first review (often the largest component)
+ Review iterations
+ Time from merge to deployment
+
+DORA 2024 benchmarks for Lead Time for Changes:
+
+ Elite: Under one day
+ High: One day to one week
+ Medium: One week to one month
+ Low: More than one month
+
+PR cycle time (the slice from PR open to merge) is the single most controllable component of lead time for most teams. Unlike CI build time or deployment infrastructure, it is directly affected by process and tooling decisions.
+
+ 3. Change Failure Rate
+
+Change Failure Rate is the percentage of deployments that result in a degraded service or require remediation (hotfix, rollback, or patch). It measures how often your pipeline ships defects to production.
+
+ Elite: 0–5%
+ High: 5–10%
+ Medium/Low: 10–15%+
+
+Change Failure Rate is where code review quality has the most direct impact. A review process that catches more defects before merge reduces the rate of failures reaching production. Teams with diff-only review tools (which only analyze changed lines, not how changes interact with the rest of the codebase) see more architectural and cross-file bugs reach production than teams with full-context review.
+
+ 4. Time to Restore Service
+
+Time to Restore Service (TTRS) measures how long it takes to recover from a production failure. It encompasses incident detection, triage, and resolution.
+
+ Elite: Under one hour
+ High: Under one day
+ Medium: One day to one week
+ Low: Over one week
+
+TTRS is less directly influenced by code review tooling than the other metrics. It depends more on monitoring, incident response, and deployment rollback capabilities. The indirect connection is through Change Failure Rate: fewer failures in production means fewer incidents requiring restoration.
+
+ Engineering analytics platforms that track DORA metrics alongside PR cycle time give engineering leads a single view of delivery performance. Optibot Insights tracks lead time, deployment frequency, and PR cycle time natively from GitHub and GitLab data. PR cycle time: the fastest DORA lever
+
+Among the controllable inputs to DORA metrics, PR cycle time is the one most teams can improve fastest. Unlike deployment infrastructure (which requires platform investment) or change failure rate (which requires long-term quality improvement), PR cycle time can be meaningfully reduced through process and tooling changes that take effect on the next PR.
+
+Industry surveys suggest the median wait time for a first review is 18–24 hours. For a team targeting elite lead time performance (under one day from commit to production), a 20-hour wait for first review consumes almost the entire budget before CI, deployment, and any iteration happen.
+
+The primary levers for reducing PR cycle time:
+
+ AI first-pass review. Tools like Optibot post inline review comments within minutes of a PR opening. Reviewers arrive to an annotated diff rather than a blank slate, which reduces their time per review and makes reviews easier to schedule. The Atlassian internal study found AI-assisted review improved cycle time by 30–45% across enterprise teams.
+ PR size limits. SmartBear and Cisco research found that defect detection falls sharply above 400 lines of code and 60 minutes of review time. Smaller PRs are reviewed faster, more accurately, and with less reviewer fatigue.
+ Review SLAs. Explicit team agreements (e.g. "first review within 4 business hours") reduce average wait time more than tool changes alone.
+ Review load visibility. Engineering analytics that surface who is carrying the most review load allow managers to redistribute work before bottlenecks develop.
+ Want to track PR cycle time and DORA metrics automatically? Optibot Insights pulls lead time, deployment frequency, and cycle time directly from GitHub and GitLab.
+
+See the metrics dashboard
+
+ How to measure DORA metrics
+
+Each metric requires different data sources:
+
+ Deployment Frequency. Pull from your CI/CD pipeline's deployment event log. Most pipelines (GitHub Actions, GitLab CI, Jenkins) emit deployment events with timestamps. Count successful production deployments per day or week.
+
+ Lead Time for Changes. Pull from your SCM (GitHub, GitLab) pull request data. For each PR: take the timestamp of the first commit in the PR's branch and the timestamp of the deployment that included the PR's merge commit. Compute the difference. Most teams approximate this as "time from PR open to merge" since the deployment gap is usually fixed or CI-automated.
+
+ Change Failure Rate. Requires correlating deployment events with incident events. Pull deployment timestamps from CI/CD and incident open/resolved timestamps from your monitoring system (PagerDuty, Opsgenie, Datadog). For each incident, identify which deployment preceded it. Change Failure Rate = incidents linked to a deployment / total deployments.
+
+ Time to Restore. Incident open timestamp to incident resolved timestamp, filtered to production incidents. Available directly from your incident management system.
+
+Engineering analytics platforms like Optibot Insights compute Deployment Frequency, Lead Time for Changes, and PR cycle time automatically by connecting to GitHub or GitLab. Change Failure Rate and TTRS require additional integration with your monitoring system.
+
+ The most common DORA measurement mistakes
+ Measuring commit-to-merge instead of commit-to-production. Lead time ends at production deployment, not at merge. Teams that optimize only the merge speed while ignoring a slow deployment pipeline can show improving SCM metrics while actual lead time stays flat.
+
+ Excluding weekends and holidays. DORA benchmarks use calendar time, not business hours. A PR that sits unreviewed over a weekend is three days of lead time by DORA measurement even if only a few hours of business time elapsed.
+
+ Treating the four metrics independently. DORA metrics interact. Pushing deployment frequency too fast without improving change failure rate creates more incidents. Reducing lead time without controlling PR size can push lower-quality code through the pipeline faster. Track all four together.
+
+ Optimizing the metric instead of the behavior. If a team knows they are being measured on deployment frequency, they may start deploying trivial changes (docs, config) to inflate the number. Pair metric tracking with peer review and context to keep the measurement honest.
+
+ How AI code review affects DORA metrics
+
+AI code review tools have a direct and measurable impact on two of the four DORA metrics:
+
+ Lead Time for Changes. AI first-pass review eliminates the wait for a human first response, which is typically the largest variable component of lead time. If the median first-review wait is 18–24 hours, and AI review posts comments within minutes, the compressible portion of lead time becomes the iteration time rather than the wait time. Teams that implement AI-assisted review see lead time move toward the high-to-elite range from medium-to-low ranges faster than with process changes alone.
+
+ Change Failure Rate. Reviews that use full codebase context catch more defects than diff-only reviews. Cross-file dependency bugs, architectural regressions, and logic errors that require understanding how changed code affects the rest of the system only surface in full-context review. Teams using diff-only tools carry a higher defect escape rate to production, which shows up directly in Change Failure Rate.
+
+ Deployment Frequency improves indirectly: when PRs move faster through review, branches stay shorter, batching decreases, and teams can ship smaller changes more often. This is the compounding benefit of improving PR cycle time.
+
+ Ready to improve your DORA metrics? Optibot reviews every PR with full codebase context and tracks lead time and cycle time automatically. Free trial, no credit card required.
+
+Try Optibot free
+
+ Frequently Asked Questions
+
+ What are DORA metrics? DORA metrics are four engineering performance measurements developed by the DevOps Research and Assessment (DORA) team at Google. They are: Deployment Frequency (how often you deploy to production), Lead Time for Changes (time from commit to production), Change Failure Rate (percentage of deployments that cause an incident), and Time to Restore Service (how long to recover from an incident). Together, they give engineering leaders an objective view of software delivery performance.
+
+ What is a DORA elite performer? According to the DORA 2024 State of DevOps Report, elite performers deploy on-demand (multiple times per day), have a lead time for changes under one day, a change failure rate under 5%, and restore service in under one hour. High performers deploy between once per day and once per week. Medium performers deploy between once per week and once per month. Low performers deploy less than once per month. Most teams fall in the medium-to-high range and can reach high or elite with focused process improvement.
+
+ What is PR cycle time and how does it relate to DORA? PR cycle time is the elapsed time from when a pull request is opened to when it is merged. It is a sub-metric of Lead Time for Changes: the portion of lead time spent in the review and approval stage. For most teams, PR review wait time is the single largest controllable component of lead time. Reducing PR cycle time is one of the most direct levers for improving DORA lead time performance.
+
+ How do I measure DORA metrics? Deployment Frequency can be measured from your CI/CD pipeline logs or deployment event hooks. Lead Time for Changes can be measured from your SCM (GitHub, GitLab) by tracking time from first commit in a PR to when that PR is deployed. Change Failure Rate requires correlating deployments with incident reports from your monitoring system (PagerDuty, Opsgenie, etc.). Time to Restore requires incident start and resolution timestamps. Engineering analytics platforms like Optibot Insights track lead time and PR cycle time automatically from GitHub and GitLab data.
+
+ How does AI code review improve DORA metrics? AI code review improves two of the four DORA metrics directly. For Lead Time for Changes: AI tools like Optibot post inline PR review comments within minutes of a PR being opened, eliminating the wait for a human first-pass review. This is typically the largest single contributor to lead time for most teams. For Change Failure Rate: deeper, full-codebase-context reviews catch more bugs before deployment, reducing the frequency of production incidents caused by defects that slipped through review. The Atlassian internal study found AI-assisted review improved cycle time by 30-45%.
+
+ What is deployment frequency in DORA? Deployment Frequency is how often your team successfully deploys code to production. DORA 2024 found that elite-performing teams deploy on-demand, multiple times per day. High performers deploy between once per day and once per week. It is both a measure of productivity and a risk signal: teams that deploy less frequently tend to batch changes into larger, riskier releases. Improving deployment frequency usually requires shortening the PR review pipeline so changes move through review and merge faster.
+
+ On this page
+
+ Free trial
+
+See Optibot in action
+
+Full codebase context, engineering metrics, flat pricing. Set up in 10 minutes — free trial, no card required.
+
+Start Free Trial
+
+Get a Demo
+
+ Related reading
+ Feature
+ Engineering Productivity Insights
+
+ Guide
+ How to Reduce PR Review Time
+
+ Feature
+ PR Cycle Time Feature
+
+ Pricing
+ Optibot Pricing
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

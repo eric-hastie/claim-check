@@ -7,8 +7,8 @@ when it touches a number, a unit, a capability word, or a negation. The
 heuristic ranks the work; it does not render the verdict. A human or an LLM
 pass decides what a material change actually means.
 
-    python tools/diff.py acme 2026-08-10 2026-08-21
-    python tools/diff.py acme 2026-08-10 2026-08-21 --json out.json
+    python tools/diff.py getoptimal 2026-08-10 2026-08-21
+    python tools/diff.py getoptimal 2026-08-10 2026-08-21 --json out.json
 """
 import argparse
 import difflib
@@ -28,7 +28,13 @@ def targets_root():
     private directory while the code stays shareable.
     """
     import os
-    return Path(os.environ.get("CLAIM_CHECK_TARGETS", REPO / "targets"))
+    env = os.environ.get("CLAIM_CHECK_TARGETS")
+    if env:
+        return Path(env)
+    # Single-target repo: config sits at the root next to the tools.
+    if (REPO / "claims.yaml").exists():
+        return REPO
+    return REPO / "targets"
 
 # A change is material when it moves a fact, not when it moves a word.
 NUM = re.compile(r"\d")
@@ -86,7 +92,8 @@ def main():
     ap.add_argument("--json")
     args = ap.parse_args()
 
-    tdir = targets_root() / args.target
+    root_dir = targets_root()
+    tdir = root_dir if (root_dir / "claims.yaml").exists() or (root_dir / "owner.yaml").exists() else root_dir / args.target
     cfg = yaml.safe_load((tdir / "owner.yaml").read_text(encoding="utf-8"))
     weight_of = {pc["id"]: pc.get("weight", "p2") for pc in cfg.get("page_classes", [])}
 

@@ -1,0 +1,135 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/review-memory
+TITLE: Review Memory — Optimal Docs
+CLASS: docs
+
+Review Memory — Optimal Docs 
+ / Docs / Agentic Code Reviews / Review Memory 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Review Memory
+
+ Review Memory is Optibot’s learning system. Every time a pull request is merged, Optibot analyzes the review it left and extracts the most important patterns — things like “when changes touch the payments module and modify error handling, missing rollback logic is common.” Those patterns are stored and automatically applied the next time a similar PR comes in.
+
+ Over time, Optibot builds a repository-specific knowledge base that makes reviews progressively more accurate and relevant to how your team writes code. Patterns confirmed across multiple repositories are promoted into Norms — shared organization-level memories that apply everywhere automatically.
+
+ How it works
+
+ After a PR is merged , Optibot looks at the feedback it left and identifies which issues were actually addressed before the merge. Only feedback that was acted on is learned from — comments the author ignored are not.
+
+ From that feedback, Optibot extracts patterns describing recurring problems specific to your codebase and stores them as memories.
+
+ What gets extracted: actual bugs, security issues, missing error handling, and other breaking problems.
+
+ What does not get extracted: style preferences, naming conventions, formatting, or subjective feedback.
+
+ During future reviews , Optibot checks whether any stored patterns are relevant to the incoming PR. If a match is found, it uses those patterns to inform its review — but only flags something if it finds concrete evidence for it in the actual code changes. Patterns are never speculatively applied.
+
+ Memories gain confidence the more they are observed, so patterns that appear repeatedly across multiple PRs carry more weight than one-off findings.
+
+ Organization memories (Norms)
+
+ When the same pattern is independently confirmed across multiple repositories in your organization, Optibot recognizes the consensus and promotes it into a Norm — a single, shared organization-level memory.
+
+ Norms are applied to code reviews across all repositories in your organization, including ones that hadn’t encountered the pattern yet. New repositories added to your organization inherit your org’s Norms from day one, so teams don’t re-discover the same lessons independently.
+
+ You can view and manage your organization’s Norms from the Optibot dashboard at agents.getoptimal.ai → select a repository → Review Memory tab → Norms .
+
+ Contradiction detection
+
+ As your knowledge base grows, some memories can end up conflicting with each other — one pattern suggesting one approach while another suggests the opposite. Optibot scans for these conflicts automatically and flags them in the dashboard.
+
+ When a contradiction is detected, neither memory is silently overridden. Both are surfaced so your team can review the conflict and decide which pattern reflects your current conventions. Resolving contradictions keeps the knowledge base consistent and prevents Optibot from giving conflicting feedback across different PRs.
+
+ Memory lifecycle
+
+ Memories have an automated lifecycle to keep the knowledge base accurate and relevant over time.
+
+ Active — the memory is in use and surfaced during relevant reviews.
+
+ Aging — the memory hasn’t been seen or acted on in recent reviews. Confidence begins to decrease.
+
+ Low confidence — the memory has been inactive long enough that its confidence has dropped significantly. It is surfaced less frequently.
+
+ Archived — the memory has been automatically removed from active use. It can still be recovered from the Archived tab.
+
+ Protected — any memory you have manually edited or pinned is exempt from this process entirely. Protected memories never decay and are never automatically archived. Human-confirmed knowledge is not touched by the automated system.
+
+ Managing memories
+
+ You can view and manage your repository’s memories from the Optibot dashboard at agents.getoptimal.ai → select a repository → Review Memory tab .
+
+ Viewing memories
+
+ Memories are listed with their pattern description, how many times they have been observed, their confidence score, and when they were last seen.
+
+ Editing a memory
+
+ Click any memory to edit its description or refine what problem it captures. Edited memories are protected from the automated decay system — your version is preserved and the memory will never be automatically archived.
+
+ Pinning a memory
+
+ Pin a memory to make it more likely to surface during reviews and to protect it from decay. Use this for patterns that are especially important — critical security issues, known architectural pitfalls, or problems your team frequently encounters.
+
+ Disabling a memory
+
+ Disable a memory to stop it from being used in future reviews without removing it. Useful if a pattern has become outdated or no longer applies to your codebase.
+
+ Archiving a memory
+
+ When you delete a memory, it is archived rather than permanently removed. Archived memories can be recovered from the Archived tab at any time. If the same pattern is observed again in future reviews, a new memory will be created unless you restore the archived version first.
+
+ Frequently asked questions
+
+ Does Review Memory share data between repositories? 
+
+Repository-level memories are scoped to a single repository. However, when the same pattern is confirmed across multiple repositories in your organization, it is automatically promoted into a Norm — an organization-level memory that applies to all repos. See Organization memories (Norms) above.
+
+ What happens if I edit a memory? 
+
+Optibot will continue to track new observations and update the memory’s confidence, but the description text you set will never be automatically overwritten. Edited memories are also protected from the automated decay system and will not be archived.
+
+ Will Optibot always flag a pattern it has learned? 
+
+No. Memories inform the review — they don’t guarantee a comment. Optibot only surfaces a learned pattern if it finds concrete evidence for it in the current PR’s changes.
+
+ What is the difference between a Norm and a regular memory? 
+
+A regular memory is scoped to one repository and learned from PRs in that repo. A Norm is promoted from multiple repositories independently confirming the same pattern — it applies across your entire organization automatically.
+
+ Does Review Memory work for GitLab as well? 
+
+Yes. Review Memory works the same way for both GitHub and GitLab pull/merge requests.

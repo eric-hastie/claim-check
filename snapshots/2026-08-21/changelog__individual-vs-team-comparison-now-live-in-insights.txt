@@ -1,0 +1,81 @@
+SOURCE: https://getoptimal.ai/changelog/individual-vs-team-comparison-now-live-in-insights
+TITLE: Individual vs. Team in Insights — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 📈 
+
+ New Release November 13, 2025 Insights Metrics Team 
+ Individual vs. Team in Insights 
+ Lassen V2.3.6 — engineers can now compare their PR cycle time against the team's aggregate, with redesigned charts and several UX improvements. 
+
+ Lassen V2.3.6 Release
+ New Feature: Individual vs. Team Comparison
+
+For users with their access level set to "User Viewer," these individuals can now compare their PR Cycle Time stats to their team's aggregate. For example, an engineer on the infrastructure team can now compare their time to review, time to open, and time to merge with the team aggregate average or median.
+
+This allows individuals to see if their metrics fall above or below the team's overall performance — especially useful for members looking to drive self-improvement or identify patterns that could naturally be driving down merge times, such as large PRs or high time to review. These aggregates are meant to create both transparency and self-awareness in team members.
+
+ How this feature works
+ Your engineer(s) should have been given the "User View" permission on the insights platform.
+ The engineer(s) should have access to the PR Cycle Time page and also be a member of at least 1 team.
+ The toggle switch allows the user to only view aggregate for the teams they are a part of. For example, if an engineer is part of the infrastructure and devOps teams, they can access aggregate comparisons for both.
+ If the engineer has no teams in the insights app, the toggle switch will not show.
+ Enhancements and Improvements
+ Redesigned our PR Cycle Time charts to be more accessible with higher contrast colors.
+ Improved label spacing for the X and Y axis charts on the PR Cycle Time charts.
+ Added the ability to turn off the average or median lines on the PR Cycle Time charts.
+ Added detailed date information on chart crosshairs when you hover over, so you know exactly what dates data is being compared for.
+ Improved the design and copy of the median and average toggle menu and switch.
+ Improved the overall responsiveness of the Cycle Time summary cards for smaller screens.
+ Improved the scrolling ability for the summary cards.
+ Bug Fixes
+ Fixed a bug where date picker hotkeys would select the wrong time interval when moving back and forth between time ranges.
+ Fixed an issue where the repo selector on the PR Cycle Time page would not clear filters.
+ Fixed an issue where repo information was not passed to the URL parameters for link sharing.
+ Fixed a bug that caused the layout to constantly shift when you hovered over any plotted data that was close to the edge of the page.
+
+Previous
+ Optibot improved context understanding and unified architecture for smarter reviews 
+Next
+ Inline GitLab Comments, On-Demand Compliance Checks, and Smarter Re-Reviews 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

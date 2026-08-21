@@ -1,0 +1,187 @@
+SOURCE: https://getoptimal.ai/integrations/github
+TITLE: GitHub Integration — Optibot by Optimal AI
+
+Optibot 
+
+ GitHub 
+
+ GitHub Integration 
+
+Every PR reviewed the moment it opens in GitHub.
+
+Optibot installs as a native GitHub App — indexing your full codebase, posting inline reviews, and flagging issues directly inside pull requests. No workflow changes. No CI pipeline edits. Just better reviews, automatically.
+
+GET STARTED FREE
+
+READ THE DOCS
+
+Works with GitHub Cloud and GitHub Enterprise
+ · 
+Fine-grained repo-level access
+ · 
+Zero code retention
+
+ What this unlocks 
+ What capabilities does Optibot provide inside GitHub?
+
+Five capabilities that activate the moment you install the GitHub App.
+
+ Automated code reviews, inline on every PR
+ The moment a pull request opens, Optibot posts a structured review with inline comments on the exact lines that matter. Every review comes with a merge recommendation — Ready to Merge or Needs Changes — ranked by confidence so engineers know what to address first. Reviews trigger automatically or on demand via #optibot review in any PR comment.
+
+ Full codebase context, not just the diff
+ Optibot indexes your entire repository on install — file structure, dependencies, past decisions, naming conventions, team patterns. When it reviews a PR, it understands how the changed code fits into everything else. Cross-file dependencies, breaking changes, and architectural regressions get caught because Optibot isn't reading 200 changed lines in isolation — it's reading them against your whole codebase.
+
+ CI failure detection and auto-fix
+ When a GitHub Actions workflow fails, Optibot detects the failed run, analyzes the error logs, identifies affected files, and applies targeted fixes directly to the branch. It then posts a PR comment summarizing exactly what it changed and why. Builds go green without anyone having to triage a CI log manually.
+
+ Compliance checks and security scanning
+ Run #optibot compliance in any PR comment to trigger a SOC 2 compliance scan. Optibot flags risky code — exposed API keys, insecure permissions, data exposure risks — maps each finding to the relevant SOC 2 principle, and provides a recommended fix inline. Security checks happen inside the PR, not in a separate tool.
+
+ Dependency bundling
+ Dependabot generates a flood of individual dependency update PRs. Optibot's dependency bundler consolidates them into a single PR, summarizes the key changes, and flags any breaking updates worth reviewing. Enable it with a single toggle from the Dependency Bundler section in the repository's Configuration tab.
+
+ How it works 
+ How quickly can you go from install to first review?
+
+Three simple steps — install the app, wait for indexing, and open a PR to see Optibot reviewing automatically.
+
+ 01 
+ Install the GitHub App
+ Select your organization or personal account, choose which repositories to connect — all repos or specific ones — and confirm read/write permissions for pull requests and metadata. Takes under 5 minutes. If you're not an org owner, GitHub sends an approval request to your org owner automatically.
+ github.com/apps/agent-optibot/installations/new 
+
+ 02 
+ Optibot indexes your codebase
+ Once installed, Optibot builds full codebase context by indexing your repository structure, dependencies, and patterns. Small repos index in minutes. Large repos and monorepos can take a few hours. Very large codebases may take up to a week. The app shows as "Installing…" during this phase — no action needed.
+
+ 03 
+ Reviews start automatically
+ From the first PR after indexing completes, Optibot posts inline reviews, PR summaries, and merge recommendations automatically. No additional configuration is required. Engineers interact with reviews directly inside GitHub — replying, asking follow-up questions, and requesting re-reviews in the PR thread.
+
+ Who it's for 
+ Which engineering roles benefit from Optibot?
+
+Optibot is designed for senior engineers, engineering managers, and CTOs — each role gets unique value from automated, full-context code reviews.
+
+ Senior Engineers & IC Engineers
+ Stop spending 45 minutes reviewing a PR that touched six files across three services. Optibot handles the systematic checks — security, anti-patterns, breaking changes, CI failures — so your review time goes toward the judgment calls only a human should make.
+
+ Engineering Managers
+ Every review Optibot posts is visible in GitHub. You can see what was flagged on any PR, track which issues were addressed, and use Optibot's activity data inside the Insights dashboard to understand review coverage across the team. Nothing runs silently.
+
+ CTOs & VPEs
+ One GitHub App installation covers your entire org. Optibot enforces consistent review quality across every repo, every team, and every engineer — including contractors and new hires who don't yet know your codebase. Scale review quality without scaling headcount.
+
+ Permissions & access 
+ What permissions does Optibot request and why?
+
+Optibot requests only what it needs. You stay in control of which repositories it can access.
+
+ Permission Why 
+ Read/write on pull requests To post inline review comments and merge recommendations 
+ Read on repository contents To index the codebase for full context 
+ Read on metadata To identify repo structure and dependencies 
+ Read/write on checks To detect CI failures and post fix summaries 
+ Read on commit statuses To track build state across PRs 
+
+ Fine-grained access: You choose which repositories Optibot can access at install time — specific repos or the full org. Adjustable any time from GitHub Settings → Installed GitHub Apps → Configure.
+
+ Get started 
+ How do you get started with Optibot?
+
+Getting started is straightforward — install the GitHub App, wait for your codebase to index, then open a pull request to see Optibot reviewing.
+
+ 01 Install the GitHub App
+
+Visit the install link, select your org, choose repos, confirm permissions.
+
+github.com/apps/agent-optibot/installations/new
+
+ 02 Wait for indexing
+
+Small repos: minutes. Large repos and monorepos: a few hours. Very large codebases: up to a week.
+
+ 03 Open a PR
+
+Optibot starts reviewing automatically. No further setup required to get your first review.
+
+Need the full setup guide and troubleshooting steps? 
+Read the setup guide →
+
+ Configuration — Form view 
+
+ Configuration · optimal-ai/qa-project-test UI 
+ Form JSON 
+ Reviews
+ Auto review 
+ Auto review on push 
+ Auto review on draft 
+ Code suggestions 
+
+ Other
+ Enable CI fixer 
+ Dependency bundler 
+
+Customize per-repository from the Configuration tab. Prefer JSON? Toggle the JSON view to paste your own settings. 
+Full config reference →
+
+ Frequently asked questions
+
+ Does Optibot store my code? No. All analysis is done ephemerally during the review process. Your code is never stored, logged, or used for model training. Optibot operates under a zero data retention model for all scanned code.
+
+ Does it work with GitHub Enterprise? Yes. Optibot supports both GitHub Cloud and GitHub Enterprise Server. The installation flow is identical — use the same install link and select your Enterprise organization.
+
+ Can I control which repos Optibot reviews? Yes. During installation you select either all repositories or specific repos. You can update this at any time from GitHub Settings → Installed GitHub Apps → Configure. Per-repo behavior can also be customized in the Configuration tab on each repository in the Optibot dashboard.
+
+ What happens if I want Optibot to skip certain PRs? Open the repository's Configuration tab and add the label or username under "Excluded labels" or "Excluded users" (these exist for both Reviews and Summary). Any PR with a matching label (e.g. do not review, wontfix) or opened by an excluded user (e.g. an automated bot account) will be skipped automatically.
+
+ Who needs to approve the GitHub App installation? An organization owner or a repo admin with sufficient permissions. If you don't have org owner rights, GitHub will show a "Request" button — clicking it automatically emails your org owner for approval. Once approved, Optibot activates immediately.
+
+ // connect github
+
+Connect GitHub. Get your first review in minutes. 
+
+Install the GitHub App, point it at your repos, and Optibot starts reviewing the next PR that opens. No CI changes, no configuration required to get started.
+
+GET STARTED FREE
+
+GET A DEMO
+
+ Optibot 
+
+ GitHub 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

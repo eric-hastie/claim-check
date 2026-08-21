@@ -1,0 +1,93 @@
+SOURCE: https://getoptimal.ai/changelog/arcadia-release-v2-5-1
+TITLE: Arcadia 2.5.1: Smarter Code Reviews — Optimal AI Changelog
+
+All changelog entries
+
+ New Release April 2026 Quality UX Performance Members AI 
+ Arcadia 2.5.1: Smarter Code Reviews 
+ Optibot v2.5.1 — eliminate repeated issues with context awareness, revamped members page with pagination, upgraded AI engine, and improved agent responses. 
+
+ Optibot Release 2.5.1 — Arcadia
+
+Arcadia eliminates review noise and makes team management frictionless. This release supercharges our context-aware code reviews to remember what's already been discussed, redesigns the members page for scale, and strengthens our AI engine across the board.
+
+ ✨ New Features
+ Smarter, Quieter Code Reviews with Review Context Tracking
+
+Code reviews should be constructive, not repetitive. Optibot's code review agent has enhanced its understanding of your pull request context. It now remembers what was already discussed across multiple review cycles and intelligently avoids raising the same points twice.
+
+ Key Capabilities
+ Avoids Duplicates: Previous review comments remain in a collapsible section instead of appearing as redundant inline feedback.
+
+ Learns from Your Feedback: If you've resolved a review conversation thread or replied with explicit disagreement 
+ (e.g., "won't fix" or a 👎 reaction), Optibot recognizes this and won't bring up the same point again.
+
+ Respects Your Code Decisions: When you intentionally keep a pattern or approach despite previous feedback, 
+ Optibot respects that decision rather than becoming a broken record.
+
+Enable the "Suppress repeated issues" toggle in your repository's Advanced Settings to match your workflow preferences.
+
+ 🚀 Revamped Members Page for Large Teams
+
+The Members & Seats page is now faster and more powerful for managing teams of any size.
+
+ What's Improved
+ Search & Performance: Find any team member instantly by name, email, or username. The page performs smoothly whether you have 10 members or 10,000.
+
+ ⚡ Improvements
+ Upgraded AI Engine & Smarter Interactions
+ Enhanced Code Context & Reasoning: Optibot now has deeper understanding of code logic, design patterns, and architectural implications. 
+ This means more accurate feedback, fewer false positives, and faster review generation even on large changes.
+
+ Smarter Agent Replies: When interacting with Optibot in PR comments, the agent now has better knowledge of supported commands, 
+ preventing suggestions of non-existent features and making conversations more natural and helpful.
+
+ 🔧 Under the Hood
+
+We've applied security updates and optimized the platform for better performance and stability.
+
+Available on Pro and Enterprise plans. Request a demo to see Optibot in action.
+
+Previous
+ Optibot: Short Summaries & Cleaner CI 
+Next
+ Optibot Release - Re-review code in one click 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

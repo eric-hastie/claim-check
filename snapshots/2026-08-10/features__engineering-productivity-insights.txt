@@ -1,0 +1,153 @@
+SOURCE: https://getoptimal.ai/features/engineering-productivity-insights
+TITLE: Engineering Productivity Metrics Dashboard | Optimal AI
+
+Optibot Insights — Pro & Max 
+
+Know exactly why your team ships fast or slow. 
+
+Optibot Insights gives engineering managers and CTOs real-time visibility into PR cycle time, DORA metrics, AI code adoption, and sprint health — all derived from the GitHub and GitLab activity you're already generating.
+
+SEE INSIGHTS IN ACTION
+
+VIEW PRICING
+
+ 97%
+ Cycle time reduction reported in first week
+ NearFleet
+
+ 50%
+ Faster PR cycle times across engineering teams
+ Multiple customers
+
+ 3×
+ Increase in deploy frequency with insights-driven workflows
+ Prado
+
+ Why engineering analytics matter 
+ Code review quality and delivery speed are connected
+ Most engineering analytics tools show you what shipped — not what slowed it down. They tell you deployment frequency but not why PRs sat in review for three days. They measure cycle time but not whether that time increased because review quality dropped or because your team grew.
+ Optibot Insights is different because it's built on top of your code review activity. When Optibot reviews a PR, it collects signal about review time, comment quality, and resolution speed. That signal feeds directly into your engineering metrics — so cycle time data is connected to the reviews that generated it.
+ The result: you don't just see that cycle time went up. You see that it went up in one repo, on PRs above a certain size, that had more security findings. That's actionable. That's what lets you fix the actual problem.
+
+ What's included 
+ Six engineering metrics in one dashboard
+
+ PR Cycle Time
+ See exactly how long each PR spends in every phase: open to first review, first review to approval, approval to merge. Identify where PRs stall and fix the bottleneck — not just the symptom.
+
+ DORA Metrics
+ Track the four engineering performance benchmarks that matter: deployment frequency, lead time for changes, change failure rate, and mean time to recovery. Get the numbers your VP of Engineering and CTO need to benchmark your team.
+
+ AI Code Adoption
+ Know what percentage of your merged code is AI-generated — by repo, by contributor, and over time. Understand the quality impact: does AI-generated code have higher defect rates? Are AI-assisted contributors shipping faster? The data tells you.
+
+ Contributor Insights
+ Understand how every engineer on the team is contributing — not just commit count, but review participation, comment quality, and cycle time impact. Coach and recognize contributors based on data, not gut feel.
+
+ Sprint Health
+ Measure planned vs. unplanned work, commitment reliability, and story point accuracy across sprints. Identify patterns that reduce predictability and give your engineering manager the data to address them in the next retro.
+
+ Natural Language Insights
+ Ask Optibot questions about your engineering data in plain English. "Why did cycle time increase last sprint?" "Which repos have the most stale PRs?" "How is AI code adoption trending?" Get answers instantly, without writing SQL.
+
+ Code review + analytics in one 
+ Why buying a separate analytics tool doesn't solve the problem
+ Tools like LinearB and Jellyfish show you metrics. Optibot shows you metrics and gives you the lever to change them — because the code review is how you improve them.
+
+ Standalone Analytics Tools
+ LinearB, Jellyfish, DX, Swarmia
+
+ Show you metrics — but not why they changed
+
+ Separate from the code review process that drives the metrics
+
+ Require an additional tool and budget alongside your review tool
+
+ No direct path from "cycle time is up" to "here's the fix"
+
+VS
+
+ Optibot Insights
+ Code review + analytics. One product. One subscription.
+
+ Shows metrics AND the review context that caused them to change
+
+ Built into the code review — analytics derive from actual PR activity
+
+ One product, one subscription — no separate analytics tool to buy or integrate
+
+ Direct path: see high cycle time → identify the review bottleneck → fix it
+
+ What teams see when they turn on Insights
+
+ 100% visibility across repos 
+ "I have full velocity visibility across all repos for the first time. I can see exactly where work is getting stuck and act on it the same day."
+ Isabella Maceda-Ali
+ Engineering Lead, TaxGPT
+
+ Cycle time ↓ 30% 
+ "Cycle time dropped 30%, and every PR gets reviewed instantly. I went from having almost no data about my team to having more than I know what to do with."
+ Grainger Blackett
+ CTO, Prado
+
+ Cycle time ↓ 26% in first month 
+ "We went from a 26% drop in cycle time in the first month. Optibot gives me the data to explain to the board exactly how the engineering team is performing."
+ Enam Haque
+ CTO, mPulse
+
+ See your engineering data clearly
+ Insights is included on Pro and Max. Start a free trial today — no credit card, no setup required beyond connecting GitHub or GitLab.
+
+GET A DEMO
+
+SEE PRICING
+
+ Also see: AI Code Reviews · DORA metrics guide · How to reduce PR cycle time · MongoDB case study 
+
+ Engineering Productivity Insights — Common Questions
+
+ What engineering metrics does Optibot track? Optibot tracks PR cycle time (time from open to first review, first review to approval, and approval to merge), DORA metrics (deployment frequency, lead time for changes, change failure rate, mean time to recovery), AI code adoption ratios by repo and contributor, contributor activity and review patterns, sprint health (planned vs. unplanned work, commitment reliability), and workload distribution across the team. All metrics are derived from your GitHub or GitLab activity — no manual data entry or third-party integrations required to get started.
+
+ How is Optibot Insights different from a JIRA or Linear dashboard? Jira and Linear show you project management data — ticket status, sprint velocity, and issue tracking. Optibot Insights is derived from your actual code repository activity: when PRs open, who reviews them, how long they stall, what code gets merged, and whether that code is AI-generated. These are engineering execution metrics, not project management metrics. Most teams use both — Jira/Linear for planning, Optibot for understanding how the engineering process is actually performing.
+
+ How is Optibot different from tools like LinearB or Jellyfish? LinearB and Jellyfish are dedicated engineering analytics platforms — they're strong on metrics but don't do AI code review. Optibot combines both in a single product: the Insights module is included on Pro and Max plans alongside Optibot's AI code review. For teams that want both deep PR reviews and engineering metrics, Optibot eliminates the need to buy and integrate a separate analytics tool.
+
+ Does Optibot Insights require a separate data connector or pipeline? No. Optibot derives all metrics from the GitHub or GitLab connection you already set up for code reviews. There are no separate data pipelines, API keys, or ETL processes to configure. Install the GitHub App or configure the GitLab token, and metrics start populating automatically as PRs open and close.
+
+ Which plan includes Optibot Insights? Optibot Insights is included on the Pro and Max plans. It is not included on the Starter plan. All plans come with a free trial that starts on Max so you can experience the full Insights dashboard before choosing a plan.
+
+ Can engineering managers ask Optibot questions about the data? Yes. Optibot includes a natural language interface for your engineering data. Managers can ask questions like 'Which repos had the highest cycle time last month?' or 'How has AI code adoption changed since we adopted Cursor?' and get direct answers from the data — no SQL, no custom dashboards, no waiting on a data analyst.
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

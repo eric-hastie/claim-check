@@ -1,0 +1,94 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-feature-update
+TITLE: Optibot February Feature Update — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ ✨ 
+
+ New Release February 12, 2026 Dashboard Multi-repo Context Engine 
+ Optibot February Feature Update 
+ Seat management from the admin dashboard, multiple workspaces, enhanced repo context engine, and multi-repo context with sub-agents in beta. 
+
+ New Features in Optibot
+ Seat Management from the Admin Dashboard
+
+You can now easily give access to Optibot to new users using our seat management dashboard. Simply head over to the dashboard on agents.getoptimal.ai , then click on your organization name → Organization Settings and assign seats to the users who you want reviews and summaries available for.
+
+ Improved Subscription Management
+
+We've moved the subscription management directly into the dashboard. This allows you to manage everything from payment methods to viewing invoices directly in the dashboard.
+
+ Multiple Workspaces
+
+We now allow for you to have multiple workspaces under your GitHub login. This means you can manage multiple subscriptions and use Optibot easily for both personal and organizational use.
+
+ Enhanced Repo Context
+
+Optibot's repository context engine got a memory upgrade. Optibot uses a high-level description of your entire repository's purpose and architecture. This context is automatically provided to Optibot during every code review, helping it understand not just what your code does line-by-line, but what your project is trying to accomplish.
+
+ Multi-Repo Context with Sub-Agents Beta 
+
+Exclusive to Optibot customers in beta. We're the first code reviewer to have multi-repo context which uses sub-agents. If your organization has multiple microservices, this feature allows Optibot to traverse connected repos to grab additional context.
+
+ Areas where multi-repo context performs best in our evals:
+ Looking Up API Endpoints: Check if the endpoint you're calling actually exists and what parameters it needs.
+ Verifying Authentication: Confirm you're using the same authentication method that the other service expects.
+ Checking Data Models: See what fields an API returns so you handle them all correctly.
+ Finding Integration Patterns: Look at how the other service is meant to be used.
+ Validating Configurations: Check if environment variables, ports, or settings match what the other service uses.
+ How to set up multi-repo context
+ Log into your agents.getoptimal.ai dashboard (currently only admins can set up multi-repo context).
+ Head over to the Organizational Map tab.
+ The Map will be pre-populated with your repos.
+ Create node connections between repos that are connected in the visual builder.
+ Add a short description on how the two repos are connected. For example, connecting a reverse proxy repo to a front-end repo: "The reverse proxy repo forwards requests to our front-end repo which hosts the UI".
+ Optionally, add your own descriptions for repos by clicking on each repo box (only do this if Optibot's auto-generated ones are missing details).
+ Click Save Map .
+ Under the Hood Improvements
+ Improved the overall context engine performance to handle events better.
+ Added fallbacks to handle model outages gracefully and inform the user.
+
+Previous
+ Optimal Insights February Release Log 
+Next
+ Optibot February II — Release Notes 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

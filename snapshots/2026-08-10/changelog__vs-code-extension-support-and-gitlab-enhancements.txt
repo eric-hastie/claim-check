@@ -1,0 +1,69 @@
+SOURCE: https://getoptimal.ai/changelog/vs-code-extension-support-and-gitlab-enhancements
+TITLE: VS Code & GitLab Enhancements — Optimal AI Changelog
+
+All changelog entries
+
+ 🔧 
+
+ Improvement November 24, 2025 VS Code GitLab Infrastructure 
+ VS Code & GitLab Enhancements 
+ Optibot Acadia 2.3.0 — VS Code local review support, improved multi-line GitLab comments, smarter follow-up context, and larger API request handling. 
+
+ Optibot — Acadia 2.3.0
+
+This release introduces new under-the-hood infrastructure changes to support local reviews within VS Code and Cursor. We also made significant improvements to our GitLab integration, as well as numerous under-the-hood enhancements to improve stability and performance.
+
+ Features
+ VS Code Extension Support: This release includes the foundational backend support for our upcoming VS Code extension. Soon, you'll be able to get Optibot reviews directly within your editor, making your workflow even more seamless.
+ Improvements
+ Enhanced GitLab Multi-line Comments: We've significantly improved how Optibot handles multi-line comments in GitLab. Comments on multiple lines of code will now be accurately placed, making reviews clearer and more precise.
+ Smarter GitLab Review Context: When you request a follow-up review in GitLab, Optibot will now consider its previous comments, leading to more context-aware and relevant feedback.
+ Improved GitLab Pagination: We've fixed a bug that could cause issues with pagination when fetching data from GitLab, ensuring that all your information is retrieved correctly.
+ Increased API Request Size: The maximum request size for our API has been increased, allowing you to send larger patches for review.
+ Under the Hood Improvements
+ More Robust Error Handling: We've implemented a more sophisticated retry mechanism for our AI agents. This makes our system more resilient to transient network issues and temporary service overloads, ensuring that your reviews are completed successfully.
+ Dependency Updates: We've updated several dependencies to their latest versions to incorporate the latest security patches and performance improvements.
+
+Previous
+ Optibot, Now in VS Code — New Release 
+Next
+ Optibot Release — Cursor Extension Launch 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

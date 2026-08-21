@@ -1,0 +1,89 @@
+SOURCE: https://getoptimal.ai/changelog/optimal-insights-february-release-log
+TITLE: Optimal Insights February Release Log — Optimal AI Changelog
+
+All changelog entries
+
+ 📊 
+
+ Improvement February 6, 2026 Insights Activity Jira UX 
+ Optimal Insights February Release Log 
+ Activity Intelligence with automatic bottleneck detection, redesigned activity timeline view, Jira integration improvements, and a refreshed integrations page. 
+
+ Activity Intelligence
+
+The "Worth noting this period" section provides intelligent insights into team workflow health by automatically detecting patterns that could impact velocity and collaboration. It analyzes activity across the selected time period and surfaces up to three actionable findings.
+
+ Optimal's Insight engine identifies critical issues such as:
+ PRs waiting for review and blocking progress.
+ Team members accumulating commits without opening PRs for early feedback.
+ Review responsibilities becoming concentrated on one person.
+ Growing backlogs from more work opening than closing.
+ Each insight includes relevant metrics and context-aware guidance. Hovering over any item in this section highlights the corresponding dates on the calendar to visualize when issues occurred.
+ Navigational and UX Improvements to the Activity Page
+ Easily scroll through the month or week with your keyboard arrow keys.
+ Toggle between Week, Month, and Today.
+ Filters have been clearly labeled at the top of the page.
+ Team name and time period have improved typography for easier visibility.
+ New Activity Details Pane
+ We overhauled the old activity details pane with a new one that is more performant and easier to read, allowing you to grasp all the details in your preferred format.
+ You can switch between the default group view or switch to a timeline view to see the order in which activities took place — especially helpful if you're trying to better understand how engineers utilize their day.
+ Added tags to the header so you can quickly get a count of the key activities such as PRs, Commits, Merges, Reviews, and Comments.
+ Improved Integration Page
+ The integration page received a design refresh. Integrations are better separated, making it easy to manage.
+ Disabled integrations fade out subtly so they're out of your view, helping you focus on what's connected.
+ Re-designed Jira Integration Page
+ We redesigned our Jira integration page to ease the integration process for both Jira Cloud and Jira Server users.
+ All tokens are now properly validated when being inserted as a new integration or when updating tokens.
+ Error messages are more detailed and provide exact steps when the Jira integration fails.
+ We improved the help section and instructions for both cloud and server setups.
+ Enhancements
+ Improved the overall loading performance of all pages.
+ Made links easily shareable with improved link history.
+ Bug Fixes
+ Fixed a bug where updating Jira tokens would result in a failed token validation.
+ Fixed a bug where AI insights would crash the PR Cycle Time page.
+ Fixed a loading bug on the Cycle Time page to consolidate loading screens.
+
+Previous
+ Optibot Now Finds Dead Code and Code Quality Issues 
+Next
+ Optibot February Feature Update 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

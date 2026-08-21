@@ -1,0 +1,82 @@
+SOURCE: https://getoptimal.ai/changelog/jira-ticket-detection-titles-and-branches
+TITLE: Jira Ticket Detection from Titles & Branches | Optibot
+CLASS: changelog
+
+All changelog entries
+
+ 🎯 
+
+ Improvement July 22, 2026 Jira Code Review Integrations 
+ Jira: Accurate Ticket Detection from Titles and Branches 
+ Optibot now reads the Jira ticket from your PR title or branch name, supports [ABC-123] and ABC-123 formats, and ignores tickets only mentioned in the body. 
+
+When Jira is connected, Optibot validates your pull request against the ticket it implements. This release makes it far better at working out which ticket that actually is.
+
+ Improvements
+ More ticket formats recognized
+
+Optibot previously only recognized a ticket wrapped in parentheses, like (ABC-123) . Teams using square brackets, or Atlassian's own recommended format, were not picked up at all. All of these now work in a pull request title:
+
+ [ABC-123] Fix login redirect 
+ (ABC-123) Fix login redirect 
+ ABC-123 Fix login redirect 
+ ABC-123: Fix login redirect 
+ Branch names now work as a fallback
+
+If the title has no ticket key, Optibot checks the branch name, so a branch like feature/ABC-123-fix-login is enough on its own. This matches how Jira itself links branches to issues, and means teams whose workflow puts the key in the branch get validation without changing anything.
+
+ No more validating against the wrong ticket
+
+Optibot used to scan the pull request description as well as the title, and picked whichever key it found first. On a PR whose body mentioned related work, that often meant validating against a ticket the PR had nothing to do with. Descriptions are no longer scanned, so the ticket Optibot validates is the one your title or branch actually names.
+
+ Quieter when a PR is not about a ticket
+
+A title like "UTF-8 encoding fix" looks a lot like an issue key. Optibot no longer posts a confusing "issue not found" warning in these cases. It only tells you an issue is missing when you explicitly wrote the key in brackets or parentheses, which is the case where a typo or a permissions problem is worth surfacing.
+
+ Action needed
+
+If your team puts the Jira key only in the pull request description, add it to the title or the branch name to keep getting Jira validation. Any of the title formats above works, as does a branch like feature/ABC-123-fix-login .
+
+Previous
+ Review Wait-Time Estimates & More Resilient Reviews 
+Next
+ Stacked Pull Request Support 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

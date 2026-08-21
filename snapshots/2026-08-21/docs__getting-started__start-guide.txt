@@ -1,0 +1,101 @@
+SOURCE: https://getoptimal.ai/docs/getting-started/start-guide
+TITLE: Start guide on using Optimal AI — Optimal Docs
+CLASS: docs
+
+Start guide on using Optimal AI — Optimal Docs 
+ / Docs / Getting Started / Start guide 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Start guide on using Optimal AI
+
+ Optimal AI helps engineering teams ship faster and build more reliably through two core products:
+
+ Optibot — AI code reviewers that analyze pull requests, catch issues early, and improve code quality automatically.
+
+ Insights — real-time analytics that track engineering productivity and surface actionable trends.
+
+ Onboarding involves two parts:
+
+ Setting up Optibot Code Reviewer (GitHub Integration)
+
+ Setting up Insights for engineering analytics
+
+ Book a Personalized Walkthrough
+
+ Get a live demo from our product team. We’ll walk you through Optibot installation, Insights setup, and common workflows from real teams.
+
+ → Book a demo 
+
+ Explore the Optimal AI Learning Library
+
+ Visit our YouTube channel for short walkthroughs, feature demos, and customer stories.
+
+ You’ll find:
+
+ Real use cases from engineering teams using Optimal AI
+
+ Product updates and “what’s new” videos
+
+ Pro tip: Every time we release a new feature, we post a quick demo video so you can see it in action right away.
+
+ Set Up Optimal AI for Your Organization
+
+ Step 1: Install Optibot Code Reviewer (GitHub Integration)
+
+ Install Optibot using your work email and grant it access to your repositories. Setup takes less than 2 minutes.
+
+ → Go to GitHub Setup Guide 
+
+ Step 2: Connect Insights
+
+ Once Optibot is installed, you can enable Insights to start tracking metrics like PR Cycle Time, Activity, and Team Contributions.
+
+ → Go to Insights Setup Guide 
+
+ Step 3: Add Slack Integration (Optional)
+
+ Connect Slack to receive Optibot summaries, code review notifications, and weekly Insights digests directly in your channels.
+
+ → Go to Slack Integration Guide 
+
+ See How Other Teams Use Optimal AI
+
+ How Prado scaled with Optibot
+
+ Why Artemis Ops uses Optimal AI for faster code reviews
+
+ With Optimal AI, you’re empowering your team to code faster, review smarter, and ship securely.

@@ -1,0 +1,175 @@
+SOURCE: https://getoptimal.ai/integrations/cursor
+TITLE: Cursor Integration — Optibot by Optimal AI
+
+Optibot 
+
+ Cursor 
+
+ Cursor Integration 
+
+Fix PR comments inside Cursor. No prompt engineering required.
+
+The Optibot Cursor extension connects GitHub review comments directly to your editor. One click from any Optibot comment opens Cursor at the exact file and line — with full repo context and a ready-to-apply fix already loaded. No copy-pasting. No file hunting. No writing prompts to re-explain what Optibot already said.
+
+INSTALL THE EXTENSION
+
+READ THE DOCS
+
+Available on Cursor Marketplace
+ · 
+Also works with VS Code
+ · 
+No prompt engineering required
+
+ The difference 
+ How does fixing a review comment change with the Optibot Cursor extension?
+
+ Before 
+ 1 Read the Optibot comment in GitHub 
+ 2 Copy the file path and line number 
+ 3 Open Cursor 
+ 4 Navigate to the file and find the line 
+ 5 Paste the comment into a new chat 
+ 6 Write a prompt to explain the context Optibot already has 
+ 7 Hope the model understands what you meant 
+ 8 Apply the fix manually 
+
+ Now 
+ 1 Click "Solve in Cursor" in the GitHub comment 
+ 2 Cursor opens at the exact file and line 
+ 3 Fix proposal appears immediately with full context 
+ 4 Accept, adjust, or undo 
+ 5 Commit back to the PR 
+
+ What this unlocks 
+ What does the Optibot extension unlock inside Cursor?
+
+ Cursor opens at the exact file and line
+ Every Optibot review comment in GitHub includes a "Solve in Cursor" link. Click it and Cursor opens instantly — no navigating, no searching the diff, no copy-pasting a file path. The editor lands exactly where the issue is, in the right branch, with the review comment and full repo context pre-loaded in the chat panel.
+
+ Fix proposal appears immediately — no prompting
+ The moment Cursor opens, Optibot already knows the specific file and line being reviewed, the full review comment and its reasoning, and the repo and branch context. A fix proposal appears immediately with inline diffs and full edit control. Accept it as-is, adjust it manually, or reject it — you're in control of every change.
+
+ Batch fixes and commit once
+ Open multiple "Solve in Cursor" links from the same PR, apply all fixes in sequence, and commit once. Addressing a full Optibot review goes from a multi-tab browser session to a focused in-editor workflow. Check "Always allow" on the browser prompt once to make every future jump automatic — no confirmation required.
+
+ How it works 
+ How does Optibot turn a review comment into a committed fix in Cursor?
+
+ 01 
+ Optibot reviews your PR and posts inline comments
+ Open a pull request on GitHub as usual. Optibot automatically analyzes it and posts a summary comment along with inline comments on every flagged line — security issues, logic gaps, anti-patterns, breaking changes. Each inline comment includes Optibot's reasoning and a "Solve in Cursor" action link alongside the standard "Solve in VS Code" option.
+
+ 02 
+ Click "Solve in Cursor"
+ Click the link in any Optibot inline comment. Your browser briefly shows an Optibot confirmation screen, then prompts you to open Cursor. Click Open — check "Always allow" to skip this prompt permanently for all future fixes from the same domain.
+
+ 03 
+ Cursor opens with context loaded (first-time: install the extension)
+ Cursor opens directly to the file and line Optibot flagged. If you don't have the Optibot extension installed yet, Cursor will prompt you to install it automatically from the Cursor Marketplace — the whole process takes under a minute. Once installed, this step is instant on every future fix. Log in with Optibot Login inside the extension to connect to your organization — all permissions and repo access carry over automatically.
+
+ 04 
+ Review and apply the fix
+ The fix proposal appears immediately in the Cursor chat panel — no prompt required, no context to re-explain. You have full edit control: accept the fix as-is, modify it before applying, or reject it entirely if it's not relevant. The extension never applies changes without your explicit confirmation.
+
+ 05 
+ Commit and request a re-review
+ Once you're satisfied with the fix, commit the change back to the same PR branch. Pull the latest branch first if other changes have come in. Return to GitHub and request a re-review — Optibot runs another pass and confirms the issue is resolved.
+
+ Who it's for 
+ Which engineers benefit from Optibot inside Cursor?
+
+ IC Engineers & Senior Engineers already using Cursor
+ You're already using Cursor as your primary editor. You expect AI to handle context automatically — not make you re-explain it every time. The Optibot extension brings your GitHub review feedback directly into the workflow you're already in. One click, full context, immediate fix. No context-switching, no prompt writing, no hunting through files.
+
+ Engineering teams on GitHub
+ Everyone on the team gets the "Solve in Cursor" link in every Optibot review comment automatically — no individual configuration needed beyond installing the extension once. New engineers and contractors get the same zero-friction fix flow from day one, without needing to already know the codebase to find the right file.
+
+ Installation 
+ How do you install the Optibot extension in Cursor?
+
+ Automatic (recommended)
+ Easiest 
+
+Click any "Solve in Cursor" link in an Optibot GitHub review comment. If the extension isn't installed, Cursor prompts you to install it automatically from the Cursor Marketplace. The entire first-time setup takes under a minute and requires no manual steps.
+
+No install link needed — this flow handles itself.
+
+ Manual install from Cursor Marketplace
+
+Open the Cursor Marketplace and search for Optibot AI , or go directly to the listing. Click Install. Once installed, it appears in your active extensions and activates immediately on the next "Solve in Cursor" click.
+
+marketplace.cursorapi.com/items/?itemName=OptimalAI.optibot-extension
+ Also works with VS Code: the same extension is available on the VS Code Marketplace at marketplace.visualstudio.com/items?itemName=OptimalAI.optibot-extension .
+
+ Requirements 
+ What do you need to use Optibot inside Cursor?
+
+ Cursor
+ Latest version. The same extension also works with VS Code if your team uses both.
+
+ GitHub integration
+ Optibot must be active on the repository. The extension uses your existing GitHub authorization — no separate login flow beyond connecting your Optibot organization once.
+
+ Branch write access
+ Standard Git permissions to commit changes back to the PR branch you're working on.
+
+ Frequently asked questions
+
+ Is this the same extension as the VS Code one? Yes — it's the same Optibot AI extension, available on both the Cursor Marketplace and the VS Code Marketplace. If you use both editors, you can install it in each. The "Solve in Cursor" and "Solve in VS Code" links in GitHub review comments work independently — engineers click whichever editor they use.
+
+ Does the extension auto-commit my changes? No. You stay in full control of every commit. The extension applies suggested fixes in your editor only when you explicitly accept them. It never commits automatically or creates new PRs on your behalf.
+
+ Do I need to write prompts to get the fix? No. That's the whole point. When Cursor opens from a "Solve in Cursor" link, Optibot already has the file, the line, the review comment, and the repo context. The fix proposal appears immediately — no prompt engineering required.
+
+ What if Cursor doesn't open when I click the link? Your browser needs permission to open the Cursor deep-link protocol. If it's blocked, enable it in your browser or system preferences. On corporate or managed devices, you may need IT to whitelist the Cursor protocol. You can also install the extension manually from the Cursor Marketplace and use it from there.
+
+ Does this replace PR reviews in GitHub? No. Optibot still performs full code reviews in GitHub — the extension doesn't change that. It eliminates the friction in the fix step: instead of reading the comment, switching to your editor, finding the file, writing a prompt, and switching back, you do it all in one click from the comment itself.
+
+ // install the extension
+
+Fix review comments inside Cursor. No setup. No prompting. 
+
+Install the Optibot Cursor extension and turn every GitHub review comment into a one-click in-editor fix — with full context already loaded and no prompt engineering required.
+
+INSTALL THE EXTENSION
+
+GET A DEMO
+
+ Optibot 
+
+ Cursor 
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |

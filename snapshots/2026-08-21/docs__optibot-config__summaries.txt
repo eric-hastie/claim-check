@@ -1,0 +1,145 @@
+SOURCE: https://getoptimal.ai/docs/optibot-config/summaries
+TITLE: Summary Configuration Settings — Optimal Docs
+CLASS: docs
+
+Summary Configuration Settings — Optimal Docs 
+ / Docs / Optibot Config / Summary settings 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Summary Configuration
+
+ The Summary settings control automated PR and MR summary generation per repository. Access them from your Optibot dashboard at agents.getoptimal.ai → Configuration tab → Summary section .
+
+ Auto Summary
+
+ Setting: Auto summary | Type: boolean | Default: On
+
+ Enables or disables automatic summary generation when a new PR or MR is opened. Optibot summaries cover the functional aspects of the code changes in detail, plus a collapsible file-by-file breakdown.
+
+ When to use: 
+
+ Keep on for automatic summaries on all PRs — helps reviewers understand changes at a glance
+
+ Turn off if summaries should only be generated on request
+
+ Auto Summary on Draft
+
+ Setting: Auto summary on draft | Type: boolean | Default: On
+
+ Controls whether Optibot generates summaries on PRs and MRs that are in draft state.
+
+ When to use: Turn off when your draft PRs are genuinely work-in-progress and you expect to push more changes before anyone should be reviewing.
+
+ Summary Level
+
+ Setting: Summary level | Type: string — Short / Basic / Detailed | Default: Basic
+
+ Controls the depth of detail Optibot includes in generated summaries.
+
+ Short
+
+ A concise 2–3 sentence natural-language overview of the pull request. Ideal for quick updates that don’t interrupt workflow.
+
+ Example output: 
+
+ “Updates login flow to streamline authentication and add basic validation. Cleans up unused logic and prepares the service for upcoming enhancements.”
+
+ Basic
+
+ A brief overview of changes, key modifications, and an impact summary. Works well for small, atomic PRs that require quick reviews.
+
+ Example output: 
+
+ “This PR adds user authentication middleware and updates the login endpoint. Key Changes: 2 new files, 3 modified files, ~150 lines changed.”
+
+ Detailed
+
+ A comprehensive analysis with file-by-file breakdown, architectural impact notes, and testing recommendations. Best for large PRs, complex features, and critical changes.
+
+ Example output: 
+
+ “This PR implements JWT-based authentication middleware with refresh token support.
+
+ Files Changed:
+
+ src/middleware/auth.ts (new): JWT verification middleware with role-based access control
+
+ src/routes/auth.ts (modified): Added refresh token endpoint
+
+ Impact Analysis:
+
+ Security: Implements industry-standard JWT authentication
+
+ Performance: Adds ~10ms latency per authenticated request”
+
+ When to use: 
+
+ Use Short for fast-moving teams or when summaries are supplementary to existing PR descriptions
+
+ Use Basic for most teams — the right balance of context without overwhelming reviewers
+
+ Use Detailed for large codebases, complex features, or any PR where architectural context matters
+
+ Excluded Labels
+
+ Setting: Excluded labels | Type: array of strings | Default: Empty
+
+ Prevents Optibot from generating summaries on PRs or MRs that carry any of the specified labels. Labels are case-sensitive.
+
+ Examples: 
+
+ Skip trivial changes:
+
+ trivial, typo-fix, formatting 
+
+ Exclude docs and dependencies:
+
+ documentation, dependencies 
+
+ Excluded Users
+
+ Setting: Excluded users | Type: array of strings | Default: Empty
+
+ Prevents Optibot from generating summaries on PRs or MRs opened by specified usernames.
+
+ Examples: 
+
+ Exclude common bots:
+
+ dependabot, renovate[bot], l10n-bot 
+
+ Note: All settings are per-repository. Changes take effect immediately for new PRs and MRs — no commits or deployments required.

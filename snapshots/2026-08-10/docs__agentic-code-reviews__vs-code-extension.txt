@@ -1,0 +1,179 @@
+SOURCE: https://getoptimal.ai/docs/agentic-code-reviews/vs-code-extension
+TITLE: VS Code Extension — Optimal Docs
+
+VS Code Extension — Optimal Docs 
+ / Docs / Agentic Code Reviews / VS Code extension 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ VS Code Extension
+
+ A fast way to jump from an Optibot PR comment to a ready-to-fix view in your IDE. Click Solve in VS Code in GitHub, we open VS Code, prefill context, and help you apply the fix. You commit back to the same PR — no copy-pasting, no hunting for files.
+
+ Overview
+
+ The Optibot VS Code extension connects GitHub review comments to your IDE. When Optibot detects issues during code review, each comment includes a “Solve it in VS Code” link that:
+
+ Opens your editor instantly at the exact file and line.
+
+ Pre-loads the Optibot comment in the Chat panel.
+
+ Lets you apply, edit, or reject the suggested fix — then commit directly back to the same PR.
+
+ Why it matters: Developers can fix issues where they write code, not in the browser. It cuts down friction between review and correction.
+
+ Requirements
+
+ VS Code (latest stable version).
+
+ GitHub repository integrated with Optimal AI (Optibot active).
+
+ Standard Git permissions and write access to the PR branch.
+
+ (Optional) Cursor IDE — works the same once listed in its marketplace.
+
+ How it Works
+
+ 1. Create a new Pull Request
+
+ After pushing your branch, open a PR as usual. Optibot automatically analyzes new PRs once created.
+
+ 2. PR opens and waits for review
+
+ Once open, you’ll see CI checks start and a Review required notice until Optibot finishes its scan.
+
+ 3. Optibot runs an automated review
+
+ Optibot posts a summary comment outlining issues, improvements, and review duration.
+
+ 4. Inline comment identifies the issue
+
+ Each flagged line includes Optibot’s reasoning and a Solve it in VS Code or Cursor action link.
+
+ 5. Click “Solve it in VS Code”
+
+ The link redirects you to an Optibot-hosted confirmation screen, verifying that your IDE will open with context pre-loaded.
+
+ 6. Browser prompt — open VS Code
+
+ Approve the launch prompt. Check Always allow dev.agents.getoptimal.ai to make future jumps automatic.
+
+ 7. Install the Optibot AI extension (first-time only)
+
+ If you don’t have it yet, VS Code will prompt you to install the extension automatically.
+
+ 8. Editor opens with context loaded
+
+ Your VS Code window opens to the exact file and line mentioned in the review. Optibot’s Chat panel shows the comment, explanation, and fix suggestion.
+
+ 9. Review, apply, and commit
+
+ You can:
+
+ Allow/Accept to apply the fix.
+
+ Edit or improve it manually.
+
+ Undo if it’s not relevant.
+
+ Then commit your change back to the same PR and request another review.
+
+ Install Manually from VS Code Marketplace
+
+ → Install from VS Code Marketplace 
+
+ Install
+
+ Open VS Code.
+
+ Go to Extensions ( ⇧⌘X / Ctrl+Shift+X ).
+
+ Search Optibot AI .
+
+ Click Install .
+
+ Uninstall or Disable
+
+ Open Extensions ( ⇧⌘X / Ctrl+Shift+X ).
+
+ Search Optibot AI .
+
+ Click ⚙︎ → Uninstall (or Disable to turn it off temporarily).
+
+ Sign-in & Org Routing
+
+ If prompted, click Optibot Login inside the extension sidebar. You’ll be routed to your organization automatically — no re-registration needed.
+
+ Security & Data
+
+ Runs locally inside your IDE.
+
+ Uses your existing secure GitHub authorization.
+
+ GitHub doesn’t allow tracking pixels — Optibot cannot track link clicks.
+
+ Troubleshooting
+
+ Issue Fix 
+ VS Code doesn’t open after clicking “Solve it in VS Code” Make sure your browser allows the vscode:// protocol to open external apps 
+ The “Install Optibot AI” prompt didn’t appear Open VS Code manually → go to Extensions → search Optibot AI → install manually 
+ Opened the wrong file or branch Verify that the PR branch is checked out locally before using Solve in VS Code 
+ Auth loop or login required again Click Optibot Login in VS Code to automatically reconnect to your org 
+ Corporate devices blocking deep links Ask IT to whitelist the vscode:// protocol 
+ Context didn’t load in VS Code Wait a few seconds or click Retry on the loading page 
+
+ FAQ
+
+ Does it auto-commit or create a new PR? 
+No. You control commits. Changes are typically committed back to the same PR.
+
+ Can I use it with Cursor? 
+Yes. Behavior is the same. Install from Cursor’s internal marketplace once available.
+
+ Can we track engineers who clicked the link? 
+No. GitHub blocks trackers in comment links. You’ll see impact via commits and re-reviews instead.
+
+ Does this replace line-by-line reviews? 
+No. Optibot still performs PR reviews in GitHub. The extension speeds up fixing them.
+
+ Pro Tips
+
+ Check Always allow once to skip the browser prompt next time.
+
+ Batch fixes: open multiple “Solve in VS Code” links, apply all, and commit once.
+
+ Request a re-review after addressing all comments.
+
+ Pull the latest branch before applying fixes for the most accurate context.

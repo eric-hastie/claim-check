@@ -1,0 +1,192 @@
+SOURCE: https://getoptimal.ai/docs/optibot-cli/installation
+TITLE: Optibot CLI — Installation & Getting Started — Optimal Docs
+CLASS: docs
+
+Optibot CLI — Installation & Getting Started — Optimal Docs 
+ / Docs / Optibot CLI / Installation & getting started 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Optibot CLI — Getting Started and Installation
+
+ The Optibot CLI expands Optibot’s capabilities by letting Optibot be used by both humans and agents through a terminal or virtual environment of choice.
+
+ The CLI is available directly through npm as a published package and is regularly updated and maintained by the Optimal AI Engineering Team.
+
+ Requirements for Installation
+
+ Node 20.0.0 or above
+
+ Git
+
+ Windows / Mac / Linux
+
+ A paid or trial subscription to Optibot. Login here or sign up here .
+
+ Install
+
+ npm install -g @optimalai/optibot 
+
+ Authentication
+
+ 1. Browser-Based OAuth (Recommended for Interactive Use)
+
+ Best for local development and interactive CLI usage:
+
+ optibot login 
+
+ This will:
+
+ Open your browser for login
+
+ Automatically save your credentials
+
+ Token expires after 90 days
+
+ Use this when: 
+
+ Setting up CLI on your local machine
+
+ You have browser access
+
+ Interactive development workflow
+
+ 2. API Key (For Agents & CI/CD)
+
+ See the CLI for CI/CD Pipelines guide for headless authentication.
+
+ How to Use the CLI
+
+ # Review local uncommitted changes 
+ optibot review 
+
+ # Review against the auto-detected base branch (origin/main, origin/master, or origin/develop) 
+ optibot review -b 
+
+ # Review changes against a specific branch 
+ optibot review --branch origin/main 
+
+ # Review an arbitrary diff file 
+ optibot review --diff changes.patch 
+
+ # Exit non-zero when the review does not pass (for git hooks / CI) 
+ optibot review --fail-on-issues 
+
+ # Use the previous synchronous review behavior 
+ # (only needed against older self-hosted backends) 
+ optibot review --sync 
+
+ By default optibot review is advisory: it always exits 0 and simply prints feedback. Add --fail-on-issues to make it exit non-zero when the review does not pass, so it can gate a git pre-push hook or a CI step. See CLI for Agents & CI/CD Pipelines for using it in a pipeline.
+
+ Large Reviews (v0.7.3 and Later)
+
+ Reviews of large diffs now complete reliably. In earlier CLI versions, very large reviews could fail with a timeout error (HTTP 524) before finishing. Since v0.7.3, reviews of any size run to completion, with live progress in your terminal as before, and nothing needs to be configured.
+
+ Upgrading is a drop-in change. Your existing optibot review commands, scripts, and CI configuration keep working with no edits, and there is nothing new to turn on. Older CLI versions still work as well, so you can upgrade on your own schedule; only v0.7.3 and later include the large-diff fix, so upgrade to resolve the timeout.
+
+ The --sync flag
+
+ optibot review --sync runs a review the previous way, in a single request. It exists only for running the CLI against an older self-hosted backend that predates this change. It also brings back the previous timeout on large diffs, so do not use it to work around a timeout: for that, upgrade instead. On the hosted service you never need --sync .
+
+ Branch Review
+
+ When using -b / --branch , the CLI will:
+
+ Auto-detect the base branch if no branch name is provided. It checks for origin/main , origin/master , and origin/develop in that order.
+
+ Check for merge conflicts before submitting the review. If conflicts are detected with the target branch, a warning is displayed.
+
+ Generate a diff and collect file contents for the review.
+
+ Review Output
+
+ After each review, the CLI displays:
+
+ Review Summary — general comments about the changes
+
+ File Comments — per-file feedback with line numbers
+
+ Rate limit info — reviews used, remaining quota, and time until reset
+
+ The display is color-coded:
+
+ Dim when usage is normal
+
+ Yellow when less than 10% of reviews remain
+
+ Red when the quota is exhausted
+
+ Organizations & Status
+
+ If you belong to more than one organization, the CLI acts as one active organization at a time. Use optibot status to see how you are authenticated and which organization is active, and optibot org switch to change it. See Organizations & Account Status for the full picture, including how API keys are bound to an organization.
+
+ # Show auth status, active organization, and review quota 
+ optibot status 
+
+ # List your organizations / switch the active one 
+ optibot org list 
+ optibot org switch 
+
+ Security Scans
+
+ Beyond code review, the CLI can run AI-powered security scans against your repositories with optibot scan . See Security Scans for the full command group, model tiers, budgets, scheduled scans, and token billing.
+
+ # Trigger a security scan on a repository (by id or name) 
+ optibot scan run my-repo 
+
+ Commands Reference
+
+ Command Description 
+ optibot login Authenticate via browser (OAuth) 
+ optibot logout Log out and remove saved credentials 
+ optibot status Show auth status, active organization, and review quota 
+ optibot review Review local uncommitted changes 
+ optibot review -b Review against auto-detected base branch 
+ optibot review -b <branch> Review against a specific target branch 
+ optibot review -d <file> Review a diff file 
+ optibot review --fail-on-issues Exit non-zero when the review does not pass 
+ optibot review --sync Use the previous synchronous review behavior 
+ optibot org list List organizations you belong to 
+ optibot org current Show the active organization 
+ optibot org switch Switch the active organization (interactive) 
+ optibot apikey create <name> Create a new API key 
+ optibot apikey list List all API keys 
+ optibot apikey delete <id> Delete an API key 
+ optibot setup ci Guided CI setup: mint a long-lived API key for OPTIBOT_API_KEY 
+ optibot scan run <repo> Run an AI security scan on a repository 
+ optibot scan list List recent security scans 
+ optibot scan show <scan-id> Show a scan’s full report 
+ optibot scan config View or update scheduled-scan configuration

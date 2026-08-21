@@ -9,8 +9,8 @@ Fails loudly. A run is a failure, not an all-clear, when a required anchor is
 missing or the page count falls below the configured floor. A monitor that
 quietly reports success while broken is worse than no monitor.
 
-    python tools/crawl.py acme
-    python tools/crawl.py acme --date 2026-08-21
+    python tools/crawl.py getoptimal
+    python tools/crawl.py getoptimal --date 2026-08-21
 """
 import argparse
 import html as _html
@@ -37,7 +37,13 @@ def targets_root():
     private directory while the code stays shareable.
     """
     import os
-    return Path(os.environ.get("CLAIM_CHECK_TARGETS", REPO / "targets"))
+    env = os.environ.get("CLAIM_CHECK_TARGETS")
+    if env:
+        return Path(env)
+    # Single-target repo: config sits at the root next to the tools.
+    if (REPO / "claims.yaml").exists():
+        return REPO
+    return REPO / "targets"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 SKIP_EXT = re.compile(
@@ -109,7 +115,8 @@ def main():
     ap.add_argument("--max-pages", type=int)
     args = ap.parse_args()
 
-    tdir = targets_root() / args.target
+    root_dir = targets_root()
+    tdir = root_dir if (root_dir / "claims.yaml").exists() or (root_dir / "owner.yaml").exists() else root_dir / args.target
     cfg = yaml.safe_load((tdir / "owner.yaml").read_text(encoding="utf-8"))
     owner, ccfg = cfg["owner"], cfg.get("crawl", {})
     root = owner["root"].rstrip("/")

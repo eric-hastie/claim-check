@@ -1,0 +1,169 @@
+SOURCE: https://getoptimal.ai/docs/optibot-cli/security-scans
+TITLE: Optibot CLI — Security Scans — Optimal Docs
+CLASS: security
+
+Optibot CLI — Security Scans — Optimal Docs 
+ / Docs / Optibot CLI / Security scans 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Security Scans
+
+ The optibot scan command group runs AI-powered security scans against the repositories in your active organization. A scan analyzes a repository and produces a markdown report of findings. You can run a scan on demand, view past results, inspect token usage and pricing, and configure recurring scheduled scans.
+
+ Scans are billed by token usage against a prepaid AI-credit balance, separate from your code-review quota. See Billing below.
+
+ Running a Scan
+
+ # By repository name 
+ optibot scan run my-repo 
+
+ # By repository id 
+ optibot scan run 42 
+
+ The repository argument accepts either a repository id or its name (use the id if two repositories share a name). Run optibot scan repos to see what is available in the active organization.
+
+ While the scan runs, the CLI streams live progress over a WebSocket and then waits for the final report. When it finishes, the full result is printed to your terminal.
+
+ Options
+
+ Option Description 
+ --budget <usd> Maximum spend for this scan, in USD. Must be between 0.50 and 500 . 
+ --model-tier <tier> Model tier to use: low , medium , or high . Higher tiers cost more per token. 
+ --post-as-issue Also open the scan report as a GitHub or GitLab issue on the repository. 
+ --timeout <seconds> How long to wait for the scan to finish before giving up. Defaults to 600 . 
+ --json Emit the result as JSON and suppress live progress output (for scripts and CI). 
+
+ If a scan does not finish before --timeout , the CLI stops waiting and exits non-zero. The scan keeps running on the server: check back later with optibot scan list , or re-run with a longer --timeout .
+
+ optibot scan run my-repo --budget 5 --model-tier high --post-as-issue 
+
+ Listing Past Scans
+
+ optibot scan list 
+
+ Lists recent scans for the active organization, most recent first.
+
+ Option Description 
+ --repo <repo> Filter by repository id or name. 
+ --page <n> Page number. Defaults to 1 . 
+ --page-size <n> Results per page. Defaults to 5 , maximum 50 . 
+ --json Emit the page of results as JSON. 
+
+ Viewing a Scan Report
+
+ optibot scan show < scan-i d > 
+
+ Renders the full markdown report for a single scan. Pass the scan id from optibot scan list .
+
+ Option Description 
+ --raw Print raw markdown with no terminal formatting. 
+ --json Emit the full scan object as JSON. 
+
+ When output is not a terminal (for example, piped to a file), the report is emitted as raw markdown automatically.
+
+ Token Usage and Pricing
+
+ # Current-month token usage and cost for scans 
+ optibot scan usage 
+
+ # Per-tier scan pricing and markup multiplier 
+ optibot scan pricing 
+
+ Both commands accept --json . Use scan usage to track how much you have spent on scans this month, and scan pricing to see what each model tier costs before you run one.
+
+ Listing Scannable Repositories
+
+ optibot scan repos 
+
+ Lists the repositories available to scan in the active organization, with their ids. Add --json for machine-readable output.
+
+ Scheduled Scans
+
+ Optibot can run scans on a recurring schedule without you triggering them. View the current configuration with:
+
+ optibot scan config 
+
+ Update it with optibot scan config set :
+
+ # Enable a weekly scan on the high tier with a $5 budget for two repos 
+ optibot scan config set --enabled --schedule weekly --model-tier high --budget 5 --repos 42,57 
+
+ # Use a custom cron schedule 
+ optibot scan config set --enabled --schedule custom --cron "0 3 * * 1" 
+
+ # Turn scheduled scans off 
+ optibot scan config set --disabled 
+
+ Option Description 
+ --enabled Enable scheduled scans. 
+ --disabled Disable scheduled scans. 
+ --schedule <schedule> weekly , monthly , quarterly , or custom . 
+ --cron <expr> Cron expression. Required when --schedule custom . 
+ --model-tier <tier> low , medium , or high . 
+ --budget <usd> Max budget per scheduled scan, in USD ( 0.50 – 500 ). 
+ --repos <ids> Comma-separated repository ids to include. 
+ --post-as-issue / --no-post-as-issue Post (or stop posting) scheduled-scan reports as issues. 
+ --json Emit the saved configuration as JSON. 
+
+ Only the options you pass are changed; everything else keeps its current value.
+
+ Billing
+
+ Security scans are metered by token usage and billed against a prepaid AI-credit balance , which is separate from your monthly code-review quota.
+
+ Set a ceiling per scan with --budget .
+
+ Higher model tiers ( --model-tier ) produce deeper analysis but cost more per token.
+
+ Check what you have spent this month with optibot scan usage , and per-tier rates with optibot scan pricing .
+
+ If your balance is too low to start a scan, the CLI exits with a clear message showing your current balance, the amount required, and a top-up link.
+
+ Exit Codes
+
+ The scan commands use stable exit codes so you can branch on them in CI scripts:
+
+ Code Meaning 
+ 0 Success 
+ 1 Generic failure (including rate limiting and server errors) 
+ 2 Authentication or authorization failed 
+ 3 Insufficient AI credits 
+ 4 A scan is already running for this repository 
+ 5 Repository or scan not found 
+ 6 Invalid request 
+
+ Combine these with --json to drive scans from automation. See CLI for Agents & CI/CD Pipelines for authentication in non-interactive environments.

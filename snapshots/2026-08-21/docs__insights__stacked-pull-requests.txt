@@ -1,0 +1,74 @@
+SOURCE: https://getoptimal.ai/docs/insights/stacked-pull-requests
+TITLE: Stacked Pull Requests — Optimal Docs
+CLASS: docs
+
+Stacked Pull Requests — Optimal Docs 
+ / Docs / Engineering Insights / Stacked Pull Requests 
+ Search ⌘K 
+getoptimal.ai
+
+ Getting Started Start guide 
+ Trial setup 
+ GitHub App installation 
+ Slack integration 
+ Optimal Insights overview 
+ Agentic Code Reviews Overview 
+ GitHub integration setup 
+ GitLab integration setup 
+ Optibot features 
+ Review Memory 
+ VS Code extension 
+ Review Statistics 
+ Optibot CLI Installation & getting started 
+ Organizations & account status 
+ Security scans 
+ CLI for agents & CI/CD pipelines 
+ Optibot Config Configuration overview 
+ Review settings 
+ Summary settings 
+ CI fixer settings 
+ Dependency bundler 
+ Monorepo guidelines 
+ Engineering Insights Overview 
+ Jira integration 
+ Distributions 
+ Activity view 
+ PR Cycle Time 
+ Stacked Pull Requests 
+ AI Insights 
+ Contributors 
+ Optibot Claude Code Skill Getting started 
+ Optibot for IDE Optibot MCP 
+ Reviewing code with MCP 
+ Stacked Pull Requests
+
+ Stacking pull requests (splitting a larger change into a chain of small, dependent PRs) is a common way to keep diffs reviewable. Insights understands stacks natively for GitHub-connected organizations, so a stack is measured as the single unit of work it represents instead of as several unrelated PRs.
+
+ Where to Find It
+
+ Go to Velocity → PR Cycle Time . Any PR that’s part of a stack shows a “Stack N/M” badge next to its title in the PR table (for example, “Stack 2/4”). Hovering the badge previews the chain; clicking it opens the Stacked Pull Requests view for that stack.
+
+ What You Get
+
+ Stalled-stack detection
+
+ Inside the Stacked Pull Requests view, each PR in the chain shows its status. A PR is labeled “Stalled” when it’s still open but activity has stopped for a while; otherwise it shows “In progress” . This is the way to spot a stack that’s gone quiet before it turns into a bottleneck.
+
+ Stack-level cycle time
+
+ Once every PR in a stack has merged, the Stacked Pull Requests view shows the stack’s cycle time: the time from when the first PR was opened to when the last one merged, as a single number. In-progress stacks don’t show this yet, since it isn’t final until the whole stack has merged.
+
+ Ask the AI chat
+
+ You can ask the AI chat about a specific stack, for example “what’s the status of PR #42’s stack?” or “has this stack fully merged?”, and get the full chain of PRs back in the answer without opening the modal yourself.
+
+ Stack adoption, coming soon
+
+ Insights is also tracking what share of your team’s PRs are part of a stack. A dedicated view for that metric is on the way.
+
+ Troubleshooting
+
+ Issue Fix 
+ No “Stack” badge showing Stacked PR support is available for GitHub-connected organizations only 
+ A PR I know is stacked isn’t showing a badge Confirm the repository is connected and synced, and that the PR was opened using a supported stacking workflow 
+ Stack cycle time isn’t showing It only appears once every PR in the stack has merged; in-progress stacks don’t have a final cycle time yet

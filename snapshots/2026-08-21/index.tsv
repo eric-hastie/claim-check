@@ -1,0 +1,127 @@
+url	class	mine	weight	words	title
+https://getoptimal.ai/	other	False	p2	2064	AI Code Review for GitHub & GitLab | Optibot by Optimal AI
+https://getoptimal.ai/agents/appsec	product	True	p1	1202	Optibot AppSec Agent — AI Security Scanning | Optimal
+https://getoptimal.ai/agents/ci-fixer	product	True	p1	1204	Optibot CI Fixer — Auto-Repair Failed CI Builds | Optimal
+https://getoptimal.ai/agents/dependency-bundler	product	True	p1	1318	Dependency Bundler — Consolidate Dependabot PRs | Optimal
+https://getoptimal.ai/agents/review-fixer	product	True	p1	1584	Review Fixer Agent — Optibot by Optimal AI
+https://getoptimal.ai/ai-code-reviews	product	True	p1	1601	AI Code Reviews — Deep, Automated & GitHub-Native | Optimal
+https://getoptimal.ai/blog	blog	False	p2	343	Blog: AI Code Reviews & Engineering | Optimal AI
+https://getoptimal.ai/blog/ai-code-review-for-gitlab	blog	False	p2	3625	Best AI Code Review Tools for GitLab 2026 | Optimal AI
+https://getoptimal.ai/blog/best-ai-code-review-tools	blog	False	p2	3240	9 Best AI Code Review Tools 2026: Ranked & Compared
+https://getoptimal.ai/blog/best-ai-coding-assistants-for-jetbrains	blog	False	p2	2721	Best AI for JetBrains IDEs 2026: IntelliJ, PyCharm
+https://getoptimal.ai/blog/coderabbit-alternatives	comparison	True	p0	2530	Best CodeRabbit Alternatives 2026 | Optimal AI
+https://getoptimal.ai/blog/cursor-bugbot-pricing	pricing	True	p0	1448	Cursor BugBot Pricing 2026: What Does It Actually Cost?
+https://getoptimal.ai/blog/dora-metrics-guide	blog	False	p2	2209	DORA Metrics Guide: Benchmarks, Formulas & Improvement
+https://getoptimal.ai/blog/github-copilot-code-review-alternatives	comparison	True	p0	4311	Best GitHub Copilot Code Review Alternatives 2026
+https://getoptimal.ai/blog/greptile-alternatives	comparison	True	p0	3416	Best Greptile Alternatives 2026 | Optimal AI
+https://getoptimal.ai/blog/how-to-reduce-pr-review-time	blog	False	p2	3770	PR Cycle Time: How to Measure and Reduce It
+https://getoptimal.ai/blog/replit-app-security	blog	False	p2	1582	Replit App Security: Scan for AI Code Vulnerabilities
+https://getoptimal.ai/blog/replit-code-review	blog	False	p2	1528	Replit Code Review: Catching Bugs in AI-Generated Code
+https://getoptimal.ai/bugbot-cost-calculator	pricing	True	p0	1288	Cursor BugBot Pricing 2026: Cost Calculator | Optimal
+https://getoptimal.ai/careers	other	False	p2	270	Careers — Optimal AI
+https://getoptimal.ai/case-studies	case_study	False	p2	311	Case Studies — Optimal AI
+https://getoptimal.ai/case-studies/artemis-ops	case_study	False	p2	704	Artemis Ops — AI Code Reviews Cut Review Time 20% | Optimal
+https://getoptimal.ai/case-studies/dapta	case_study	False	p2	1050	Dapta — 10× PR Velocity with Optibot | Optimal
+https://getoptimal.ai/case-studies/mongodb	case_study	False	p2	662	MongoDB Case Study — 50% Smaller PRs, Faster Cycles
+https://getoptimal.ai/case-studies/nearfleet	case_study	False	p2	849	Nearfleet — 75% Faster PRs, 30 Hours Reclaimed Weekly
+https://getoptimal.ai/case-studies/prado	case_study	False	p2	722	Prado — 5× More Deploys with AI Code Reviews | Optimal
+https://getoptimal.ai/case-studies/prometric	case_study	False	p2	742	Prometric Case Study — 50% Faster PR Cycles, 40+ Hours Saved
+https://getoptimal.ai/case-studies/soraban	case_study	False	p2	819	Soraban — 2+ Hours Saved, 5 Vulns Blocked Monthly
+https://getoptimal.ai/changelog	changelog	False	p2	1592	Changelog — Optimal AI
+https://getoptimal.ai/changelog/arcadia-release-v2-5-1	changelog	False	p2	464	Arcadia 2.5.1: Smarter Code Reviews — Optimal AI Changelog
+https://getoptimal.ai/changelog/auto-detect-review-instructions	changelog	False	p2	658	Auto-Detect Review Instructions | Optibot Changelog
+https://getoptimal.ai/changelog/automatic-reviews-on-new-commits	changelog	False	p2	340	Automatic Reviews on New Commits — Optimal AI Changelog
+https://getoptimal.ai/changelog/cli-async-reviews-pre-push-gate-and-reliability-fixes	changelog	False	p2	491	CLI: Async Reviews & Pre-Push Gate — Optimal AI Changelog
+https://getoptimal.ai/changelog/gitlab-integration-and-faster-code-review-performance	changelog	False	p2	466	GitLab Integration & Review Speed — Optimal AI Changelog
+https://getoptimal.ai/changelog/individual-vs-team-comparison-now-live-in-insights	changelog	False	p2	533	Individual vs. Team in Insights — Optimal AI Changelog
+https://getoptimal.ai/changelog/inline-gitlab-comments-on-demand-compliance-checks-and-smarter-re-reviews	changelog	False	p2	379	Inline GitLab Comments & Compliance — Optimal AI Changelog
+https://getoptimal.ai/changelog/introducing-branch-review-analyze-entire-pull-requests	changelog	False	p2	418	Introducing Branch Review — Optimal AI Changelog
+https://getoptimal.ai/changelog/jira-reconnect-and-more-reliable-setup	changelog	False	p2	404	Jira Reconnect & More Reliable Setup | Optibot
+https://getoptimal.ai/changelog/jira-ticket-detection-titles-and-branches	changelog	False	p2	448	Jira Ticket Detection from Titles & Branches | Optibot
+https://getoptimal.ai/changelog/more-reliable-one-click-fixes	changelog	False	p2	802	Auto-Fixer v2: New Engine, Faster Fixes | Optibot Changelog
+https://getoptimal.ai/changelog/optibot-claude-code-skill---optibot-code-reviews-built-into-claude-code	changelog	False	p2	336	Optibot Claude Code Skill — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-feature-update	changelog	False	p2	549	Optibot February Feature Update — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-february-ii---release-notes	changelog	False	p2	414	Optibot February II — Release Notes — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-firmware-update	changelog	False	p2	714	Reviews That Learn As You Push — A Rebuilt Review Engine
+https://getoptimal.ai/changelog/optibot-for-app-sec-ai-security-agent	changelog	False	p2	614	Optibot for AppSec — Security Agent — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-improved-context-understanding-and-unified-architecture-for-smarter-reviews	changelog	False	p2	496	Optibot Unified Architecture Update — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-monorepo-guidelines---per-directory-review-instructions	changelog	False	p2	402	Monorepo Guidelines — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-now-finds-dead-code-and-code-quality-issues	changelog	False	p2	409	Optibot: Dead Code & Quality Issues — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-now-in-vs-code-new-release	changelog	False	p2	460	Optibot, Now in VS Code — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-now-reviews-ci-and-tooling-config	changelog	False	p2	341	Optibot Now Reviews CI & Tooling Config | Optibot Changelog
+https://getoptimal.ai/changelog/optibot-release---cursor-extension-launch	changelog	False	p2	451	Optibot: Cursor Extension Launch — Optimal AI Changelog
+https://getoptimal.ai/changelog/optibot-release-re-review-code-in-one-click	changelog	False	p2	587	Optibot Release - Re-review code in one click
+https://getoptimal.ai/changelog/optibot-slack-integration---real-time-pr-reviews-productivity-alerts	changelog	False	p2	306	Optibot + Slack: PR Reviews & Alerts — Optimal AI Changelog
+https://getoptimal.ai/changelog/optimal-insights-february-release-log	changelog	False	p2	533	Optimal Insights February Release Log — Optimal AI Changelog
+https://getoptimal.ai/changelog/pair-review	changelog	False	p2	760	Pair Review - Optibot's biggest review upgrade
+https://getoptimal.ai/changelog/review-memory-organization-level-and-smarter-maintenance	changelog	False	p2	684	Review Memory: Norms & Smarter Suggestions
+https://getoptimal.ai/changelog/review-stats-track-review-metrics-for-your-team	changelog	False	p2	403	Review Stats: Track Review Metrics for Your Team
+https://getoptimal.ai/changelog/review-wait-times-and-resilience-improvements	changelog	False	p2	301	Review Wait Times & Resilience Improvements | Optibot
+https://getoptimal.ai/changelog/short-summaries-better-comments-cleaner-ci	changelog	False	p2	362	Optibot: Short Summaries & Cleaner CI — Optimal AI Changelog
+https://getoptimal.ai/changelog/smarter-duplicate-detection-and-more-reliable-reviews	changelog	False	p2	543	Catch Duplicate Code Before It Ships | Optibot
+https://getoptimal.ai/changelog/stacked-pull-request-support	changelog	False	p2	418	Stacked Pull Request Support | Optimal Insights
+https://getoptimal.ai/changelog/vs-code-extension-support-and-gitlab-enhancements	changelog	False	p2	366	VS Code & GitLab Enhancements — Optimal AI Changelog
+https://getoptimal.ai/claude-code-review-cost-calculator	pricing	True	p0	1210	Claude Code Review Calculator: Per-PR vs Flat $29 | Optimal
+https://getoptimal.ai/contact	other	False	p2	316	Contact Us — Optimal AI
+https://getoptimal.ai/demo	other	False	p2	1167	Book a Demo | Optimal AI Code Review
+https://getoptimal.ai/docs	docs	True	p1	358	Documentation — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/github-integration	docs	True	p1	573	GitHub Integration Setup Guide (Optibot) — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/gitlab-integration	docs	True	p1	510	GitLab Integration Setup — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/optibot-features	docs	True	p1	1004	Optibot Features — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/overview	docs	True	p1	573	Agentic Code Reviews — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/review-memory	docs	True	p1	1092	Review Memory — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/review-stats	docs	True	p1	424	Review Statistics — Optimal Docs
+https://getoptimal.ai/docs/agentic-code-reviews/vs-code-extension	docs	True	p1	869	VS Code Extension — Optimal Docs
+https://getoptimal.ai/docs/claude-code-skill/getting-started	docs	True	p1	536	Getting Started with the Claude Code Skill — Optimal Docs
+https://getoptimal.ai/docs/getting-started/github-app-installation	docs	True	p1	572	GitHub App Installation & Troubleshooting — Optimal Docs
+https://getoptimal.ai/docs/getting-started/optimal-insights	docs	True	p1	694	Optimal Insights — Optimal Docs
+https://getoptimal.ai/docs/getting-started/slack-integration	docs	True	p1	404	Slack Integration — Optimal Docs
+https://getoptimal.ai/docs/getting-started/start-guide	docs	True	p1	410	Start guide on using Optimal AI — Optimal Docs
+https://getoptimal.ai/docs/getting-started/trial-setup	docs	True	p1	902	Trial Setup — Optibot + Insights — Optimal Docs
+https://getoptimal.ai/docs/insights/activity-view	docs	True	p1	493	Activity View — Optimal Docs
+https://getoptimal.ai/docs/insights/ai-insights	docs	True	p1	883	AI Insights — Optimal Docs
+https://getoptimal.ai/docs/insights/contributors	docs	True	p1	855	Contributors — Optimal Docs
+https://getoptimal.ai/docs/insights/distributions	docs	True	p1	619	Distributions — Optimal Docs
+https://getoptimal.ai/docs/insights/jira-integration	docs	True	p1	1206	Jira Integration in Insights — Optimal Docs
+https://getoptimal.ai/docs/insights/overview	docs	True	p1	559	Engineering Productivity Insights — Optimal Docs
+https://getoptimal.ai/docs/insights/pr-cycle-time	docs	True	p1	783	PR Cycle Time — Optimal Docs
+https://getoptimal.ai/docs/insights/stacked-pull-requests	docs	True	p1	477	Stacked Pull Requests — Optimal Docs
+https://getoptimal.ai/docs/optibot-cli/ci-cd-pipelines	docs	True	p1	899	CLI for Agents & CI/CD Pipelines — Optimal Docs
+https://getoptimal.ai/docs/optibot-cli/installation	docs	True	p1	1016	Optibot CLI — Installation & Getting Started — Optimal Docs
+https://getoptimal.ai/docs/optibot-cli/organizations	docs	True	p1	622	Optibot CLI — Organizations & Status — Optimal Docs
+https://getoptimal.ai/docs/optibot-cli/security-scans	security	True	p0	956	Optibot CLI — Security Scans — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/ci-fixer	docs	True	p1	487	CI Fixer Configuration — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/dependency-bundler	docs	True	p1	421	Dependency Bundler Configuration — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/monorepo-guidelines	docs	True	p1	1863	Monorepo Guidelines — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/overview	docs	True	p1	646	Optibot Configuration Overview — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/reviews	docs	True	p1	1057	Review Configuration Settings — Optimal Docs
+https://getoptimal.ai/docs/optibot-config/summaries	docs	True	p1	591	Summary Configuration Settings — Optimal Docs
+https://getoptimal.ai/docs/optibot-for-ide/mcp-code-review	docs	True	p1	519	Reviewing Code with MCP — Optimal Docs
+https://getoptimal.ai/docs/optibot-for-ide/optibot-mcp	docs	True	p1	640	Optibot MCP Server — Optimal Docs
+https://getoptimal.ai/engineering-ai-agents	product	True	p1	2925	How Optibot Works — AI Code Review with Codebase Context
+https://getoptimal.ai/features/engineering-productivity-insights	other	False	p2	1273	Engineering Productivity Metrics Dashboard | Optimal AI
+https://getoptimal.ai/integrations	other	False	p2	273	Integrations — Optimal AI
+https://getoptimal.ai/integrations/cursor	product	True	p1	1393	Cursor Integration — Optibot by Optimal AI
+https://getoptimal.ai/integrations/github	product	True	p1	1317	GitHub Integration — Optibot by Optimal AI
+https://getoptimal.ai/integrations/gitlab	product	True	p1	1511	GitLab Integration — Optibot by Optimal AI
+https://getoptimal.ai/integrations/jira	product	True	p1	1787	Jira AI Bot for Code Review | Optibot by Optimal AI
+https://getoptimal.ai/integrations/mcp-server	product	True	p1	1565	MCP Server Integration — Optibot by Optimal AI
+https://getoptimal.ai/integrations/optibot-claude-code-skill	product	True	p1	1605	Claude Code Integration — Optibot Skill by Optimal AI
+https://getoptimal.ai/integrations/slack	product	True	p1	1051	Slack Integration — Optibot by Optimal AI
+https://getoptimal.ai/integrations/vscode	product	True	p1	1283	VS Code Extension — Optibot by Optimal AI
+https://getoptimal.ai/optibot-claude-code-skill-for-deeper-code-reviews	other	False	p2	1079	Optibot Claude Code Skill — Deeper Reviews | Optimal
+https://getoptimal.ai/pricing	pricing	True	p0	1080	Pricing — Optimal AI
+https://getoptimal.ai/privacy	other	False	p2	1434	Privacy Policy — Optimal AI
+https://getoptimal.ai/qodo-cost-calculator	pricing	True	p0	1297	Qodo Merge Pricing 2026: Cost Calculator | Optimal
+https://getoptimal.ai/security	security	True	p0	365	Security — Building and Scaling with Trust | Optimal AI
+https://getoptimal.ai/shallow-vs-deep-code-reviews	other	False	p2	1237	Deep vs Shallow AI Code Reviews: What's the Difference?
+https://getoptimal.ai/terms-of-use	other	False	p2	1429	Terms of Service — Optimal AI
+https://getoptimal.ai/token-spend-calculator	other	False	p2	1089	LLM Token Cost Calculator: Claude vs GPT vs Gemini | Optimal
+https://getoptimal.ai/vs	other	False	p2	363	Optibot vs Competitors — Code Reviews | Optimal AI
+https://getoptimal.ai/vs/coderabbit	comparison	True	p0	2158	Optibot vs CodeRabbit: AI Code Review 2026 | Optimal AI
+https://getoptimal.ai/vs/coderabbit-pricing	comparison	True	p0	1939	Optibot vs CodeRabbit Pricing — Flat vs Usage | Optimal AI
+https://getoptimal.ai/vs/deepsource	comparison	True	p0	1174	Optibot vs DeepSource: AI Code Review vs Analysis | Optimal
+https://getoptimal.ai/vs/github-copilot	comparison	True	p0	884	Optibot vs GitHub Copilot — Comparison 2026 | Optimal AI
+https://getoptimal.ai/vs/greptile	comparison	True	p0	790	Optibot vs Greptile — Comparison 2026 | Optimal AI
+https://getoptimal.ai/vs/qodo	comparison	True	p0	1060	Optibot vs Qodo Merge: AI Code Review 2026 | Optimal AI
+https://getoptimal.ai/vs/sonarqube	comparison	True	p0	1230	Optibot vs SonarQube: AI Code Review vs SAST | Optimal

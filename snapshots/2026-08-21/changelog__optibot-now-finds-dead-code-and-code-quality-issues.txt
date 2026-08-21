@@ -1,0 +1,79 @@
+SOURCE: https://getoptimal.ai/changelog/optibot-now-finds-dead-code-and-code-quality-issues
+TITLE: Optibot: Dead Code & Quality Issues — Optimal AI Changelog
+CLASS: changelog
+
+All changelog entries
+
+ 🧹 
+
+ New Release January 30, 2026 Code Quality Static Analysis Dead Code 
+ Optibot: Dead Code & Quality Issues 
+ Optibot detects unused variables, unreachable functions, orphaned components, and AI-generated code bloat — keeping codebases lean as AI tools proliferate. 
+
+ Summary
+
+Optibot, our senior engineering agent, has expanded its capabilities. Beyond catching functional bugs and security flaws, it now identifies structural issues and maintenance risks — specifically targeting the bloat often introduced by AI code assistants.
+
+ New Features
+ Dead Code Detection: Automatically identifies and flags unused variables, unreachable functions, and orphaned components to keep the codebase lean.
+ AI Quality Guard: Detects "AI bloat" — redundant logic and unnecessary complexity common in LLM-generated code — and suggests simplified alternatives.
+ Critical Quality Insights: Flags architectural and maintainability issues that lead to technical debt before they reach production.
+ The Problem
+
+AI coding tools (like Copilot or Cursor) are fantastic at generating code, but they are often terrible at cleaning up after themselves. They frequently leave behind unused variables, unreachable logic paths, and "zombie" functions that look correct but are never actually called. We call this AI Bloat.
+
+ See it in action
+
+In a recent internal audit, Optibot flagged a getPatternColor function. The function contained a switch statement for pattern types ( streak , high_collaboration ) that didn't actually exist in the TypeScript definition. Because the union type for ActivityPattern didn't include these keys, this code was literally impossible to reach — it was just sitting there adding weight to the bundle size and confusing developers.
+
+ Interactive Explanations
+
+We know that sometimes "dead code" is there for a reason (e.g., a future feature). That's why Optibot is conversational. You can ask it why a change is necessary, and it will explain the reasoning in plain language.
+
+ Under the Hood
+ Refined Analysis Engine: Improved logic to better differentiate between necessary complexity and genuine code bloat.
+ Scanning Efficiency: Optimized performance to ensure quality checks don't increase PR review latency.
+
+Previous
+ Introducing Branch Review: Analyze Entire Pull Requests 
+Next
+ Optimal Insights February Release Log 
+
+ See Optibot in action
+ Get a personalized demo and see how Optimal AI fits your team.
+
+Get a demo
+
+2261 Market Street STE 22540
+
+San Francisco, CA 94114
+
+ Product
+ How it Works 
+ Features 
+ Pricing 
+ Security 
+ Compliance 
+
+ Features
+ AI Code Reviews 
+ Deep vs. Shallow Reviews 
+ Engineering Insights 
+ Compliance 
+
+ Resources
+ Docs 
+ Blog 
+ Comparisons 
+ Customer Success 
+ LLM Token Calculator 
+ Claude Code Review Calculator 
+ Careers 
+
+ Connect
+ Contact Us 
+ Twitter 
+ LinkedIn 
+ Youtube 
+
+ Optimal AI ©2026 |
