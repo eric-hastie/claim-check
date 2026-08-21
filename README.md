@@ -162,13 +162,14 @@ security carry real exposure when nothing backs them.
 
 ## Seed data
 
-`claims.yaml` ships populated with 45 real claims across eight live comparison pages, and
+`claims.yaml` ships populated with 45 real claims across seven live comparison pages, and
 `reports/` carries every run from the 2026-08-14 baseline to
 [`reports/2026-08-21.md`](reports/2026-08-21.md). It is not a template with placeholder rows:
-9 of the 23 are out of date, each with the date it went stale and a link to the evidence.
+17 are out of date and 9 of those are still published, each with the date it went stale
+and a link to the evidence.
 
 ## Etiquette
 
-One weekly pass over roughly 20 public URLs. Respect robots.txt, do not add
+One weekly pass over 36 public URLs across 16 hosts. Respect robots.txt, do not add
 authenticated sources, and do not scrape at volume. The vendor changelog is public
 because vendors want it read.

@@ -131,7 +131,9 @@ four states. Never invent a fifth.
 | `OUT_OF_DATE` | A source contradicts the claim | Fix or remove the row now |
 | `UNVERIFIABLE` | Sources do not settle it, or a fetch failed | Do not publish the claim until settled |
 
-Every verdict other than CONFIRMED must carry three things, or it is not finished:
+`UNVERIFIABLE` is exempt from what follows, by definition: a claim no source settles has
+no evidence date, no cause and no link to give. Record why the sources do not settle it
+instead. Every **other** verdict must carry three things, or it is not finished:
 
 1. **A date.** `evidence_date` is the date printed on the source: the changelog entry,
    the release post, the announcement. Never guess it and never substitute today's
@@ -309,7 +311,7 @@ comparison page that contradicts your own pricing page.
 - It does not edit the comparison pages. It reports; a human decides.
 - It does not judge whether a competitor's product is good. It only asks whether a
   published sentence is still true.
-- It does not scrape at volume. One weekly pass over a dozen public URLs. Respect
+- It does not scrape at volume. One weekly pass over 36 public URLs across 16 hosts. Respect
   robots.txt and do not add sources that require authentication.
 
 
