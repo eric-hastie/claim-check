@@ -58,8 +58,8 @@ Watch: they ship fast. Six competitively relevant features landed between 2026-0
 
 | Source | Settles | Anchor |
 |---|---|---|
-| https://getoptimal.ai/pricing | own tiers, review caps, what happens past the cap | "deep PR reviews per user per month" |
-| https://getoptimal.ai/vs | the claims themselves | "Optibot vs" |
+| `<your-domain>/pricing` | own tiers, usage caps, what happens past the cap | a phrase only your pricing table uses |
+| `<your-domain>/vs/*` | the claims themselves | your product name |
 
 Check own pages every run. A comparison page that contradicts your own pricing page is
 the cheapest error in the file to find and the most expensive to leave up.

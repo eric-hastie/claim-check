@@ -9,8 +9,8 @@ Fails loudly. A run is a failure, not an all-clear, when a required anchor is
 missing or the page count falls below the configured floor. A monitor that
 quietly reports success while broken is worse than no monitor.
 
-    python tools/crawl.py getoptimal
-    python tools/crawl.py getoptimal --date 2026-08-21
+    python tools/crawl.py acme
+    python tools/crawl.py acme --date 2026-08-21
 """
 import argparse
 import html as _html
@@ -44,10 +44,16 @@ SKIP_EXT = re.compile(
     r"\.(png|jpe?g|gif|svg|webp|ico|css|js|woff2?|ttf|mp4|pdf|zip|xml|json)$", re.I)
 
 
+LAST_MODIFIED = {}
+
+
 def fetch(url, timeout):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
+            lm = r.headers.get("Last-Modified")
+            if lm:
+                LAST_MODIFIED[lm] = LAST_MODIFIED.get(lm, 0) + 1
             if "text/html" not in r.headers.get("Content-Type", ""):
                 return None, r.status
             return r.read().decode("utf-8", "ignore"), r.status
@@ -170,9 +176,15 @@ def main():
                 f"anchor missing on {req['url']}: {req['anchor']!r} "
                 f"(page returned {rec['words']} words)")
 
+    # A static host stamps every page with the build time, so the most common
+    # Last-Modified dates the deploy. The snapshots say WHAT changed; this says WHEN it
+    # shipped, which a diff between two dated crawls cannot resolve on its own.
+    deploys = sorted(LAST_MODIFIED.items(), key=lambda kv: -kv[1])
     meta = {"target": args.target, "date": args.date, "root": root,
             "urls_visited": len(seen), "pages_saved": len(index),
             "fetch_failures": failures, "problems": problems,
+            "last_deploy": deploys[0][0] if deploys else None,
+            "last_modified_spread": dict(deploys[:5]),
             "ok": not problems}
     (out / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     with (out / "index.tsv").open("w", encoding="utf-8") as f:
@@ -181,7 +193,10 @@ def main():
             f.write(f"{r['url']}\t{r['cls']}\t{r['mine']}\t{r['weight']}\t"
                     f"{r['words']}\t{r['title']}\n")
 
-    print(f"\nvisited {len(seen)} urls, saved {len(index)} pages")
+    if deploys:
+        print(f"\nlast deploy (most common Last-Modified): {deploys[0][0]} "
+              f"on {deploys[0][1]} pages")
+    print(f"visited {len(seen)} urls, saved {len(index)} pages")
     if failures:
         print(f"fetch failures: {len(failures)}")
     if problems:

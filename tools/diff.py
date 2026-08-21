@@ -7,8 +7,8 @@ when it touches a number, a unit, a capability word, or a negation. The
 heuristic ranks the work; it does not render the verdict. A human or an LLM
 pass decides what a material change actually means.
 
-    python tools/diff.py getoptimal 2026-08-10 2026-08-21
-    python tools/diff.py getoptimal 2026-08-10 2026-08-21 --json out.json
+    python tools/diff.py acme 2026-08-10 2026-08-21
+    python tools/diff.py acme 2026-08-10 2026-08-21 --json out.json
 """
 import argparse
 import difflib

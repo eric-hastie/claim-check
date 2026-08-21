@@ -14,8 +14,8 @@ Claims are paraphrases of page copy, not quotes, so matching is by distinctive
 token overlap plus a best-sentence similarity floor rather than exact string
 search.
 
-    python tools/published.py getoptimal 2026-08-21
-    python tools/published.py getoptimal 2026-08-21 --write
+    python tools/published.py acme 2026-08-21
+    python tools/published.py acme 2026-08-21 --write
 """
 import argparse
 import difflib
