@@ -107,6 +107,45 @@ def resolve(claim_text, body):
     return "AMBIGUOUS", score, best[:180]
 
 
+# Severity is DERIVED. It is never a field in claims.yaml, because a hand-set severity
+# drifts from the data the moment either input changes. Inputs: the verdict, whether the
+# claim is still shown, and how expensive an error on that page class is.
+SEV_RANK = {"p0": 0, "p1": 1, "p2": 2, "p3": 3}
+
+
+def severity(claim, weight):
+    st, pub = claim.get("status"), claim.get("published")
+    if claim.get("source_type") == "internal":
+        return "p3", "internal, never rechecked"
+    if st in ("OUT_OF_DATE",) and pub == "PUBLISHED":
+        return "p0", f"published and untrue on a {weight} page"
+    if st == "internal_conflict":
+        return "p0", "two of our own pages disagree"
+    if st == "WEAKENED" and pub == "PUBLISHED":
+        return "p1", "still true, argument blunted"
+    if pub == "UNTRACKED":
+        return "p1", "published with no claim behind it"
+    if st in ("OUT_OF_DATE", "WEAKENED") and pub == "UNPUBLISHED":
+        return "p3", "resolved, no longer published"
+    if st == "UNVERIFIABLE":
+        return "p3", "no source settles it"
+    if pub == "AMBIGUOUS":
+        return "p3", "needs a human read"
+    return "p3", "current"
+
+
+def page_weight(claim, cfg):
+    pages = claim.get("page") if isinstance(claim.get("page"), list) else [claim.get("page")]
+    best = "p2"
+    for pc in cfg.get("page_classes", []):
+        for m in pc.get("match", []):
+            if any(m in str(q or "") for q in pages):
+                w = pc.get("weight", "p2")
+                if SEV_RANK.get(w, 3) < SEV_RANK.get(best, 3):
+                    best = w
+    return best
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("target")
@@ -137,9 +176,23 @@ def main():
     resolved = [(c, s) for c, s, _, _ in rows
                 if s == "UNPUBLISHED" and c.get("status") in ("OUT_OF_DATE", "WEAKENED")]
 
-    print(f"P0 candidates, published AND not true: {len(urgent)}")
+    import yaml as _y
+    ocfg = _y.safe_load((tdir / "owner.yaml").read_text(encoding="utf-8")) \
+        if (tdir / "owner.yaml").exists() else {}
+    sev_counts = {}
+    for c, state, _, _ in rows:
+        c2 = dict(c); c2["published"] = state
+        sv, _why = severity(c2, page_weight(c2, ocfg))
+        sev_counts[sv] = sev_counts.get(sv, 0) + 1
+    print("derived severity: " + " | ".join(
+        f"{k.upper()} {sev_counts[k]}" for k in sorted(sev_counts, key=lambda x: SEV_RANK[x])) + "\n")
+
+    print(f"Published and no longer fully true: {len(urgent)} "
+          f"(severity below; WEAKENED is P1, not P0)")
     for c, _, sc in sorted(urgent, key=lambda x: -x[2]):
-        print(f"  [{c['status']:12s}] {c['page']:28s} {c['id']}  (match {sc:.2f})")
+        c2 = dict(c); c2["published"] = "PUBLISHED"
+        sv, why = severity(c2, page_weight(c2, ocfg))
+        print(f"  [{sv.upper()}] [{c['status']:12s}] {str(c['page'])[:26]:26s} {c['id']}  ({why})")
     print(f"\nResolved since authoring, no longer published: {len(resolved)}")
     for c, _ in resolved:
         print(f"  [{c['status']:12s}] {c['page']:28s} {c['id']}")

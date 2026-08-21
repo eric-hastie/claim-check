@@ -9,9 +9,9 @@ A comparison page is a list of assertions about competitors. Each assertion has 
 primary source that would settle it. This skill re-checks those sources on a schedule
 and reports only the assertions whose status changed.
 
-**It is not a page-change monitor.** Watching whole pages for diffs produces noise
-(testimonial rotation, nav edits, A/B copy) and misses the changes that matter (a
-competitor ships a feature and never edits the page you watch). Claims are the unit.
+Each claim names the primary source that settles it, and a run re-reads those sources. A
+competitor can ship a feature and never touch the page you watch: the source moves, so
+the claim moves with it. Testimonial rotations, nav edits and A/B copy move nothing.
 
 ## Layout
 
@@ -303,10 +303,8 @@ URL can settle is not a claim, it is marketing copy. Either find the source or m
 Claims about your own product belong in the file too. The cheapest error to catch is a
 comparison page that contradicts your own pricing page.
 
-## What this skill does not do
+## Scope
 
-- It does not edit the comparison pages. It reports; a human decides.
-- It does not judge whether a competitor's product is good. It only asks whether a
-  published sentence is still true.
-- It does not scrape at volume. One weekly pass over 36 public URLs across 16 hosts. Respect
-  robots.txt and do not add sources that require authentication.
+This skill asks one question: is this published sentence still true. It reports; a human
+decides what to edit. It runs one weekly pass over 36 public URLs across 16 hosts,
+respects robots.txt, and uses only sources that need no authentication.

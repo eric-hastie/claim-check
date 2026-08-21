@@ -10,7 +10,6 @@ click. Nothing here is scraped from behind a login, and nothing is inferred.
 real claims from the live comparison pages. `reports/` holds every run. The most recent
 is [`reports/2026-08-21.md`](reports/2026-08-21.md), which crawled all 126 pages of the
 site and found a competitor's price published 4x below what that competitor charges.
-This is not a template with placeholder rows.
 
 Comparison pages are high-intent inbound: someone typing "X vs Y" is evaluating right
 now, and the page is the only rep in the room. They are also the fastest-rotting content
@@ -21,13 +20,11 @@ competitor between April and August 2026.
 This skill re-checks each published claim against the primary source that would settle
 it, weekly, and reports only what changed.
 
-## What makes it different from a page monitor
+## How it works
 
-It watches claims, not pages. A page monitor tells you a competitor's pricing page
-changed, which is usually a testimonial rotation. It cannot tell you that a competitor
-shipped a feature that makes row four of your comparison table out of date without ever
-touching the page you watch. Claims are the unit, and each claim names the source that
-settles it.
+Each claim names the primary source that settles it, and the weekly run re-reads those
+sources. A competitor can ship a feature and never touch the page you watch: the source
+moves, so the claim moves with it. Testimonial rotations and nav edits move nothing.
 
 ## Install
 
@@ -76,7 +73,7 @@ ACTION NEEDED: 2 claims. Greptile shipped an analytics dashboard (2026-04-15).
 
 That line is the Slack notification preview, so it has to carry the whole verdict. A
 quiet week is two lines and should stay two lines: padding a nothing week to look
-productive is how a weekly report gets muted, and a muted report is worse than none.
+productive is how a weekly report gets muted, and a muted report trains the reader to skim.
 
 ## Every finding is dated and linked
 
@@ -103,7 +100,7 @@ source does not support the claim, with no release to point at), and `internal_c
 
 Copy a block in `competitors.yaml`, point it at a dated release feed, set `digest: true`.
 No claims required: the digest and the claim check are independent, and a competitor
-nobody has written a comparison row about is often the one worth reading about on Monday.
+nobody has written a comparison row about is often the one that belongs in Monday's digest.
 
 Tier 1 runs every time, tier 2 runs when there is room and gets dropped first, tier 3 is
 claims only. If a tier-2 competitor is skipped, the report says so.
@@ -121,7 +118,7 @@ The skill is the process; something has to fire it. Any of these works:
   "3 claims need review."
 - A calendar reminder and a person. This is fine. The run takes a few minutes.
 
-The pull request version is the one worth aiming at: marketing reviews a diff on Monday,
+The pull request version is the target shape: marketing reviews a diff on Monday,
 edits the page or dismisses the finding, and the state file records the decision.
 
 ## Files
@@ -136,7 +133,7 @@ edits the page or dismisses the finding, and the state file records the decision
 | `reports/` | Dated output |
 | `build_standalone.py` | Concatenates the above into the single-file paste version |
 
-## Design decisions worth keeping
+## Design decisions
 
 **Four verdicts, not two.** CONFIRMED, WEAKENED, OUT_OF_DATE, UNVERIFIABLE. Most real
 movement is "weakened": a competitor adds a spend cap, which does not make
@@ -146,7 +143,7 @@ true/false system reports nothing on the week that matters most.
 **Fail loudly.** A 200 response is not evidence that a page loaded. Every source carries
 an anchor string that must appear in the extracted text, and a run with failed fetches
 cannot produce an all-clear report. A monitor that quietly reports "no changes" when it
-is broken is worse than no monitor.
+is broken reports green while broken, which is the failure this exists to prevent.
 
 **Reconcile the counts.** Every run ends with claims selected, verdicts returned,
 sources attempted, fetched and failed. If verdicts returned is lower than claims
@@ -164,7 +161,7 @@ security carry real exposure when nothing backs them.
 
 `claims.yaml` ships populated with 45 real claims across seven live comparison pages, and
 `reports/` carries every run from the 2026-08-14 baseline to
-[`reports/2026-08-21.md`](reports/2026-08-21.md). It is not a template with placeholder rows:
+[`reports/2026-08-21.md`](reports/2026-08-21.md).:
 17 are out of date and 9 of those are still published, each with the date it went stale
 and a link to the evidence.
 

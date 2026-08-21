@@ -121,7 +121,7 @@ only the vendors already named on a comparison page. Full entries in
 | https://docs.qodo.ai/changelog | Qodo releases | "chronological record of changes to Qodo" | 2026-08-14 |
 | https://graphite.com/blog | Graphite Agent releases (no changelog feed exists) | "Graphite" | unverified |
 
-Two gaps worth stating in every report rather than leaving silent:
+Two gaps stated in every report rather than leaving silent:
 
 - **CodeRabbit publishes no dated changelog feed** that we could locate. Their changes
   arrive through pricing and docs diffs, which means late. A quiet CodeRabbit week in
