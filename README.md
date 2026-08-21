@@ -6,10 +6,11 @@ Every source it reads is a public vendor page: changelogs, pricing pages, produc
 Every finding carries the date it went stale and a link, so anyone can check it in one
 click. Nothing here is scraped from behind a login, and nothing is inferred.
 
-**Worked example included.** `claims.yaml` and `reports/2026-08-14.md` are a real run
-against the six comparison pages on getoptimal.ai: 43 claims, 18 of them out of date,
-each one traced to the competitor release or pricing page that moved. Swap the file for
-your own claims and the skill works the same way.
+**Point it at your own site.** Copy `targets/example/`, fill in your comparison pages
+and the claims they make, and the weekly run tells you which ones a competitor has
+already invalidated. Targets can live outside this repo entirely, via
+`CLAIM_CHECK_TARGETS`, so findings about a real company stay private while the tool
+stays shareable.
 
 Comparison pages are high-intent inbound: someone typing "X vs Y" is evaluating right
 now, and the page is the only rep in the room. They are also the fastest-rotting content
