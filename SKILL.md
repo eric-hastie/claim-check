@@ -13,12 +13,61 @@ and reports only the assertions whose status changed.
 (testimonial rotation, nav edits, A/B copy) and misses the changes that matter (a
 competitor ships a feature and never edits the page you watch). Claims are the unit.
 
+## Targets
+
+Everything lives under `targets/<slug>/`, so the skill carries nothing about any one
+company. Point it at a new company by adding a directory.
+
+```
+targets/<slug>/
+  owner.yaml         the site you are defending: page classes, anchors, page floor
+  competitors.yaml   who the digest watches
+  claims.yaml        input and state
+  snapshots/<date>/  one text file per page, git is the history
+  reports/<date>.md
+```
+
 ## Inputs
 
 - `claims.yaml` is both the input and the state. Each claim carries `status`,
-  `evidence` and `last_verified`. The job of a run is to update that file.
+  `published`, `evidence` and `last_verified`. The job of a run is to update that file.
+- `owner.yaml` defines your own site. Page classes decide two separate things: whether a
+  page is **mined** for claims, and how expensive an error on it is (`weight`).
 - `references/sources.md` says which URL is authoritative for which kind of claim, per
   competitor. Read it before fetching anything.
+
+## Two states per claim, never one
+
+This is the core of the design and the easiest thing to get wrong.
+
+| | Question | Verified against |
+|---|---|---|
+| `status` | Is the claim TRUE? | the competitor's primary source |
+| `published` | Is the claim STILL SHOWN? | your own site crawl |
+
+`OUT_OF_DATE` + `PUBLISHED` is **P0**. `OUT_OF_DATE` + `UNPUBLISHED` is **resolved**,
+and reporting it as urgent is the fastest way to make a weekly report unreadable. A
+monitor that shouts about something already fixed gets ignored, and then it misses the
+one that mattered.
+
+`published` also carries `UNTRACKED`: an assertion found on a mined page with no claim
+in the registry. An unverified published claim is a liability nobody has looked at, so
+it is P1.
+
+## Severity is derived, never hand-set
+
+Severity falls out of the three fields already tracked. Do not add it as an independent
+axis, because it will drift from the data.
+
+| | What it is | Owner | Timebox |
+|---|---|---|---|
+| **P0** | Published and false. `OUT_OF_DATE` + `PUBLISHED`, or two of your own pages contradicting each other (`internal_conflict`). A prospect can disprove it in one click. | marketing, web | this week |
+| **P1** | A competitor shipped something that changes how you sell. `WEAKENED` claims, digest items tagged `affects a claim`, and `UNTRACKED`. | sales | this cycle |
+| **P2** | Competitive intel, no action. Becomes next quarter's claims. | everyone | none |
+| **P3** | Housekeeping. Aging, failed fetches, ambiguous matches. Report as a **count**, not a list. | registry owner | monthly |
+
+Within P0, order by the `weight` of the page class the claim sits on. A comparison or
+pricing page outranks a docs page because the reader is further down the funnel.
 
 ## Procedure
 
@@ -32,6 +81,15 @@ Build the run list. Include a claim if any of:
 
 Claims flagged `frozen: true` are skipped. Use that for strategic claims that only
 change when a competitor reverses a public position.
+
+**Claims with `source_type: internal` are never selected.** They come from customer
+conversations, sales calls or proprietary data, and no public source will ever settle
+them. Excluding them by construction is why this skill needs no escalation counter for
+unverifiable claims: the only things left in the loop are claims a public source was
+always expected to settle, so a persistent `UNVERIFIABLE` means a real problem with the
+source rather than a claim that was never checkable. An internal claim published on a
+public page still belongs in the file, marked, so nobody re-litigates its provenance
+every quarter.
 
 Print the run list with counts before fetching: total claims, selected, skipped, and why.
 
@@ -150,10 +208,23 @@ claims at all, which is the point: the most useful item in a digest is usually a
 competitor nobody has written a comparison row about yet. Adding one is a copy-pasted
 block with a dated source and `digest: true`.
 
-Tiers control cost. Tier 1 runs every time. Tier 2 runs when the run has room and is the
-first thing dropped when it does not. Tier 3 is claims only and never appears in the
-digest. If a tier-2 competitor is skipped, say so in the report rather than leaving a
-silent hole.
+**Group the digest by competitor, with a count in the summary line, and never truncate.**
+
+```
+<details><summary><strong>Greptile, 6 releases in the window</strong></summary>
+- 2026-08-12 Linear integration ... `affects: no claim yet`
+</details>
+```
+
+`<details>` renders natively in GitHub-flavoured markdown and in HTML, so one source
+serves the repo report and a published page. The reader is tracking a competitor over
+time, so a cap would throw away exactly what they came for. The count in the summary
+line is itself the intel: "Greptile 6, CodeRabbit 1, Qodo 0" says something true about
+the quarter, and **a competitor going quiet is information**, so name them and say zero.
+
+Tiers control cost, not visibility. Tier 1 runs every time; tier 2 runs when the run has
+room; tier 3 is claims only. If a tier-2 competitor is skipped, say so rather than
+leaving a silent hole.
 
 **Never invent a source URL.** A guessed changelog either 404s, which is loud and fine,
 or returns a 200 shell, which reads as "they shipped nothing this week" and is the exact
@@ -195,6 +266,28 @@ each with its link. Then a link to the full report. Three sections, no preamble,
 sign-off.
 
 A quiet week in Slack is two lines. Resist making it longer.
+
+## Tools
+
+Fetching and diffing are mechanical and live in `tools/`. Rendering verdicts is not, and
+stays with the agent.
+
+```
+python tools/crawl.py <target>                       # dated snapshot of the owner site
+python tools/diff.py <target> <before> <after>       # sentence-level, MATERIAL vs REWORDING
+python tools/published.py <target> <snapshot> --write  # resolve and persist published state
+```
+
+`crawl.py` exits non-zero when a required anchor is missing or the page count falls below
+`floor_pages`. A run that cannot prove it fetched the site is a failure, never an
+all-clear.
+
+`diff.py` tags a change MATERIAL when it touches a number, a unit, a capability word or a
+negation, and REWORDING otherwise. That heuristic ranks the work; it does not render the
+verdict.
+
+`published.py` declines to guess. Between roughly 0.35 and 0.70 match it returns
+AMBIGUOUS rather than a state it cannot support, and the report carries the count.
 
 ## Adding a claim
 
