@@ -329,6 +329,21 @@ claims:
       /vs/greptile: neither now contains the word unlimited. Keep the claim registered,
       because pricing copy is the row most likely to drift back.
     published: PUBLISHED
+    checks:
+      - id: pricing-unlimited-gone
+        run: "absent:unlimited code reviews"
+        source: https://getoptimal.ai/pricing
+        expect: "absent"
+        volatility: high
+        captured: 2026-08-10
+        note: "If this flips back, the flat-rate wedge changes again"
+      - id: unlimited-gone-comparison
+        run: "sitewide_absent:/vs/|alternatives||unlimited reviews"
+        source: https://getoptimal.ai/sitemap-0.xml
+        expect: "absent"
+        volatility: high
+        captured: 2026-08-17
+        note: "Was live on ~20 pages on 2026-08-10 and removed by the 2026-08-14 deploy. pricing-unlimited-gone only ever watched /pricing. KNOWN FALSE POSITIVE 2026-08-21: fires on /vs/coderabbit for the sentence 'Does CodeRabbit have unlimited reviews? Not in practice.' The substring test cannot tell a claim about Optibot from a question about a competitor. Needs a proximity condition before this check is trustworthy; do not edit the page on its say-so."
   - id: self-2x-vulnerabilities
     competitor: self
     page: [/vs/coderabbit, /vs/greptile]
@@ -636,6 +651,27 @@ claims:
       to defend than a degraded review, and the metered competitor it is aimed at lets
       the customer set their own spend cap instead.
     published: PUBLISHED
+    checks:
+      - id: pricing-plus-cap
+        run: "regex:Optibot Plus[\\s\\S]{0,900}?Up to (\\d+) deep PR reviews"
+        source: https://getoptimal.ai/pricing
+        expect: "50"
+        volatility: high
+        captured: 2026-08-10
+        note: "Contradicts the unlimited claim made in spring 2026"
+      - id: pricing-pro-cap
+        run: "regex:Optibot Pro[\\s\\S]{0,900}?Up to (\\d+) deep PR reviews"
+        source: https://getoptimal.ai/pricing
+        expect: "100"
+        volatility: high
+        captured: 2026-08-10
+      - id: pricing-max-cap
+        run: "regex:Optibot Max[\\s\\S]{0,900}?Up to (\\d+) deep PR reviews"
+        source: https://getoptimal.ai/pricing
+        expect: "350"
+        volatility: high
+        captured: 2026-08-10
+        note: "Max tier is Contact Sales"
   - id: bugbot-usage-billing
     competitor: cursor-bugbot
     page: /bugbot-cost-calculator
@@ -654,3 +690,102 @@ claims:
       metered-cost argument does not apply. Ask which Cursor tier they are on before
       running the cost pitch.
     published: PUBLISHED
+
+  # ---- merged from FACTS.tsv 2026-08-21: mechanically checkable claims ----
+  - id: self-pricing-tiers
+    competitor: self
+    page: /pricing
+    claim: "Optibot Plus is $29 per user per month and Optibot Pro is $49 per user per month."
+    sources: [https://getoptimal.ai/pricing]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: pricing-plus-price
+        run: "regex:Optibot Plus[\\s\\S]{0,400}?\\$\\s*(\\d+)\\s*/\\s*user"
+        source: https://getoptimal.ai/pricing
+        expect: "29"
+        volatility: high
+        captured: 2026-08-10
+        note: "Cited in 00_AE_PLAYBOOK.md pricing box"
+      - id: pricing-pro-price
+        run: "regex:Optibot Pro[\\s\\S]{0,400}?\\$\\s*(\\d+)\\s*/\\s*user"
+        source: https://getoptimal.ai/pricing
+        expect: "49"
+        volatility: high
+        captured: 2026-08-10
+        note: "Billed annually"
+  - id: self-soc2
+    competitor: self
+    page: /security
+    claim: "Optimal AI is SOC 2 Type II certified."
+    sources: [https://getoptimal.ai/security]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: soc2-type-ii
+        run: "present:SOC 2 Type II"
+        source: https://getoptimal.ai/security
+        expect: "present"
+        volatility: med
+        captured: 2026-08-10
+        note: "Also GCP, AES-256, US-only storage, SAML+RBAC"
+  - id: self-zero-retention
+    competitor: self
+    page: /security
+    claim: "Optibot never stores your source code: PRs are analysed in memory and discarded after the review."
+    sources: [https://getoptimal.ai/security]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: zero-code-retention
+        run: "present:never stores your source code"
+        source: https://getoptimal.ai/security
+        expect: "present"
+        volatility: med
+        captured: 2026-08-10
+        note: "Core trust claim in every pitch"
+  - id: self-positioning-line
+    competitor: self
+    page: /
+    claim: "The homepage positioning line reads as recorded."
+    sources: [https://getoptimal.ai/]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: positioning-line
+        run: "regex:(AI writes the code\\. Optibot makes sure it's safe to ship\\.)"
+        source: https://getoptimal.ai/
+        expect: "AI writes the code. Optibot makes sure it's safe to ship."
+        volatility: med
+        captured: 2026-08-10
+        note: "If this changes, the category framing changed"
+  - id: ds-price
+    competitor: deepsource
+    page: /vs/deepsource
+    claim: "DeepSource's published price on our comparison page matches DeepSource's own pricing page."
+    sources: [https://getoptimal.ai/vs/deepsource]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: competitor-deepsource-price
+        run: "crosscheck:starts at approximately \\$\\s*(\\d+)||https://deepsource.com/pricing||Team[\\s\\S]{0,60}?\\$\\s*(\\d+)\\s*per user"
+        source: https://getoptimal.ai/vs/deepsource
+        expect: "match"
+        volatility: high
+        captured: 2026-08-17
+        note: "Our page says a Business plan from ~$6/user; DeepSource lists Team at $24/user billed yearly and has no Business tier"
+  - id: cr-price
+    competitor: coderabbit
+    page: /vs/coderabbit-pricing
+    claim: "CodeRabbit's published price on our comparison page matches CodeRabbit's own pricing page."
+    sources: [https://getoptimal.ai/vs/coderabbit-pricing]
+    status: CONFIRMED
+    last_verified: 2026-08-21
+    checks:
+      - id: competitor-coderabbit-price
+        run: "crosscheck:\\$\\s*(\\d+)/user/mo on Pro||https://www.coderabbit.ai/pricing||Pull Request Reviews[^$]{0,60}\\$\\s*(\\d+)"
+        source: https://getoptimal.ai/vs/coderabbit-pricing
+        expect: "match"
+        volatility: high
+        captured: 2026-08-17
+        note: "Accurate as of 2026-08-17. Kept as a regression check, since competitor pricing moves and our pages do not"
